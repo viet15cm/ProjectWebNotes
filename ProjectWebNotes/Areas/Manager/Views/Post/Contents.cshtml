@@ -1,0 +1,45 @@
+﻿@model PostDto
+
+@{
+    Layout = "~/Areas/Manager/Views/Shared/_LayoutSummernote.cshtml"; 
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+             <h5>Cập nhật nội dung bào viết --@Model.Title--</h5>
+
+                <form method="post" >
+                    @Html.HiddenFor(x => x.Slug)
+                    @Html.HiddenFor(x => x.Serial)
+                    @Html.HiddenFor(x => x.PostParentId)
+                    @Html.HiddenFor(x => x.Prime)
+                    @Html.HiddenFor(x => x.Title)
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.DateUpdated"></label>
+                    <input class="form-control" asp-for="@Model.DateUpdated" />
+                    <span asp-validation-for="@Model.DateUpdated"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.Content"></label>
+                    <textarea rows="4" class="form-control" asp-for="@Model.Content"></textarea>
+                    <span asp-validation-for="@Model.Content"></span>
+                </div>
+                <button type="submit">Lưu</button>
+                </form>
+
+
+        </div>
+        <div class="col-nd-7">
+            <h5>Danh sách hình ảnh trong bài viết --@Model.Title-- </h5>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+
+    <partial name="_Summernote"/>
+
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+
+}

@@ -1,0 +1,15 @@
+D:\C#\ProjectWebNotes\Contracts\bin\Release\net7.0\Contracts.deps.json
+D:\C#\ProjectWebNotes\Contracts\bin\Release\net7.0\Contracts.dll
+D:\C#\ProjectWebNotes\Contracts\bin\Release\net7.0\Contracts.pdb
+D:\C#\ProjectWebNotes\Contracts\bin\Release\net7.0\Entities.dll
+D:\C#\ProjectWebNotes\Contracts\bin\Release\net7.0\Entities.pdb
+D:\C#\ProjectWebNotes\Contracts\obj\Release\net7.0\Contracts.csproj.AssemblyReference.cache
+D:\C#\ProjectWebNotes\Contracts\obj\Release\net7.0\Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\ProjectWebNotes\Contracts\obj\Release\net7.0\Contracts.AssemblyInfoInputs.cache
+D:\C#\ProjectWebNotes\Contracts\obj\Release\net7.0\Contracts.AssemblyInfo.cs
+D:\C#\ProjectWebNotes\Contracts\obj\Release\net7.0\Contracts.csproj.CoreCompileInputs.cache
+D:\C#\ProjectWebNotes\Contracts\obj\Release\net7.0\Contracts.csproj.CopyComplete
+D:\C#\ProjectWebNotes\Contracts\obj\Release\net7.0\Contracts.dll
+D:\C#\ProjectWebNotes\Contracts\obj\Release\net7.0\refint\Contracts.dll
+D:\C#\ProjectWebNotes\Contracts\obj\Release\net7.0\Contracts.pdb
+D:\C#\ProjectWebNotes\Contracts\obj\Release\net7.0\ref\Contracts.dll

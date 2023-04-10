@@ -1,0 +1,122 @@
+﻿
+@{
+}
+
+    <link href="~/Summernote-cr/summernote-bs4.min.css" rel="stylesheet" />
+    <script src="~/Summernote-cr/summernote-bs4.min.js"></script>
+    @*<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>*@
+<script>
+    $(document).ready(function () {
+        $('#Content').summernote({
+            placeholder: 'Hello',
+            tabsize: 2,
+            height: 400,
+            toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']],
+                /*['dracula', ['dracula']],*/
+                ['Code Highlight', ['CodeHighlight']],
+                ['Careful Azure', ['CarefulAzure']],
+                ['Careful', ['Careful']],
+            ],
+            buttons: {
+                /*dracula: Helloframes,*/
+                CodeHighlight: HelloCodeHighlight,
+                Careful : HelloCareful,
+                CarefulAzure: HelloCarefulAzure
+            }
+
+        });
+    });
+
+
+    var Helloframes = function (context) {
+        var ui = $.summernote.ui;
+
+        // create button
+        var button = ui.button({
+            contents: 'Coded Dacula',
+            tooltip: 'Code Dracula',
+            click: function (value) {
+                var text = context.invoke('editor.getSelectedText');
+                // http://summernote.org/deep-dive/#insertnode
+                context.invoke('editor.pasteHTML', '<div class="code-wrapper"><pre style="min-height: 50px;background-color: #071e3d; color: white;"><code id="code"><br><br>' + text + '</code></pre></div><p><br/></p>');
+            },
+
+        });
+
+        return button.render(); // return button as jquery object
+    }
+
+
+    var HelloCareful = function (context) {
+        var ui = $.summernote.ui;
+
+        // create button
+        var button = ui.button({
+            contents: 'Careful',
+            tooltip: 'Careful',
+            click: function (value) {
+                var text = context.invoke('editor.getSelectedText');
+                // http://summernote.org/deep-dive/#insertnode
+                context.invoke('editor.pasteHTML', '<p style="background: #F5F5F5;" class="careful"><br></p><p><br></p>');
+            },
+
+        });
+
+        return button.render(); // return button as jquery object
+    }
+
+    var HelloCarefulAzure = function (context) {
+        var ui = $.summernote.ui;
+
+        // create button
+        var button = ui.button({
+            contents: 'CarefulAzure',
+            tooltip: 'CarefulAzure',
+            click: function (value) {
+                var text = context.invoke('editor.getSelectedText');
+                // http://summernote.org/deep-dive/#insertnode
+                context.invoke('editor.pasteHTML', '<p style="background: #e4fafa;" class="careful-azure"><br></p><p><br></p>');
+            },
+
+        });
+
+        return button.render(); // return button as jquery object
+    }
+
+    var HelloCodeHighlight = function (context) {
+        var ui = $.summernote.ui;
+
+        // create button
+        var button = ui.button({
+            contents: 'Code Highlight',
+            tooltip: 'Code Highlight',
+            click: function (value) {
+                var text = context.invoke('editor.getSelectedText');
+                // http://summernote.org/deep-dive/#insertnode
+                context.invoke('editor.pasteHTML', '<pre class="box-shadow" style="min-height: 50px; background: #F5F5F5;"><h5 class="box-shadow coppy-code">Code</h5><code class=""><br><br>' + text + '</code></pre><p><br/></p>');
+            },
+
+        });
+
+        return button.render(); // return button as jquery object
+    }
+
+    function copyToClipboard(valueText) {
+
+        /*Copy the text inside the text field */
+        var message = valueText;
+        navigator.clipboard.writeText(message);
+
+        /* Alert the copied text */
+        alert("Copied the text: " + message);
+    }
+</script>
+

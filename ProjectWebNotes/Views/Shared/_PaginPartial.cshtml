@@ -1,0 +1,76 @@
+﻿@model Paging
+@{
+    var totalPages = Model.TotalPages;
+    var currentPage = Model.CurrentPage;
+    var urlAction = Model.UrlAction;
+    bool HasPrevious = Model.CurrentPage > 1;
+    bool HasNext = Model.CurrentPage < Model.TotalPages;
+    
+    Func<int?, string> generateUrl = (int? _pagenumber) =>
+    {
+        return Url.Action(urlAction, new { pageNumber = _pagenumber });
+    };
+
+}
+<nav class="Page navigation example">
+    <ul class="pagination">
+        <!-- Previous page link -->
+        @if (HasPrevious)
+        {
+
+                    <li class="page-item">
+                            <a class="page-link" href="@generateUrl(currentPage - 1)" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+
+                    </li>
+        }
+        else
+        {
+                    <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+        }
+
+        <!-- Numbered page links -->
+        @for (int i = 1; i <= totalPages; i++)
+        {
+            if (i != currentPage)
+            {
+                            <li class="page-item">
+                                <a class="page-link" href="@generateUrl(i)">
+                        @i
+                                </a>
+                            </li>
+            }
+            else
+            {
+                        <li class="page-item active" aria-current="page">
+                            <a class="page-link" href="#">@i <span class="sr-only">(current)</span></a>
+                        </li>
+            }
+        }
+
+
+        <!-- Next page link -->
+        @if (HasNext)
+        {
+
+                    <li class="page-item">
+                            <a class="page-link" href="@generateUrl(currentPage +1 )" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+        }
+        else
+        {
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+        }
+    </ul>
+</nav>

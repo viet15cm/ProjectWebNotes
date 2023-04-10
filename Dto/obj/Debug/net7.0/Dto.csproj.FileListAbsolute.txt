@@ -1,0 +1,12 @@
+D:\C#\ProjectWebNotes\Dto\bin\Debug\net7.0\Dto.deps.json
+D:\C#\ProjectWebNotes\Dto\bin\Debug\net7.0\Dto.dll
+D:\C#\ProjectWebNotes\Dto\bin\Debug\net7.0\Dto.pdb
+D:\C#\ProjectWebNotes\Dto\obj\Debug\net7.0\Dto.csproj.AssemblyReference.cache
+D:\C#\ProjectWebNotes\Dto\obj\Debug\net7.0\Dto.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\ProjectWebNotes\Dto\obj\Debug\net7.0\Dto.AssemblyInfoInputs.cache
+D:\C#\ProjectWebNotes\Dto\obj\Debug\net7.0\Dto.AssemblyInfo.cs
+D:\C#\ProjectWebNotes\Dto\obj\Debug\net7.0\Dto.csproj.CoreCompileInputs.cache
+D:\C#\ProjectWebNotes\Dto\obj\Debug\net7.0\Dto.dll
+D:\C#\ProjectWebNotes\Dto\obj\Debug\net7.0\refint\Dto.dll
+D:\C#\ProjectWebNotes\Dto\obj\Debug\net7.0\Dto.pdb
+D:\C#\ProjectWebNotes\Dto\obj\Debug\net7.0\ref\Dto.dll

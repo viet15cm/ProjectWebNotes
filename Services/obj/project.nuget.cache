@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "vTNwedyqDe2MswOhnYN6/+32Z1A0b0IBOnCUWf8C/n+ILG/28iNQtVb7TjwLAuvR6uggHit/Amob1uWayj/F3Q==",
+  "success": true,
+  "projectFilePath": "D:\\C#\\ProjectWebNotes\\Services\\Services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\viet_key\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\viet_key\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

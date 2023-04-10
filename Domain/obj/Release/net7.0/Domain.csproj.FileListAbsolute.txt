@@ -1,0 +1,17 @@
+D:\C#\ProjectWebNotes\Domain\bin\Release\net7.0\Domain.deps.json
+D:\C#\ProjectWebNotes\Domain\bin\Release\net7.0\Domain.dll
+D:\C#\ProjectWebNotes\Domain\bin\Release\net7.0\Domain.pdb
+D:\C#\ProjectWebNotes\Domain\bin\Release\net7.0\Contracts.dll
+D:\C#\ProjectWebNotes\Domain\bin\Release\net7.0\Entities.dll
+D:\C#\ProjectWebNotes\Domain\bin\Release\net7.0\Contracts.pdb
+D:\C#\ProjectWebNotes\Domain\bin\Release\net7.0\Entities.pdb
+D:\C#\ProjectWebNotes\Domain\obj\Release\net7.0\Domain.csproj.AssemblyReference.cache
+D:\C#\ProjectWebNotes\Domain\obj\Release\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\ProjectWebNotes\Domain\obj\Release\net7.0\Domain.AssemblyInfoInputs.cache
+D:\C#\ProjectWebNotes\Domain\obj\Release\net7.0\Domain.AssemblyInfo.cs
+D:\C#\ProjectWebNotes\Domain\obj\Release\net7.0\Domain.csproj.CoreCompileInputs.cache
+D:\C#\ProjectWebNotes\Domain\obj\Release\net7.0\Domain.csproj.CopyComplete
+D:\C#\ProjectWebNotes\Domain\obj\Release\net7.0\Domain.dll
+D:\C#\ProjectWebNotes\Domain\obj\Release\net7.0\refint\Domain.dll
+D:\C#\ProjectWebNotes\Domain\obj\Release\net7.0\Domain.pdb
+D:\C#\ProjectWebNotes\Domain\obj\Release\net7.0\ref\Domain.dll

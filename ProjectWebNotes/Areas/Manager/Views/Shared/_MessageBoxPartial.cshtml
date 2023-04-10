@@ -1,0 +1,12 @@
+﻿@model string 
+@{
+    var mesage = Model;
+}
+@if (mesage != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Thông báo !</strong> @mesage
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+}

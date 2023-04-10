@@ -1,0 +1,17 @@
+D:\C#\ProjectWebNotes\LoggerManager\bin\Release\net7.0\Logger.deps.json
+D:\C#\ProjectWebNotes\LoggerManager\bin\Release\net7.0\Logger.dll
+D:\C#\ProjectWebNotes\LoggerManager\bin\Release\net7.0\Logger.pdb
+D:\C#\ProjectWebNotes\LoggerManager\bin\Release\net7.0\Contracts.dll
+D:\C#\ProjectWebNotes\LoggerManager\bin\Release\net7.0\Entities.dll
+D:\C#\ProjectWebNotes\LoggerManager\bin\Release\net7.0\Contracts.pdb
+D:\C#\ProjectWebNotes\LoggerManager\bin\Release\net7.0\Entities.pdb
+D:\C#\ProjectWebNotes\LoggerManager\obj\Release\net7.0\Logger.csproj.AssemblyReference.cache
+D:\C#\ProjectWebNotes\LoggerManager\obj\Release\net7.0\Logger.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\ProjectWebNotes\LoggerManager\obj\Release\net7.0\Logger.AssemblyInfoInputs.cache
+D:\C#\ProjectWebNotes\LoggerManager\obj\Release\net7.0\Logger.AssemblyInfo.cs
+D:\C#\ProjectWebNotes\LoggerManager\obj\Release\net7.0\Logger.csproj.CoreCompileInputs.cache
+D:\C#\ProjectWebNotes\LoggerManager\obj\Release\net7.0\Logger.csproj.CopyComplete
+D:\C#\ProjectWebNotes\LoggerManager\obj\Release\net7.0\Logger.dll
+D:\C#\ProjectWebNotes\LoggerManager\obj\Release\net7.0\refint\Logger.dll
+D:\C#\ProjectWebNotes\LoggerManager\obj\Release\net7.0\Logger.pdb
+D:\C#\ProjectWebNotes\LoggerManager\obj\Release\net7.0\ref\Logger.dll

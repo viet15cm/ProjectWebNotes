@@ -1,0 +1,42 @@
+﻿@model PostController.BidingPostCategory
+
+@{
+
+    ViewBag.Title = "Chọn gán danh mục.";
+
+    var posts = ViewData["Posts"] as IEnumerable<PostForWithDetailDto>;
+
+    var postTreeView = ViewData["TreeViewPosts"] as List<PostForWithDetailDto>;
+
+
+}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-8" id="tablePosts">
+            @{
+                @await Html.PartialAsync("_GetAllPostPartial", posts)       
+            }
+        </div>
+        <div class="col-md-4">
+            <h2>@ViewBag.Title</h2>
+            <form method="post" asp-action="AddCategory">
+                  
+                  <div class="mb-3">
+                        <label class="form-label" asp-for="@Model.PostCategorys"></label>
+                        <select  id="multiple-select-field"  class="form-select"  asp-for="@Model.PostCategorys"
+                                asp-items="@Model.addCategory">                               
+                        </select>
+                   </div>
+                    <button type="submit"  class="btn btn-primary w-100">Cập nhật</button>
+                </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+
+    @*https://apalfrey.github.io/select2-bootstrap-5-theme/examples/multiple-select/*@
+
+}

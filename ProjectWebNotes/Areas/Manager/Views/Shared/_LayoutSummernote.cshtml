@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Web Site</title>
+</head>
+<body>
+    <div class="container-xl">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/Summernote-cr/popper.min.js"></script>
+    <link href="~/Summernote-cr/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Summernote-cr/bootstrap.min.js"></script>
+   
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

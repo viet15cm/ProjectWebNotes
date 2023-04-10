@@ -1,0 +1,47 @@
+﻿@model PagedList<PostDto>
+@{
+    var statusMessage = TempData["StatusMessage"] as string;
+}
+<h2>Danh sách bài viết</h2>
+ <partial name="_MessageBoxPartial" model="@statusMessage" />
+<table class="table table-dark table-striped table-sm">
+    <thead>
+        <tr>
+           
+            <th scope="col">ID</th>
+            <th scope="col">Tiêu đề</th>
+            <th scope="col">Slug</th>        
+            <th scope="col">Nội dung</th>
+            <th scope="col">Tùy chọn</th>
+        </tr>      
+    </thead>
+      <tbody>
+        @foreach (var item in Model)
+        {
+             <tr>
+              @*<th> @item.Serial</th>*@
+              <th> @item.Id</th>
+              <th> @item.Title</th>
+              <td>@item.Slug</td>
+                <td>
+                    <a asp-action="Contents" asp-route-pageNumber="@Model.CurrentPage" asp-controller="Post" asp-route-id="@item.Id" >
+                        Nội dung
+                    </a>
+                </td>
+              <td>
+                <a asp-action="EditPost" asp-route-pageNumber="@Model.CurrentPage" asp-controller="Post" asp-route-id="@item.Id" >
+                    Sửa
+                </a>
+                |
+                 <a  asp-action="DeletePost"  asp-route-pageNumber="@Model.CurrentPage" asp-controller="Post" asp-route-id="@item.Id" >
+                    Xóa
+                </a>
+                | <a  asp-action="AddItemCategory" asp-route-pageNumber="@Model.CurrentPage" asp-controller="Post" asp-route-id="@item.Id" >
+                    Danh mục
+                </a>
+              </td>
+            </tr>
+        }
+      </tbody>
+   
+</table>

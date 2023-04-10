@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "9s1qg9SngH3uvrN7RNAmgCCrQ7LXCb9rMBuuGrXpzkFThug63xh+RVvgcYm6pm4pnTZW+nQ6Y8sDxpaL9svLYA==",
+  "success": true,
+  "projectFilePath": "D:\\C#\\ProjectWebNotes\\Middleware\\Middleware.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\viet_key\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\viet_key\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\viet_key\\.nuget\\packages\\microsoft.extensions.primitives\\2.2.0\\microsoft.extensions.primitives.2.2.0.nupkg.sha512",
+    "C:\\Users\\viet_key\\.nuget\\packages\\nlog\\5.1.2\\nlog.5.1.2.nupkg.sha512",
+    "C:\\Users\\viet_key\\.nuget\\packages\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",
+    "C:\\Users\\viet_key\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.1\\system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
+    "C:\\Users\\viet_key\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

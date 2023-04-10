@@ -1,0 +1,12 @@
+D:\C#\ProjectWebNotes\Exceptions\bin\Debug\net7.0\Exceptions.deps.json
+D:\C#\ProjectWebNotes\Exceptions\bin\Debug\net7.0\Exceptions.dll
+D:\C#\ProjectWebNotes\Exceptions\bin\Debug\net7.0\Exceptions.pdb
+D:\C#\ProjectWebNotes\Exceptions\obj\Debug\net7.0\Exceptions.csproj.AssemblyReference.cache
+D:\C#\ProjectWebNotes\Exceptions\obj\Debug\net7.0\Exceptions.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\ProjectWebNotes\Exceptions\obj\Debug\net7.0\Exceptions.AssemblyInfoInputs.cache
+D:\C#\ProjectWebNotes\Exceptions\obj\Debug\net7.0\Exceptions.AssemblyInfo.cs
+D:\C#\ProjectWebNotes\Exceptions\obj\Debug\net7.0\Exceptions.csproj.CoreCompileInputs.cache
+D:\C#\ProjectWebNotes\Exceptions\obj\Debug\net7.0\Exceptions.dll
+D:\C#\ProjectWebNotes\Exceptions\obj\Debug\net7.0\refint\Exceptions.dll
+D:\C#\ProjectWebNotes\Exceptions\obj\Debug\net7.0\Exceptions.pdb
+D:\C#\ProjectWebNotes\Exceptions\obj\Debug\net7.0\ref\Exceptions.dll

@@ -1,0 +1,17 @@
+D:\C#\ProjectWebNotes\Services.Abstractions\bin\Debug\net7.0\Services.Abstractions.deps.json
+D:\C#\ProjectWebNotes\Services.Abstractions\bin\Debug\net7.0\Services.Abstractions.dll
+D:\C#\ProjectWebNotes\Services.Abstractions\bin\Debug\net7.0\Services.Abstractions.pdb
+D:\C#\ProjectWebNotes\Services.Abstractions\obj\Debug\net7.0\Services.Abstractions.csproj.AssemblyReference.cache
+D:\C#\ProjectWebNotes\Services.Abstractions\obj\Debug\net7.0\Services.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\ProjectWebNotes\Services.Abstractions\obj\Debug\net7.0\Services.Abstractions.AssemblyInfoInputs.cache
+D:\C#\ProjectWebNotes\Services.Abstractions\obj\Debug\net7.0\Services.Abstractions.AssemblyInfo.cs
+D:\C#\ProjectWebNotes\Services.Abstractions\obj\Debug\net7.0\Services.Abstractions.csproj.CoreCompileInputs.cache
+D:\C#\ProjectWebNotes\Services.Abstractions\obj\Debug\net7.0\Services.Abstractions.csproj.CopyComplete
+D:\C#\ProjectWebNotes\Services.Abstractions\obj\Debug\net7.0\Services.Abstractions.dll
+D:\C#\ProjectWebNotes\Services.Abstractions\obj\Debug\net7.0\refint\Services.Abstractions.dll
+D:\C#\ProjectWebNotes\Services.Abstractions\obj\Debug\net7.0\Services.Abstractions.pdb
+D:\C#\ProjectWebNotes\Services.Abstractions\obj\Debug\net7.0\ref\Services.Abstractions.dll
+D:\C#\ProjectWebNotes\Services.Abstractions\bin\Debug\net7.0\Dto.dll
+D:\C#\ProjectWebNotes\Services.Abstractions\bin\Debug\net7.0\Paging.dll
+D:\C#\ProjectWebNotes\Services.Abstractions\bin\Debug\net7.0\Dto.pdb
+D:\C#\ProjectWebNotes\Services.Abstractions\bin\Debug\net7.0\Paging.pdb

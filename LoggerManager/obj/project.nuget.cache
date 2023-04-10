@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "9MsEIeWsMYisqx2S0KpLVN9bKo9cuekDy8O2QW0Kp/GbksFDfOVP6O5ZLeoWnfu9Cv5Ahoi8u9mkTjTq5QyklA==",
+  "success": true,
+  "projectFilePath": "D:\\C#\\ProjectWebNotes\\LoggerManager\\Logger.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\viet_key\\.nuget\\packages\\nlog\\5.1.2\\nlog.5.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

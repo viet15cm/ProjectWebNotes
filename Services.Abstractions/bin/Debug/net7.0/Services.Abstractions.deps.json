@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Services.Abstractions/1.0.0": {
+        "dependencies": {
+          "Dto": "1.0.0",
+          "Paging": "1.0.0"
+        },
+        "runtime": {
+          "Services.Abstractions.dll": {}
+        }
+      },
+      "Dto/1.0.0": {
+        "runtime": {
+          "Dto.dll": {}
+        }
+      },
+      "Paging/1.0.0": {
+        "runtime": {
+          "Paging.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Services.Abstractions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Dto/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Paging/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

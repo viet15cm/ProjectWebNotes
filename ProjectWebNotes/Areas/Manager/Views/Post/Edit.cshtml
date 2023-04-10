@@ -1,0 +1,62 @@
+﻿@model PostDto
+@{
+
+    ViewBag.Title = "Chỉnh sửa";
+
+    var posts = ViewData["Posts"] as IEnumerable<PostForWithDetailDto>;
+
+    var postTreeView = ViewData["TreeViewPosts"] as List<PostForWithDetailDto>;
+}
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-8" id="tablePosts">
+            @{
+                @await Html.PartialAsync("_GetAllPostPartial", posts)       
+            }
+        </div>
+        <div class="col-md-4">
+            <h2>@ViewBag.Title</h2>
+            <form method="post" asp-action="Edit">
+                <div class="mb-3">
+                <label asp-for="@Model.Title" class="form-label"></label>
+                <input asp-for="@Model.Title"  class="form-control" >
+                <span asp-validation-for="@Model.Title" class="form-text"></span>
+                </div>
+                <div class="mb-3">
+                <label asp-for="@Model.Slug" class="form-label"></label>
+                <input asp-for="@Model.Slug"  class="form-control" >
+                <span asp-validation-for="@Model.Slug" class="form-text"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.PostParentId"></label>
+                    <select class="form-select" aria-label="Default select example" asp-for="@Model.PostParentId"
+                            asp-items="@(new SelectList(postTreeView,"Id","Title"))">
+                                <option value="">Không</option>
+                    </select>
+
+                    <span asp-validation-for="@Model.PostParentId"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.Description"></label>
+                    <textarea rows="6" class="form-control" asp-for="@Model.Description"></textarea>
+                    <span asp-validation-for="@Model.Description"></span>
+                </div>
+
+                    <div class="mb-3">
+                    <label asp-for="@Model.Serial" class="form-label"></label>
+                    <input asp-for="@Model.Serial"  class="form-control" >
+                    <span asp-validation-for="@Model.Serial" class="form-text"></span>
+                </div>
+
+                <div asp-validation-summary="All"></div>
+                <button class="btn btn-sm btn-primary" type="submit">Update</button> |
+                @Html.ActionLink("Quay trở lại danh sách", "Index")
+            </form>
+        </div>
+    </div>
+</div>
+
+

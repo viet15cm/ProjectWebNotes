@@ -1,0 +1,51 @@
+﻿@model PostController.BidingPostCategory
+
+@{
+
+    ViewBag.Title = "Chọn một hoặc nhiều danh mục.";
+
+    var posts = ViewData["Posts"] as PagedList<PostDto>;
+
+    var paging = new Paging()
+            {
+                UrlAction = "Posts",
+                CurrentPage = posts.CurrentPage,
+                TotalPages = posts.TotalPages,
+            };
+
+    var postTreeView = ViewData["TreeViewPosts"] as List<PostForWithDetailDto>;
+
+
+}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-8" id="tablePosts">
+            @{
+                @await Html.PartialAsync("_PostPagingPartial", posts)       
+            }
+            @await Html.PartialAsync("_PaginPartial", paging)
+        </div>
+        <div class="col-md-4">
+            <h2>@ViewBag.Title</h2>
+            <form method="post" asp-action="AddItemCategory" asp-route-pageNumber="@posts.CurrentPage">
+
+                  <div class="mb-3">
+                        <label class="form-label" asp-for="@Model.PostCategorys"></label>
+                        <select  id="multiple-select-field"  class="form-select"  asp-for="@Model.PostCategorys"
+                                asp-items="@Model.addCategory">                               
+                        </select>
+                   </div>
+                    <button type="submit"  class="btn btn-primary w-100">Cập nhật</button>
+                    @Html.ActionLink("Quay trở lại danh sách", "Posts")
+                </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+
+    @*https://apalfrey.github.io/select2-bootstrap-5-theme/examples/multiple-select/*@
+
+}

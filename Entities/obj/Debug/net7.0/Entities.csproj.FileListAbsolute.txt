@@ -1,0 +1,12 @@
+D:\C#\ProjectWebNotes\Entities\bin\Debug\net7.0\Entities.deps.json
+D:\C#\ProjectWebNotes\Entities\bin\Debug\net7.0\Entities.dll
+D:\C#\ProjectWebNotes\Entities\bin\Debug\net7.0\Entities.pdb
+D:\C#\ProjectWebNotes\Entities\obj\Debug\net7.0\Entities.csproj.AssemblyReference.cache
+D:\C#\ProjectWebNotes\Entities\obj\Debug\net7.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\ProjectWebNotes\Entities\obj\Debug\net7.0\Entities.AssemblyInfoInputs.cache
+D:\C#\ProjectWebNotes\Entities\obj\Debug\net7.0\Entities.AssemblyInfo.cs
+D:\C#\ProjectWebNotes\Entities\obj\Debug\net7.0\Entities.csproj.CoreCompileInputs.cache
+D:\C#\ProjectWebNotes\Entities\obj\Debug\net7.0\Entities.dll
+D:\C#\ProjectWebNotes\Entities\obj\Debug\net7.0\refint\Entities.dll
+D:\C#\ProjectWebNotes\Entities\obj\Debug\net7.0\Entities.pdb
+D:\C#\ProjectWebNotes\Entities\obj\Debug\net7.0\ref\Entities.dll

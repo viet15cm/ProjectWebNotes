@@ -1,0 +1,72 @@
+﻿@model CategoryForWithDetailDto
+@{
+    ViewBag.Title = "Xóa";
+
+    var categorys = ViewData["categorys"] as IEnumerable<CategoryForWithDetailDto>;
+
+    var categoryTreeView = ViewData["TreeViewCategorys"] as List<CategoryForWithDetailDto>;
+}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-8">
+            @{
+                @await Html.PartialAsync("_GetAllCategoryPartial", categorys)       
+            }
+        </div>
+        <div class="col-md-4">
+            <h2>@ViewBag.Title</h2>
+            <form method="post" asp-action="Delete">
+               
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </dt>
+
+                    <dd>
+                            @Html.DisplayFor(model => model.Title)
+                    </dd>
+
+                    <dt>
+                            @Html.DisplayNameFor(model => model.Slug)          
+                    </dt>
+
+                    <dd>
+                            @Html.DisplayFor(model => model.Slug)
+                    </dd>
+
+                    <dt>
+                            @Html.DisplayNameFor(model => model.IConFont)
+                    </dt>
+
+                    <dd>
+                            @Html.DisplayFor(model => model.IConFont)
+                    </dd>
+
+                    <dt>
+                            @Html.DisplayNameFor(model => model.Description)
+                    </dt>
+
+                    <dd>
+                            @Html.Raw(Model.Description)
+                    </dd>
+
+                </dl>
+
+                <p>
+                      <div asp-validation-summary="All"></div>
+                       <button type="submit" class="btn btn-sm btn-danger">Xóa</button> |
+                       @Html.ActionLink("Quay trở lại danh sách", "Index")
+                </p>
+            </form>
+           
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+
+   @* @await Html.PartialAsync("_ValidationScriptsPartial")*@
+}
