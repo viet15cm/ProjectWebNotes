@@ -19,3 +19,5 @@ D:\C#\ProjectWebNotes\Middleware\obj\Debug\net7.0\Middleware.pdb
 D:\C#\ProjectWebNotes\Middleware\obj\Debug\net7.0\ref\Middleware.dll
 D:\C#\ProjectWebNotes\Middleware\bin\Debug\net7.0\Paging.dll
 D:\C#\ProjectWebNotes\Middleware\bin\Debug\net7.0\Paging.pdb
+D:\C#\ProjectWebNotes\Middleware\bin\Debug\net7.0\ExtentionLinqEntitys.dll
+D:\C#\ProjectWebNotes\Middleware\bin\Debug\net7.0\ExtentionLinqEntitys.pdb

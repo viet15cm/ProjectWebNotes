@@ -15,3 +15,5 @@ D:\C#\ProjectWebNotes\Contracts\obj\Debug\net7.0\Contracts.pdb
 D:\C#\ProjectWebNotes\Contracts\obj\Debug\net7.0\ref\Contracts.dll
 D:\C#\ProjectWebNotes\Contracts\bin\Debug\net7.0\Paging.dll
 D:\C#\ProjectWebNotes\Contracts\bin\Debug\net7.0\Paging.pdb
+D:\C#\ProjectWebNotes\Contracts\bin\Debug\net7.0\ExtentionLinqEntitys.dll
+D:\C#\ProjectWebNotes\Contracts\bin\Debug\net7.0\ExtentionLinqEntitys.pdb

@@ -9,6 +9,7 @@
       "Contracts/1.0.0": {
         "dependencies": {
           "Entities": "1.0.0",
+          "ExtentionLinqEntitys": "1.0.0",
           "Paging": "1.0.0"
         },
         "runtime": {
@@ -18,6 +19,11 @@
       "Entities/1.0.0": {
         "runtime": {
           "Entities.dll": {}
+        }
+      },
+      "ExtentionLinqEntitys/1.0.0": {
+        "runtime": {
+          "ExtentionLinqEntitys.dll": {}
         }
       },
       "Paging/1.0.0": {
@@ -34,6 +40,11 @@
       "sha512": ""
     },
     "Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ExtentionLinqEntitys/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

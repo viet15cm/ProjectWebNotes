@@ -9,9 +9,8 @@
         <tr>
            
             <th scope="col">ID</th>
-            <th scope="col">Tiêu đề</th>
-            <th scope="col">Slug</th>        
-            <th scope="col">Nội dung</th>
+            <th scope="col">Tiêu đề</th>  
+            <th scope="col"></th>
             <th scope="col">Tùy chọn</th>
         </tr>      
     </thead>
@@ -22,11 +21,8 @@
               @*<th> @item.Serial</th>*@
               <th> @item.Id</th>
               <th> @item.Title</th>
-              <td>@item.Slug</td>
                 <td>
-                    <a asp-action="Contents" asp-route-pageNumber="@Model.CurrentPage" asp-controller="Post" asp-route-id="@item.Id" >
-                        Nội dung
-                    </a>
+                    @Html.ActionLink("Chi tiết", "detail" , "post" , new{id = item.Id})
                 </td>
               <td>
                 <a asp-action="EditPost" asp-route-pageNumber="@Model.CurrentPage" asp-controller="Post" asp-route-id="@item.Id" >
@@ -35,9 +31,6 @@
                 |
                  <a  asp-action="DeletePost"  asp-route-pageNumber="@Model.CurrentPage" asp-controller="Post" asp-route-id="@item.Id" >
                     Xóa
-                </a>
-                | <a  asp-action="AddItemCategory" asp-route-pageNumber="@Model.CurrentPage" asp-controller="Post" asp-route-id="@item.Id" >
-                    Danh mục
                 </a>
               </td>
             </tr>

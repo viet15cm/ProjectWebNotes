@@ -1,20 +1,22 @@
-﻿@model PostDto
+﻿@model PostsFWDImagesDto
 
 @{
-    Layout = "~/Areas/Manager/Views/Shared/_LayoutSummernote.cshtml"; 
+    Layout = "~/Areas/Manager/Views/Shared/_LayoutSummernote.cshtml";
+
+    var statusMessage = TempData["StatusMessage"] as string;
+
+    string id = "Content";
 }
 
 <div class="container">
+      <partial name="_MessageBoxPartial" model="@statusMessage" />
     <div class="row">
-        <div class="col-md-5">
-             <h5>Cập nhật nội dung bào viết --@Model.Title--</h5>
+        <div class="col-md-5 pb-3 pt-3 ">
 
-                <form method="post" >
-                    @Html.HiddenFor(x => x.Slug)
-                    @Html.HiddenFor(x => x.Serial)
-                    @Html.HiddenFor(x => x.PostParentId)
-                    @Html.HiddenFor(x => x.Prime)
-                    @Html.HiddenFor(x => x.Title)
+
+             <h5>Cập nhật nội dung bài viết --@Model.Title--</h5>
+
+                <form method="post" asp-route-id="@Model.Id">
                 <div class="mb-3">
                     <label class="form-label" asp-for="@Model.DateUpdated"></label>
                     <input class="form-control" asp-for="@Model.DateUpdated" />
@@ -22,15 +24,15 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label" asp-for="@Model.Content"></label>
-                    <textarea rows="4" class="form-control" asp-for="@Model.Content"></textarea>
+                    <textarea id="Content" name="Content" rows="4" class="form-control" asp-for="@Model.Content"></textarea>
                     <span asp-validation-for="@Model.Content"></span>
                 </div>
-                <button type="submit">Lưu</button>
+
+                <button class="btn btn-sm btn-info" type="submit">Cập nhật</button>
+                @Html.ActionLink("Quay trở lại bài viết", "detail", "post", new{id = Model.Id})
                 </form>
-
-
         </div>
-        <div class="col-nd-7">
+        <div class="col-md-7 pb-3 pt-3 ">
             <h5>Danh sách hình ảnh trong bài viết --@Model.Title-- </h5>
         </div>
     </div>
@@ -38,7 +40,7 @@
 
 @section Scripts{
 
-    <partial name="_Summernote"/>
+     <partial name="_Summernote" model="@id"/>
 
     @await Html.PartialAsync("_ValidationScriptsPartial")
 

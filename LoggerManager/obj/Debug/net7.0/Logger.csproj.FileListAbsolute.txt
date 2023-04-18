@@ -17,3 +17,5 @@ D:\C#\ProjectWebNotes\LoggerManager\obj\Debug\net7.0\Logger.pdb
 D:\C#\ProjectWebNotes\LoggerManager\obj\Debug\net7.0\ref\Logger.dll
 D:\C#\ProjectWebNotes\LoggerManager\bin\Debug\net7.0\Paging.dll
 D:\C#\ProjectWebNotes\LoggerManager\bin\Debug\net7.0\Paging.pdb
+D:\C#\ProjectWebNotes\LoggerManager\bin\Debug\net7.0\ExtentionLinqEntitys.dll
+D:\C#\ProjectWebNotes\LoggerManager\bin\Debug\net7.0\ExtentionLinqEntitys.pdb

@@ -1,14 +1,13 @@
 ﻿using ATMapper;
-using AutoMapper;
 using Contracts;
 using Dto;
 using Entities.Models;
 using Exceptions;
+using ExtentionLinqEntitys;
+using Microsoft.EntityFrameworkCore;
 using Services.Abstractions;
-using System.Linq.Expressions;
 using System.Reflection;
-using System.Security.Cryptography.X509Certificates;
-using System.Threading;
+
 
 namespace Services
 {
@@ -29,7 +28,7 @@ namespace Services
             {
                 categoryDto.Id = Guid.NewGuid().ToString();
             }
-
+            
             //if (categoryDto.DateUpdated == null)
             //{
             //    categoryDto.DateUpdated = _httpClient.GetNistTime();
@@ -52,7 +51,9 @@ namespace Services
                 throw new CategoryIdNullException("Không tải được Id danh Mục.");
             }
 
-            var category = await _repositoryManager.Category.GetByIdWithDetailAsync(categoryId, cancellationToken);
+            var category = await _repositoryManager
+                .Category
+                .GetByIdWithDetailAsync(categoryId, ExpLinqEntity<Category>.ResLinqEntity(ExpExpressions.ExtendInclude<Category>(x => x.Include(x => x.PostCategories).Include(x => x.CategoryChildren))));
 
             if (category.CategoryChildren?.Count > 0)
             {
@@ -105,8 +106,11 @@ namespace Services
                                         CategoryForUpdateDto categoryForUpdate , 
                                         CancellationToken cancellationToken)
         {
-
-            var category = await _repositoryManager.Category.GetByIdWithDetailAsync(idCategory, cancellationToken);
+            var category = await _repositoryManager
+                .Category
+                .GetByIdWithDetailAsync(idCategory,
+                                        ExpLinqEntity<Category>.ResLinqEntity(ExpExpressions.ExtendInclude<Category>(x => x.Include(x => x.PostCategories).ThenInclude(x => x.Post))),
+                                        cancellationToken);
 
             if (category == null)
             {
@@ -158,19 +162,14 @@ namespace Services
         }
 
 
-        public async Task<IEnumerable<CategoryForWithDetailDto>> GetAllWithDetailAsync(CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<Category>> GetAllWithDetailAsync(IExpLinqEntity<Category> expLinqEntity, CancellationToken cancellationToken = default)
         {
-            var data = await _repositoryManager.Category.GetAllWithDetailAsync(cancellationToken);
-
-            return ObjectMapper.Mapper.Map<IEnumerable<CategoryForWithDetailDto>>(data);
+            return await _repositoryManager.Category.GetAllWithDetailAsync(expLinqEntity);
         }
 
-        public async Task<CategoryForWithDetailDto> GetByIdWithDetailAsync(string categoryId, CancellationToken cancellationToken = default)
+        public async Task<Category> GetByIdWithDetailAsync(string categoryId, IExpLinqEntity<Category> expLinqEntity, CancellationToken cancellationToken = default)
         {
-            var data = await _repositoryManager.Category.CategoryInclue(categoryId , new Expression<Func<Category, object>>[] { c => c.ParentCategoryId, c => c.PostCategories });
-            
-            return ObjectMapper.Mapper.Map<CategoryForWithDetailDto>(data);
+            return await _repositoryManager.Category.GetByIdWithDetailAsync(categoryId, expLinqEntity);
         }
-
     }
 }

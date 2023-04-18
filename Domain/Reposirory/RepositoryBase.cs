@@ -1,13 +1,13 @@
-﻿using System.Collections.Generic;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 using Contracts;
 using Domain.Reposirory;
-using Entities.Models;
+using ExtentionLinqEntitys;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
 
 namespace Domain.Repository
 {
-    public abstract  class RepositoryBase<T> : IRepositoryBase<T> where T : class
+    public abstract class RepositoryBase<T> : IRepositoryBase<T> where T : class
     {
         protected RepositoryContext RepositoryContext { get; set; }
         public RepositoryBase(RepositoryContext repositoryContext)
@@ -15,7 +15,7 @@ namespace Domain.Repository
             RepositoryContext = repositoryContext;
         }
         public IQueryable<T> FindAll() => RepositoryContext.Set<T>().AsNoTracking();
-    
+
         public IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression) =>
             RepositoryContext.Set<T>().Where(expression).AsNoTracking();
         public void Create(T entity) => RepositoryContext.Set<T>().Add(entity);
@@ -27,12 +27,88 @@ namespace Domain.Repository
             DbSet<T> dbSet = RepositoryContext.Set<T>();
 
             IQueryable<T> query = null;
-            foreach (var includeExpression in includeExpressions)
+            if (includeExpressions != null)
             {
-                query = dbSet.Include(includeExpression);
-            }
+                foreach (var includeExpression in includeExpressions)
+                {
+                    query = dbSet.Include(includeExpression);
 
+                }
+
+            }
             return query ?? dbSet;
         }
+
+        // phương pháp tối ưu hay nhất
+        public IQueryable<T> Queryable(IExpLinqEntity<T> expLinqEntity = null)
+        {
+            IQueryable<T> query = RepositoryContext.Set<T>();
+
+            if (expLinqEntity != null)
+            {
+                
+                if (expLinqEntity.DisableTracking())
+                {
+                    query = query.AsNoTracking();
+                }
+
+                if (expLinqEntity.Includes() != null)
+                {
+                    foreach(var include in expLinqEntity.Includes())
+                            query = include(query);
+                }
+
+                if (expLinqEntity.OrderBy() != null)
+                {
+                    query = expLinqEntity.OrderBy()(query);
+                }
+            }
+
+            return query;
+
+        }
+
+        
+
+        //public IQueryable<T> Queryable(IExpLinqEntity<T> expLinqEntity = null)
+        //{
+        //    IQueryable<T> query = RepositoryContext.Set<T>();
+
+        //    if (expLinqEntity != null)
+        //    {
+        //        var inclue = typeof(ExpLinqEntity<T>)
+        //            .GetProperty("Include")
+        //            .GetValue(expLinqEntity)
+        //            as Func<IQueryable<T>, IIncludableQueryable<T, object>>;
+        //        var disableTracking = typeof(ExpLinqEntity<T>)
+        //            .GetProperty("DisableTracking")
+        //            .GetValue(expLinqEntity);
+
+        //        var orderBy = typeof(ExpLinqEntity<T>)
+        //            .GetProperty("OrderBy")
+        //            .GetValue(expLinqEntity) as Func<IQueryable<T>, IOrderedQueryable<T>>;
+
+        //        if ((bool)disableTracking)
+        //        {
+        //            query = query.AsNoTracking();
+        //        }
+
+        //        if (orderBy != null)
+        //        {
+        //            query = orderBy(query);
+        //        }
+
+        //        if (inclue != null)
+        //        {
+        //            query = inclue(query);
+        //        }
+
+        //    }
+
+        //    return query;
+
+        //}
+
+
     }
 }

@@ -1,9 +1,10 @@
-﻿using Contracts;
+﻿
+using Contracts;
 using Domain.Reposirory;
+using Entities;
 using Entities.Models;
+using ExtentionLinqEntitys;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Linq.Expressions;
 
 namespace Domain.Repository
 {
@@ -13,7 +14,6 @@ namespace Domain.Repository
         {
         }
 
-
         public void Edit(Category category)
         {
             Update(category);
@@ -21,22 +21,16 @@ namespace Domain.Repository
 
         public async Task<IEnumerable<Category>> GetAllAsync(CancellationToken cancellationToken = default)
         {
-          
-            var categorys =  await FindAll().
-                                OrderBy(x => x.Serial).
-                                ToListAsync();
+            var categorys = await FindAll()
+                                   .OrderBy(x => x.Serial).
+                                   ToListAsync();
 
             return categorys;
-
         }
 
-        public async Task<IEnumerable<Category>> GetAllWithDetailAsync(CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<Category>> GetAllWithDetailAsync(IExpLinqEntity<Category> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
-            var categorys = await FindAll()
-                                  .OrderBy(x => x.Serial)
-                                  .Include(c => c.PostCategories)      
-                                  .ToListAsync();
-            return categorys;
+            return await Queryable(expLinqEntity).ToListAsync();
         }
 
         public async Task<Category> GetByIdAsync(string categoryId, CancellationToken cancellationToken = default)
@@ -44,39 +38,16 @@ namespace Domain.Repository
             return await FindByCondition(x => x.Id == categoryId).FirstOrDefaultAsync();
         }
 
-        public async Task<Category> GetByIdWithDetailAsync(string categoryId, CancellationToken cancellationToken = default)
+        public async Task<Category> GetByIdWithDetailAsync(string categoryId, IExpLinqEntity<Category> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
-            var category = await FindAll()                            
-                                .Include(c => c.PostCategories)
-                                .FirstOrDefaultAsync(c => c.Id == categoryId);
-            return category;
+            var c = ExpLinqEntity<Category>.ResLinqEntity(ExpExpressions.ExtendInclude<Category>(x => x.Include(x => x.PostCategories).ThenInclude(x => x.Post)));
+
+            return await Queryable(expLinqEntity).Where(x => x.Id == categoryId).FirstOrDefaultAsync();
         }
 
         public void Insert(Category category)
         {
-
             Create(category);
-        }
-
-        public async Task<Category> CategoryInclue(string categoryId, Expression<Func<Category, object>>[] includeExpressions = default)
-        {
-            DbSet<Category> dbSet = RepositoryContext.Set<Category>();
-
-            IQueryable<Category> query = null;
-            if (includeExpressions != null)
-            {
-                foreach (var includeExpression in includeExpressions)
-                {
-                    query = dbSet.Include(includeExpression);
-                }
-            }
-
-            if (query != null)
-            {
-                return await query.FirstOrDefaultAsync(x => x.Id == categoryId);
-            }
-
-            return await dbSet?.FirstOrDefaultAsync(x => x.Id == categoryId);
         }
 
         public void Remove(Category category)
@@ -84,6 +55,6 @@ namespace Domain.Repository
             Delete(category);
         }
 
-        
+      
     }
 }

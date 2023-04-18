@@ -1,16 +1,18 @@
-﻿@model PostForWithDetailDto
+﻿@model Post
 @{
     ViewBag.Title = "Chi tiết bài Post";
 
-    var posts = ViewData["posts"] as IEnumerable<PostForWithDetailDto>;
+    var posts = ViewData["posts"] as IEnumerable<Post>;
+
+    var statusMessage = TempData["StatusMessage"] as string;
 
 }
 
 <div class="container">
+    <partial name="_MessageBoxPartial" model="@statusMessage" />
     <div>
             <h2>@ViewBag.Title</h2>
-            <form method="post" asp-action="Delete">
-
+       
                 <dl>
                     <dt>
                         @Html.DisplayNameFor(model => model.Title)
@@ -42,34 +44,191 @@
                     </dt>
 
                     <dd>
-                          <a asp-action="Contents" asp-route-id="@Model.Id">
-                             Cập nhật nội dung.
-                          </a>
-                    </dd
+                          @Html.ActionLink("Cập nhật", "contents", "post", new {id = Model.Id})
+                    </dd>
 
 
-                   @* <dt>
-                           @Html.DisplayNameFor(model => model.Images)
-                    </dt>*@
+                    <dt>
+                          @Html.ActionLink("Ảnh", "image", "pots", new {id = Model.Id})
+                    </dt>
 
                     <dd>
-                          <a asp-action="Contents" asp-route-id="@Model.Id">
-                              Cập nhật ảnh
-                          </a>
+                          <div>
+                              @for (int i = 0; i < 10; i++)
+                              {
+                                    <img src="" style="width: 50px; height: 50px;" />
+                              }
+                              
+                          </div>
+                    </dd>
+
+                     <dt>
+                          @Html.ActionLink("Nội dung phân cấp", "createcontent", "post", new {id = Model.Id})
+                    </dt>
+
+                    <dd>
+                            @if (Model.Contents?.Count > 0)
+                            {
+                                <ul>
+                                    
+                                    @{
+                                      await RenderContents(Model.Contents.Where(x => x.ParentContent is null).ToList());
+                                    } 
+                                </ul>
+                               
+
+                            }else
+                            {
+                               <a>Trống</a>
+                            }
+                    </dd>
+
+
+                    <dt>
+                          @Html.ActionLink("Danh mục hiện tại", "AddItemCategory", "post", new {id = Model.Id})
+                    </dt>
+
+                    <dd>
+                        @if (Model.PostCategories?.Count >0)
+                        {
+                            <ul>
+                                @foreach (var item in Model.PostCategories)
+                                {
+
+                                      <li>
+                                        @item.Category.Title
+                                      </li>
+                                }
+                            </ul>
+                           
+                        }
+                            
+                    </dd>
+
+                    <dt>
+                        Nhánh
+                    </dt>
+
+                    <dd>
+                        @if (Model.PostParent != null)
+                        {
+                            <ul>
+                                  <li>@Html.ActionLink(Model.PostParent.Title , "detail", "post", new {id = Model.PostParent.Id})
+                                  
+                                  
+                                        @if (Model.PostParent?.PostChilds.Count > 0)
+                                        {  
+                                            <ul>
+                                                @{
+                                                    await RenderPosts(Model.PostParent.PostChilds);
+                                                }
+                                            </ul>
+
+
+                                        }
+                                  
+                                  </li>
+                                
+                                 
+                            </ul>
+                        }
+                        else
+                        {
+                                <ul>
+                                      <li>@Html.ActionLink(Model.Title , "detail", "post", new {id = Model.Id})
+
+                                            @if (Model.PostChilds.Count > 0)
+                                            {
+                                                <ul>
+                                                    @{
+                                                        await RenderPosts(Model.PostChilds);
+                                                    }
+                                                 </ul>
+
+                                            }   
+
+                                       </li>
+                                </ul>
+                        }
                     </dd>
 
                 </dl>
-
                 <p>
-                    <div asp-validation-summary="All"></div>
-                    <button type="submit" class="btn btn-sm btn-danger">Xóa</button> |
-                    @Html.ActionLink("Quay trở lại danh sách", "Index")
+                    @Html.ActionLink("Quay trở lại danh sách", "Index", "post")
                 </p>
-            </form>
-
-
     </div>
 </div>
+
+
+
+@{
+
+        async Task RenderPosts(ICollection<Post> posts)
+        {
+            @foreach (var item in posts)
+            {
+                @if (item.PostChilds?.Count < 0)
+                {
+                    <li>
+                        @Html.ActionLink(item.Title , "detail", "post", new {id = item.Id})
+                    </li>
+                }
+                else
+                {
+                    <li>
+                        @Html.ActionLink(item.Title , "detail", "post", new {id = item.Id})
+
+                            <ul>
+
+                                @if (item.PostChilds?.Count > 0)
+                                {
+
+                                 await RenderPosts(item.PostChilds);
+
+                                }
+
+                            </ul>
+                    </li>
+
+                }
+            }
+        }
+
+
+        async Task RenderContents(ICollection<Content> contents)
+        {
+            @foreach (var item in contents)
+            {
+                @if (item.ContentChildrens?.Count < 0)
+                {
+                    <li>
+                       @Html.ActionLink(item.Title , "Edit", "Content", new {id = Model.Id , idcontent = item.Id})
+                    </li>
+                }
+                else
+                {
+                    <li>
+                        @Html.ActionLink(item.Title , "Edit", "Content", new {id = Model.Id , idcontent = item.Id})
+
+                          <ul>
+
+                            @if (item.ContentChildrens?.Count > 0)
+                            {
+
+                                await RenderContents(item.ContentChildrens);
+
+                            }
+
+                          </ul>
+                    </li>
+
+                }
+
+            }
+
+   
+        }
+}
 
 @section Scripts {
 

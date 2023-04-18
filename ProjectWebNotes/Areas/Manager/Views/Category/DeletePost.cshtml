@@ -2,21 +2,20 @@
 @{
     ViewBag.Title = "Xóa";
 
-    var posts = ViewData["posts"] as IEnumerable<PostForWithDetailDto>;
-
-  }
+    var category = ViewData["category"] as CategoryBranchPosts;    
+}
 
 <div class="container">
 
     <div class="row">
         <div class="col-md-8">
             @{
-                @await Html.PartialAsync("_GetAllPostPartial", posts)       
+                @await Html.PartialAsync("_GetPostBranchPartial", category)       
             }
         </div>
         <div class="col-md-4">
             <h2>@ViewBag.Title</h2>
-            <form method="post" asp-action="Delete">
+            <form method="post" asp-route-id="@category.Category.Id" asp-route-postid="@Model.Id">
 
                 <dl>
                     <dt>
@@ -49,7 +48,7 @@
                 <p>
                       <div asp-validation-summary="All"></div>
                        <button type="submit" class="btn btn-sm btn-danger">Xóa</button> |
-                    @Html.ActionLink("Quay trở lại danh sách", "Index")
+                    @Html.ActionLink("Quay trở lại danh sách", "index", "category")
                 </p>
             </form>
 

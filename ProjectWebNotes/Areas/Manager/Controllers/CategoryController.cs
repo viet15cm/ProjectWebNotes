@@ -1,5 +1,10 @@
-﻿using Dto;
+﻿using ATMapper;
+using Dto;
+using Entities.Models;
+using ExtentionLinqEntitys;
+using Microsoft.AspNetCore.JsonPatch.Internal;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using ProjectWebNotes.Areas.Manager.Models;
 using Services.Abstractions;
@@ -19,101 +24,49 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         {
         }
 
-       
-        //Hàm phụ
+        
         [NonAction]
-        private void CreateTreeViewCategorySeleteItems(IEnumerable<CategoryForWithDetailDto> categoryTreeLayerDtos 
-                                              ,List<CategoryForWithDetailDto> des,
-                                               int leve)
+        async Task<Category> GetByIdCategoy(string id)
         {
 
-            foreach (var category in categoryTreeLayerDtos)
+            Category category;
+
+            // Phục hồi categories từ Memory cache, không có thì truy vấn Db
+            if (!_cache.TryGetValue(_KeyCategory, out category))
             {
-                string perfix = string.Concat(Enumerable.Repeat("-", leve));
-
-                des.Add(new CategoryForWithDetailDto()
-                {
-                    Id = category.Id,
-                    Title = perfix + category.Title
-                });
-
-                if (category.CategoryChildren?.Count > 0)
-                {
-
-                    CreateTreeViewCategorySeleteItems(category.CategoryChildren, des, leve + 1);
-                    
-                }
+               
+                category = await _serviceManager.CategoryService.GetByIdWithDetailAsync(id);
+                category.PostCategories = (await _serviceManager.PostCategoryService.GetByIdCategoryWithDetailAsync(id,
+                    ExpLinqEntity<PostCategory>.ResLinqEntity(ExpExpressions.ExtendInclude<PostCategory>(x => x.Include(x => x.Post))))).ToList();
+                // Thiết lập cache - lưu vào cache             
+                var cacheEntryOptions = new MemoryCacheEntryOptions()
+                    .SetSlidingExpiration(TimeSpan.FromMinutes(300));
+                _cache.Set(_KeyCategory, category, cacheEntryOptions);
             }
 
-        }
+            category = _cache.Get(_KeyCategory) as Category;
 
-        //Hàm phụ
-        [NonAction]
-        private void CreateTreeViewPostSeleteItems(List<PostForWithDetailDto> postTreeLayerDtos
-                                              , List<PostForWithDetailDto> des
-                                               ,List<PostForWithDetailDto> postTreeView,
-                                               int leve)
-        {
-
-            foreach (var post in postTreeLayerDtos)
+            if (category.Id != id)
             {
-                string perfix = string.Concat(Enumerable.Repeat("-", leve));
+                category = await _serviceManager.CategoryService.GetByIdWithDetailAsync(id);
+                category.PostCategories = (await _serviceManager.PostCategoryService.GetByIdCategoryWithDetailAsync(id,
+                   ExpLinqEntity<PostCategory>.ResLinqEntity(ExpExpressions.ExtendInclude<PostCategory>(x => x.Include(x => x.Post))))).ToList();
 
-                des.Add(new PostForWithDetailDto()
-                {
-                    Id = post.Id,
-                    Title = perfix + post.Title
-                });
-
-                postTreeView.Add(post);
-
-                if (post.PostChilds?.Count > 0)
-                {
-
-                    CreateTreeViewPostSeleteItems(post.PostChilds.ToList(), des , postTreeView, leve + 1);
-
-                }
+                // Thiết lập cache - lưu vào cache             
+                var cacheEntryOptions = new MemoryCacheEntryOptions()
+                    .SetSlidingExpiration(TimeSpan.FromMinutes(300));
+                _cache.Set(_KeyCategory, category, cacheEntryOptions);
             }
 
+            return category;
         }
-
-        //[NonAction]
-        //async Task<CategoryDto> GetCategoyDto(string id)
-        //{
-
-        //    CategoryDto category;
-
-        //    // Phục hồi categories từ Memory cache, không có thì truy vấn Db
-        //    if (!_cache.TryGetValue(_KeyCategory, out category))
-        //    {
-        //        category = await _serviceManager.CategoryService.GetByIdAsync(id);
-
-        //        // Thiết lập cache - lưu vào cache             
-        //        var cacheEntryOptions = new MemoryCacheEntryOptions()
-        //            .SetSlidingExpiration(TimeSpan.FromMinutes(300));
-        //        _cache.Set(_KeyCategory, category, cacheEntryOptions);
-        //    }
-
-        //     category = _cache.Get(_KeyCategory) as CategoryDto;
-
-        //    if (category.Id != id) 
-        //    {
-        //        category = await _serviceManager.CategoryService.GetByIdAsync(id);
-        //        // Thiết lập cache - lưu vào cache             
-        //        var cacheEntryOptions = new MemoryCacheEntryOptions()
-        //            .SetSlidingExpiration(TimeSpan.FromMinutes(300));
-        //        _cache.Set(_KeyCategory, category, cacheEntryOptions);
-        //    }
-
-        //    return category;
-        //}
 
 
         [NonAction]
-        async Task <IEnumerable<CategoryForWithDetailDto>> GetAllTreeViewCategories()
+        async Task <IEnumerable<Category>> GetAllTreeViewCategories()
         {
 
-            IEnumerable<CategoryForWithDetailDto> categories;
+            IEnumerable<Category> categories;
 
 
             // Phục hồi categories từ Memory cache, không có thì truy vấn Db
@@ -127,7 +80,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
                 _cache.Set(_KeyListCatgorys, categories, cacheEntryOptions);
             }
             
-            categories = _cache.Get(_KeyListCatgorys) as IEnumerable<CategoryForWithDetailDto>;
+            categories = _cache.Get(_KeyListCatgorys) as IEnumerable<Category>;
             
             return categories;
         }
@@ -143,9 +96,9 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             cateforys = TreeViews.GetCategoryChierarchicalTree(cateforys);
             
             ViewData["categorys"] = cateforys;
-            var des = new List<CategoryForWithDetailDto>();
+            var des = new List<Category>();
 
-            CreateTreeViewCategorySeleteItems(cateforys, des, 0);
+            TreeViews.CreateTreeViewCategorySeleteItems(cateforys, des, 0);
 
             ViewData["TreeViewCategorys"] = des;
             return View(new CategoryForCreationDto());
@@ -164,9 +117,9 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
                 ViewData["categorys"] = treeViewcategories;
 
-                var des = new List<CategoryForWithDetailDto>();
+                var des = new List<Category>();
 
-                CreateTreeViewCategorySeleteItems(treeViewcategories, des, 0);
+                TreeViews.CreateTreeViewCategorySeleteItems(treeViewcategories, des, 0);
 
                 ViewData["TreeViewCategorys"] = des;
 
@@ -183,27 +136,6 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             
         }
 
-        public void FindTreeViewCategory(List<CategoryForWithDetailDto> categorys , string id , CategoryForWithDetailDto categoryskip)
-        {
-
-            foreach (var item in categorys)
-            {
-                if (item.Id == id)
-                {
-                    categoryskip = item;          
-                }
-
-                if (item.CategoryChildren?.Count > 0)
-                {
-                    FindTreeViewCategory(item.CategoryChildren.ToList(), id, categoryskip);
-                }
-            }
-        }
-
-        public void SkipTreeViewCategory(CategoryForWithDetailDto categoryskip)
-        {
-
-        }
 
         [HttpGet]
         public async Task<IActionResult> Edit(string id)
@@ -214,9 +146,9 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             
             ViewData["categorys"] = treeViewcategories;
 
-            var des = new List<CategoryForWithDetailDto>();
+            var des = new List<Category>();
 
-            CreateTreeViewCategorySeleteItems(treeViewcategories, des, 0);
+            TreeViews.CreateTreeViewCategorySeleteItems(treeViewcategories, des, 0);
 
             ViewData["TreeViewCategorys"] = des;
 
@@ -243,9 +175,9 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
                 ViewData["categorys"] = treeViewcategories;
 
                
-                var des = new List<CategoryForWithDetailDto>();
+                var des = new List<Category>();
 
-                CreateTreeViewCategorySeleteItems(treeViewcategories, des, 0);
+                TreeViews.CreateTreeViewCategorySeleteItems(treeViewcategories, des, 0);
 
                 ViewData["TreeViewCategorys"] = des;
 
@@ -287,69 +219,34 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
         }
 
-        //public List<CategoryForWithDetailDto> listcagory()
-        //{
-        //    var post = new List<CategoryForWithDetailDto>();
-        //    for (int i = 0; i <= 2000; i++)
-        //    {
 
-        //        var postdata = new CategoryForWithDetailDto()
-        //        {
-        //            Id = i.ToString(),
-        //            Slug = "slug " + i.ToString(),
-        //            Title = "Tieu de " + i.ToString(),
-        //            ParentCategoryId = random(i)
-        //        };
+        async Task<List<Post>> RunView(string id)
+        {
+            var category = await GetByIdCategoy(id);
 
-        //        if (i% 2 == 0)
-        //        {
-        //            postdata.ParentCategoryId = null; 
-        //        }
+            var listPostWithDetails = category.PostCategories.Select(c => c.Post).ToList();
 
-        //        post.Add(postdata);
-        //    }
+            var outPut = listPostWithDetails;
 
-        //    return post;
-        //}
+            listPostWithDetails = TreeViews.GetPostChierarchicalTree(listPostWithDetails);
 
-        //string random(int i)
-        //{
-        //    while (true)
-        //    {
-        //        Random rd = new Random();
-        //        var data = rd.Next(0, 2000);
+            var categoryBrpost = new CategoryBranchPosts(ObjectMapper.Mapper.Map<CategoryDto>(category), ObjectMapper.Mapper.Map<List<PostFWDetailChilds>>(listPostWithDetails));
 
-        //        if (data != i)
-        //        {
-        //            return data.ToString();
-        //        }
+            ViewData["category"] = categoryBrpost;
 
-        //    }        
-        //}
+            var des = new List<PostSelectDto>();
+
+            TreeViews.CreateTreeViewPostSeleteItems(listPostWithDetails, des, 0);
+
+            ViewData["SeletePosts"] = des;
+
+            return outPut;
+        }
 
         [HttpGet]
         public async Task<IActionResult> Posts([FromRoute] string id)
         {
-            var category = await _serviceManager.CategoryService.GetByIdWithDetailAsync(id);
-
-            category.PostCategories = (await _serviceManager.PostCategoryService.GetByIdCategoryWithDetailAsync(category.Id)).ToList();
-
-            var listPostWithDetails = category.PostCategories.Select(c => c.Post).ToList();
-
-            listPostWithDetails = TreeViews.GetPostChierarchicalTree(listPostWithDetails);
-
-            ViewData["category"] = category;
-
-            ViewData["treeViewPost"] = listPostWithDetails;
-
-            var des = new List<PostForWithDetailDto>();
-
-            var treeViewPost = new List<PostForWithDetailDto>();
-
-            CreateTreeViewPostSeleteItems(listPostWithDetails, des, treeViewPost, 0);
-
-            ViewData["SeletePosts"] = des;
-
+            await RunView(id);
             return View(new PostForCreationDto());
         }
 
@@ -359,99 +256,97 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             if (!ModelState.IsValid)
             {
-                var category = await _serviceManager.CategoryService.GetByIdWithDetailAsync(id);
-
-                ViewData["category"] = category;
-
-                var listPostWithDetails = new List<PostForWithDetailDto>();
-
-                foreach (var item in category.PostCategories)
-                {
-
-                    listPostWithDetails.Add(item.Post);
-                }
-
-                var des = new List<PostForWithDetailDto>();
-
-                 var treeViewPost = new List<PostForWithDetailDto>();
-
-                CreateTreeViewPostSeleteItems(listPostWithDetails, des, treeViewPost, 0);
-
-                return View(postForCreationDto);
+                await RunView(id);
+                return View("Posts", postForCreationDto);
             }
 
             var post = await _serviceManager.PostService.CreateAsync(postForCreationDto, id);
 
-
             StatusMessage = $"Thêm thành bài viết #{post.Title}#";
+
+            _cache.Remove(_KeyCategory);
 
             return RedirectToAction("Posts", new { id = id });
         }
 
 
         [HttpGet]
-        public async Task<IActionResult> EditPost([FromRoute] string id, [FromQuery] string idpost)
+        public async Task<IActionResult> EditPost([FromRoute] string id, [FromQuery] string postid)
         {
-            var category = await _serviceManager.CategoryService.GetByIdWithDetailAsync(id);
 
-            ViewData["category"] = category;
+            var listPostbra =  await RunView(id);
 
-            var listPostWithDetails = new List<PostForWithDetailDto>();
+            var postEdit = listPostbra.Where(p => p.Id == postid).FirstOrDefault();
 
-            foreach (var item in category.PostCategories)
+            if (postEdit is null)
             {
-                listPostWithDetails.Add(item.Post);
+                return RedirectToAction("Posts", new {id= id});
             }
 
-            var des = new List<PostForWithDetailDto>();
+            var postDto = ObjectMapper.Mapper.Map<PostDto>(postEdit);
 
-            var treeViewPost = new List<PostForWithDetailDto>();
-            
-            CreateTreeViewPostSeleteItems(listPostWithDetails, des, treeViewPost, 0);
-
-            ViewData["TreeViewPosts"] = des;
-
-            var postEdit = treeViewPost.Where(p => p.Id == idpost).FirstOrDefault();
-
-            ViewData["postid"] = postEdit.Id;
-
-            return View(postEdit);
+            return View(postDto);
         }
 
         [HttpPost]
         public async Task<IActionResult> EditPost(
             [FromForm] PostForUpdateDto postForUpdateDto,
             [FromRoute] string id,
-            [FromQuery] string idpost)
+            [FromQuery] string postid)
         {
             if (!ModelState.IsValid)
             {
-                var category = await _serviceManager.CategoryService.GetByIdWithDetailAsync(id);
+                var listPostbra = await RunView(id);
 
-                ViewData["category"] = category;
+                var postEdit = listPostbra.Where(p => p.Id == postid).FirstOrDefault();
 
+                if (postEdit is null)
+                {
+                    return RedirectToAction("Posts", new { id = id });
+                }
 
-                var listPostWithDetails = category.PostCategories.Select(pc => pc.Post).ToList();
-             
-                var des = new List<PostForWithDetailDto>();
+                var postDto = ObjectMapper.Mapper.Map<PostDto>(postEdit);
 
-                var treeViewPost = new List<PostForWithDetailDto>();
-                CreateTreeViewPostSeleteItems(listPostWithDetails, des, treeViewPost , 0);
-
-                ViewData["TreeViewPosts"] = des;
-
-                ViewData["postid"] = idpost;
-
-                return View(postForUpdateDto);
+                return View(postDto);
             }
 
-            var result = await _serviceManager.PostService.UpdateAsync(idpost, postForUpdateDto);
+            var result = await _serviceManager.PostService.UpdateAsync(postid, postForUpdateDto);
 
             StatusMessage = $"Cập nhật thành bài viết #{result.Title}#";
+           
+            _cache.Remove(_KeyCategory);
 
-            return RedirectToAction("Posts", new { id = id });
+            return RedirectToAction("EditPost", new { id = id , postid = postid});
         }
 
+        [HttpGet]
+        public async Task<IActionResult> DeletePost([FromRoute]string id ,[FromQuery] string postid)
+        {
+            var listPostbra = await RunView(id);
+
+            var postEdit = listPostbra.Where(p => p.Id == postid).FirstOrDefault();
+
+            if (postEdit is null)
+            {
+                return RedirectToAction("Posts", new { id = id });
+            }
+
+            var postDto = ObjectMapper.Mapper.Map<PostDto>(postEdit);
+
+            return View(postDto);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeletePost([FromRoute] string id , [FromQuery] string postid, bool íDelete)
+        {
+            var post = await _serviceManager.PostService.DeleteAsync(postid);
+
+            StatusMessage = $"Xóa thành công bài viết #{post.Title}# ";
+
+            _cache.Remove(_KeyCategory);
+            return RedirectToAction("posts", new {id = id});
+
+        }
 
         //[HttpPost]
         //public async Task<JsonResult> Create([FromBody] CategoryForCreationDto categoryForCreationDto)

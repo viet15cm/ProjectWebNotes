@@ -1,4 +1,7 @@
 ﻿using Dto;
+using Entities;
+using Entities.Models;
+using ExtentionLinqEntitys;
 
 namespace Services.Abstractions
 {
@@ -6,10 +9,10 @@ namespace Services.Abstractions
     {
         Task<IEnumerable<CategoryDto>> GetAllAsync(CancellationToken cancellationToken = default);
 
-        Task<IEnumerable<CategoryForWithDetailDto>> GetAllWithDetailAsync(CancellationToken cancellationToken = default);
+        Task<IEnumerable<Category>> GetAllWithDetailAsync(IExpLinqEntity<Category> expLinqEntity = default ,CancellationToken cancellationToken = default);
         Task<CategoryDto> GetByIdAsync(string categoryId, CancellationToken cancellationToken = default);
 
-        Task<CategoryForWithDetailDto> GetByIdWithDetailAsync(string categoryId, CancellationToken cancellationToken = default);
+        Task<Category> GetByIdWithDetailAsync(string categoryId , IExpLinqEntity<Category> expLinqEntity = default, CancellationToken cancellationToken = default);
 
         Task<CategoryDto> CreateAsync(CategoryForCreationDto categoryDto, CancellationToken cancellationToken = default);
         

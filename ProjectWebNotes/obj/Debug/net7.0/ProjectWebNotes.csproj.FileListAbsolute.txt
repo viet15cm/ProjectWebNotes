@@ -100,3 +100,5 @@ D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\Dto.dll
 D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\Paging.dll
 D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\Dto.pdb
 D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\Paging.pdb
+D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\ExtentionLinqEntitys.dll
+D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\ExtentionLinqEntitys.pdb

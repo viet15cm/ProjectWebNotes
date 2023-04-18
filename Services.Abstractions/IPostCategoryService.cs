@@ -1,16 +1,12 @@
-﻿using Dto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Entities.Models;
+using ExtentionLinqEntitys;
 
 namespace Services.Abstractions
 {
     public interface IPostCategoryService
     {
-        Task<IEnumerable<PostCategoryForWithDetailDto>> GetByIdCategoryWithDetailAsync(string categoryId, CancellationToken cancellationToken = default);
+        Task<IEnumerable<PostCategory>> GetByIdCategoryWithDetailAsync(string categoryId , IExpLinqEntity<PostCategory> expLinqEntity = default, CancellationToken cancellationToken = default);
 
-        Task<IEnumerable<PostCategoryForWithDetailDto>> GetByIdPostWithDetailAsync(string postId, CancellationToken cancellationToken = default);
+        Task<IEnumerable<PostCategory>> GetByIdPostWithDetailAsync(string postId , IExpLinqEntity<PostCategory> expLinqEntity = default, CancellationToken cancellationToken = default);
     }
 }

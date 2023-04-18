@@ -9,6 +9,7 @@ namespace Entities.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
+        [Required]
         public string Url { get; set; }
 
         public string PostId { get; set; }

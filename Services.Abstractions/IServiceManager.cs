@@ -8,6 +8,8 @@
 
         IPostCategoryService PostCategoryService { get; }
 
+        IContentService ContentService { get; }
+
 
     }
 }

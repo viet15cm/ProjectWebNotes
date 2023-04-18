@@ -1,5 +1,7 @@
-﻿
+﻿@model string
+
 @{
+    var id = "#" + Model;
 }
 
     <link href="~/Summernote-cr/summernote-bs4.min.css" rel="stylesheet" />
@@ -8,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>*@
 <script>
     $(document).ready(function () {
-        $('#Content').summernote({
+        $('@id').summernote({
             placeholder: 'Hello',
             tabsize: 2,
             height: 400,

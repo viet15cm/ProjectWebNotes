@@ -1,26 +1,21 @@
 ﻿@model PostForCreationDto
 @{
-
     ViewBag.Title = "Tạo bài viết";
-
-    var category = ViewData["category"] as CategoryForWithDetailDto;
-    var treeViewPost = ViewData["treeViewPost"] as List<PostForWithDetailDto>;
-    var SeletePosts = ViewData["SeletePosts"] as List<PostForWithDetailDto>;
+    var category = ViewData["category"] as CategoryBranchPosts; 
+    var SeletePosts = ViewData["SeletePosts"] as List<PostSelectDto>;
 }
-
 <div class="container">
    
     <div class="row">
-        <div class="col-md-8" id="tablePosts">
-             <h2>Danh sách bài viết thuộc danh mục <span>@category.Title</span></h2>
+        <div class="col-md-8" id="tablePosts">          
             @{
              
-                @await Html.PartialAsync("_GetPostBranchPartial", treeViewPost)       
+                @await Html.PartialAsync("_GetPostBranchPartial", category)       
             }
         </div>
         <div class="col-md-4">
             <h2>@ViewBag.Title</h2>
-            <form method="post" asp-action="CreatePost" asp-route-idpost="@Model.Id" asp-route-id="@category.Id">
+            <form method="post" asp-action="CreatePost" asp-route-id="@category.Category.Id">
                   <div class="mb-3">
                     <label asp-for="@Model.Title" class="form-label"></label>
                     <input asp-for="@Model.Title"  class="form-control" >
@@ -59,3 +54,4 @@
         </div>
     </div>
 </div>
+

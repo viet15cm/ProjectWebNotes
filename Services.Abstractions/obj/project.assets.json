@@ -12,6 +12,26 @@
           "bin/placeholder/Dto.dll": {}
         }
       },
+      "Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entities.dll": {}
+        }
+      },
+      "ExtentionLinqEntitys/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/ExtentionLinqEntitys.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ExtentionLinqEntitys.dll": {}
+        }
+      },
       "Paging/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -30,6 +50,16 @@
       "path": "../Dto/Dto.csproj",
       "msbuildProject": "../Dto/Dto.csproj"
     },
+    "Entities/1.0.0": {
+      "type": "project",
+      "path": "../Entities/Entities.csproj",
+      "msbuildProject": "../Entities/Entities.csproj"
+    },
+    "ExtentionLinqEntitys/1.0.0": {
+      "type": "project",
+      "path": "../ExtentionLinqEntitys/ExtentionLinqEntitys.csproj",
+      "msbuildProject": "../ExtentionLinqEntitys/ExtentionLinqEntitys.csproj"
+    },
     "Paging/1.0.0": {
       "type": "project",
       "path": "../Paging/Paging.csproj",
@@ -39,6 +69,8 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Dto >= 1.0.0",
+      "Entities >= 1.0.0",
+      "ExtentionLinqEntitys >= 1.0.0",
       "Paging >= 1.0.0"
     ]
   },
@@ -76,6 +108,12 @@
           "projectReferences": {
             "D:\\C#\\ProjectWebNotes\\Dto\\Dto.csproj": {
               "projectPath": "D:\\C#\\ProjectWebNotes\\Dto\\Dto.csproj"
+            },
+            "D:\\C#\\ProjectWebNotes\\Entities\\Entities.csproj": {
+              "projectPath": "D:\\C#\\ProjectWebNotes\\Entities\\Entities.csproj"
+            },
+            "D:\\C#\\ProjectWebNotes\\ExtentionLinqEntitys\\ExtentionLinqEntitys.csproj": {
+              "projectPath": "D:\\C#\\ProjectWebNotes\\ExtentionLinqEntitys\\ExtentionLinqEntitys.csproj"
             },
             "D:\\C#\\ProjectWebNotes\\Paging\\Paging.csproj": {
               "projectPath": "D:\\C#\\ProjectWebNotes\\Paging\\Paging.csproj"

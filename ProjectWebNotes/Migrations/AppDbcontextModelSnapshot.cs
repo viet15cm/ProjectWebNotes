@@ -64,6 +64,45 @@ namespace ProjectWebNotes.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("Entities.Models.Content", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("KeyTitleId")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<int?>("ParentContentId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PostId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("TextContents")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("KeyTitleId")
+                        .IsUnique()
+                        .HasFilter("[KeyTitleId] IS NOT NULL");
+
+                    b.HasIndex("ParentContentId");
+
+                    b.HasIndex("PostId");
+
+                    b.ToTable("Contents");
+                });
+
             modelBuilder.Entity("Entities.Models.Image", b =>
                 {
                     b.Property<int>("Id")
@@ -76,6 +115,7 @@ namespace ProjectWebNotes.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Url")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -156,6 +196,21 @@ namespace ProjectWebNotes.Migrations
                     b.Navigation("ParentCategory");
                 });
 
+            modelBuilder.Entity("Entities.Models.Content", b =>
+                {
+                    b.HasOne("Entities.Models.Content", "ParentContent")
+                        .WithMany("ContentChildrens")
+                        .HasForeignKey("ParentContentId");
+
+                    b.HasOne("Entities.Models.Post", "Post")
+                        .WithMany()
+                        .HasForeignKey("PostId");
+
+                    b.Navigation("ParentContent");
+
+                    b.Navigation("Post");
+                });
+
             modelBuilder.Entity("Entities.Models.Image", b =>
                 {
                     b.HasOne("Entities.Models.Post", "Post")
@@ -198,6 +253,11 @@ namespace ProjectWebNotes.Migrations
                     b.Navigation("CategoryChildren");
 
                     b.Navigation("PostCategories");
+                });
+
+            modelBuilder.Entity("Entities.Models.Content", b =>
+                {
+                    b.Navigation("ContentChildrens");
                 });
 
             modelBuilder.Entity("Entities.Models.Post", b =>

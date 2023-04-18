@@ -1,12 +1,9 @@
 ﻿using Contracts;
 using Domain.Repository;
 using Entities.Models;
+using ExtentionLinqEntitys;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Domain.Reposirory
 {
@@ -26,11 +23,9 @@ namespace Domain.Reposirory
             return await FindAll().ToListAsync();
         }
 
-        public async Task<IEnumerable<PostCategory>> GetAllWithDetailAsync(CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<PostCategory>> GetAllWithDetailAsync(IExpLinqEntity<PostCategory> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
-           return await FindAll().
-                        Include(pc => pc.Category)
-                       .Include(pc => pc.Post).ToListAsync();
+            return await Queryable(expLinqEntity).ToListAsync();
         }
 
         public async Task<PostCategory> GetByIdAsync(string categoryId, string postId, CancellationToken cancellationToken = default)
@@ -39,32 +34,22 @@ namespace Domain.Reposirory
                         .FirstOrDefaultAsync();
         }
 
-        public async Task<IEnumerable<PostCategory>> GetByIdCategoryWithDetailAsync(string categoryId, CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<PostCategory>> GetByIdCategoryWithDetailAsync(string categoryId, IExpLinqEntity<PostCategory> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
-
-            return await FindByCondition(x => x.CategoryID == categoryId)
-                        .Include(x => x.Post)
-                        .Include(x => x.Category)
-                        .ToListAsync();
-
+           return  await Queryable(expLinqEntity).Where(x => x.CategoryID.Equals(categoryId))
+                   .ToListAsync();
         }
 
-        public async Task<IEnumerable<PostCategory>> GetByIdPostWithDetailAsync(string postId, CancellationToken cancellationToken = default)
+
+        public async Task<IEnumerable<PostCategory>> GetByIdPostWithDetailAsync(string postId, IExpLinqEntity<PostCategory> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
-
-
-            return await FindByCondition(x => x.PostID == postId)
-                        .Include(x => x.Post)
-                        .Include(x => x.Category)
-                        .ToListAsync();
-
+            return await Queryable(expLinqEntity).Where(x => x.PostID.Equals(postId)).ToListAsync();
         }
 
-        public async Task<PostCategory> GetByIdWithDetailAsync(string categoryId, string postId, CancellationToken cancellationToken = default)
+        public async Task<PostCategory> GetByIdWithDetailAsync(string categoryId, string postId, IExpLinqEntity<PostCategory> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
-            return await FindByCondition(x => x.PostID == postId && x.CategoryID == categoryId)
-                        .Include(x => x.Post)
-                        .Include(x => x.Category)
+            return await Queryable(expLinqEntity)
+                        .Where(x => x.PostID == postId && x.CategoryID == categoryId)
                         .FirstOrDefaultAsync();
         }
 

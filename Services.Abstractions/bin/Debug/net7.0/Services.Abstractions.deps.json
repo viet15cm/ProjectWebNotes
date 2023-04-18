@@ -9,6 +9,8 @@
       "Services.Abstractions/1.0.0": {
         "dependencies": {
           "Dto": "1.0.0",
+          "Entities": "1.0.0",
+          "ExtentionLinqEntitys": "1.0.0",
           "Paging": "1.0.0"
         },
         "runtime": {
@@ -18,6 +20,16 @@
       "Dto/1.0.0": {
         "runtime": {
           "Dto.dll": {}
+        }
+      },
+      "Entities/1.0.0": {
+        "runtime": {
+          "Entities.dll": {}
+        }
+      },
+      "ExtentionLinqEntitys/1.0.0": {
+        "runtime": {
+          "ExtentionLinqEntitys.dll": {}
         }
       },
       "Paging/1.0.0": {
@@ -34,6 +46,16 @@
       "sha512": ""
     },
     "Dto/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ExtentionLinqEntitys/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

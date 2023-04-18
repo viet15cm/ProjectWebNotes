@@ -8,22 +8,50 @@ namespace ATMapper
     {
         public MappingProfile()
         {
-            CreateMap<Category, CategoryForWithDetailDto>()
-                .ForMember(x => x.PostCategories, k => k.MapFrom(y => y.PostCategories));
-
-            CreateMap<PostCategory, PostCategoryForWithDetailDto>()
-                .ForMember(x => x.Category, k => k.MapFrom(y => y.Category))
-                .ForMember(x => x.Post, k => k.MapFrom(y => y.Post));
-
-            CreateMap<Post, PostForWithDetailDto>()
-                .ForMember(x => x.PostCategories, k => k.MapFrom(y => y.PostCategories));
-
             CreateMap<Category, CategoryDto>();
+            CreateMap<CategoryDto, Category>();
             CreateMap<Category, CategoryForUpdateDto>();
             CreateMap<Category, CategoryForCreationDto>();
+            CreateMap<CategoryForCreationDto, Category>();
+
             CreateMap<Post, PostDto>();
 
-            // All other mappings goes here
+            CreateMap<Post, PostForCreationDto>();
+
+            CreateMap<Post, PostForUpdateDto>();
+
+            CreateMap<PostForCreationDto, Post>();
+            CreateMap<Post, PostFWDetailChilds>();
+          
+            CreateMap<Post, PostSelectDto>();
+
+            CreateMap<Post, PostForUpdateContentDto>();
+
+            CreateMap<Image, ImageDto>();
+
+            CreateMap<Post, PostsFWDImagesDto>()
+                .ForMember(x => x.Images, y => y.MapFrom(k => k.Images));
+
+            CreateMap<Post, PostsFWDContentImagesDto>()
+                .ForMember(x => x.Images, y => y.MapFrom(k => k.Images))
+                .ForMember(x => x.Contents, y => y.MapFrom(k => k.Contents));
+
+
+            CreateMap<Content, ContentDto>();
+
+            CreateMap<ContentDto, Content>();
+
+            CreateMap<Content, ContentFWDPost>()
+                .ForMember(x => x.Post , y => y.MapFrom(k => k.Post));
+
+            CreateMap<Content, ContentForCreateDto>();
+
+            CreateMap<Content, ContentForUpdateDto>();
+
+            CreateMap<Content, ContentFWDChildsDto>();
+
+            CreateMap<ContentForCreateDto, Content>();
+
         }
     }
 }

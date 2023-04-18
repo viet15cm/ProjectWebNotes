@@ -1,4 +1,4 @@
-﻿@model ICollection<CategoryForWithDetailDto>
+﻿@model ICollection<Category>
 
 @{
     var categorys = Model;
@@ -25,7 +25,7 @@
 </table>
 
 @{
-    async Task RenderTreeViewTable(IEnumerable<CategoryForWithDetailDto> categorys, int leve)
+    async Task RenderTreeViewTable(IEnumerable<Category> categorys, int leve)
     {
         var temp = leve;
 

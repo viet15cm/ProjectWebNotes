@@ -51,6 +51,9 @@ namespace Entities.Models
 
         public virtual ICollection<Image> Images { get; set; }
 
+        [Display(Name ="Nội dung cấp bậc")]
+        public virtual ICollection<Content> Contents { get; set; }
+
         [Display(Name = "Số thứ tự")]
         public int Serial { get; set; }
 

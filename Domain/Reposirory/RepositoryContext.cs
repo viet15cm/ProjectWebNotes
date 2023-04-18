@@ -9,7 +9,6 @@ namespace Domain.Reposirory
         public RepositoryContext(DbContextOptions options) : base(options)
         {
         }
-
         protected RepositoryContext()
         {
         }
@@ -19,6 +18,8 @@ namespace Domain.Reposirory
         public virtual DbSet<PostCategory> PostCategories { get; set; }
 
         public virtual DbSet<Category> Categories { get; set; }
+
+        public virtual DbSet<Content> Contents { get; set; }
 
         public virtual DbSet<Image> Images { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -31,6 +32,10 @@ namespace Domain.Reposirory
 
             modelBuilder.Entity<Post>(entity => {
                 entity.HasIndex(p => p.Slug).IsUnique();
+            });
+
+            modelBuilder.Entity<Content>(entity => {
+                entity.HasIndex(p => p.KeyTitleId).IsUnique();
             });
 
             // cấu hình mối quan hệ many to many

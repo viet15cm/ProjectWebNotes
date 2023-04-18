@@ -9,6 +9,9 @@ using Services.Abstractions;
 using System.Linq;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
+using System.Linq.Expressions;
+using ExtentionLinqEntitys;
+using Microsoft.EntityFrameworkCore;
 
 namespace Services
 {
@@ -63,6 +66,11 @@ namespace Services
 
         public async Task<PostDto> CreateAsync(PostForCreationDto postForCreationDto, string categoryId, CancellationToken cancellationToken = default)
         {
+
+            if (categoryId is null) {
+
+                throw new PostNotFoundException("Dữ liệu Id trống");
+            }
             if (postForCreationDto is null)
             {
                 throw new PostNotFoundException("Dữ liệu trống.");
@@ -100,7 +108,11 @@ namespace Services
                 throw new PostNotFoundException("Không tìm thấy dữ liệu nạp Id.");
             }
 
-            var post = await _repositoryManager.Post.GetByIdWithDetailAsync(postId);
+            var post = await _repositoryManager
+               .Post
+               .GetByIdWithDetailAsync(postId,
+                ExpLinqEntity<Post>.ResLinqEntity(ExpExpressions.ExtendInclude<Post>(p => p.Include(p => p.PostCategories).Include(p => p.PostChilds))));
+
 
             if (post.PostChilds?.Count> 0)
             {
@@ -125,6 +137,8 @@ namespace Services
             return ObjectMapper.Mapper.Map<PostDto>(post);
         }
 
+        
+
         public async Task<IEnumerable<PostDto>> GetAllAsync(CancellationToken cancellationToken = default)
         {
             var post = await _repositoryManager.Post.GetAllAsync();
@@ -132,13 +146,14 @@ namespace Services
             return ObjectMapper.Mapper.Map<IEnumerable<PostDto>>(post);
         }
 
-        public async Task<IEnumerable<PostForWithDetailDto>> GetAllWithDetailAsync(CancellationToken cancellationToken = default)
+
+
+        public async Task<IEnumerable<Post>> GetAllWithDetailAsync(IExpLinqEntity<Post> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
             var dataPosts = await _repositoryManager.Post.GetAllWithDetailAsync();
 
-            var posts = dataPosts.Where(p => p.PostParentId == null).ToList();
 
-            return ObjectMapper.Mapper.Map<IEnumerable<PostForWithDetailDto>>(posts);
+            return dataPosts;
         }
 
         public async Task<PostDto> GetByIdAsync(string postId, CancellationToken cancellationToken = default)
@@ -148,11 +163,12 @@ namespace Services
             return ObjectMapper.Mapper.Map<PostDto>(post);
         }
 
-        public async Task<PostForWithDetailDto> GetByIdWithDetailAsync(string postId, CancellationToken cancellationToken = default)
-        {
-            var post = await _repositoryManager.Post.GetByIdWithDetailAsync(postId);
 
-            return ObjectMapper.Mapper.Map<PostForWithDetailDto>(post);
+        public async Task<Post> GetByIdWithDetailAsync(string postId, IExpLinqEntity<Post> expLinqEntity = null, CancellationToken cancellationToken = default)
+        {
+            var post = await _repositoryManager.Post.GetByIdWithDetailAsync(postId , expLinqEntity);
+
+            return post;
         }
 
         public PagedList<PostDto> Posts(PostParameters postParameters)
@@ -188,7 +204,11 @@ namespace Services
 
         public async Task<PostDto> UpdateAsync(string postId, PostForUpdateDto postForUpdateDto, CancellationToken cancellationToken = default)
         {
-            var post = await _repositoryManager.Post.GetByIdWithDetailAsync(postId, cancellationToken);
+            var post = await _repositoryManager
+                .Post
+                .GetByIdWithDetailAsync(postId, 
+                ExpLinqEntity<Post>.ResLinqEntity(ExpExpressions.ExtendInclude<Post>(p => p.Include(p => p.PostCategories).Include(p => p.PostChilds))));
+
 
             if (post == null)
             {
@@ -239,6 +259,38 @@ namespace Services
             return ObjectMapper.Mapper.Map<PostDto>(post);
         }
 
-     
+        public async Task<PostDto> UpdateAsync(string postId, PostForUpdateContentDto postForUpdate, CancellationToken cancellationToken = default)
+        {
+            var post = await _repositoryManager.Post.GetByIdWithDetailAsync(postId);
+
+            if (post == null)
+            {
+                throw new PostNotFoundException(post.Id);
+            }
+
+            if (postForUpdate == null)
+            {
+                throw new PostNotFoundException("Không tìm thấy dữ liệu đầu vào .");
+            }
+
+            Type TypePostForupdateDto = postForUpdate.GetType();
+
+            Type TypePost = post.GetType();
+
+            IList<PropertyInfo> props = new List<PropertyInfo>(TypePostForupdateDto.GetProperties());
+
+            foreach (PropertyInfo prop in props)
+            {
+                PropertyInfo propertyInfo = TypePost.GetProperty(prop.Name);
+                propertyInfo.SetValue(post, prop.GetValue(postForUpdate, null));
+
+            }
+
+            _repositoryManager.Post.Update(post);
+
+            await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
+
+            return ObjectMapper.Mapper.Map<PostDto>(post);
+        }
     }
 }

@@ -15,11 +15,26 @@ namespace Domain.Repository
         private IPostRepository _post;
         private ICategoryRepository _category;
 
+        private IContentRepository _content;
+
         private IPostCategoryRepository _postCategory;
 
         private IUnitOfWork _unitOfWork;
        
 
+        public IContentRepository Content
+        {
+
+            get
+            {
+                if (_content == null)
+                {
+                    _content = new ContentRepository(_repoContext);
+                }
+
+                return _content;
+            }
+        }
 
         public ICategoryRepository Category
         {

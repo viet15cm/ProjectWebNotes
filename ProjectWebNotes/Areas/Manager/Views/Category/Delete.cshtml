@@ -1,10 +1,10 @@
-﻿@model CategoryForWithDetailDto
+﻿@model Category
 @{
     ViewBag.Title = "Xóa";
 
-    var categorys = ViewData["categorys"] as IEnumerable<CategoryForWithDetailDto>;
+    var categorys = ViewData["categorys"] as IEnumerable<Category>;
 
-    var categoryTreeView = ViewData["TreeViewCategorys"] as List<CategoryForWithDetailDto>;
+    var categoryTreeView = ViewData["TreeViewCategorys"] as List<Category>;
 }
 
 <div class="container">

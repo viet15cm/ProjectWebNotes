@@ -1,15 +1,20 @@
 ﻿
+using ATMapper;
 using Dto;
+using Entities.Models;
+using ExtentionLinqEntitys;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Hosting;
 using Paging;
 using ProjectWebNotes.Areas.Manager.Models;
 using ProjectWebNotes.Models;
 using Services.Abstractions;
+using System.ComponentModel.DataAnnotations;
 using System.Reflection.Metadata.Ecma335;
 using static ProjectWebNotes.Areas.Manager.Controllers.PostController;
 
@@ -29,73 +34,17 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         {
         }
 
-
-
         [NonAction]
-        private void CreateTreeViewSeleteItems(IEnumerable<PostForWithDetailDto> postTreeLayerDtos
-                                              , List<PostForWithDetailDto> des,
-                                               int leve)
+        async Task<IEnumerable<Category>> GetAllTreeViewCategories()
         {
 
-            foreach (var post in postTreeLayerDtos)
-            {
-                string perfix = string.Concat(Enumerable.Repeat("-", leve));
+            IEnumerable<Category> categories;
 
-                des.Add(new PostForWithDetailDto()
-                {
-                    Id = post.Id,
-                    Title = perfix + post.Title
-                });
-
-                if (post.PostChilds?.Count > 0)
-                {
-
-                    CreateTreeViewSeleteItems(post.PostChilds, des, leve + 1);
-
-                }
-            }
-
-        }
-
-        [NonAction]
-        private void CreateTreeViewSeleteItems(IEnumerable<CategoryForWithDetailDto> categoryTreeLayerDtos
-                                              , List<CategoryForWithDetailDto> des,
-                                               int leve)
-        {
-
-            foreach (var category in categoryTreeLayerDtos)
-            {
-                string perfix = string.Concat(Enumerable.Repeat("-", leve));
-
-                des.Add(new CategoryForWithDetailDto()
-                {
-                    Id = category.Id,
-                    Title = perfix + category.Title
-                });
-
-                if (category.CategoryChildren?.Count > 0)
-                {
-
-                    CreateTreeViewSeleteItems(category.CategoryChildren, des, leve + 1);
-
-                }
-            }
-
-        }
-
-        [NonAction]
-        async Task<IEnumerable<CategoryForWithDetailDto>> GetAllTreeViewCategories()
-        {
-
-            IEnumerable<CategoryForWithDetailDto> categories;
 
             // Phục hồi categories từ Memory cache, không có thì truy vấn Db
             if (!_cache.TryGetValue(_KeyListCatgorys, out categories))
             {
-
-                var sqlCategory = await _serviceManager.CategoryService.GetAllWithDetailAsync();
-
-                categories = TreeViews.GetCategoryChierarchicalTree(sqlCategory);
+                categories = await _serviceManager.CategoryService.GetAllWithDetailAsync();
 
                 // Thiết lập cache - lưu vào cache
                 var cacheEntryOptions = new MemoryCacheEntryOptions()
@@ -103,7 +52,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
                 _cache.Set(_KeyListCatgorys, categories, cacheEntryOptions);
             }
 
-            categories = _cache.Get(_KeyListCatgorys) as IEnumerable<CategoryForWithDetailDto>;
+            categories = _cache.Get(_KeyListCatgorys) as IEnumerable<Category>;
 
             return categories;
         }
@@ -143,11 +92,10 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
 
         [NonAction]
-        async Task<IEnumerable<PostForWithDetailDto>> GetAllPostTreeViews()
+        async Task<IEnumerable<Post>> GetAllPostTreeViews()
         {
 
-            IEnumerable<PostForWithDetailDto> posts;
-
+            IEnumerable<Post> posts;
 
             // Phục hồi categories từ Memory cache, không có thì truy vấn Db
             if (!_cache.TryGetValue(_KeyList, out posts))
@@ -161,141 +109,17 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
                 _cache.Set(_KeyList, posts, cacheEntryOptions);
             }
 
-            posts = _cache.Get(_KeyList) as IEnumerable<PostForWithDetailDto>;
+            posts = _cache.Get(_KeyList) as IEnumerable<Post>;
 
             return posts;
         }
 
-     
-
-
-        [HttpGet]
-        public async Task<IActionResult> Index()
-        {
-            var posts = await GetAllPostTreeViews();
-
-            ViewData["Posts"] = posts;
-
-            var des = new List<PostForWithDetailDto>();
-
-            CreateTreeViewSeleteItems(posts, des, 0);
-
-            ViewData["TreeViewPosts"] = des;
-            return View(new PostForCreationDto());
-        }
-        
-        
-
-        [HttpPost]
-        public async Task<IActionResult> Create([FromForm] PostForCreationDto postForCreationDto)
-        {
-
-            if (!ModelState.IsValid)
-            {
-                var posts = await GetAllPostTreeViews();
-                ViewData["Posts"] = posts;
-
-                var des = new List<PostForWithDetailDto>();
-
-                CreateTreeViewSeleteItems(posts, des, 0);
-
-                ViewData["TreeViewPosts"] = des;
-
-                return View("index", postForCreationDto);
-            }
-
-            
-
-            var post = await _serviceManager.PostService.CreateAsync(postForCreationDto);
-
-            StatusMessage = $"Thêm thành bài viết #{post.Title}#";
-
-            _cache.Remove(_KeyList);
-
-            return RedirectToAction("index");
-
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> Delete(string id)
-        {
-            var posts = await GetAllPostTreeViews();
-
-            ViewData["Posts"] = posts;
-
-            var cateforyDto = await GetPostDto(id);
-
-            return View(cateforyDto);
-        }
-        [HttpPost]
-        public async Task<IActionResult> Delete([FromRoute] string id, bool IsDelte)
-        {
-            var post = await _serviceManager.PostService.DeleteAsync(id);
-            _cache.Remove(_KeyList);
-            StatusMessage = $"Xóa thành công bài viết #{post.Title}# ";
-            return RedirectToAction("index");
-
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> Edit(string id)
-        {
-            var posts = await GetAllPostTreeViews();
-
-            ViewData["Posts"] = posts;
-
-            var des = new List<PostForWithDetailDto>();
-
-            CreateTreeViewSeleteItems(posts, des, 0);
-
-            ViewData["TreeViewPosts"] = des;
-
-            var postDto = await GetPostDto(id);
-
-           
-
-            return View(postDto);
-
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Edit([FromRoute] string id, [FromForm] PostForUpdateDto postForUpdateDto)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            if (!ModelState.IsValid)
-            {
-                var posts = await GetAllPostTreeViews();
-
-                ViewData["posts"] = posts;
-
-                var des = new List<PostForWithDetailDto>();
-
-                CreateTreeViewSeleteItems(posts, des, 0);
-
-                ViewData["TreeViewPosts"] = des;
-
-                return View(postForUpdateDto);
-            }
-
-            var post = await _serviceManager.PostService.UpdateAsync(id, postForUpdateDto);
-
-            StatusMessage = $"Cập nhật thành bài viết #{post.Title}#";
-
-            _cache.Remove(_KeyList);
-
-            _cache.Remove(_KeyObj);
-
-            return RedirectToAction("Edit");
-
-        }
 
         public class BidingPostCategory
         {
+            public string IdPost { get; set; }
 
+            [Display(Name ="Danh mục")]
             public string[] PostCategorys { get; set; }
 
            
@@ -314,9 +138,9 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             var cateforys = await GetAllTreeViewCategories();
 
-            var des = new List<CategoryForWithDetailDto>();
+            var des = new List<Category>();
 
-            CreateTreeViewSeleteItems(cateforys, des, 0);
+            TreeViews.CreateTreeViewCategorySeleteItems(cateforys, des, 0);
 
             var post = await _serviceManager.PostService.GetByIdWithDetailAsync(id);
 
@@ -360,15 +184,97 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Contents(string id)
+        async Task<Post> RunPostDetail(string id)
         {
-            var post = await _serviceManager.PostService.GetByIdAsync(id);
+            var post = await _serviceManager
+              .PostService
+              .GetByIdWithDetailAsync(id, ExpLinqEntity<Post>
+              .ResLinqEntity(ExpExpressions
+              .ExtendInclude<Post>(x => x.Include(x => x.Images)
+                                  .Include(x => x.PostChilds)
+                                  .Include(x => x.PostParent)
+                                  .Include(x => x.PostChilds)
+                                  .Include(x => x.Contents)
+                                  .Include(x => x.PostCategories)
+                                  .ThenInclude(x => x.Category)
+                                  )));
 
-            
-            
+            return post;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Detail([FromRoute]string id)
+        {
+            var post = await RunPostDetail(id);
             return View(post);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Contents([FromRoute] string id)
+        {
+            var post = await RunPostDetail(id);
+
+            var postFWDImgaesDto = ObjectMapper.Mapper.Map<PostsFWDImagesDto>(post);
+            return View(postFWDImgaesDto);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> CreateContent([FromRoute] string id)
+        {
+            var post = await RunPostDetail(id);
+
+            var postFWDImgaesDto = ObjectMapper.Mapper.Map<PostsFWDContentImagesDto>(post);
+
+            var des = new List<ContentSelectDto>();
+
+            TreeViews.CreateTreeViewContentSeleteItems(postFWDImgaesDto.Contents.Where(x => x.ParentContentId == null), des, 0);
+            
+            ViewData["postFWDImgaesDto"] = postFWDImgaesDto;
+
+            ViewData["TreeViewContentSelete"] = des;
+
+            return View(new ContentForCreateDto());
+            
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateContent([FromForm] ContentForCreateDto contentForCreateDto, [FromRoute] string id
+                                                      )
+        {
+            if (contentForCreateDto?.PostId is null)
+            {
+                contentForCreateDto.PostId = id;
+            }
+             var contentDto = await _serviceManager.ContentService.CreateAsync(contentForCreateDto);
+
+            StatusMessage = $"Thêm thành công nội dung ---{contentDto.Title}---";
+
+            return RedirectToAction("detail", new {id = id });
+        }
+
+
+        public async Task<IActionResult> Contents([FromForm] PostForUpdateContentDto postForUpdateContentDto,
+                                                    [FromRoute]string id)
+
+        {
+            if (!ModelState.IsValid)
+            {
+                var post = await _serviceManager
+                .PostService
+                .GetByIdWithDetailAsync(id, ExpLinqEntity<Post>.ResLinqEntity(ExpExpressions.ExtendInclude<Post>(x => x.Include(x => x.Images))));
+
+                var postFWDImgaesDto = ObjectMapper.Mapper.Map<PostsFWDImagesDto>(post);
+                
+                return View(postFWDImgaesDto);
+            }
+
+            var postUpdate = await _serviceManager.PostService.UpdateAsync(id, postForUpdateContentDto);
+
+            StatusMessage = $"Cập nhật thành công nội dung --{postUpdate.Title}--";
+
+            return RedirectToAction("Contents", new { id});
+        }
+        
 
         [HttpPost]
 
@@ -390,8 +296,9 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             return RedirectToAction("Posts");
         }
 
+      
         [HttpGet]
-         public IActionResult Posts([FromQuery] PostParameters postParameters)
+         public IActionResult Index([FromQuery] PostParameters postParameters)
          {
             var posts = _serviceManager.PostService.Posts(postParameters);
 
@@ -430,9 +337,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             }
 
             var post = await _serviceManager.PostService.UpdateAsync(id, postForUpdateDto);
-
             StatusMessage = $"Cập nhật thành bài viết #{post.Title}#";
-
             return RedirectToAction("Posts", new { pageNumber = postParameters.PageNumber});
         }
 
@@ -455,24 +360,23 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
            
             StatusMessage = $"Xóa thành công bài viết #{post.Title}# ";
             
-            return RedirectToAction("Posts");
+            return RedirectToAction("index");
 
         }
 
         [HttpGet]
         public async Task<IActionResult> AddItemCategory([FromRoute] string id, [FromQuery] PostParameters postParameters)
         {
-            var posts = _serviceManager.PostService.Posts(postParameters);
-
-            ViewData["Posts"] = posts;
-
+            
             var cateforys = await GetAllTreeViewCategories();
 
-            var des = new List<CategoryForWithDetailDto>();
+            cateforys = TreeViews.GetCategoryChierarchicalTree(cateforys);
 
-            CreateTreeViewSeleteItems(cateforys, des, 0);
+            var des = new List<Category>();
 
-            var post = await _serviceManager.PostService.GetByIdWithDetailAsync(id);
+            TreeViews.CreateTreeViewCategorySeleteItems(cateforys, des, 0);
+
+            var post = await RunPostDetail(id);
 
             bidingPostCategory = new BidingPostCategory();
 
@@ -480,25 +384,25 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             bidingPostCategory.addCategory = new SelectList(des, "Id", "Title");
 
+            bidingPostCategory.IdPost = post.Id;
+
             return View(bidingPostCategory);
         }
 
         [HttpPost]
         public async Task<IActionResult> AddItemCategory([FromForm] BidingPostCategory bidingPostCategory, 
-                                                            [FromRoute] string id , 
-                                                            [FromQuery] PostParameters postParameters)
+                                                            [FromRoute] string id
+                                                            )
         {
-            var post = await _serviceManager.PostService.GetByIdWithDetailAsync(id);
+            var post = await RunPostDetail(id);
 
             if (bidingPostCategory.PostCategorys == null)
             {
                 bidingPostCategory.PostCategorys = new string[] { };
             }
 
-            var oldPostCategorys = (await _serviceManager
-                .PostService
-                .GetByIdWithDetailAsync(id))
-                ?.PostCategories.Select(c => c.CategoryID);
+            var oldPostCategorys = post
+                .PostCategories.Select(c => c.CategoryID);
 
 
             var deleteCategorys = oldPostCategorys.Where(x => !bidingPostCategory.PostCategorys.Contains(x));
@@ -511,7 +415,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             StatusMessage = $"Cập nhật thành công danh mục cho bài viết --{post.Title}--";
 
-            return RedirectToAction("AddItemCategory", new { id = post.Id , pageNumber = postParameters.PageNumber });
+            return RedirectToAction("detail", new { id = post.Id});
 
 
         }

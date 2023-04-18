@@ -1,4 +1,4 @@
-﻿@model ICollection<PostForWithDetailDto>
+﻿@model ICollection<Post>
 
 @{
     var posts = Model;
@@ -24,7 +24,7 @@
 </table>
 
 @{
-    async Task RenderTreeViewTable(IEnumerable<PostForWithDetailDto> posts, int leve)
+    async Task RenderTreeViewTable(IEnumerable<Post> posts, int leve)
     {
         var temp = leve;
 

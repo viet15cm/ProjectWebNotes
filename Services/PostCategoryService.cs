@@ -1,8 +1,10 @@
 ﻿using ATMapper;
 using Contracts;
 using Dto;
+using Entities.Models;
+using ExtentionLinqEntitys;
 using Services.Abstractions;
-
+using System.Linq.Expressions;
 
 namespace Services
 {
@@ -12,18 +14,14 @@ namespace Services
         {
         }
 
-        public async Task<IEnumerable<PostCategoryForWithDetailDto>> GetByIdCategoryWithDetailAsync(string categoryId, CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<PostCategory>> GetByIdCategoryWithDetailAsync(string categoryId, IExpLinqEntity<PostCategory> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
-            var postCategory =  await _repositoryManager.PostCategory.GetByIdCategoryWithDetailAsync(categoryId);
-
-            return ObjectMapper.Mapper.Map<IEnumerable<PostCategoryForWithDetailDto>>(postCategory);
+            return await _repositoryManager.PostCategory.GetByIdCategoryWithDetailAsync(categoryId, expLinqEntity, cancellationToken);
         }
 
-        public async Task<IEnumerable<PostCategoryForWithDetailDto>> GetByIdPostWithDetailAsync(string postId, CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<PostCategory>> GetByIdPostWithDetailAsync(string postId, IExpLinqEntity<PostCategory> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
-            var postCategory = await _repositoryManager.PostCategory.GetByIdCategoryWithDetailAsync(postId);
-
-            return ObjectMapper.Mapper.Map<IEnumerable<PostCategoryForWithDetailDto>>(postCategory);
+            return await _repositoryManager.PostCategory.GetByIdPostWithDetailAsync(postId, expLinqEntity, cancellationToken);
         }
     }
 }

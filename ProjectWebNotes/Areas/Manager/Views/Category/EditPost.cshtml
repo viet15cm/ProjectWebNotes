@@ -1,13 +1,9 @@
-﻿@model PostForWithDetailDto
+﻿@model PostDto
 @{
 
     ViewBag.Title = "Cập nhật bài viết";
-
-    var category = ViewData["category"] as CategoryForWithDetailDto;
-
-    var postTreeView = ViewData["TreeViewPosts"] as List<PostForWithDetailDto>;
-
-    var postid = ViewData["postid"] as string; 
+    var category = ViewData["category"] as CategoryBranchPosts;
+    var SeletePosts = ViewData["SeletePosts"] as List<PostSelectDto>;
 }
 
 <div class="container">
@@ -20,7 +16,7 @@
         </div>
         <div class="col-md-4">
             <h2>@ViewBag.Title</h2>
-            <form method="Post" asp-action="EditPost" asp-route-idpost="@postid" asp-route-id="@category.Id">
+            <form method="Post" asp-action="EditPost" asp-route-postid="@Model.Id" asp-route-id="@category.Category.Id">
                   <div class="mb-3">
                     <label asp-for="@Model.Title" class="form-label"></label>
                     <input asp-for="@Model.Title"  class="form-control" >
@@ -35,7 +31,7 @@
                   <div class="mb-3">
                         <label class="form-label" asp-for="@Model.PostParentId"></label>
                         <select class="form-select" aria-label="Default select example" asp-for="@Model.PostParentId"
-                                asp-items="@(new SelectList(postTreeView,"Id","Title"))">
+                                asp-items="@(new SelectList(SeletePosts,"Id","Title"))">
                                 <option value="">Không</option>
                         </select>
                         <span asp-validation-for="@Model.PostParentId"></span>
@@ -55,7 +51,7 @@
 
                      <div asp-validation-summary="All"></div>
                     <button class="btn btn-sm btn-primary" type="submit">Update</button> |
-                @Html.ActionLink("Quay trở lại danh sách", "Index")
+                   @Html.ActionLink("Quay trở lại danh sách", "index", "category")
                 </form>
         </div>
     </div>

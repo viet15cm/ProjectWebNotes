@@ -1,0 +1,59 @@
+﻿@model ContentForCreateDto
+
+@{
+    Layout = "~/Areas/Manager/Views/Shared/_LayoutSummernote.cshtml";
+
+    var postFWDImgaesDto = ViewData["postFWDImgaesDto"] as PostsFWDImagesDto;
+    var treeViewContent = ViewData["TreeViewContentSelete"] as List<ContentSelectDto>;
+
+    var id = "TextContents";
+}
+
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-5 pb-3 pt-3 ">
+
+
+             <h5>Cập nhật nội dung bài viết --@postFWDImgaesDto.Title--</h5>
+
+              <form method="post" asp-route-id="@postFWDImgaesDto.Id">
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.Title"></label>
+                    <input class="form-control" asp-for="@Model.Title" />
+                    <span asp-validation-for="@Model.Title"></span>
+                </div>
+
+
+                  <div class="mb-3">
+                        <label class="form-label" asp-for="@Model.ParentContentId"></label>
+                        <select class="form-select" aria-label="Default select example" asp-for="@Model.ParentContentId"
+                                asp-items="@(new SelectList(treeViewContent,"Id","Title"))">
+                                <option value="">Không</option>
+                        </select>
+                        <span asp-validation-for="@Model.ParentContentId"></span>
+                   </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.TextContents"></label>
+                    <textarea id="TextContents" name="TextContents" rows="4" class="form-control" asp-for="@Model.TextContents"></textarea>
+                    <span asp-validation-for="@Model.TextContents"></span>
+                </div>
+
+                <button class="btn btn-sm btn-info" type="submit">Tạo</button>
+                @Html.ActionLink("Quay trở lại bài viết", "detail", "post", new{id = postFWDImgaesDto.Id})
+             </form>
+        </div>
+        <div class="col-md-7 pb-3 pt-3 ">
+            <h5>Danh sách hình ảnh trong bài viết --@Model.Title-- </h5>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+
+        <partial name="_Summernote" model="@id"/>
+
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+
+}

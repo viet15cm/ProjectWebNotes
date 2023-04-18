@@ -4,6 +4,7 @@
     {
         ICategoryRepository Category { get; }
 
+        IContentRepository Content { get; }
         IPostRepository Post { get; }
 
         IPostCategoryRepository PostCategory {get;}

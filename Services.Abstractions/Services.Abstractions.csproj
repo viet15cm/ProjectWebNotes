@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Dto\Dto.csproj" />
+    <ProjectReference Include="..\Entities\Entities.csproj" />
+    <ProjectReference Include="..\ExtentionLinqEntitys\ExtentionLinqEntitys.csproj" />
     <ProjectReference Include="..\Paging\Paging.csproj" />
   </ItemGroup>
 
