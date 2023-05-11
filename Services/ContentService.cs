@@ -4,10 +4,12 @@ using Dto;
 using Entities.Models;
 using Exceptions;
 using ExtentionLinqEntitys;
+using Microsoft.EntityFrameworkCore;
 using Services.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -41,39 +43,101 @@ namespace Services
 
             _repositoryManager.Content.Insert(content);
 
-            await _repositoryManager.UnitOfWork.SaveChangesAsync();
+            await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
 
             return ObjectMapper.Mapper.Map<ContentDto>(content);
         }
 
-        public Task<ContentDto> DeleteAsync(string Id, CancellationToken cancellationToken = default)
+        public async Task<ContentDto> DeleteAsync(int Id, CancellationToken cancellationToken = default)
         {
-            throw new NotImplementedException();
+
+            var content = await _repositoryManager
+               .Content
+               .GetByIdAsync(Id,
+               ExpLinqEntity<Content>.ResLinqEntity(ExpExpressions.ExtendInclude<Content>(x => x.Include(x => x.ContentChildrens))), cancellationToken);
+
+
+            if (content.ContentChildrens?.Count > 0)
+            {
+                
+                foreach (var item in content.ContentChildrens)
+                {
+                    item.ParentContentId = content.ParentContentId;
+                }
+                
+            }
+
+            _repositoryManager.Content.Remove(content);
+
+            await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
+
+            return ObjectMapper.Mapper.Map<ContentDto>(content);
         }
 
-        public Task<IEnumerable<ContentDto>> GetAllAsync(CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<Content>> GetAllAsync(IExpLinqEntity<Content> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
-            throw new NotImplementedException();
+            return await _repositoryManager.Content.GetAllAsync(expLinqEntity, cancellationToken);
         }
 
-        public Task<IEnumerable<Content>> GetAllWithDetailAsync(IExpLinqEntity<Content> expLinqEntity = null, CancellationToken cancellationToken = default)
+        public async Task<Content> GetByIdAsync(int Id, IExpLinqEntity<Content> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
-            throw new NotImplementedException();
+            return await _repositoryManager.Content.GetByIdAsync(Id, expLinqEntity, cancellationToken);
         }
 
-        public Task<ContentDto> GetByIdAsync(string Id, CancellationToken cancellationToken = default)
-        {
-            throw new NotImplementedException();
-        }
 
-        public Task<ContentDto> GetByIdWithDetailAsync(string Id, IExpLinqEntity<Content> expLinqEntity = null, CancellationToken cancellationToken = default)
+        public async Task<ContentDto> UpdateAsync(int Id, ContentForUpdateDto contentForUpdateDto, CancellationToken cancellationToken = default)
         {
-            throw new NotImplementedException();
-        }
+            var content = await _repositoryManager
+                .Content
+                .GetByIdAsync(Id,
+                ExpLinqEntity<Content>.ResLinqEntity(ExpExpressions.ExtendInclude<Content>(x => x.Include(x => x.ContentChildrens).Include(x=> x.ParentContent))), cancellationToken);
 
-        public Task<ContentDto> UpdateAsync(string Id, ContentForUpdateDto contentForUpdateDto, CancellationToken cancellationToken = default)
-        {
-            throw new NotImplementedException();
+            if (content == null)
+            {
+                throw new PostNotFoundException(content.Id.ToString());
+            }
+
+            if (content == null)
+            {
+                throw new PostNotFoundException("Không tìm thấy dữ liệu đầu vào .");
+            }
+
+            if (contentForUpdateDto.ParentContentId != null)
+            {
+                if (content.Id == contentForUpdateDto.ParentContentId)
+                {
+                    throw new CategoryIdDuplicatePatentIdException("Lỗi trùng lập Id");
+                }
+            }
+            if (content.ContentChildrens?.Count > 0)
+            {
+                if (content.ParentContentId != contentForUpdateDto.ParentContentId)
+                {
+                    foreach (var item in content.ContentChildrens)
+                    {
+                        item.ParentContentId = content.ParentContentId;
+                    }
+                }
+            }
+
+            Type TypeContentForupdateDto = contentForUpdateDto.GetType();
+
+            Type TypeContent = content.GetType();
+
+            IList<PropertyInfo> props = new List<PropertyInfo>(TypeContentForupdateDto.GetProperties());
+
+            foreach (PropertyInfo prop in props)
+            {
+                PropertyInfo propertyInfo = TypeContent.GetProperty(prop.Name);
+                propertyInfo.SetValue(content, prop.GetValue(contentForUpdateDto, null));
+
+            }
+
+            _repositoryManager.Content.Edit(content);
+            
+            await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
+
+            return ObjectMapper.Mapper.Map<ContentDto>(content);
         }
     }
 }

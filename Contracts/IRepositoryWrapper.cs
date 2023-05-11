@@ -9,6 +9,8 @@
 
         IPostCategoryRepository PostCategory {get;}
 
+        IImageRepository Image { get; }
+
         IUnitOfWork UnitOfWork { get; }
     }
 }

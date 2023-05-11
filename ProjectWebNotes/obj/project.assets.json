@@ -1703,6 +1703,19 @@
           "bin/placeholder/Middleware.dll": {}
         }
       },
+      "ModelValidation/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/ModelValidation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ModelValidation.dll": {}
+        }
+      },
       "Paging/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -4661,6 +4674,11 @@
       "path": "../Middleware/Middleware.csproj",
       "msbuildProject": "../Middleware/Middleware.csproj"
     },
+    "ModelValidation/1.0.0": {
+      "type": "project",
+      "path": "../ModelValidation/ModelValidation.csproj",
+      "msbuildProject": "../ModelValidation/ModelValidation.csproj"
+    },
     "Paging/1.0.0": {
       "type": "project",
       "path": "../Paging/Paging.csproj",
@@ -4685,6 +4703,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.4",
       "Microsoft.jQuery.Unobtrusive.Ajax >= 3.2.6",
       "Middleware >= 1.0.0",
+      "ModelValidation >= 1.0.0",
       "Services >= 1.0.0",
       "Services.Abstractions >= 1.0.0",
       "bootstrap-select >= 1.13.18"
@@ -4730,6 +4749,9 @@
             },
             "D:\\C#\\ProjectWebNotes\\Middleware\\Middleware.csproj": {
               "projectPath": "D:\\C#\\ProjectWebNotes\\Middleware\\Middleware.csproj"
+            },
+            "D:\\C#\\ProjectWebNotes\\ModelValidation\\ModelValidation.csproj": {
+              "projectPath": "D:\\C#\\ProjectWebNotes\\ModelValidation\\ModelValidation.csproj"
             },
             "D:\\C#\\ProjectWebNotes\\Services.Abstractions\\Services.Abstractions.csproj": {
               "projectPath": "D:\\C#\\ProjectWebNotes\\Services.Abstractions\\Services.Abstractions.csproj"

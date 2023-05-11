@@ -36,6 +36,9 @@ namespace Entities.Models
         [Display(Name = "Ngày cập nhật")]
         public DateTime? DateUpdated { set; get; }
 
+        [Display(Name = "Ngày tạo")]
+        public DateTime? DateCreate { set; get; }
+
         public string PostParentId { get; set; }
 
 

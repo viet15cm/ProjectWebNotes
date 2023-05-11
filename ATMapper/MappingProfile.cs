@@ -29,6 +29,10 @@ namespace ATMapper
 
             CreateMap<Image, ImageDto>();
 
+            CreateMap<Image, ImageForCreateDto>();
+
+            CreateMap<ImageForCreateDto,Image>();
+
             CreateMap<Post, PostsFWDImagesDto>()
                 .ForMember(x => x.Images, y => y.MapFrom(k => k.Images));
 

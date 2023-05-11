@@ -14,13 +14,12 @@ namespace Contracts
         void Remove(Post post);
         void Edit(Post post);
 
-        Task<IEnumerable<Post>> GetAllAsync(CancellationToken cancellationToken = default);
+        IEnumerable<Post> GetAll(IExpLinqEntity<Post> expLinqEntity = default);
 
-        Task<IEnumerable<Post>> GetAllWithDetailAsync(IExpLinqEntity<Post> expLinqEntity = default, CancellationToken cancellationToken = default);
+        Post GetById(string postId, IExpLinqEntity<Post> expLinqEntity = default);
 
-        Task<Post> GetByIdAsync(string postId, CancellationToken cancellationToken = default);
+        Task<IEnumerable<Post>> GetAllAsync(IExpLinqEntity<Post> expLinqEntity = default, CancellationToken cancellationToken = default);
 
-        Task<Post> GetByIdWithDetailAsync(string postId , IExpLinqEntity<Post> expLinqEntity = default, CancellationToken cancellationToken = default);
-
+        Task<Post> GetByIdAsync(string postId, IExpLinqEntity<Post> expLinqEntity = default, CancellationToken cancellationToken = default);
     }
 }

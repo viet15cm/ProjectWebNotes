@@ -6,6 +6,6 @@ namespace ExtentionLinqEntitys
         Func<IQueryable<T>, IQueryable<T>>[] Includes();
 
         Func<IQueryable<T>, IOrderedQueryable<T>> OrderBy();
-         bool DisableTracking();
+        bool DisableTracking();
     }
 }

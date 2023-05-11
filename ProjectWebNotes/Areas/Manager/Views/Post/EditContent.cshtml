@@ -1,0 +1,100 @@
+﻿@model Content
+
+@{
+    Layout = "~/Areas/Manager/Views/Shared/_LayoutSummernote.cshtml";
+
+    var treeViewContent = ViewData["TreeViewContentSelete"] as List<ContentSelectDto>;
+    
+    var id = "TextContents";
+}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-6 pb-3 pt-3 ">
+             <h5 class="alert alert-info" >Chỉnh sửa nội dung <span class="text-danger" >--@Model.Title--</span></h5>
+
+              <form method="post" asp-route-contentid="@Model.Id" asp-route-id="@Model.PostId">
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.Title"></label>
+                    <input class="form-control" asp-for="@Model.Title" />
+                    <span asp-validation-for="@Model.Title"></span>
+                </div>
+
+                  <div class="mb-3">
+                        <label class="form-label" asp-for="@Model.ParentContentId"></label>
+                        <select class="form-control" aria-label="Default select example" asp-for="@Model.ParentContentId"
+                                asp-items="@(new SelectList(treeViewContent,"Id","Title"))">
+                                <option value="">Không</option>
+                        </select>
+                        <span asp-validation-for="@Model.ParentContentId"></span>
+                   </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.TextContents"></label>
+                    <textarea id="TextContents" name="TextContents" rows="6" class="form-control" asp-for="@Model.TextContents"></textarea>
+                    <span asp-validation-for="@Model.TextContents"></span>
+                </div>
+
+                <button class="btn btn-sm btn-info" type="submit">Update</button>
+                @Html.ActionLink("Quay trở lại bài viết", "detail", "post", new{id = Model.PostId})
+              
+             </form>
+            <hr />
+            <form id="DeletContent" asp-action="DeleteContent" asp-controller="post" method="post" asp-route-contentid="@Model.Id" asp-route-id="@Model.PostId" >
+                    <button class="btn btn-sm btn-danger m-0" onclick="DeletContent()">Xóa</button>
+            </form>
+        </div>
+        <div class="col-md-6 pb-3 pt-3 ">
+            <div class="card">
+                <h6 class="card-header">Danh sánh ảnh trong bài viết <span class="text-danger">@Model.Post.Title</span> @*(<a class="link-primary" asp-controller="Image" asp-action="index" asp-route-id="@Model.PostId">+ Cập nhật quản lý ảnh</a>)*@</h6>
+                <div class="card-body">
+                    @if (Model.Post.Images?.Count > 0)
+                    {
+                        @foreach (var item in Model.Post.Images)
+                        {
+
+                            <div class="card mx-2 mb-2" style="float: left">
+                                <div class="card-body" style=" height: 100px; width: 180px; border-radius: 6px;">
+                                    <img src="@item.Url" style="height: 100%; width: auto;" />
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn btn-sm btn-outline-primary" type="button" onclick="copyToClipboard('@item.Url')">Copy url</button>
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <h6 class="alert alert-danger">Chưa có</h6>
+                    }
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+
+    <partial name="_Summernote" model="@id"/>
+
+        <script>
+            function DeletContent() {
+                  document.getElementById("DeletContent").submit();
+            }
+        </script>
+
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+
+        <script>
+        function copyToClipboard(valueText) {
+
+            window.prompt("Sao chép dịa chỉ ảnh nhấn : Ctrl+C, Enter", valueText);
+        }
+    </script>
+
+
+
+}

@@ -26,7 +26,10 @@ namespace ProjectWebNotes.Extensions
         public static void ConfigureServiceManager(this IServiceCollection services)
         {
             services.AddScoped<IServiceManager, ServiceManager>();
-            services.AddScoped<IHttpClientServiceImplementation, HttpClientStreamService>();
+            services.AddHttpClient<IHttpClientServiceImplementation, HttpClientStreamService>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+
         }
         public static void ConfigureRepositoryWrapper(this IServiceCollection services)
         {
@@ -37,5 +40,7 @@ namespace ProjectWebNotes.Extensions
         {
             services.AddSingleton<ILoggerManager, LoggerManager>();
         }
+
+        
     }
 }

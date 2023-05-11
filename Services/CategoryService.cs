@@ -11,11 +11,12 @@ using System.Reflection;
 
 namespace Services
 {
-    internal sealed class CategoryService : ServiceBase , ICategoryService
+    internal class CategoryService : ServiceBase , ICategoryService
     {
         public CategoryService(IRepositoryWrapper repositoryManager) : base(repositoryManager)
         {
         }
+
 
         public async Task<CategoryDto> CreateAsync(CategoryForCreationDto categoryDto, CancellationToken cancellationToken = default)
         {
@@ -39,7 +40,7 @@ namespace Services
             _repositoryManager.Category.Insert(category);
 
 
-            await _repositoryManager.UnitOfWork.SaveChangesAsync();
+            await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
 
             return ObjectMapper.Mapper.Map<CategoryDto>(category);
         }
@@ -53,7 +54,8 @@ namespace Services
 
             var category = await _repositoryManager
                 .Category
-                .GetByIdWithDetailAsync(categoryId, ExpLinqEntity<Category>.ResLinqEntity(ExpExpressions.ExtendInclude<Category>(x => x.Include(x => x.PostCategories).Include(x => x.CategoryChildren))));
+                .GetByIdAsync(categoryId, ExpLinqEntity<Category>
+                .ResLinqEntity(ExpExpressions.ExtendInclude<Category>(x => x.Include(x => x.PostCategories).Include(x => x.CategoryChildren))), cancellationToken);
 
             if (category.CategoryChildren?.Count > 0)
             {
@@ -73,34 +75,29 @@ namespace Services
           
             _repositoryManager.Category.Remove(category);
 
-            await _repositoryManager.UnitOfWork.SaveChangesAsync();
+            await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
 
             return ObjectMapper.Mapper.Map<CategoryDto>(category);
 
         }
 
 
-        public async Task<IEnumerable<CategoryDto>> GetAllAsync(CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<Category>> GetAllAsync(IExpLinqEntity<Category> expLinqEntity = null ,CancellationToken cancellationToken = default)
         {
-            var categorys = await _repositoryManager.Category.GetAllAsync(cancellationToken);
-            
-            var categorysDtos = ObjectMapper.Mapper.Map<IEnumerable<CategoryDto>>(categorys);
-            
-            return categorysDtos;
+             return await _repositoryManager.Category.GetAllAsync(expLinqEntity, cancellationToken);
+
         }
 
-        public async Task<CategoryDto> GetByIdAsync(string categoryId, CancellationToken cancellationToken = default)
+        public async Task<Category> GetByIdAsync(string categoryId, IExpLinqEntity<Category> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
-            var category = await _repositoryManager.Category.GetByIdAsync(categoryId, cancellationToken);
+            var category = await _repositoryManager.Category.GetByIdAsync(categoryId, expLinqEntity , cancellationToken);
 
             if (category is null)
             {
                 throw new CategoryNotFoundException(category.Id);
             }
 
-            var categoryDto = ObjectMapper.Mapper.Map<CategoryDto>(category);
-
-            return categoryDto;
+            return category;
         }
         public async Task<CategoryDto> UpdateAsync(string idCategory , 
                                         CategoryForUpdateDto categoryForUpdate , 
@@ -108,7 +105,7 @@ namespace Services
         {
             var category = await _repositoryManager
                 .Category
-                .GetByIdWithDetailAsync(idCategory,
+                .GetByIdAsync(idCategory,
                                         ExpLinqEntity<Category>.ResLinqEntity(ExpExpressions.ExtendInclude<Category>(x => x.Include(x => x.PostCategories).ThenInclude(x => x.Post))),
                                         cancellationToken);
 
@@ -162,14 +159,15 @@ namespace Services
         }
 
 
-        public async Task<IEnumerable<Category>> GetAllWithDetailAsync(IExpLinqEntity<Category> expLinqEntity, CancellationToken cancellationToken = default)
+        public Category GetById(string categoryId, IExpLinqEntity<Category> expLinqEntity = null)
         {
-            return await _repositoryManager.Category.GetAllWithDetailAsync(expLinqEntity);
+            return _repositoryManager.Category.GetById(categoryId, expLinqEntity);
         }
 
-        public async Task<Category> GetByIdWithDetailAsync(string categoryId, IExpLinqEntity<Category> expLinqEntity, CancellationToken cancellationToken = default)
+        public IEnumerable<Category> GetAll(IExpLinqEntity<Category> expLinqEntity = null)
         {
-            return await _repositoryManager.Category.GetByIdWithDetailAsync(categoryId, expLinqEntity);
+            return _repositoryManager.Category.GetAll(expLinqEntity);
         }
+
     }
 }

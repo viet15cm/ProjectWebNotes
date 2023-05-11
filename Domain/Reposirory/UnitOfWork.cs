@@ -13,7 +13,7 @@ namespace Domain.Repository
 
         public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
-            return await RepositoryContext.SaveChangesAsync();
+            return await RepositoryContext.SaveChangesAsync(cancellationToken);
         }
 
         public int SaveChanges()

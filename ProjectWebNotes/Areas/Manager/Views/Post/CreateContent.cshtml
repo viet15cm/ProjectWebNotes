@@ -15,7 +15,7 @@
         <div class="col-md-5 pb-3 pt-3 ">
 
 
-             <h5>Cập nhật nội dung bài viết --@postFWDImgaesDto.Title--</h5>
+             <h5 class="alert alert-info">Tạo nội dung bài viết --@postFWDImgaesDto.Title--</h5>
 
               <form method="post" asp-route-id="@postFWDImgaesDto.Id">
                 <div class="mb-3">
@@ -27,7 +27,7 @@
 
                   <div class="mb-3">
                         <label class="form-label" asp-for="@Model.ParentContentId"></label>
-                        <select class="form-select" aria-label="Default select example" asp-for="@Model.ParentContentId"
+                        <select class="form-control" aria-label="Default select example" asp-for="@Model.ParentContentId"
                                 asp-items="@(new SelectList(treeViewContent,"Id","Title"))">
                                 <option value="">Không</option>
                         </select>
@@ -45,7 +45,25 @@
              </form>
         </div>
         <div class="col-md-7 pb-3 pt-3 ">
-            <h5>Danh sách hình ảnh trong bài viết --@Model.Title-- </h5>
+            @if (postFWDImgaesDto.Images?.Count > 0)
+            {
+                @foreach (var item in postFWDImgaesDto.Images)
+                {
+
+                    <div class="card mx-2 mb-2" style="float: left">
+                        <div class="card-body" style=" height: 100px; width: 180px; border-radius: 6px;">
+                            <img src="@item.Url" style="height: 100%; width: auto;" />
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-sm btn-outline-primary" type="button" onclick="copyToClipboard('@item.Url')">Copy url</button>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                 <h6 class="alert alert-danger">Chưa có</h6>
+            }
         </div>
     </div>
 </div>
@@ -53,7 +71,12 @@
 @section Scripts{
 
         <partial name="_Summernote" model="@id"/>
+             <script>
+            function copyToClipboard(valueText) {
 
+                window.prompt("Sao chép dịa chỉ ảnh nhấn : Ctrl+C, Enter", valueText);
+            }
+        </script>
     @await Html.PartialAsync("_ValidationScriptsPartial")
 
 }

@@ -14,26 +14,6 @@ namespace Domain.Repository
         {
         }
 
-        public async Task<IEnumerable<Post>> GetAllAsync(CancellationToken cancellationToken = default)
-        {
-            return await FindAll()
-                .OrderBy(x => x.Title)
-                .ToListAsync();
-        }
-
-      
-        public Post GetById(string postId)
-        {
-            return FindByCondition(owner => owner.Id.Equals(postId))
-                    .FirstOrDefault();
-        }
-        
-        public async Task<Post> GetByIdAsync(string postId, CancellationToken cancellationToken = default)
-        {
-            return await FindByCondition(owner => owner.Id.Equals(postId))
-                        .FirstOrDefaultAsync();
-        }
-        
         public void Insert(Post post)
         {
             Create(post);
@@ -52,19 +32,31 @@ namespace Domain.Repository
 
         public PagedList<Post> Posts(PostParameters postParameters)
         {
-            return  PagedList<Post>.ToPagedList(FindAll().OrderBy(on => on.Serial),
+            return  PagedList<Post>.ToPagedList(FindAll().OrderByDescending(on => on.DateCreate),
                     postParameters.PageNumber,
                     postParameters.PageSize);
         }
 
-        public async Task<IEnumerable<Post>> GetAllWithDetailAsync(IExpLinqEntity<Post> expLinqEntity = null, CancellationToken cancellationToken = default)
+        public IEnumerable<Post> GetAll(IExpLinqEntity<Post> expLinqEntity = null)
         {
-            return await Queryable(expLinqEntity).ToListAsync();
+            return Queryable(expLinqEntity).ToList();
         }
 
-        public async Task<Post> GetByIdWithDetailAsync(string postId, IExpLinqEntity<Post> expLinqEntity = null, CancellationToken cancellationToken = default)
+        public  Post GetById(string postId, IExpLinqEntity<Post> expLinqEntity = null)
         {
-            return  await Queryable(expLinqEntity).Where(x => x.Id == postId).FirstOrDefaultAsync();   
+            return  Queryable(expLinqEntity).Where(x => x.Id == postId).FirstOrDefault();
+        }
+
+        public async Task<IEnumerable<Post>> GetAllAsync(IExpLinqEntity<Post> expLinqEntity = null,
+                                                            CancellationToken cancellationToken = default)
+        {
+            return await Queryable(expLinqEntity).ToListAsync(cancellationToken);
+        }
+
+        public async Task<Post> GetByIdAsync(string postId, IExpLinqEntity<Post> expLinqEntity = null,
+                                                               CancellationToken cancellationToken = default)
+        {
+            return await Queryable(expLinqEntity).Where(x => x.Id == postId).FirstOrDefaultAsync(cancellationToken);
         }
     }
 }

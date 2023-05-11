@@ -6,7 +6,7 @@
     var posts = ViewData["Posts"] as PagedList<PostDto>;
     var paging = new Paging()
             {
-                UrlAction = "Posts",
+                UrlAction = "index",
                 CurrentPage = posts.CurrentPage,
                 TotalPages = posts.TotalPages,
             };
@@ -50,7 +50,7 @@
 
                 <div asp-validation-summary="All"></div>
                 <button class="btn btn-sm btn-primary" type="submit">Update</button> |
-                @Html.ActionLink("Quay trở lại danh sách", "Posts")
+                @Html.ActionLink("Quay trở lại danh sách", "index", new {pageNumber = posts.CurrentPage})
             </form>
         </div>
     </div>

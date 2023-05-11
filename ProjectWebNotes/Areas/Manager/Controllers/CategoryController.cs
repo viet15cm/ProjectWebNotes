@@ -34,11 +34,15 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             // Phục hồi categories từ Memory cache, không có thì truy vấn Db
             if (!_cache.TryGetValue(_KeyCategory, out category))
             {
-               
-                category = await _serviceManager.CategoryService.GetByIdWithDetailAsync(id);
-                category.PostCategories = (await _serviceManager.PostCategoryService.GetByIdCategoryWithDetailAsync(id,
-                    ExpLinqEntity<PostCategory>.ResLinqEntity(ExpExpressions.ExtendInclude<PostCategory>(x => x.Include(x => x.Post))))).ToList();
-                // Thiết lập cache - lưu vào cache             
+
+                category = await _serviceManager
+                    .CategoryService
+                    .GetByIdAsync(id, ExpLinqEntity<Category>.ResLinqEntity(null, null, true));
+                category.PostCategories = (await _serviceManager
+                                        .PostCategoryService
+                                        .GetByIdCategoryAsync(id,
+                                        ExpLinqEntity<PostCategory>.ResLinqEntity(ExpExpressions.ExtendInclude<PostCategory>(x => x.Include(x => x.Post)), null, true))).ToList();
+
                 var cacheEntryOptions = new MemoryCacheEntryOptions()
                     .SetSlidingExpiration(TimeSpan.FromMinutes(300));
                 _cache.Set(_KeyCategory, category, cacheEntryOptions);
@@ -48,9 +52,14 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             if (category.Id != id)
             {
-                category = await _serviceManager.CategoryService.GetByIdWithDetailAsync(id);
-                category.PostCategories = (await _serviceManager.PostCategoryService.GetByIdCategoryWithDetailAsync(id,
-                   ExpLinqEntity<PostCategory>.ResLinqEntity(ExpExpressions.ExtendInclude<PostCategory>(x => x.Include(x => x.Post))))).ToList();
+                category = await _serviceManager
+                    .CategoryService
+                    .GetByIdAsync(id, ExpLinqEntity<Category>.ResLinqEntity(null, null, true));
+                category.PostCategories = (await _serviceManager
+                                        .PostCategoryService
+                                        .GetByIdCategoryAsync(id,
+                                        ExpLinqEntity<PostCategory>.ResLinqEntity(ExpExpressions.ExtendInclude<PostCategory>(x => x.Include(x => x.Post)), null, true))).ToList();
+
 
                 // Thiết lập cache - lưu vào cache             
                 var cacheEntryOptions = new MemoryCacheEntryOptions()
@@ -72,7 +81,9 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             // Phục hồi categories từ Memory cache, không có thì truy vấn Db
             if (!_cache.TryGetValue(_KeyListCatgorys, out categories))
             {
-                 categories = await _serviceManager.CategoryService.GetAllWithDetailAsync();
+                categories = await _serviceManager
+                    .CategoryService
+                    .GetAllAsync(ExpLinqEntity<Category>.ResLinqEntity(null, x => x.OrderBy(x => x.Serial), true));
 
                 // Thiết lập cache - lưu vào cache
                 var cacheEntryOptions = new MemoryCacheEntryOptions()
@@ -224,7 +235,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         {
             var category = await GetByIdCategoy(id);
 
-            var listPostWithDetails = category.PostCategories.Select(c => c.Post).ToList();
+            var listPostWithDetails = category.PostCategories.Select(c => c.Post).OrderBy(x => x.Serial).ToList();
 
             var outPut = listPostWithDetails;
 

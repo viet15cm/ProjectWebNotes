@@ -21,7 +21,7 @@
                     <dd>
                         @Html.DisplayFor(model => model.Title)
                     </dd>
-
+                    
                     <dt>
                         @Html.DisplayNameFor(model => model.Slug)          
                     </dt>
@@ -36,11 +36,19 @@
                     </dt>
 
                     <dd>
-                        @Html.Raw(Model.Description)
+                        @if (Model.Description != null)
+                        {
+                          @Html.Raw(Model.Description)
+                        }
+                        else{
+                            <span class="text-danger">Chưa có</span>
+                        }
                     </dd>
 
                     <dt>
-                         @Html.DisplayNameFor(model => model.Content)
+                       
+                        @Html.DisplayNameFor(model => model.Content)
+                          
                     </dt>
 
                     <dd>
@@ -49,16 +57,24 @@
 
 
                     <dt>
-                          @Html.ActionLink("Ảnh", "image", "pots", new {id = Model.Id})
+                          @Html.ActionLink("Ảnh", "images", "post", new {id = Model.Id})
                     </dt>
 
                     <dd>
                           <div>
-                              @for (int i = 0; i < 10; i++)
+                              @if (Model.Images?.Count <=0)
                               {
-                                    <img src="" style="width: 50px; height: 50px;" />
+                                    <span class="text-danger">Chưa có</span>
                               }
-                              
+                              else
+                              {
+                                    @foreach (var item in Model.Images)
+                                    {
+                                        <img src="@item.Url" style="width: 50px; height: 50px; margin-top: 7px;" />
+
+                                    }
+                              }
+                             
                           </div>
                     </dd>
 
@@ -79,7 +95,7 @@
 
                             }else
                             {
-                               <a>Trống</a>
+                                <span class="text-danger">Chưa có</span>
                             }
                     </dd>
 
@@ -101,6 +117,9 @@
                                 }
                             </ul>
                            
+                        }else
+                        {
+                            <span class="text-danger">Chưa có</span>
                         }
                             
                     </dd>
@@ -202,13 +221,13 @@
                 @if (item.ContentChildrens?.Count < 0)
                 {
                     <li>
-                       @Html.ActionLink(item.Title , "Edit", "Content", new {id = Model.Id , idcontent = item.Id})
+                         @Html.ActionLink(item.Title , "editcontent", "post", new {id = Model.Id , contentid = item.Id})
                     </li>
                 }
                 else
                 {
                     <li>
-                        @Html.ActionLink(item.Title , "Edit", "Content", new {id = Model.Id , idcontent = item.Id})
+                       @Html.ActionLink(item.Title , "editcontent", "post", new {id = Model.Id , contentid = item.Id})
 
                           <ul>
 

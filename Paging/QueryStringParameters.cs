@@ -5,7 +5,7 @@ namespace Paging
     {
         const int maxPageSize = 50;
         public int PageNumber { get; set; } = 1;
-        private int _pageSize = 5;
+        private int _pageSize = 15;
         public int PageSize
         {
             get

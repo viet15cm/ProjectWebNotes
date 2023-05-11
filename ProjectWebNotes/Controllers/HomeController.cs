@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProjectWebNotes.DbContextLayer;
+using ProjectWebNotes.FileManager;
 using ProjectWebNotes.Models;
 using Services.Abstractions;
 using System.Diagnostics;
@@ -11,7 +12,7 @@ namespace ProjectWebNotes.Controllers
     {
         private readonly AppDbcontext _context;
         private readonly IServiceManager _serviceManager;
-       
+ 
         public HomeController(IServiceManager serviceManager, AppDbcontext context)
         {
             _serviceManager = serviceManager;
@@ -33,8 +34,9 @@ namespace ProjectWebNotes.Controllers
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public  IActionResult Error()
         {
+            
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }

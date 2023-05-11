@@ -133,6 +133,9 @@ namespace ProjectWebNotes.Migrations
                     b.Property<string>("Content")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime?>("DateCreate")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime?>("DateUpdated")
                         .HasColumnType("datetime2");
 
@@ -203,7 +206,7 @@ namespace ProjectWebNotes.Migrations
                         .HasForeignKey("ParentContentId");
 
                     b.HasOne("Entities.Models.Post", "Post")
-                        .WithMany()
+                        .WithMany("Contents")
                         .HasForeignKey("PostId");
 
                     b.Navigation("ParentContent");
@@ -262,6 +265,8 @@ namespace ProjectWebNotes.Migrations
 
             modelBuilder.Entity("Entities.Models.Post", b =>
                 {
+                    b.Navigation("Contents");
+
                     b.Navigation("Images");
 
                     b.Navigation("PostCategories");

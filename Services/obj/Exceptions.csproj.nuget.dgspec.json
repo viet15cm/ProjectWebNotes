@@ -8,10 +8,10 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "D:\\C#\\ProjectWebNotes\\ATMapper\\ATMapper.csproj",
-        "projectName": "ExtentionLinqEntitys",
+        "projectName": "ATMapper",
         "projectPath": "D:\\C#\\ProjectWebNotes\\ATMapper\\ATMapper.csproj",
         "packagesPath": "C:\\Users\\viet_key\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\ProjectWebNotes\\ExtentionLinqEntitys\\obj\\",
+        "outputPath": "D:\\C#\\ProjectWebNotes\\ATMapper\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -31,7 +31,14 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\C#\\ProjectWebNotes\\Dto\\Dto.csproj": {
+                "projectPath": "D:\\C#\\ProjectWebNotes\\Dto\\Dto.csproj"
+              },
+              "D:\\C#\\ProjectWebNotes\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\C#\\ProjectWebNotes\\Entities\\Entities.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -100,6 +107,9 @@
               "D:\\C#\\ProjectWebNotes\\Entities\\Entities.csproj": {
                 "projectPath": "D:\\C#\\ProjectWebNotes\\Entities\\Entities.csproj"
               },
+              "D:\\C#\\ProjectWebNotes\\ExtentionLinqEntitys\\ExtentionLinqEntitys.csproj": {
+                "projectPath": "D:\\C#\\ProjectWebNotes\\ExtentionLinqEntitys\\ExtentionLinqEntitys.csproj"
+              },
               "D:\\C#\\ProjectWebNotes\\Paging\\Paging.csproj": {
                 "projectPath": "D:\\C#\\ProjectWebNotes\\Paging\\Paging.csproj"
               }
@@ -135,14 +145,14 @@
         }
       }
     },
-    "D:\\C#\\ProjectWebNotes\\Entities\\Entities.csproj": {
+    "D:\\C#\\ProjectWebNotes\\Dto\\Dto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\ProjectWebNotes\\Entities\\Entities.csproj",
-        "projectName": "Entities",
-        "projectPath": "D:\\C#\\ProjectWebNotes\\Entities\\Entities.csproj",
+        "projectUniqueName": "D:\\C#\\ProjectWebNotes\\Dto\\Dto.csproj",
+        "projectName": "Dto",
+        "projectPath": "D:\\C#\\ProjectWebNotes\\Dto\\Dto.csproj",
         "packagesPath": "C:\\Users\\viet_key\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\ProjectWebNotes\\Entities\\obj\\",
+        "outputPath": "D:\\C#\\ProjectWebNotes\\Dto\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -163,6 +173,69 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\C#\\ProjectWebNotes\\Entities\\Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\C#\\ProjectWebNotes\\Entities\\Entities.csproj",
+        "projectName": "Domain",
+        "projectPath": "D:\\C#\\ProjectWebNotes\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\viet_key\\.nuget\\packages\\",
+        "outputPath": "D:\\C#\\ProjectWebNotes\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\viet_key\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\C#\\ProjectWebNotes\\Contracts\\Contracts.csproj": {
+                "projectPath": "D:\\C#\\ProjectWebNotes\\Contracts\\Contracts.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -266,14 +339,73 @@
         }
       }
     },
+    "D:\\C#\\ProjectWebNotes\\ExtentionLinqEntitys\\ExtentionLinqEntitys.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\C#\\ProjectWebNotes\\ExtentionLinqEntitys\\ExtentionLinqEntitys.csproj",
+        "projectName": "ExtentionLinqEntitys",
+        "projectPath": "D:\\C#\\ProjectWebNotes\\ExtentionLinqEntitys\\ExtentionLinqEntitys.csproj",
+        "packagesPath": "C:\\Users\\viet_key\\.nuget\\packages\\",
+        "outputPath": "D:\\C#\\ProjectWebNotes\\ExtentionLinqEntitys\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\viet_key\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\C#\\ProjectWebNotes\\Paging\\Paging.csproj": {
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "D:\\C#\\ProjectWebNotes\\Paging\\Paging.csproj",
-        "projectName": "ExtentionLinqEntitys",
+        "projectName": "Paging",
         "projectPath": "D:\\C#\\ProjectWebNotes\\Paging\\Paging.csproj",
         "packagesPath": "C:\\Users\\viet_key\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\ProjectWebNotes\\ExtentionLinqEntitys\\obj\\",
+        "outputPath": "D:\\C#\\ProjectWebNotes\\Paging\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -329,10 +461,10 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "D:\\C#\\ProjectWebNotes\\Services.Abstractions\\Services.Abstractions.csproj",
-        "projectName": "ExtentionLinqEntitys",
+        "projectName": "Services.Abstractions",
         "projectPath": "D:\\C#\\ProjectWebNotes\\Services.Abstractions\\Services.Abstractions.csproj",
         "packagesPath": "C:\\Users\\viet_key\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\ProjectWebNotes\\ExtentionLinqEntitys\\obj\\",
+        "outputPath": "D:\\C#\\ProjectWebNotes\\Services.Abstractions\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -352,7 +484,20 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\C#\\ProjectWebNotes\\Dto\\Dto.csproj": {
+                "projectPath": "D:\\C#\\ProjectWebNotes\\Dto\\Dto.csproj"
+              },
+              "D:\\C#\\ProjectWebNotes\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\C#\\ProjectWebNotes\\Entities\\Entities.csproj"
+              },
+              "D:\\C#\\ProjectWebNotes\\ExtentionLinqEntitys\\ExtentionLinqEntitys.csproj": {
+                "projectPath": "D:\\C#\\ProjectWebNotes\\ExtentionLinqEntitys\\ExtentionLinqEntitys.csproj"
+              },
+              "D:\\C#\\ProjectWebNotes\\Paging\\Paging.csproj": {
+                "projectPath": "D:\\C#\\ProjectWebNotes\\Paging\\Paging.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

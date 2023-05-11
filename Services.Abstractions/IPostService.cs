@@ -7,12 +7,15 @@ namespace Services.Abstractions
 {
     public interface IPostService
     {
-        Task<IEnumerable<PostDto>> GetAllAsync(CancellationToken cancellationToken = default);
+
+        Post GetById(string postId, IExpLinqEntity<Post> expLinqEntity = default);
+
+        IEnumerable<Post> GetAll(IExpLinqEntity<Post> expLinqEntity = default);
+        Task<IEnumerable<Post>> GetAllAsync(IExpLinqEntity<Post> expLinqEntity = default, CancellationToken cancellationToken = default);
+
+        Task<Post> GetByIdAsync(string postId, IExpLinqEntity<Post> expLinqEntity = default, CancellationToken cancellationToken = default);
         PagedList<PostDto> Posts(PostParameters postParameters);
 
-        Task<Post> GetByIdWithDetailAsync(string postId, IExpLinqEntity<Post> expLinqEntity = default, CancellationToken cancellationToken = default);
-        Task<IEnumerable<Post>> GetAllWithDetailAsync(IExpLinqEntity<Post> expLinqEntity = default, CancellationToken cancellationToken = default);
-        Task<PostDto> GetByIdAsync(string postId, CancellationToken cancellationToken = default);
         Task<PostDto> CreateAsync(PostForCreationDto postForCreationDto, CancellationToken cancellationToken = default);
 
         Task<PostDto> CreateAsync(PostForCreationDto postForCreationDto , string categoryId, CancellationToken cancellationToken = default);

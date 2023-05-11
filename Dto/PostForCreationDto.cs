@@ -30,7 +30,7 @@ namespace Dto
         public string Content { set; get; }
 
         [Display(Name = "Ngày cập nhật")]
-        public DateTime? DateUpdated { set; get; }
+        public DateTime? DateCreate { set; get; }
         public string PostParentId { get; set; }
 
         [Display(Name = "Nổi bậc")]

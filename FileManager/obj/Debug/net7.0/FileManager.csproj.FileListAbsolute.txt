@@ -1,0 +1,12 @@
+D:\C#\ProjectWebNotes\FileManager\bin\Debug\net7.0\FileManager.deps.json
+D:\C#\ProjectWebNotes\FileManager\bin\Debug\net7.0\FileManager.dll
+D:\C#\ProjectWebNotes\FileManager\bin\Debug\net7.0\FileManager.pdb
+D:\C#\ProjectWebNotes\FileManager\obj\Debug\net7.0\FileManager.csproj.AssemblyReference.cache
+D:\C#\ProjectWebNotes\FileManager\obj\Debug\net7.0\FileManager.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\ProjectWebNotes\FileManager\obj\Debug\net7.0\FileManager.AssemblyInfoInputs.cache
+D:\C#\ProjectWebNotes\FileManager\obj\Debug\net7.0\FileManager.AssemblyInfo.cs
+D:\C#\ProjectWebNotes\FileManager\obj\Debug\net7.0\FileManager.csproj.CoreCompileInputs.cache
+D:\C#\ProjectWebNotes\FileManager\obj\Debug\net7.0\FileManager.dll
+D:\C#\ProjectWebNotes\FileManager\obj\Debug\net7.0\refint\FileManager.dll
+D:\C#\ProjectWebNotes\FileManager\obj\Debug\net7.0\FileManager.pdb
+D:\C#\ProjectWebNotes\FileManager\obj\Debug\net7.0\ref\FileManager.dll

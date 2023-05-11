@@ -11,20 +11,15 @@ namespace Services
 {
     public class HttpClientStreamService : IHttpClientServiceImplementation
     {
-        private static readonly HttpClient _httpClient = new HttpClient();
-        private readonly JsonSerializerOptions _options;
-        public HttpClientStreamService()
-        {
-            if (_httpClient.BaseAddress == null)
-            {
-                _httpClient.BaseAddress = new Uri("http://www.microsoft.com");
-            }
-            _httpClient.Timeout = new TimeSpan(0, 0, 30);
-            _httpClient.DefaultRequestHeaders.Clear();
-            _options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-        }
+     
+        //private readonly JsonSerializerOptions _options;
+        private readonly HttpClient _httpClient;
 
-        public static DateTime GetNistTime()
+        public HttpClientStreamService(HttpClient httpClient)
+        {
+            _httpClient = httpClient;
+        }
+        public DateTime GetNistTime()
         {
             string url = "http://www.microsoft.com";
 

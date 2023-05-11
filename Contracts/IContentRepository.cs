@@ -8,13 +8,12 @@ using System.Threading.Tasks;
 
 namespace Contracts
 {
-    public interface IContentRepository
+    public interface IContentRepository : IRepositoryBase<Content>
     {
-        Task<IEnumerable<Content>> GetAllAsync(CancellationToken cancellationToken = default);
-        Task<IEnumerable<Content>> GetAllWithDetailAsync(IExpLinqEntity<Content> expLinqEntity = default, CancellationToken cancellationToken = default);
-        Task<Content> GetByIdAsync(int Id, CancellationToken cancellationToken = default);
-        Task<Content> GetByIdWithDetailAsync(int Id, IExpLinqEntity<Content> expLinqEntity = default, CancellationToken cancellationToken = default);
-
+     
+        Task<IEnumerable<Content>> GetAllAsync(IExpLinqEntity<Content> expLinqEntity = default, CancellationToken cancellationToken = default);
+        Task<Content> GetByIdAsync(int Id , IExpLinqEntity<Content> expLinqEntity = default, CancellationToken cancellationToken = default);
+      
         void Edit(Content content);
 
         void Insert(Content content);

@@ -17,30 +17,22 @@ namespace Domain.Reposirory
         {
         }
 
-        public void Edit(Content category)
+        public void Edit(Content content)
         {
-            Edit(category);
+            Update(content);
         }
 
-        public Task<IEnumerable<Content>> GetAllAsync(CancellationToken cancellationToken = default)
+
+        public async Task<IEnumerable<Content>> GetAllAsync(IExpLinqEntity<Content> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
-            throw new NotImplementedException();
+            return await Queryable(expLinqEntity).ToListAsync(cancellationToken);
         }
 
-        public Task<IEnumerable<Content>> GetAllWithDetailAsync(IExpLinqEntity<Content> expLinqEntity = null, CancellationToken cancellationToken = default)
+        public async Task<Content> GetByIdAsync(int Id , IExpLinqEntity<Content> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
-            throw new NotImplementedException();
+            return await Queryable(expLinqEntity).Where(x => x.Id == Id).FirstOrDefaultAsync(cancellationToken);
         }
 
-        public Task<Content> GetByIdAsync(int Id, CancellationToken cancellationToken = default)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task<Content> GetByIdWithDetailAsync(int Id, IExpLinqEntity<Content> expLinqEntity = null, CancellationToken cancellationToken = default)
-        {
-            return await Queryable(expLinqEntity).Where(x => x.Id == Id).FirstOrDefaultAsync();
-        }
 
         public void Insert(Content content)
         {

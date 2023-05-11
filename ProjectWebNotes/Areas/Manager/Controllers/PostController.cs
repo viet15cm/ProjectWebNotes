@@ -4,19 +4,15 @@ using Dto;
 using Entities.Models;
 using ExtentionLinqEntitys;
 using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
-using Microsoft.Extensions.Hosting;
 using Paging;
 using ProjectWebNotes.Areas.Manager.Models;
-using ProjectWebNotes.Models;
+using ProjectWebNotes.FileManager;
 using Services.Abstractions;
 using System.ComponentModel.DataAnnotations;
-using System.Reflection.Metadata.Ecma335;
-using static ProjectWebNotes.Areas.Manager.Controllers.PostController;
 
 namespace ProjectWebNotes.Areas.Manager.Controllers
 {
@@ -27,11 +23,18 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
         private const string _KeyListCatgorys = "_listallPosts";
 
+        private readonly IWebHostEnvironment _webhost;
+
+        private readonly IHttpContextAccessor _iHttpContextAccessor;
         public PostController(IServiceManager serviceManager, 
                                 IMemoryCache memoryCache,
-                                IHttpClientServiceImplementation httpClient)
+                                IHttpClientServiceImplementation httpClient,
+                                IWebHostEnvironment webhost,
+                                IHttpContextAccessor httpContextAccessor)
             : base(serviceManager, memoryCache, httpClient)
         {
+            _webhost = webhost;
+            _iHttpContextAccessor = httpContextAccessor;
         }
 
         [NonAction]
@@ -44,7 +47,9 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             // Phục hồi categories từ Memory cache, không có thì truy vấn Db
             if (!_cache.TryGetValue(_KeyListCatgorys, out categories))
             {
-                categories = await _serviceManager.CategoryService.GetAllWithDetailAsync();
+                categories = await _serviceManager.
+                    CategoryService
+                    .GetAllAsync(ExpLinqEntity<Category>.ResLinqEntity(null, null, true));
 
                 // Thiết lập cache - lưu vào cache
                 var cacheEntryOptions = new MemoryCacheEntryOptions()
@@ -59,39 +64,6 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
 
         [NonAction]
-        async Task<PostDto> GetPostDto(string id)
-        {
-
-            PostDto post;
-
-            // Phục hồi categories từ Memory cache, không có thì truy vấn Db
-            if (!_cache.TryGetValue(_KeyObj, out post))
-            {
-
-                post = await _serviceManager.PostService.GetByIdAsync(id);
-
-                // Thiết lập cache - lưu vào cache             
-                var cacheEntryOptions = new MemoryCacheEntryOptions()
-                    .SetSlidingExpiration(TimeSpan.FromMinutes(300));
-                _cache.Set(_KeyObj, post, cacheEntryOptions);
-            }
-
-            post = _cache.Get(_KeyObj) as PostDto;
-
-            if (post.Id != id)
-            {
-                post = await _serviceManager.PostService.GetByIdAsync(id);
-                // Thiết lập cache - lưu vào cache             
-                var cacheEntryOptions = new MemoryCacheEntryOptions()
-                    .SetSlidingExpiration(TimeSpan.FromMinutes(300));
-                _cache.Set(_KeyObj, post, cacheEntryOptions);
-            }
-
-            return post;
-        }
-
-
-        [NonAction]
         async Task<IEnumerable<Post>> GetAllPostTreeViews()
         {
 
@@ -101,7 +73,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             if (!_cache.TryGetValue(_KeyList, out posts))
             {
 
-                posts = await _serviceManager.PostService.GetAllWithDetailAsync();
+                posts = await _serviceManager.PostService.GetAllAsync();
 
                 // Thiết lập cache - lưu vào cache
                 var cacheEntryOptions = new MemoryCacheEntryOptions()
@@ -142,7 +114,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             TreeViews.CreateTreeViewCategorySeleteItems(cateforys, des, 0);
 
-            var post = await _serviceManager.PostService.GetByIdWithDetailAsync(id);
+            var post = await _serviceManager.PostService.GetByIdAsync(id);
 
             bidingPostCategory = new BidingPostCategory();
 
@@ -156,7 +128,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         [HttpPost]
         public async Task<IActionResult> AddCategory([FromForm] BidingPostCategory bidingPostCategory, [FromRoute] string id)
         {
-            var post = await _serviceManager.PostService.GetByIdWithDetailAsync(id);
+            var post = await _serviceManager.PostService.GetByIdAsync(id);
 
             if (bidingPostCategory.PostCategorys == null)
             {
@@ -165,7 +137,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             var oldPostCategorys = (await _serviceManager
                 .PostService
-                .GetByIdWithDetailAsync(id))
+                .GetByIdAsync(id))
                 ?.PostCategories.Select(c => c.CategoryID);
 
 
@@ -181,14 +153,13 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             return RedirectToAction("AddCategory", new {id = post.Id });
 
-
         }
 
         async Task<Post> RunPostDetail(string id)
         {
             var post = await _serviceManager
               .PostService
-              .GetByIdWithDetailAsync(id, ExpLinqEntity<Post>
+              .GetByIdAsync(id, ExpLinqEntity<Post>
               .ResLinqEntity(ExpExpressions
               .ExtendInclude<Post>(x => x.Include(x => x.Images)
                                   .Include(x => x.PostChilds)
@@ -198,7 +169,6 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
                                   .Include(x => x.PostCategories)
                                   .ThenInclude(x => x.Category)
                                   )));
-
             return post;
         }
 
@@ -206,6 +176,14 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         public async Task<IActionResult> Detail([FromRoute]string id)
         {
             var post = await RunPostDetail(id);
+
+            if (post.Images?.Count > 0)
+            {
+                foreach (var item in post.Images)
+                {
+                    item.Url = PathAbsolute.HttpContextAccessorPathImgSrcIndex(_iHttpContextAccessor, new ImagePost(), item.Url);
+                }
+            }
             return View(post);
         }
 
@@ -215,58 +193,49 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             var post = await RunPostDetail(id);
 
             var postFWDImgaesDto = ObjectMapper.Mapper.Map<PostsFWDImagesDto>(post);
+
+            if (postFWDImgaesDto.Images?.Count >0)
+            {
+                foreach (var item in postFWDImgaesDto.Images)
+                {
+                    item.Url = PathAbsolute.HttpContextAccessorPathImgSrcIndex(_iHttpContextAccessor, new ImagePost(), item.Url);
+                }
+            }
+
+
             return View(postFWDImgaesDto);
         }
 
-        [HttpGet]
-        public async Task<IActionResult> CreateContent([FromRoute] string id)
-        {
-            var post = await RunPostDetail(id);
-
-            var postFWDImgaesDto = ObjectMapper.Mapper.Map<PostsFWDContentImagesDto>(post);
-
-            var des = new List<ContentSelectDto>();
-
-            TreeViews.CreateTreeViewContentSeleteItems(postFWDImgaesDto.Contents.Where(x => x.ParentContentId == null), des, 0);
-            
-            ViewData["postFWDImgaesDto"] = postFWDImgaesDto;
-
-            ViewData["TreeViewContentSelete"] = des;
-
-            return View(new ContentForCreateDto());
-            
-        }
 
         [HttpPost]
-        public async Task<IActionResult> CreateContent([FromForm] ContentForCreateDto contentForCreateDto, [FromRoute] string id
-                                                      )
-        {
-            if (contentForCreateDto?.PostId is null)
-            {
-                contentForCreateDto.PostId = id;
-            }
-             var contentDto = await _serviceManager.ContentService.CreateAsync(contentForCreateDto);
-
-            StatusMessage = $"Thêm thành công nội dung ---{contentDto.Title}---";
-
-            return RedirectToAction("detail", new {id = id });
-        }
-
-
         public async Task<IActionResult> Contents([FromForm] PostForUpdateContentDto postForUpdateContentDto,
                                                     [FromRoute]string id)
 
         {
             if (!ModelState.IsValid)
             {
-                var post = await _serviceManager
-                .PostService
-                .GetByIdWithDetailAsync(id, ExpLinqEntity<Post>.ResLinqEntity(ExpExpressions.ExtendInclude<Post>(x => x.Include(x => x.Images))));
+                var post = await RunPostDetail(id);
 
                 var postFWDImgaesDto = ObjectMapper.Mapper.Map<PostsFWDImagesDto>(post);
-                
+
+
+                if (postFWDImgaesDto.Images?.Count > 0)
+                {
+                    foreach (var item in postFWDImgaesDto.Images)
+                    {
+                        item.Url = PathAbsolute.HttpContextAccessorPathImgSrcIndex(_iHttpContextAccessor, new ImagePost(), item.Url);
+                    }
+                }
+
                 return View(postFWDImgaesDto);
             }
+
+
+            if (postForUpdateContentDto.DateUpdated is null)
+            {
+                postForUpdateContentDto.DateUpdated = _serviceManager.HttpClient.GetNistTime();
+            }
+
 
             var postUpdate = await _serviceManager.PostService.UpdateAsync(id, postForUpdateContentDto);
 
@@ -289,11 +258,17 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
                 return View("Posts", postForCreationDto);
             }
 
+            if (postForCreationDto.DateCreate is null)
+            {
+                postForCreationDto.DateCreate = _serviceManager.HttpClient.GetNistTime();
+            }
+
+
             var post = await _serviceManager.PostService.CreateAsync(postForCreationDto);
 
             StatusMessage = $"Thêm thành công bài viết #{post.Title}#";
 
-            return RedirectToAction("Posts");
+            return RedirectToAction("index");
         }
 
       
@@ -314,7 +289,9 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             ViewData["Posts"] = posts;
 
-            var postDto = await _serviceManager.PostService.GetByIdAsync(id);
+            var post = await _serviceManager.PostService.GetByIdAsync(id);
+
+            var postDto = ObjectMapper.Mapper.Map<PostDto>(post);
 
             return View(postDto);
         }
@@ -328,7 +305,10 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             {
                 var posts = _serviceManager.PostService.Posts(postParameters);
 
-                var postDto = await _serviceManager.PostService.GetByIdAsync(id);
+                var itemPost = await _serviceManager.PostService.GetByIdAsync(id);
+
+                var postDto = ObjectMapper.Mapper.Map<PostDto>(itemPost);
+
 
                 ViewData["Posts"] = posts;
 
@@ -338,7 +318,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             var post = await _serviceManager.PostService.UpdateAsync(id, postForUpdateDto);
             StatusMessage = $"Cập nhật thành bài viết #{post.Title}#";
-            return RedirectToAction("Posts", new { pageNumber = postParameters.PageNumber});
+            return RedirectToAction("editpost", new { pageNumber = postParameters.PageNumber});
         }
 
         [HttpGet]
@@ -348,7 +328,9 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             ViewData["Posts"] = posts;
 
-            var postDto = await _serviceManager.PostService.GetByIdAsync(id);
+            var post = await _serviceManager.PostService.GetByIdAsync(id);
+
+            var postDto = ObjectMapper.Mapper.Map<PostDto>(post);
 
             return View(postDto);
         }
@@ -418,6 +400,237 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             return RedirectToAction("detail", new { id = post.Id});
 
 
+        }
+
+
+        [HttpGet]
+        public async Task<IActionResult> CreateContent([FromRoute] string id)
+        {
+            var post = await RunPostDetail(id);
+
+            var postFWDImgaesDto = ObjectMapper.Mapper.Map<PostsFWDContentImagesDto>(post);
+
+            if (postFWDImgaesDto.Images?.Count > 0)
+            {
+                foreach (var item in postFWDImgaesDto.Images)
+                {
+                    item.Url = PathAbsolute.HttpContextAccessorPathImgSrcIndex(_iHttpContextAccessor, new ImagePost(), item.Url);
+                }
+            }
+
+            var des = new List<ContentSelectDto>();
+
+            TreeViews.CreateTreeViewContentSeleteItems(postFWDImgaesDto.Contents.Where(x => x.ParentContentId == null), des, 0);
+
+            ViewData["postFWDImgaesDto"] = postFWDImgaesDto;
+
+            ViewData["TreeViewContentSelete"] = des;
+
+            return View(new ContentForCreateDto());
+
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateContent([FromForm] ContentForCreateDto contentForCreateDto, [FromRoute] string id
+                                                      )
+        {
+            if (!ModelState.IsValid)
+            {
+                var post = await RunPostDetail(id);
+
+                var postFWDImgaesDto = ObjectMapper.Mapper.Map<PostsFWDContentImagesDto>(post);
+
+                if (postFWDImgaesDto.Images?.Count > 0)
+                {
+                    foreach (var item in postFWDImgaesDto.Images)
+                    {
+                        item.Url = PathAbsolute.HttpContextAccessorPathImgSrcIndex(_iHttpContextAccessor, new ImagePost(), item.Url);
+                    }
+                }
+
+
+                var des = new List<ContentSelectDto>();
+
+                TreeViews.CreateTreeViewContentSeleteItems(postFWDImgaesDto.Contents.Where(x => x.ParentContentId == null), des, 0);
+
+                ViewData["postFWDImgaesDto"] = postFWDImgaesDto;
+
+                ViewData["TreeViewContentSelete"] = des;
+
+                return View(contentForCreateDto);
+            }
+
+            if (contentForCreateDto?.PostId is null)
+            {
+                contentForCreateDto.PostId = id;
+            }
+
+            var contentDto = await _serviceManager.ContentService.CreateAsync(contentForCreateDto);
+
+            StatusMessage = $"Thêm thành công nội dung ---{contentDto.Title}---";
+
+            return RedirectToAction("detail", new { id = id });
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> EditContent([FromRoute]string id , [FromQuery]int contentid)
+        {
+            var content = await _serviceManager
+                .ContentService
+                .GetByIdAsync(contentid
+                , ExpLinqEntity<Content>
+                .ResLinqEntity(ExpExpressions
+                .ExtendInclude<Content>(x => x.Include(x => x.Post)
+                .ThenInclude(x => x.Contents)
+                .Include(x => x.Post)
+                .ThenInclude(x => x.Images))));
+
+            var postFWDImgaesDto = ObjectMapper.Mapper.Map<PostsFWDContentImagesDto>(content.Post);
+
+            var des = new List<ContentSelectDto>();
+
+            TreeViews.CreateTreeViewContentSeleteItems(postFWDImgaesDto.Contents.Where(x => x.ParentContentId == null), des, 0);
+
+            if (content.Post.Images?.Count > 0)
+            {
+                foreach (var item in content.Post.Images)
+                {
+                    item.Url = PathAbsolute.HttpContextAccessorPathImgSrcIndex(_iHttpContextAccessor, new ImagePost(), item.Url);
+                }
+            }
+
+            ViewData["TreeViewContentSelete"] = des;
+
+            return View(content);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditContent([FromForm] ContentForUpdateDto contentForUpdateDto, [FromRoute] string id , [FromQuery] int contentid)
+        {
+            if (!ModelState.IsValid)
+            {
+                var content = await _serviceManager
+                .ContentService
+                .GetByIdAsync(contentid
+                , ExpLinqEntity<Content>
+                .ResLinqEntity(ExpExpressions
+                .ExtendInclude<Content>(x => x.Include(x => x.Post)
+                .ThenInclude(x => x.Contents))));
+
+                var postFWDImgaesDto = ObjectMapper.Mapper.Map<PostsFWDContentImagesDto>(content.Post);
+
+                var des = new List<ContentSelectDto>();
+
+                TreeViews.CreateTreeViewContentSeleteItems(postFWDImgaesDto.Contents.Where(x => x.ParentContentId == null), des, 0);
+
+                ViewData["TreeViewContentSelete"] = des;
+
+                return View(contentForUpdateDto);
+            }
+
+            var contentDto = await _serviceManager.ContentService.UpdateAsync(contentid, contentForUpdateDto);
+
+            StatusMessage = $"Chỉnh sửa thành công nội dung ---{contentDto.Title}---";
+
+            return RedirectToAction("detail", new { id = id });
+
+
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteContent([FromRoute]string id , [FromQuery]int contentid)        
+        {
+            var contentDto = await _serviceManager.ContentService.DeleteAsync(contentid);
+
+            StatusMessage = $"Xóa thành công nội dung ---{contentDto.Title}---";
+
+            return RedirectToAction("detail", new { id = id });
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Images([FromRoute] string id)
+        {
+            var post = await RunPostDetail(id);
+
+            var postFWDImgaesDto = ObjectMapper.Mapper.Map<PostsFWDImagesDto>(post);
+
+            ViewData["postFWDImgaesDto"] = postFWDImgaesDto;
+
+            var image = new ImageView();
+            
+            image.SelectImages = post.Images.Select(x => x.Url).ToList();
+
+            image.AvailableImages = post.Images.Select(x => new ImageSelectList() { Text = x.Url, Value = x.Url }).ToList();
+            
+            return View(image);
+
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditImages(ImageView image , [FromRoute]string id)
+        {
+            if (image == null)
+            {
+                return NotFound();
+            }
+
+            var post =  await RunPostDetail(id);
+
+            var messgae = 0;
+            var deleteImge = 0;
+
+            if (ModelState.IsValid)
+            {
+                if (image.FormFiles != null)
+                {
+                    foreach (var fronfile in image.FormFiles)
+                    {
+                        var data = new ImageForCreateDto()
+                        {
+                            Url = FileService.GetUniqueFileName(fronfile.FileName),
+                            PostId = post.Id
+                        };
+
+                        var resultFile = await FileService.CreateFileAsync(_webhost, CreateObFile.Create<ImagePost>(), fronfile, data.Url);
+
+                        if (resultFile)
+                        {
+                            var resultImage = await _serviceManager.ImageService.CreateAsync(data);
+                            messgae += 1;
+                        }
+
+                    }
+
+                }
+
+                if (image.SelectImages.Count > 0)
+                {
+                    foreach (var item in image.SelectImages)
+                    {
+
+                        var img = post.Images.FirstOrDefault(x => x.Url.Equals(item));
+
+                        var deletedataImgeResult = await _serviceManager.ImageService.DeleteAsync(img.Id);
+
+                        var resultFileimge = await FileService.DeleteFileAsync(_webhost, CreateObFile.Create<ImagePost>(), item);
+       
+                         deleteImge += 1;                        
+                    }
+                }
+                StatusMessage = $"Thêm thành công {messgae} ảnh , đả xóa {deleteImge} ảnh ";
+
+                return RedirectToAction("Detail", new { id = post.Id });
+            }
+
+
+            var images =  post.Images;
+
+            image.SelectImages = post.Images.Select(x => x.Url).ToList();
+
+            image.AvailableImages = post.Images.Select(x => new ImageSelectList() { Text = x.Url, Value = x.Url }).ToList();
+
+
+            return View("Images", image);
         }
 
     }

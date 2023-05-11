@@ -10,6 +10,9 @@
 
         IContentService ContentService { get; }
 
+        IImageService ImageService { get; }
+
+        IHttpClientServiceImplementation HttpClient { get; }
 
     }
 }

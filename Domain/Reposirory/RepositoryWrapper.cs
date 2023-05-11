@@ -1,5 +1,6 @@
 ﻿using Contracts;
 using Domain.Reposirory;
+using Entities.Models;
 
 namespace Domain.Repository
 {
@@ -20,8 +21,8 @@ namespace Domain.Repository
         private IPostCategoryRepository _postCategory;
 
         private IUnitOfWork _unitOfWork;
-       
 
+        private IImageRepository _image;
         public IContentRepository Content
         {
 
@@ -88,5 +89,17 @@ namespace Domain.Repository
             }
         }
 
+        public IImageRepository Image
+        {
+            get
+            {
+                if (_image == null)
+                {
+                    _image = new ImageRepository(_repoContext);
+                }
+
+                return _image;
+            }
+        }
     }
 }

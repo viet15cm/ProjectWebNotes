@@ -17,13 +17,15 @@ namespace Services
 {
     public class PostService : ServiceBase , IPostService
     {
+      
         public PostService(IRepositoryWrapper repositoryManager) : base(repositoryManager)
         {
+            
         }
 
         public async Task AddToCategorysAsync(string postId, IEnumerable<string> categoryId)
         {
-            var datas = await _repositoryManager.PostCategory.GetByIdPostWithDetailAsync(postId);
+            var datas = await _repositoryManager.PostCategory.GetByIdPostAsync(postId);
 
                 foreach (var item in categoryId)
                 {
@@ -49,12 +51,7 @@ namespace Services
             if (postForCreationDto.Id is null)
             {
                 postForCreationDto.Id = Guid.NewGuid().ToString();
-            }
-            //if (postForCreationDto.DateUpdated == null)
-            //{
-            //    postForCreationDto.DateUpdated = _httpClient.GetNistTime();
-            //}
-
+            }          
             var post = ObjectMapper.Mapper.Map<Post>(postForCreationDto);
 
             _repositoryManager.Post.Create(post);
@@ -110,8 +107,10 @@ namespace Services
 
             var post = await _repositoryManager
                .Post
-               .GetByIdWithDetailAsync(postId,
-                ExpLinqEntity<Post>.ResLinqEntity(ExpExpressions.ExtendInclude<Post>(p => p.Include(p => p.PostCategories).Include(p => p.PostChilds))));
+               .GetByIdAsync(postId,
+                ExpLinqEntity<Post>.ResLinqEntity(ExpExpressions
+                .ExtendInclude<Post>(p => p.Include(p => p.PostCategories)
+                .Include(p => p.PostChilds))));
 
 
             if (post.PostChilds?.Count> 0)
@@ -137,39 +136,30 @@ namespace Services
             return ObjectMapper.Mapper.Map<PostDto>(post);
         }
 
-        
-
-        public async Task<IEnumerable<PostDto>> GetAllAsync(CancellationToken cancellationToken = default)
+        public IEnumerable<Post> GetAll(IExpLinqEntity<Post> expLinqEntity = null)
         {
-            var post = await _repositoryManager.Post.GetAllAsync();
-
-            return ObjectMapper.Mapper.Map<IEnumerable<PostDto>>(post);
+            return _repositoryManager.Post.GetAll(expLinqEntity);
         }
 
-
-
-        public async Task<IEnumerable<Post>> GetAllWithDetailAsync(IExpLinqEntity<Post> expLinqEntity = null, CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<Post>> GetAllAsync(IExpLinqEntity<Post> expLinqEntity = null ,CancellationToken cancellationToken = default)
         {
-            var dataPosts = await _repositoryManager.Post.GetAllWithDetailAsync();
+            return await _repositoryManager.Post.GetAllAsync(expLinqEntity);
 
+        }  
 
-            return dataPosts;
-        }
-
-        public async Task<PostDto> GetByIdAsync(string postId, CancellationToken cancellationToken = default)
+        public Post GetById(string postId, IExpLinqEntity<Post> expLinqEntity = null)
         {
-            var post = await _repositoryManager.Post.GetByIdAsync(postId);
-
-            return ObjectMapper.Mapper.Map<PostDto>(post);
-        }
-
-
-        public async Task<Post> GetByIdWithDetailAsync(string postId, IExpLinqEntity<Post> expLinqEntity = null, CancellationToken cancellationToken = default)
-        {
-            var post = await _repositoryManager.Post.GetByIdWithDetailAsync(postId , expLinqEntity);
+            var post =  _repositoryManager.Post.GetById(postId, expLinqEntity);
 
             return post;
         }
+
+        public async Task<Post> GetByIdAsync(string postId , IExpLinqEntity<Post> expLinqEntity, CancellationToken cancellationToken = default)
+        {
+           return await _repositoryManager.Post.GetByIdAsync(postId, expLinqEntity);
+  
+        }
+
 
         public PagedList<PostDto> Posts(PostParameters postParameters)
         {
@@ -186,8 +176,7 @@ namespace Services
 
         public async Task RemoveFromCategorysAsync(string idPost, IEnumerable<string> idCategory)
         {
-           
-                var datas = await _repositoryManager.PostCategory.GetByIdPostWithDetailAsync(idPost);
+                var datas = await _repositoryManager.PostCategory.GetByIdPostAsync(idPost);
                 
                 foreach (var pc in datas)
                 {
@@ -206,8 +195,9 @@ namespace Services
         {
             var post = await _repositoryManager
                 .Post
-                .GetByIdWithDetailAsync(postId, 
-                ExpLinqEntity<Post>.ResLinqEntity(ExpExpressions.ExtendInclude<Post>(p => p.Include(p => p.PostCategories).Include(p => p.PostChilds))));
+                .GetByIdAsync(postId, 
+                 ExpLinqEntity<Post>.ResLinqEntity(ExpExpressions.
+                 ExtendInclude<Post>(p => p.Include(p => p.PostCategories).Include(p => p.PostChilds))));
 
 
             if (post == null)
@@ -261,7 +251,9 @@ namespace Services
 
         public async Task<PostDto> UpdateAsync(string postId, PostForUpdateContentDto postForUpdate, CancellationToken cancellationToken = default)
         {
-            var post = await _repositoryManager.Post.GetByIdWithDetailAsync(postId);
+            var post = await _repositoryManager
+                .Post
+                .GetByIdAsync(postId,null, cancellationToken);
 
             if (post == null)
             {
@@ -292,5 +284,7 @@ namespace Services
 
             return ObjectMapper.Mapper.Map<PostDto>(post);
         }
+
+    
     }
 }

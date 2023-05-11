@@ -10,7 +10,7 @@ namespace Dto
 {
     public class PostForUpdateContentDto
     {
-
+      
         [Display(Name = ("Nội dung"))]
         public string Content { set; get; }
 
