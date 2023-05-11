@@ -15,6 +15,7 @@ namespace Services
         private readonly Lazy<IImageService> _lazyImageService;
 
         private readonly Lazy<IHttpClientServiceImplementation> _httpClientService;
+
         public ServiceManager(IRepositoryWrapper repositoryManager)
         {
             _lazyCategoyService = new Lazy<ICategoryService>(() => new CategoryService(repositoryManager));

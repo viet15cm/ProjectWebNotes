@@ -60,5 +60,7 @@ namespace Entities.Models
         [Display(Name = "Số thứ tự")]
         public int Serial { get; set; }
 
+        [Display(Name ="Tác giả")]
+        public string AuthorId { get; set; }
     }
 }

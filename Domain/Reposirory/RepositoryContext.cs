@@ -1,10 +1,13 @@
-﻿using Entities.Models;
+﻿using Domain.IdentityModel;
+using Entities.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Reflection.Metadata;
 
 namespace Domain.Reposirory
 {
-    public class RepositoryContext : DbContext
+    public class RepositoryContext : IdentityDbContext<AppUser>
     {
         public RepositoryContext(DbContextOptions options) : base(options)
         {
@@ -50,7 +53,14 @@ namespace Domain.Reposirory
                 .HasOne(bc => bc.Category)
                 .WithMany(c => c.PostCategories)
                 .HasForeignKey(bc => bc.CategoryID);
+
+            modelBuilder.Entity<AppUser>()
+           .HasMany(e => e.Posts)
+           .WithOne()
+           .HasForeignKey(e => e.AuthorId);
+           
         }
+
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

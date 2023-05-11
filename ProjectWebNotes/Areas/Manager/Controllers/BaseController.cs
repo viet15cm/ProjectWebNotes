@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Domain.IdentityModel;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Services.Abstractions;
 
@@ -8,32 +10,16 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
     {
         protected readonly IServiceManager _serviceManager;
 
+        private readonly UserManager<AppUser> _userManager;
+
         protected readonly IMemoryCache _cache;
 
-        protected readonly IHttpClientServiceImplementation _httpClient;
 
-        public BaseController()
-        {
-
-        }
-
-        public BaseController(IServiceManager serviceManager)
-        {
-            _serviceManager = serviceManager;
-
-        }
-
-        public BaseController(IServiceManager serviceManager, IMemoryCache memoryCache)
+        public BaseController(IServiceManager serviceManager , IMemoryCache memoryCache, UserManager<AppUser> userManager)
         {
             _serviceManager = serviceManager;
             _cache = memoryCache;
-          
-        }
-        public BaseController(IServiceManager serviceManager , IMemoryCache memoryCache, IHttpClientServiceImplementation httpClient)
-        {
-            _serviceManager = serviceManager;
-            _cache = memoryCache;
-            _httpClient = httpClient;
+            _userManager = userManager;
         }
 
 

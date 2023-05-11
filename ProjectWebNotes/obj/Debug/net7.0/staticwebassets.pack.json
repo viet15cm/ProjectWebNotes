@@ -1,883 +1,883 @@
 {
   "Files": [
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ProjectWebNotes.bundle.scp.css",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ProjectWebNotes.bundle.scp.css",
       "PackagePath": "staticwebassets\\ProjectWebNotes.bundle.scp.css"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\231503222_1a831772.jpg",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\231503222_1a831772.jpg",
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\231503222_1a831772.jpg"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\231503294_42488301.jpg",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\231503294_42488301.jpg",
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\231503294_42488301.jpg"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\231503301_bb8ee97a.jpg",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\231503301_bb8ee97a.jpg",
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\231503301_bb8ee97a.jpg"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\231503305_3400652e.jpg",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\231503305_3400652e.jpg",
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\231503305_3400652e.jpg"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\231503310_8be5a7f3.jpg",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\231503310_8be5a7f3.jpg",
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\231503310_8be5a7f3.jpg"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\231950346_be48a8e7.jpg",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\231950346_be48a8e7.jpg",
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\231950346_be48a8e7.jpg"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\231950354_2300991e.jpg",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\231950354_2300991e.jpg",
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\231950354_2300991e.jpg"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\232556817_b27d9e6d.jpg",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\232556817_b27d9e6d.jpg",
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\232556817_b27d9e6d.jpg"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\232556823_69130a03.jpg",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\232556823_69130a03.jpg",
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\232556823_69130a03.jpg"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\232556826_48892348.jpg",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\232556826_48892348.jpg",
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\232556826_48892348.jpg"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\232556830_c28a54e6.jpg",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\232556830_c28a54e6.jpg",
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\232556830_c28a54e6.jpg"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\232556834_a802e0f8.jpg",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\232556834_a802e0f8.jpg",
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\232556834_a802e0f8.jpg"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\bootstrap.min.css",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\Summernote-cr\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\bootstrap.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\font\\summernote.eot",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\font\\summernote.eot",
       "PackagePath": "staticwebassets\\Summernote-cr\\font\\summernote.eot"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\font\\summernote.ttf",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\font\\summernote.ttf",
       "PackagePath": "staticwebassets\\Summernote-cr\\font\\summernote.ttf"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\font\\summernote.woff",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\font\\summernote.woff",
       "PackagePath": "staticwebassets\\Summernote-cr\\font\\summernote.woff"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\font\\summernote.woff2",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\font\\summernote.woff2",
       "PackagePath": "staticwebassets\\Summernote-cr\\font\\summernote.woff2"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ar-AR.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ar-AR.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-ar-AR.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ar-AR.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ar-AR.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-ar-AR.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ar-AR.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ar-AR.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-ar-AR.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-az-AZ.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-az-AZ.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-az-AZ.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-az-AZ.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-az-AZ.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-az-AZ.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-az-AZ.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-az-AZ.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-az-AZ.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-bg-BG.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-bg-BG.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-bg-BG.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-bg-BG.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-bg-BG.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-bg-BG.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-bg-BG.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-bg-BG.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-bg-BG.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ca-ES.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ca-ES.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-ca-ES.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ca-ES.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ca-ES.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-ca-ES.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ca-ES.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ca-ES.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-ca-ES.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-cs-CZ.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-cs-CZ.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-cs-CZ.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-cs-CZ.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-cs-CZ.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-cs-CZ.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-cs-CZ.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-cs-CZ.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-cs-CZ.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-da-DK.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-da-DK.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-da-DK.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-da-DK.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-da-DK.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-da-DK.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-da-DK.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-da-DK.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-da-DK.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-de-DE.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-de-DE.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-de-DE.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-de-DE.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-de-DE.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-de-DE.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-de-DE.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-de-DE.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-de-DE.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-el-GR.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-el-GR.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-el-GR.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-el-GR.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-el-GR.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-el-GR.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-el-GR.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-el-GR.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-el-GR.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-es-ES.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-es-ES.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-es-ES.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-es-ES.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-es-ES.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-es-ES.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-es-ES.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-es-ES.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-es-ES.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-es-EU.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-es-EU.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-es-EU.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-es-EU.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-es-EU.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-es-EU.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-es-EU.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-es-EU.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-es-EU.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-fa-IR.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-fa-IR.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-fa-IR.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-fa-IR.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-fa-IR.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-fa-IR.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-fa-IR.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-fa-IR.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-fa-IR.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-fi-FI.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-fi-FI.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-fi-FI.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-fi-FI.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-fi-FI.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-fi-FI.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-fi-FI.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-fi-FI.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-fi-FI.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-fr-FR.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-fr-FR.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-fr-FR.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-fr-FR.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-fr-FR.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-fr-FR.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-fr-FR.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-fr-FR.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-fr-FR.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-gl-ES.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-gl-ES.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-gl-ES.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-gl-ES.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-gl-ES.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-gl-ES.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-gl-ES.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-gl-ES.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-gl-ES.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-he-IL.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-he-IL.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-he-IL.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-he-IL.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-he-IL.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-he-IL.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-he-IL.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-he-IL.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-he-IL.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-hr-HR.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-hr-HR.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-hr-HR.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-hr-HR.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-hr-HR.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-hr-HR.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-hr-HR.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-hr-HR.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-hr-HR.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-hu-HU.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-hu-HU.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-hu-HU.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-hu-HU.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-hu-HU.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-hu-HU.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-hu-HU.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-hu-HU.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-hu-HU.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-id-ID.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-id-ID.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-id-ID.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-id-ID.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-id-ID.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-id-ID.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-id-ID.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-id-ID.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-id-ID.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-it-IT.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-it-IT.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-it-IT.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-it-IT.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-it-IT.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-it-IT.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-it-IT.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-it-IT.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-it-IT.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ja-JP.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ja-JP.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-ja-JP.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ja-JP.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ja-JP.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-ja-JP.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ja-JP.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ja-JP.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-ja-JP.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ko-KR.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ko-KR.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-ko-KR.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ko-KR.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ko-KR.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-ko-KR.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ko-KR.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ko-KR.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-ko-KR.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-lt-LT.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-lt-LT.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-lt-LT.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-lt-LT.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-lt-LT.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-lt-LT.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-lt-LT.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-lt-LT.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-lt-LT.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-lt-LV.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-lt-LV.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-lt-LV.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-lt-LV.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-lt-LV.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-lt-LV.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-lt-LV.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-lt-LV.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-lt-LV.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-mn-MN.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-mn-MN.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-mn-MN.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-mn-MN.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-mn-MN.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-mn-MN.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-mn-MN.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-mn-MN.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-mn-MN.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-nb-NO.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-nb-NO.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-nb-NO.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-nb-NO.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-nb-NO.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-nb-NO.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-nb-NO.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-nb-NO.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-nb-NO.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-nl-NL.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-nl-NL.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-nl-NL.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-nl-NL.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-nl-NL.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-nl-NL.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-nl-NL.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-nl-NL.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-nl-NL.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-pl-PL.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-pl-PL.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-pl-PL.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-pl-PL.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-pl-PL.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-pl-PL.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-pl-PL.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-pl-PL.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-pl-PL.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-pt-BR.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-pt-BR.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-pt-BR.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-pt-BR.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-pt-BR.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-pt-BR.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-pt-BR.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-pt-BR.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-pt-BR.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-pt-PT.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-pt-PT.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-pt-PT.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-pt-PT.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-pt-PT.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-pt-PT.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-pt-PT.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-pt-PT.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-pt-PT.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ro-RO.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ro-RO.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-ro-RO.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ro-RO.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ro-RO.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-ro-RO.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ro-RO.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ro-RO.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-ro-RO.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ru-RU.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ru-RU.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-ru-RU.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ru-RU.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ru-RU.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-ru-RU.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ru-RU.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ru-RU.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-ru-RU.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sk-SK.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sk-SK.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-sk-SK.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sk-SK.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sk-SK.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-sk-SK.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sk-SK.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sk-SK.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-sk-SK.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sl-SI.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sl-SI.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-sl-SI.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sl-SI.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sl-SI.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-sl-SI.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sl-SI.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sl-SI.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-sl-SI.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sr-RS-Latin.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sr-RS-Latin.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-sr-RS-Latin.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sr-RS-Latin.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sr-RS-Latin.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-sr-RS-Latin.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sr-RS-Latin.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sr-RS-Latin.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-sr-RS-Latin.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sr-RS.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sr-RS.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-sr-RS.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sr-RS.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sr-RS.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-sr-RS.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sr-RS.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sr-RS.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-sr-RS.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sv-SE.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sv-SE.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-sv-SE.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sv-SE.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sv-SE.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-sv-SE.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sv-SE.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sv-SE.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-sv-SE.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ta-IN.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ta-IN.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-ta-IN.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ta-IN.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ta-IN.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-ta-IN.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ta-IN.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ta-IN.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-ta-IN.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-th-TH.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-th-TH.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-th-TH.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-th-TH.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-th-TH.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-th-TH.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-th-TH.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-th-TH.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-th-TH.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-tr-TR.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-tr-TR.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-tr-TR.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-tr-TR.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-tr-TR.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-tr-TR.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-tr-TR.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-tr-TR.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-tr-TR.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-uk-UA.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-uk-UA.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-uk-UA.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-uk-UA.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-uk-UA.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-uk-UA.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-uk-UA.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-uk-UA.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-uk-UA.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-uz-UZ.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-uz-UZ.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-uz-UZ.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-uz-UZ.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-uz-UZ.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-uz-UZ.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-uz-UZ.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-uz-UZ.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-uz-UZ.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-vi-VN.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-vi-VN.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-vi-VN.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-vi-VN.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-vi-VN.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-vi-VN.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-vi-VN.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-vi-VN.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-vi-VN.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-zh-CN.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-zh-CN.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-zh-CN.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-zh-CN.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-zh-CN.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-zh-CN.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-zh-CN.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-zh-CN.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-zh-CN.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-zh-TW.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-zh-TW.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-zh-TW.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-zh-TW.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-zh-TW.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-zh-TW.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-zh-TW.min.js.LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-zh-TW.min.js.LICENSE.txt",
       "PackagePath": "staticwebassets\\Summernote-cr\\lang\\summernote-zh-TW.min.js.LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\plugin\\databasic\\summernote-ext-databasic.css",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\plugin\\databasic\\summernote-ext-databasic.css",
       "PackagePath": "staticwebassets\\Summernote-cr\\plugin\\databasic\\summernote-ext-databasic.css"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\plugin\\databasic\\summernote-ext-databasic.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\plugin\\databasic\\summernote-ext-databasic.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\plugin\\databasic\\summernote-ext-databasic.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\plugin\\hello\\summernote-ext-hello.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\plugin\\hello\\summernote-ext-hello.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\plugin\\hello\\summernote-ext-hello.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\plugin\\specialchars\\summernote-ext-specialchars.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\plugin\\specialchars\\summernote-ext-specialchars.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\plugin\\specialchars\\summernote-ext-specialchars.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\popper.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\popper.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\popper.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\summernote-bs4.min.css",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\summernote-bs4.min.css",
       "PackagePath": "staticwebassets\\Summernote-cr\\summernote-bs4.min.css"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\summernote-bs4.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\summernote-bs4.min.js",
       "PackagePath": "staticwebassets\\Summernote-cr\\summernote-bs4.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\summernote-bs4.min.js.map",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\summernote-bs4.min.js.map",
       "PackagePath": "staticwebassets\\Summernote-cr\\summernote-bs4.min.js.map"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\css\\site.css",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\favicon.ico",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\js\\jquery.unobtrusive-ajax.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\js\\jquery.unobtrusive-ajax.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.unobtrusive-ajax.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\js\\site.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

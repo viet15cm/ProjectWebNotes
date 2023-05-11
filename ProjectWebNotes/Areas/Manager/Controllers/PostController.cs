@@ -1,9 +1,11 @@
 ﻿
 using ATMapper;
+using Domain.IdentityModel;
 using Dto;
 using Entities.Models;
 using ExtentionLinqEntitys;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -28,10 +30,10 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         private readonly IHttpContextAccessor _iHttpContextAccessor;
         public PostController(IServiceManager serviceManager, 
                                 IMemoryCache memoryCache,
-                                IHttpClientServiceImplementation httpClient,
+                                UserManager<AppUser> userManager,
                                 IWebHostEnvironment webhost,
                                 IHttpContextAccessor httpContextAccessor)
-            : base(serviceManager, memoryCache, httpClient)
+            : base(serviceManager, memoryCache, userManager)
         {
             _webhost = webhost;
             _iHttpContextAccessor = httpContextAccessor;
