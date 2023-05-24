@@ -1,0 +1,35 @@
+﻿@page
+@model ConfirmedEmailModel
+@{
+    Layout = "~/Areas/Identity/Pages/Shared/_LayoutManager.cshtml";
+    ViewData["ActiveManager"] = "ConfirmedEmail";
+    var statusmessage = TempData["StatusMessage"] as string;
+}
+
+<div class="container mt-5 d-flex justify-content-center">
+    <section>
+        <form method="post">            
+            @Html.HiddenFor(x => Model.input.Email)
+            @Html.HiddenFor(x => Model.input.IsConfirmed)
+            <h5 class="text-center text-primary"><i class="fa-solid fa-envelope"></i> Xác nhận địa chỉ Email</h5>
+            <hr class="text-primary" />
+            <div class="mt-2">         
+            <partial name="_AlertMessage" model="@statusmessage" />
+
+            </div>
+            <div class="mb-3 div d-grid gap-2">
+                <button type="submit" class="btn btn-primary">Gửi</button>
+            </div>
+            <hr class="text-primary" />
+            <div class="mt-2">
+                <p class="text-primary">Nhận mã xác nhận tại mail @Model.input.Email <br /></p>              
+            </div>
+            <div asp-validation-summary="All" class="text-danger"></div>
+        </form>
+    </section>
+</div>
+
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+

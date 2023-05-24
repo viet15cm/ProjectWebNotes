@@ -1,0 +1,43 @@
+﻿@page 
+@model CreateModel
+@{
+    ViewData["title"] = "Tạo vai trò";
+}
+
+<div class="container d-md-flex justify-content-center">
+    <div class="mt-5">
+        <div class="alert alert-link p-0">
+            <a asp-page="./index" asp-area="Identity">Vai trò</a> /
+            <a href="#">@ViewData["Title"]</a>
+        </div>
+        <div class="card">
+            <h5 class="card-header text-primary">
+                @ViewData["title"]
+            </h5>
+            <form method="post">
+                <div class="card-body">                 
+                    <div class="mb-2">
+                        <label asp-for="Input.Name"></label>
+                        <input asp-for="Input.Name" class="form-control" />
+                        <span asp-validation-for="Input.Name" class="text-danger"></span>
+                    </div>
+                    <div class="mb-2">
+                        <button type="submit" class="btn btn-primary">Tạo</button>
+                    </div>
+                    <hr class="text-primary" />
+                    <div class="mb-2">
+                        <p>
+                            <a class="link-primary" asp-area="Identity" asp-page="./index" a>Quay về.</a>
+                        </p>
+                    </div>
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    @await Html.PartialAsync("_ValidationScriptsPartial");
+}

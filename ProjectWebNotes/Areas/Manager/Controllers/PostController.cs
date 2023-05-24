@@ -18,6 +18,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ProjectWebNotes.Areas.Manager.Controllers
 {
+
     public class PostController : BaseController
     {
         private const string _KeyList = "_listallPosts";
@@ -25,18 +26,15 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
         private const string _KeyListCatgorys = "_listallPosts";
 
-        private readonly IWebHostEnvironment _webhost;
-
-        private readonly IHttpContextAccessor _iHttpContextAccessor;
+        private readonly IFileServices _fileServices;
         public PostController(IServiceManager serviceManager, 
                                 IMemoryCache memoryCache,
                                 UserManager<AppUser> userManager,
-                                IWebHostEnvironment webhost,
-                                IHttpContextAccessor httpContextAccessor)
+                                IFileServices fileServices
+                                )
             : base(serviceManager, memoryCache, userManager)
         {
-            _webhost = webhost;
-            _iHttpContextAccessor = httpContextAccessor;
+            _fileServices = fileServices;
         }
 
         [NonAction]
@@ -101,7 +99,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         }
 
 
-        public BidingPostCategory bidingPostCategory = new BidingPostCategory();
+        public BidingPostCategory bidingPostCategory;
 
         [HttpGet]
         public async Task<IActionResult> AddCategory([FromRoute] string id)
@@ -183,7 +181,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             {
                 foreach (var item in post.Images)
                 {
-                    item.Url = PathAbsolute.HttpContextAccessorPathImgSrcIndex(_iHttpContextAccessor, new ImagePost(), item.Url);
+                    item.Url = _fileServices.HttpContextAccessorPathImgSrcIndex(ImagePost.GetImagePost(), item.Url);
                 }
             }
             return View(post);
@@ -200,7 +198,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             {
                 foreach (var item in postFWDImgaesDto.Images)
                 {
-                    item.Url = PathAbsolute.HttpContextAccessorPathImgSrcIndex(_iHttpContextAccessor, new ImagePost(), item.Url);
+                    item.Url = _fileServices.HttpContextAccessorPathImgSrcIndex(ImagePost.GetImagePost(), item.Url);
                 }
             }
 
@@ -225,7 +223,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
                 {
                     foreach (var item in postFWDImgaesDto.Images)
                     {
-                        item.Url = PathAbsolute.HttpContextAccessorPathImgSrcIndex(_iHttpContextAccessor, new ImagePost(), item.Url);
+                        item.Url = _fileServices.HttpContextAccessorPathImgSrcIndex(ImagePost.GetImagePost(), item.Url);
                     }
                 }
 
@@ -257,7 +255,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
                 var posts = _serviceManager.PostService.Posts(postParameters);
                 ViewData["Posts"] = posts;
 
-                return View("Posts", postForCreationDto);
+                return View("index", postForCreationDto);
             }
 
             if (postForCreationDto.DateCreate is null)
@@ -416,7 +414,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             {
                 foreach (var item in postFWDImgaesDto.Images)
                 {
-                    item.Url = PathAbsolute.HttpContextAccessorPathImgSrcIndex(_iHttpContextAccessor, new ImagePost(), item.Url);
+                    item.Url = _fileServices.HttpContextAccessorPathImgSrcIndex( ImagePost.GetImagePost(), item.Url);
                 }
             }
 
@@ -446,7 +444,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
                 {
                     foreach (var item in postFWDImgaesDto.Images)
                     {
-                        item.Url = PathAbsolute.HttpContextAccessorPathImgSrcIndex(_iHttpContextAccessor, new ImagePost(), item.Url);
+                        item.Url = _fileServices.HttpContextAccessorPathImgSrcIndex(ImagePost.GetImagePost(), item.Url);
                     }
                 }
 
@@ -497,7 +495,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             {
                 foreach (var item in content.Post.Images)
                 {
-                    item.Url = PathAbsolute.HttpContextAccessorPathImgSrcIndex(_iHttpContextAccessor, new ImagePost(), item.Url);
+                    item.Url = _fileServices.HttpContextAccessorPathImgSrcIndex(ImagePost.GetImagePost(), item.Url);
                 }
             }
 
@@ -589,11 +587,12 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
                     {
                         var data = new ImageForCreateDto()
                         {
-                            Url = FileService.GetUniqueFileName(fronfile.FileName),
+                            Url = FileServices.GetUniqueFileName(fronfile.FileName),
+
                             PostId = post.Id
                         };
 
-                        var resultFile = await FileService.CreateFileAsync(_webhost, CreateObFile.Create<ImagePost>(), fronfile, data.Url);
+                        var resultFile = await _fileServices.CreateFileAsync(ImagePost.GetImagePost(), fronfile, data.Url);
 
                         if (resultFile)
                         {
@@ -614,7 +613,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
                         var deletedataImgeResult = await _serviceManager.ImageService.DeleteAsync(img.Id);
 
-                        var resultFileimge = await FileService.DeleteFileAsync(_webhost, CreateObFile.Create<ImagePost>(), item);
+                        var resultFileimge = await _fileServices.DeleteFileAsync( ImagePost.GetImagePost(), item);
        
                          deleteImge += 1;                        
                     }

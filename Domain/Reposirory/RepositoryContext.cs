@@ -28,6 +28,17 @@ namespace Domain.Reposirory
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            foreach (var item in modelBuilder.Model.GetEntityTypes())
+            {
+                var tableName = item.GetTableName();
+
+                if (tableName.StartsWith("AspNet"))
+                {
+                    item.SetTableName(tableName.Substring(6));
+                }
+
+            }
             modelBuilder.Entity<Category>(entity => {
                 entity.HasIndex(p => p.Slug).IsUnique();
             });

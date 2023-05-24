@@ -1,0 +1,35 @@
+﻿@page
+@model ChangeEmailModel
+@{
+    ViewData["ActiveManager"] = "ChangeEmail";
+    var statusmessage = TempData["StatusMessage"] as string;
+}
+
+<div class="container mt-5 d-flex justify-content-center">
+    <section>
+        <partial name="_AlertMessage" model="@statusmessage" />
+        <div class="card">
+            <h5 class="card-header text-secondary"><i class="fa-solid fa-square-envelope"></i> Đổi Email</h5>
+            <div class="card-body">
+                <form id="change-password-form" method="post">
+                    <div class="mb-3">
+                        <label class="form-label" asp-for="Input.NewEmail"></label>
+                        <input asp-for="Input.NewEmail" class="form-control" />
+                        <span asp-validation-for="Input.NewEmail" class="text-danger"></span>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Lưu</button>
+                    <hr />
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                  
+                </form>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

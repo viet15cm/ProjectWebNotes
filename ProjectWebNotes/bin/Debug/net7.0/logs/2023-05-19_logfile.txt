@@ -1,0 +1,18 @@
+2023-05-19 11:59:36.8254 ERROR Đã xảy ra sự cố: System.ArgumentOutOfRangeException: Token 2003ffc is not valid in the scope of module System.ModuleHandle. (Parameter 'typeToken')
+   at System.ModuleHandle.ResolveTypeHandle(Int32 typeToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext)
+   at System.Reflection.CustomAttribute.FilterCustomAttributeRecord(MetadataToken caCtorToken, MetadataImport& scope, RuntimeModule decoratedModule, MetadataToken decoratedToken, RuntimeType attributeFilterType, Boolean mustBeInheritable, ListBuilder`1& derivedAttributes, RuntimeType& attributeType, IRuntimeMethodInfo& ctorWithParameters, Boolean& isVarArg)
+   at System.Reflection.CustomAttribute.IsCustomAttributeDefined(RuntimeModule decoratedModule, Int32 decoratedMetadataToken, RuntimeType attributeFilterType, Int32 attributeCtorToken, Boolean mustBeInheritable)
+   at System.Reflection.RuntimePropertyInfo.IsDefined(Type attributeType, Boolean inherit)
+   at System.Attribute.InternalIsDefined(PropertyInfo element, Type attributeType, Boolean inherit)
+   at System.Attribute.IsDefined(MemberInfo element, Type attributeType, Boolean inherit)
+   at Microsoft.Extensions.Internal.PropertyActivator`1.<>c__DisplayClass9_0.<GetPropertiesToActivate>b__0(PropertyInfo property)
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.ToArray()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator..ctor(Type pageType, Type declaredModelType, IModelMetadataProvider metadataProvider, PropertyValueAccessors propertyValueAccessors)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageFactoryProvider.CreatePageFactory(CompiledPageActionDescriptor actionDescriptor)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvokerCache.CreateCacheEntry(CompiledPageActionDescriptor compiledActionDescriptor, FilterItem[] cachedFilters)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvokerCache.GetCachedResult(ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageRequestDelegateFactory.<>c__DisplayClass13_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Middleware.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in D:\C#\ProjectWebNotes\Middleware\ExceptionMiddleware.cs:line 25

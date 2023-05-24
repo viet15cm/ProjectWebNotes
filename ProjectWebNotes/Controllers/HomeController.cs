@@ -39,5 +39,16 @@ namespace ProjectWebNotes.Controllers
             
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
+        [HttpPost]
+        public IActionResult SetThemme([FromBody] string data)
+        {
+
+            CookieOptions cookie = new CookieOptions();
+            cookie.Expires = DateTime.Now.AddDays(1);
+            Response.Cookies.Append("theme", data, cookie);
+            return Ok();
+        }
     }
 }

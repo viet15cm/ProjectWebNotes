@@ -4,19 +4,22 @@ namespace ProjectWebNotes.FileManager
 {
     public class ImagePost : ObjectFolder
     {
-        public ImagePost() { }
+        private ImagePost() { }
 
-        public ImagePost(string folderImage) : base(folderImage)
+        private static ImagePost _instance;
+
+        public static ImagePost GetImagePost()
         {
+            if (_instance is null)
+            {
+                return new ImagePost();
+            }
+
+            return _instance;
         }
-
-        public ImagePost(string folderImage, string folderRootDirectory) : base(folderImage, folderRootDirectory)
+        public override string GetFileImage()
         {
-        }
-
-        public override string GetFolderImage()
-        {
-            return base.GetFolderImage();
+            return base.GetFileImage();
         }
 
         public override string GetFolderRootDirectory()

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "s9s7Pd3MVaELFSts0JhJcwq5wH21Rw9nsMfpzI5C8lA=",
+  "Hash": "JEbB32wf9Uh3ZiPN1VR+vptDi3XOzaz1r0/KTJaUk60=",
   "Source": "ProjectWebNotes",
   "BasePath": "_content/ProjectWebNotes",
   "Mode": "Default",
@@ -17,10 +17,10 @@
   ],
   "Assets": [
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\obj\\Debug\\net7.0\\scopedcss\\bundle\\ProjectWebNotes.styles.css",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\obj\\Debug\\net7.0\\scopedcss\\bundle\\ProjectWebNotes.styles.css",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/ProjectWebNotes",
       "RelativePath": "ProjectWebNotes.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\obj\\Debug\\net7.0\\scopedcss\\bundle\\ProjectWebNotes.styles.css"
+      "OriginalItemSpec": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\obj\\Debug\\net7.0\\scopedcss\\bundle\\ProjectWebNotes.styles.css"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ProjectWebNotes.bundle.scp.css",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ProjectWebNotes.bundle.scp.css",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/ProjectWebNotes",
       "RelativePath": "ProjectWebNotes.bundle.scp.css",
       "AssetKind": "All",
@@ -48,10 +48,27 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ProjectWebNotes.bundle.scp.css"
+      "OriginalItemSpec": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ProjectWebNotes.bundle.scp.css"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\css\\site.css",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\css\\site-black.css",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "css/site-black.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site-black.css"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\css\\site.css",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -68,7 +85,7 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\favicon.ico",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\favicon.ico",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -85,12 +102,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\231503222_1a831772.jpg",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\Avartar\\234709212_d03b429e.jpg",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
       "BasePath": "_content/ProjectWebNotes",
-      "RelativePath": "ImageManager/ImagePost/231503222_1a831772.jpg",
+      "RelativePath": "ImageManager/Avartar/234709212_d03b429e.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,15 +116,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\231503222_1a831772.jpg"
+      "OriginalItemSpec": "wwwroot\\ImageManager\\Avartar\\234709212_d03b429e.jpg"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\231503294_42488301.jpg",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\Avatar\\230510921_31ba5a6f.jpg",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
       "BasePath": "_content/ProjectWebNotes",
-      "RelativePath": "ImageManager/ImagePost/231503294_42488301.jpg",
+      "RelativePath": "ImageManager/Avatar/230510921_31ba5a6f.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -116,15 +133,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\231503294_42488301.jpg"
+      "OriginalItemSpec": "wwwroot\\ImageManager\\Avatar\\230510921_31ba5a6f.jpg"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\231503301_bb8ee97a.jpg",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\Avatar\\235210144_e4012b81.jpg",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
       "BasePath": "_content/ProjectWebNotes",
-      "RelativePath": "ImageManager/ImagePost/231503301_bb8ee97a.jpg",
+      "RelativePath": "ImageManager/Avatar/235210144_e4012b81.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,15 +150,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\231503301_bb8ee97a.jpg"
+      "OriginalItemSpec": "wwwroot\\ImageManager\\Avatar\\235210144_e4012b81.jpg"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\231503305_3400652e.jpg",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\230510921_31ba5a6f.jpg",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
       "BasePath": "_content/ProjectWebNotes",
-      "RelativePath": "ImageManager/ImagePost/231503305_3400652e.jpg",
+      "RelativePath": "ImageManager/ImagePost/230510921_31ba5a6f.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -150,10 +167,27 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\231503305_3400652e.jpg"
+      "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\230510921_31ba5a6f.jpg"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\231503310_8be5a7f3.jpg",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\230511145_6bfbd580.jpg",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "ImageManager/ImagePost/230511145_6bfbd580.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\230511145_6bfbd580.jpg"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\231503310_8be5a7f3.jpg",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -170,7 +204,7 @@
       "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\231503310_8be5a7f3.jpg"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\231950346_be48a8e7.jpg",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\231950346_be48a8e7.jpg",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -187,24 +221,7 @@
       "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\231950346_be48a8e7.jpg"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\231950354_2300991e.jpg",
-      "SourceId": "ProjectWebNotes",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
-      "BasePath": "_content/ProjectWebNotes",
-      "RelativePath": "ImageManager/ImagePost/231950354_2300991e.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\231950354_2300991e.jpg"
-    },
-    {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\232556817_b27d9e6d.jpg",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\232556817_b27d9e6d.jpg",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -221,7 +238,7 @@
       "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\232556817_b27d9e6d.jpg"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\232556823_69130a03.jpg",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\232556823_69130a03.jpg",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -238,7 +255,7 @@
       "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\232556823_69130a03.jpg"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\232556826_48892348.jpg",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\232556826_48892348.jpg",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -255,7 +272,7 @@
       "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\232556826_48892348.jpg"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\232556830_c28a54e6.jpg",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\232556830_c28a54e6.jpg",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -272,7 +289,7 @@
       "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\232556830_c28a54e6.jpg"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\232556834_a802e0f8.jpg",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\232556834_a802e0f8.jpg",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -289,7 +306,126 @@
       "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\232556834_a802e0f8.jpg"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\js\\jquery.unobtrusive-ajax.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\235733944_1fa5aa5c.jpg",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "ImageManager/ImagePost/235733944_1fa5aa5c.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\235733944_1fa5aa5c.jpg"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\Avartar.jpg",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "Img/Avartar.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\Avartar.jpg"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\camera.png",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "Img/camera.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\camera.png"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\csharp.jpg",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "Img/csharp.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\csharp.jpg"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\default.jpg",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "Img/default.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\default.jpg"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\DefaultCategory.jpg",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "Img/DefaultCategory.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\DefaultCategory.jpg"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\js\\dropdownBtn.js",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "js/dropdownBtn.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\dropdownBtn.js"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\js\\jquery.unobtrusive-ajax.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -306,7 +442,7 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery.unobtrusive-ajax.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\js\\site.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\js\\site.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -323,7 +459,41 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\js\\theme-home.js",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "js/theme-home.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\theme-home.js"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\js\\theme.js",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "js/theme.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\theme.js"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -340,7 +510,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -357,7 +527,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -374,7 +544,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -391,7 +561,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -408,7 +578,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -425,7 +595,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -442,7 +612,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -459,7 +629,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -476,7 +646,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -493,7 +663,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -510,7 +680,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -527,7 +697,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -544,7 +714,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -561,7 +731,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -578,7 +748,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -595,7 +765,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -612,7 +782,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -629,7 +799,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -646,7 +816,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -663,7 +833,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -680,7 +850,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -697,7 +867,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -714,7 +884,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -731,7 +901,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -748,7 +918,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -765,7 +935,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -782,7 +952,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -799,7 +969,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -816,7 +986,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -833,7 +1003,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -850,7 +1020,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -867,7 +1037,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -884,7 +1054,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -901,7 +1071,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -918,7 +1088,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -935,7 +1105,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -952,7 +1122,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -969,7 +1139,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -986,7 +1156,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1003,7 +1173,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1020,7 +1190,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1037,7 +1207,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1054,7 +1224,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1071,7 +1241,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1088,7 +1258,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1105,7 +1275,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1122,7 +1292,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1139,7 +1309,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1156,7 +1326,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1173,7 +1343,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1190,7 +1360,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1207,7 +1377,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1224,7 +1394,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1241,7 +1411,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1258,7 +1428,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1275,7 +1445,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1292,7 +1462,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\bootstrap.min.css",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\bootstrap.min.css",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1309,7 +1479,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\bootstrap.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\bootstrap.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1326,7 +1496,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\font\\summernote.eot",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\font\\summernote.eot",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1343,7 +1513,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\font\\summernote.eot"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\font\\summernote.ttf",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\font\\summernote.ttf",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1360,7 +1530,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\font\\summernote.ttf"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\font\\summernote.woff",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\font\\summernote.woff",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1377,7 +1547,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\font\\summernote.woff"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\font\\summernote.woff2",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\font\\summernote.woff2",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1394,7 +1564,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\font\\summernote.woff2"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ar-AR.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ar-AR.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1411,7 +1581,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-ar-AR.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ar-AR.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ar-AR.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1428,7 +1598,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-ar-AR.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ar-AR.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ar-AR.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1445,7 +1615,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-ar-AR.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-az-AZ.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-az-AZ.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1462,7 +1632,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-az-AZ.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-az-AZ.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-az-AZ.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1479,7 +1649,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-az-AZ.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-az-AZ.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-az-AZ.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1496,7 +1666,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-az-AZ.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-bg-BG.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-bg-BG.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1513,7 +1683,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-bg-BG.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-bg-BG.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-bg-BG.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1530,7 +1700,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-bg-BG.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-bg-BG.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-bg-BG.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1547,7 +1717,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-bg-BG.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ca-ES.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ca-ES.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1564,7 +1734,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-ca-ES.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ca-ES.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ca-ES.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1581,7 +1751,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-ca-ES.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ca-ES.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ca-ES.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1598,7 +1768,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-ca-ES.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-cs-CZ.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-cs-CZ.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1615,7 +1785,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-cs-CZ.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-cs-CZ.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-cs-CZ.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1632,7 +1802,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-cs-CZ.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-cs-CZ.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-cs-CZ.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1649,7 +1819,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-cs-CZ.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-da-DK.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-da-DK.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1666,7 +1836,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-da-DK.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-da-DK.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-da-DK.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1683,7 +1853,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-da-DK.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-da-DK.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-da-DK.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1700,7 +1870,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-da-DK.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-de-DE.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-de-DE.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1717,7 +1887,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-de-DE.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-de-DE.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-de-DE.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1734,7 +1904,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-de-DE.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-de-DE.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-de-DE.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1751,7 +1921,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-de-DE.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-el-GR.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-el-GR.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1768,7 +1938,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-el-GR.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-el-GR.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-el-GR.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1785,7 +1955,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-el-GR.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-el-GR.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-el-GR.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1802,7 +1972,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-el-GR.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-es-ES.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-es-ES.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1819,7 +1989,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-es-ES.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-es-ES.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-es-ES.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1836,7 +2006,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-es-ES.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-es-ES.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-es-ES.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1853,7 +2023,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-es-ES.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-es-EU.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-es-EU.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1870,7 +2040,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-es-EU.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-es-EU.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-es-EU.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1887,7 +2057,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-es-EU.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-es-EU.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-es-EU.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1904,7 +2074,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-es-EU.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-fa-IR.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-fa-IR.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1921,7 +2091,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-fa-IR.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-fa-IR.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-fa-IR.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1938,7 +2108,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-fa-IR.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-fa-IR.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-fa-IR.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1955,7 +2125,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-fa-IR.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-fi-FI.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-fi-FI.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1972,7 +2142,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-fi-FI.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-fi-FI.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-fi-FI.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -1989,7 +2159,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-fi-FI.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-fi-FI.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-fi-FI.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2006,7 +2176,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-fi-FI.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-fr-FR.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-fr-FR.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2023,7 +2193,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-fr-FR.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-fr-FR.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-fr-FR.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2040,7 +2210,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-fr-FR.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-fr-FR.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-fr-FR.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2057,7 +2227,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-fr-FR.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-gl-ES.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-gl-ES.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2074,7 +2244,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-gl-ES.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-gl-ES.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-gl-ES.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2091,7 +2261,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-gl-ES.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-gl-ES.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-gl-ES.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2108,7 +2278,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-gl-ES.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-he-IL.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-he-IL.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2125,7 +2295,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-he-IL.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-he-IL.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-he-IL.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2142,7 +2312,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-he-IL.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-he-IL.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-he-IL.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2159,7 +2329,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-he-IL.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-hr-HR.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-hr-HR.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2176,7 +2346,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-hr-HR.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-hr-HR.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-hr-HR.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2193,7 +2363,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-hr-HR.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-hr-HR.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-hr-HR.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2210,7 +2380,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-hr-HR.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-hu-HU.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-hu-HU.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2227,7 +2397,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-hu-HU.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-hu-HU.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-hu-HU.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2244,7 +2414,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-hu-HU.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-hu-HU.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-hu-HU.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2261,7 +2431,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-hu-HU.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-id-ID.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-id-ID.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2278,7 +2448,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-id-ID.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-id-ID.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-id-ID.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2295,7 +2465,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-id-ID.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-id-ID.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-id-ID.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2312,7 +2482,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-id-ID.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-it-IT.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-it-IT.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2329,7 +2499,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-it-IT.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-it-IT.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-it-IT.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2346,7 +2516,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-it-IT.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-it-IT.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-it-IT.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2363,7 +2533,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-it-IT.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ja-JP.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ja-JP.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2380,7 +2550,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-ja-JP.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ja-JP.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ja-JP.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2397,7 +2567,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-ja-JP.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ja-JP.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ja-JP.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2414,7 +2584,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-ja-JP.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ko-KR.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ko-KR.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2431,7 +2601,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-ko-KR.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ko-KR.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ko-KR.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2448,7 +2618,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-ko-KR.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ko-KR.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ko-KR.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2465,7 +2635,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-ko-KR.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-lt-LT.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-lt-LT.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2482,7 +2652,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-lt-LT.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-lt-LT.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-lt-LT.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2499,7 +2669,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-lt-LT.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-lt-LT.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-lt-LT.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2516,7 +2686,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-lt-LT.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-lt-LV.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-lt-LV.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2533,7 +2703,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-lt-LV.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-lt-LV.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-lt-LV.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2550,7 +2720,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-lt-LV.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-lt-LV.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-lt-LV.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2567,7 +2737,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-lt-LV.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-mn-MN.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-mn-MN.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2584,7 +2754,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-mn-MN.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-mn-MN.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-mn-MN.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2601,7 +2771,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-mn-MN.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-mn-MN.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-mn-MN.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2618,7 +2788,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-mn-MN.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-nb-NO.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-nb-NO.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2635,7 +2805,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-nb-NO.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-nb-NO.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-nb-NO.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2652,7 +2822,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-nb-NO.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-nb-NO.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-nb-NO.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2669,7 +2839,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-nb-NO.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-nl-NL.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-nl-NL.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2686,7 +2856,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-nl-NL.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-nl-NL.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-nl-NL.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2703,7 +2873,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-nl-NL.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-nl-NL.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-nl-NL.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2720,7 +2890,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-nl-NL.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-pl-PL.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-pl-PL.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2737,7 +2907,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-pl-PL.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-pl-PL.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-pl-PL.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2754,7 +2924,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-pl-PL.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-pl-PL.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-pl-PL.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2771,7 +2941,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-pl-PL.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-pt-BR.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-pt-BR.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2788,7 +2958,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-pt-BR.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-pt-BR.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-pt-BR.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2805,7 +2975,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-pt-BR.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-pt-BR.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-pt-BR.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2822,7 +2992,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-pt-BR.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-pt-PT.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-pt-PT.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2839,7 +3009,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-pt-PT.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-pt-PT.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-pt-PT.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2856,7 +3026,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-pt-PT.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-pt-PT.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-pt-PT.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2873,7 +3043,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-pt-PT.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ro-RO.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ro-RO.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2890,7 +3060,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-ro-RO.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ro-RO.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ro-RO.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2907,7 +3077,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-ro-RO.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ro-RO.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ro-RO.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2924,7 +3094,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-ro-RO.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ru-RU.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ru-RU.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2941,7 +3111,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-ru-RU.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ru-RU.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ru-RU.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2958,7 +3128,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-ru-RU.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ru-RU.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ru-RU.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2975,7 +3145,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-ru-RU.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sk-SK.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sk-SK.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -2992,7 +3162,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-sk-SK.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sk-SK.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sk-SK.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3009,7 +3179,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-sk-SK.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sk-SK.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sk-SK.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3026,7 +3196,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-sk-SK.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sl-SI.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sl-SI.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3043,7 +3213,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-sl-SI.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sl-SI.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sl-SI.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3060,7 +3230,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-sl-SI.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sl-SI.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sl-SI.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3077,7 +3247,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-sl-SI.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sr-RS-Latin.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sr-RS-Latin.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3094,7 +3264,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-sr-RS-Latin.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sr-RS-Latin.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sr-RS-Latin.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3111,7 +3281,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-sr-RS-Latin.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sr-RS-Latin.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sr-RS-Latin.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3128,7 +3298,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-sr-RS-Latin.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sr-RS.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sr-RS.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3145,7 +3315,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-sr-RS.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sr-RS.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sr-RS.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3162,7 +3332,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-sr-RS.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sr-RS.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sr-RS.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3179,7 +3349,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-sr-RS.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sv-SE.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sv-SE.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3196,7 +3366,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-sv-SE.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sv-SE.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sv-SE.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3213,7 +3383,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-sv-SE.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-sv-SE.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-sv-SE.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3230,7 +3400,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-sv-SE.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ta-IN.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ta-IN.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3247,7 +3417,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-ta-IN.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ta-IN.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ta-IN.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3264,7 +3434,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-ta-IN.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-ta-IN.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-ta-IN.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3281,7 +3451,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-ta-IN.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-th-TH.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-th-TH.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3298,7 +3468,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-th-TH.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-th-TH.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-th-TH.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3315,7 +3485,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-th-TH.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-th-TH.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-th-TH.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3332,7 +3502,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-th-TH.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-tr-TR.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-tr-TR.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3349,7 +3519,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-tr-TR.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-tr-TR.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-tr-TR.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3366,7 +3536,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-tr-TR.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-tr-TR.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-tr-TR.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3383,7 +3553,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-tr-TR.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-uk-UA.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-uk-UA.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3400,7 +3570,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-uk-UA.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-uk-UA.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-uk-UA.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3417,7 +3587,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-uk-UA.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-uk-UA.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-uk-UA.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3434,7 +3604,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-uk-UA.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-uz-UZ.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-uz-UZ.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3451,7 +3621,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-uz-UZ.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-uz-UZ.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-uz-UZ.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3468,7 +3638,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-uz-UZ.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-uz-UZ.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-uz-UZ.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3485,7 +3655,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-uz-UZ.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-vi-VN.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-vi-VN.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3502,7 +3672,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-vi-VN.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-vi-VN.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-vi-VN.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3519,7 +3689,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-vi-VN.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-vi-VN.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-vi-VN.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3536,7 +3706,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-vi-VN.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-zh-CN.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-zh-CN.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3553,7 +3723,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-zh-CN.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-zh-CN.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-zh-CN.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3570,7 +3740,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-zh-CN.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-zh-CN.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-zh-CN.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3587,7 +3757,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-zh-CN.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-zh-TW.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-zh-TW.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3604,7 +3774,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-zh-TW.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-zh-TW.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-zh-TW.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3621,7 +3791,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-zh-TW.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\lang\\summernote-zh-TW.min.js.LICENSE.txt",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\lang\\summernote-zh-TW.min.js.LICENSE.txt",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3638,7 +3808,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\lang\\summernote-zh-TW.min.js.LICENSE.txt"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\plugin\\databasic\\summernote-ext-databasic.css",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\plugin\\databasic\\summernote-ext-databasic.css",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3655,7 +3825,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\plugin\\databasic\\summernote-ext-databasic.css"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\plugin\\databasic\\summernote-ext-databasic.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\plugin\\databasic\\summernote-ext-databasic.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3672,7 +3842,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\plugin\\databasic\\summernote-ext-databasic.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\plugin\\hello\\summernote-ext-hello.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\plugin\\hello\\summernote-ext-hello.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3689,7 +3859,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\plugin\\hello\\summernote-ext-hello.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\plugin\\specialchars\\summernote-ext-specialchars.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\plugin\\specialchars\\summernote-ext-specialchars.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3706,7 +3876,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\plugin\\specialchars\\summernote-ext-specialchars.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\popper.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\popper.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3723,7 +3893,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\popper.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\summernote-bs4.min.css",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\summernote-bs4.min.css",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3740,7 +3910,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\summernote-bs4.min.css"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\summernote-bs4.min.js",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\summernote-bs4.min.js",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
@@ -3757,7 +3927,7 @@
       "OriginalItemSpec": "wwwroot\\Summernote-cr\\summernote-bs4.min.js"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Summernote-cr\\summernote-bs4.min.js.map",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\summernote-bs4.min.js.map",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",

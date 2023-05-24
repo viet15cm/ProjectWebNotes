@@ -2,7 +2,7 @@
 {
     public interface IObjectFolder
     {
-        string GetFolderImage();
+        string GetFileImage();
 
         string GetFolderRootDirectory();
     }

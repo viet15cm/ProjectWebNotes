@@ -3,6 +3,8 @@ html {
    
 }
 
+
+
 @media (min-width: 768px) {
   html {
     font-size: 14px;
@@ -14,13 +16,15 @@ html {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-
-
+.theme{
+    margin-top: 7px;
+   
+    border: none;
+}
 
 html {
-  position: relative;
-  min-height: 100%;
-  
+    position: relative;
+    min-height: 100%;
 }
 
 dt,
@@ -42,4 +46,67 @@ dt::after {
 body {
   margin-bottom: 60px;
 
+}
+
+/*ImageAvartar*/
+
+.personal-image {
+    text-align: center;
+}
+
+    .personal-image input[type="file"] {
+        display: none;
+    }
+
+.personal-figure {
+    position: relative;
+    width: 300px;
+    height: 100%;
+}
+
+.personal-avatar {
+    cursor: pointer;
+    width: 300px;
+    height: auto;
+    box-sizing: border-box;
+    /* border-radius: 100%;*/
+    border: 2px solid transparent;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+    transition: all ease-in-out .3s;
+}
+
+    .personal-avatar:hover {
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+    }
+
+.personal-figcaption {
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    width: inherit;
+    height: inherit;
+    opacity: 1;
+    transition: all ease-in-out .3s;
+}
+
+    .personal-figcaption:hover {
+        background-color: rgba(0, 0, 0, .5);
+    }
+
+    .personal-figcaption > img {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 50%; /* position the top  edge of the element at the middle of the parent */
+        left: 50%; /* position the left edge of the element at the middle of the parent */
+
+        transform: translate(-50%, -50%);
+    }
+/*from login*/
+
+.form-login {
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
 }

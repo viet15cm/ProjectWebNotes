@@ -1,0 +1,98 @@
+﻿@page
+@model OnOff2faModel
+
+@{
+    ViewData["ActiveManager"] = "OnOff2fa";
+}
+
+
+    <div class="card mt-2">
+        <h5 class="card-header text-secondary"><i class="fas fa-shield-alt"></i> Xác thực hai yếu tố</h5>
+        <div class="card-body">
+            <form method="Post" id="Width2fa" asp-page="/Account/Manager/OnOff2fa" , asp-area="Identity">
+                <div class="d-flex justify-content-between">
+                    <div class="mb-2 form-check form-switch">
+                        <input asp-for="input.Check2fa" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onclick="Width2fa()">
+                        <label class="form-check-label" for="flexSwitchCheckDefault"> Chọn.</label>
+                    </div>
+                    <div>
+                        @if (Model.input.Check2fa)
+                        {
+                            <p class="text-primary"> Đang bật</p>
+                        }
+                        else
+                        {
+                            <p style="color:#808080">Đang tắc</p>
+                        }
+                    </div>
+                </div>
+            </form>
+            <hr />
+            <p class="text-primary">Bật xác thực để tăng cường hệ thống bảo mật tài khoản.</p>
+            @*<partial name="_StatusMessage" for="StatusMessage" />*@
+        </div>
+    </div>
+
+
+
+@*<form method="Post" id="Width2fa" asp-page="Setting", asp-area="Identity">
+        <div class="form-group">
+            <label asp-for="input.Check2fa"></label>
+            <select class="form-control" asp-for="input.Check2fa" onchange="Width2fa()">
+                <option value="true">on</option>
+                <option value="false">off</option>
+            </select>
+        </div>
+    </form>*@
+@*<hr />
+    <form  method="Post" id="Width2fa" asp-page="/Setting/SecurityAndLogin/OnOff2fa", asp-area="Identity">
+        <div class="form-check form-switch">
+            <input asp-for="input.Check2fa" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onclick="Width2fa()">
+            <label class="form-check-label" for="flexSwitchCheckDefault"> Xác thực hai yếu tố</label>
+        </div>
+    </form>
+    <hr />
+    <partial name="_StatusMessage" for="StatusMessage"/>*@
+
+@*<div id="div1">
+
+    </div>*@
+
+
+@*<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>*@
+
+@*<script>
+
+        //function Width2fa() {
+        //    document.getElementById("Width2fa").submit();
+        //    $(".StatusMessage").html("");
+
+        //    var form = $('#Width2fa')[0];
+        //    var data = new FormData(form);
+        //    $.ajax({
+        //        type: "POST",
+        //        url: data.action,
+        //        data: data,
+        //        enctype: 'multipart/form-data', // Important!!!!
+        //        processData: false,  //prevent jQuery transforming the data into a query string
+        //        contentType: false,
+        //        cache: false,
+
+        //        success: function (result) {
+        //            $("#div1").load("/Identity/Setting/SecurityAndLogin/OnOff2fa?handler=Partial&Message=" + result);
+        //        }
+        //    });
+        //}
+
+</script>*@
+
+@section Scripts
+{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script>
+        function Width2fa() {
+            document.getElementById("Width2fa").submit();
+        }
+    </script>
+}
+

@@ -8,6 +8,8 @@ namespace ProjectWebNotes.Models
         public int CurrentPage { get; set; }
         public int TotalPages { get; set; }
         public string UrlAction { get; set; }
+
+        public bool IsPage { get; set; } = false;
     }
 
 }

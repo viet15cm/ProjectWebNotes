@@ -1,7 +1,9 @@
 ﻿using ATMapper;
+using Domain.IdentityModel;
 using Dto;
 using Entities.Models;
 using ExtentionLinqEntitys;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.JsonPatch.Internal;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +14,7 @@ using Services.Abstractions;
 
 namespace ProjectWebNotes.Areas.Manager.Controllers
 {
+
     public class CategoryController : BaseController 
     {
         private const string _KeyListCatgorys = "_listallcategories";
@@ -19,8 +22,8 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
         public CategoryController(IServiceManager serviceManager, 
                                 IMemoryCache memoryCache, 
-                                IHttpClientServiceImplementation httpClient) 
-                                : base(serviceManager, memoryCache, httpClient)
+                                UserManager<AppUser> userManager) 
+                                : base(serviceManager, memoryCache, userManager)
         {
         }
 

@@ -1,11 +1,30 @@
-﻿<!DOCTYPE html>
+﻿@inject IHttpContextAccessor iHttpContextAccessor
+@{
+    var theme = iHttpContextAccessor.HttpContext.Request.Cookies["theme"]?.ToString();
+
+    string avatar = "dsfs";
+}  
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ProjectWebNotes</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    @{
+
+        if (theme == null || theme == "0")
+        {
+                    <link id="site-theme" href="~/css/site.css" rel="stylesheet" />
+                  
+        }
+        else
+        {
+                   <link id="site-theme" href = "~/css/site-black.css" rel = "stylesheet" />
+                  
+        }
+    }
     <link rel="stylesheet" href="~/ProjectWebNotes.styles.css" asp-append-version="true" />
 
 
@@ -35,6 +54,26 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="Manager" asp-controller="Post" asp-action="index">Post</a>
                         </li>
+                       @* @await Html.PartialAsync("_LoginPartial")*@
+                    </ul>
+
+                     <ul class="nav navbar-nav navbar-right">
+
+                        @await Html.PartialAsync("_LoginPartial")
+                         <li>
+                           <select  id="theme-home" class="theme" name="theme-home" >
+                                @if (theme == null || theme == "0")
+                                {
+                                    <option selected  value="0">&#9788;</option>
+                                    <option  value="1">&#9790;</option>
+                                }
+                                else
+                                {
+                                    <option value="0">&#9788;</option>
+                                    <option selected  value="1">&#9790;</option>
+                                }
+                        </select>
+                       </li>
                     </ul>
                 </div>
             </div>
@@ -51,7 +90,7 @@
             &copy; 2023 - ProjectWebNotes - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
-   
+   <script src="~/js/theme-home.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
    
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

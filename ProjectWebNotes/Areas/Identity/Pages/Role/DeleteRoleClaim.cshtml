@@ -1,0 +1,47 @@
+﻿@page
+@model DeleteRoleClaimModel
+@{
+    var statusMessage = TempData["StatusMessage"];
+    ViewData["Title"] = "Xóa claim";
+}
+
+<div class="container d-md-flex justify-content-center">
+    <div class="mt-5">
+        <div class="alert alert-link p-0">
+            <a asp-page="./index" asp-area="Identity">Vai trò</a> /
+            <a asp-route-id="@Model.role.Id" asp-page="./Edit" asp-area="Identity">Cập nhật vai trò</a> /
+            <a>@ViewData["Title"]</a>
+        </div>
+        <div class="card">
+            <h5 class="card-header text-danger">
+                @ViewData["title"]
+            </h5>
+            <form method="post">
+                <div class="card-body">
+                    <div class="mb-2 alert alert-danger">
+                        Bạn có muốn xóa claim (@Model.input.Name) ?
+                    </div>
+                    @Html.HiddenFor(x => Model.input.Name)
+                    @Html.HiddenFor(x => Model.input.Value)
+                    <div class="mb-2">
+                        <button type="submit" class="btn btn-danger">Xóa</button>
+                    </div>
+                    <hr class="text-primary" />
+                    <div class="mb-2">
+                        <p>
+                            <a class="link-primary" asp-route-id="@Model.role.Id" asp-area="Identity" asp-page="./Edit" a>Quay về.</a>
+                        </p>
+                    </div>
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    @await Html.PartialAsync("_ValidationScriptsPartial");
+}
+
+

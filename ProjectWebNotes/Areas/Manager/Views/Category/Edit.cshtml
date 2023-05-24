@@ -45,7 +45,13 @@
                     <span asp-validation-for="@Model.Description"></span>
                 </div>
 
-                    <div class="mb-3">
+                <div class="mb-3">
+                        <label asp-for="@Model.IConFont" class="form-label"></label>
+                        <input asp-for="@Model.IConFont"  class="form-control" placeholder="https://icons.getbootstrap.com/" >
+                        <span asp-validation-for="@Model.IConFont" class="form-text"></span>
+                 </div>
+
+                <div class="mb-3">
                     <label asp-for="@Model.Serial" class="form-label"></label>
                     <input asp-for="@Model.Serial"  class="form-control" >
                     <span asp-validation-for="@Model.Serial" class="form-text"></span>

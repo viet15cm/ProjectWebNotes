@@ -1,0 +1,11 @@
+﻿@page
+@model SuccessConfirmEmailModel
+@{
+    ViewData["ActiveManager"] = "ConfirmedEmail";
+    var statusmessage = TempData["StatusMessage"] as string;
+
+}
+
+<div class="container mt-5">
+    <partial name="_AlertMessage" model="@statusmessage" />
+</div>

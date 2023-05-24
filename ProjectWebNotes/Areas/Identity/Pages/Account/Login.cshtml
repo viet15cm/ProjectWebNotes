@@ -1,0 +1,69 @@
+﻿@page
+@model LoginModel
+@{
+
+}
+
+<div class="form-login">
+           
+                <form id="account" method="post">
+                    <h5 class="text-primary"> Đăng nhập</h5>
+                    <hr class="text-primary" />
+                    <div class="mb-3">
+                        <label asp-for="Input.UserNameOrEmail"></label>
+                        <input asp-for="Input.UserNameOrEmail" class="form-control" />
+                        <span asp-validation-for="Input.UserNameOrEmail" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="Input.Password"></label>
+                        <input asp-for="Input.Password" class="form-control" />
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <div class="checkbox">
+                            <label asp-for="Input.RememberMe">
+                                <input asp-for="Input.RememberMe" />
+                                        @Html.DisplayNameFor(m => m.Input.RememberMe)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                    </div>
+                    <hr class="text-primary" />
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    
+                  
+                </form>
+                <div class="mb-3">
+                    @if ((Model.ExternalLogins?.Count ?? 0) != 0)
+                    {
+                        <section>                        
+                            <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
+                                        <div>
+                                            <p>
+                                                @foreach (var provider in Model.ExternalLogins)
+                                                {
+                                                           <button type="submit" class="btn btn-danger" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account"><i class="bi bi-google"></i></button>
+                                                }
+                                            </p>
+                                        </div>
+                            </form>
+                        </section>
+                    }
+                </div>
+                  <div class="mb-3">
+                        <p>
+                            <a id="forgot-password" asp-area="Identity" asp-page="./ForgotPassword">Quên mật khẩu.</a>
+                        </p>
+                        <p>
+                            <a asp-area="Identity" asp-page="/Account/Register">Đăng kí.</a>
+                        </p>
+                    </div>
+
+
+</div>
+
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

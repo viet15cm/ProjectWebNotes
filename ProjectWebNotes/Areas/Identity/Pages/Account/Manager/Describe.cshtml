@@ -1,0 +1,42 @@
+﻿@page
+@model DescribeModel
+
+@{
+    ViewData["ActiveManager"] = "ProFile";
+    var statusmessage = TempData["StatusMessage"] as string;
+    Layout = "~/Pages/Shared/_LayoutSummernote.cshtml";
+}
+
+
+<div class="container mt-5">
+    <div class="alert alert-warning">
+        Mô Tả Bản Thân
+    </div>
+    <form method="post">
+        <div class="mb-3">           
+            <textarea rows="6" class="form-control" asp-for="Input.Describe"></textarea>
+            <span asp-validation-for="Input.Describe"></span>
+        </div>
+
+        <hr />
+        <button class="btn btn-primary" type="submit"> Cập nhật</button>
+        <a class="btn btn-primary" asp-page="profile" > Quay về</a>
+        <div asp-validation-summary="ModelOnly"></div>
+    </form>
+
+</div>
+
+
+@{
+    var id = "Input_Describe";
+}
+
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial");
+
+    <partial name="_Summernote" model="@id" />
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+
+}
+
+

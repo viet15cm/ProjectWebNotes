@@ -1,0 +1,136 @@
+﻿@page
+@model UserRoleClaimModel
+@{
+
+    var handler = Model.handler;
+}
+
+@if (handler.Contains("AddUserClaim"))
+{
+    <div class="container d-sm-flex justify-content-center">
+        <div class="mt-5">
+            <div class="alert alert-link p-0">
+                <a asp-page="./AddRole" asp-route-id="@Model.user.Id" asp-area="Identity">Cliam User</a> /
+                <a>Tạo claim cho user @Model.user.UserName</a>
+            </div>
+            <div class="card">
+                <h5 class="card-header text-primary">
+                    Tạo claim
+                </h5>
+                <form method="post">
+                    <div class="card-body">
+                        <div class="mb-2">
+                            <label asp-for="input.TypeName"></label>
+                            <input asp-for="input.TypeName" class="form-control" />
+                            <span asp-validation-for="input.TypeName" class="text-danger"></span>
+                        </div>
+                        <div class="mb-2">
+                            <label asp-for="input.Value"></label>
+                            <input asp-for="input.Value" class="form-control" />
+                            <span asp-validation-for="input.Value" class="text-danger"></span>
+                        </div>
+                        <div class="mb-2">
+                            <button type="submit" class="btn btn-primary">Tạo</button>
+                        </div>
+                        <hr class="text-primary" />
+                        <div class="mb-2">
+                            <p>
+                                <a class="link-primary" asp-area="Identity" asp-route-id="@Model.user.Id" asp-page="./AddRole" a>Quay về.</a>
+                            </p>
+                        </div>
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+}
+else if (handler.Contains("EditUserClaim"))
+{
+    <div class="container d-sm-flex justify-content-center">
+        <div class="mt-5">
+            <div class="alert alert-link p-0">
+                <a asp-page="./AddRole" asp-route-id="@Model.user.Id" asp-area="Identity">Cliam User</a> /
+                <a>Cập nhật claim cho user @Model.user.UserName</a>
+            </div>
+            <div class="card">
+                <h5 class="card-header text-primary">
+                    Cập nhật claim
+                </h5>
+                <form method="post">
+                    <div class="card-body">
+                        <div class="mb-2">
+                            <label asp-for="input.TypeName"></label>
+                            <input asp-for="input.TypeName" class="form-control" />
+                            <span asp-validation-for="input.TypeName" class="text-danger"></span>
+                        </div>
+                        <div class="mb-2">
+                            <label asp-for="input.Value"></label>
+                            <input asp-for="input.Value" class="form-control" />
+                            <span asp-validation-for="input.Value" class="text-danger"></span>
+                        </div>
+                        <div class="mb-2">
+                            <button type="submit" class="btn btn-primary">Cập nhật</button>
+                        </div>
+                        <hr class="text-primary" />
+                        <div class="mb-2">
+                            <p>
+                                <a class="link-primary" asp-area="Identity" asp-page="./AddRole" asp-route-id="@Model.user.Id">Quay về.</a>
+                            </p>
+                        </div>
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+}
+else if (handler.Contains("DeleteUserClaim"))
+{
+    <div class="container d-sm-flex justify-content-center">
+        <div class="mt-5">
+            <div class="alert alert-link p-0">
+                <a asp-page="./AddRole" asp-route-id="@Model.user.Id" asp-area="Identity">Cliam User</a> /
+                <a>Xóa claim của user @Model.user.UserName</a>
+            </div>
+            <div class="card">
+                <h5 class="card-header text-danger">
+                   Xóa claim
+                </h5>
+                <form method="post">
+                    <div class="card-body">
+                        <div class="mb-2">
+                           <p>Bạn có muốn xóa claim (@Model.input.TypeName) ?</p>
+                        </div>
+                        
+                        <div class="mb-2">
+                            <button type="submit" class="btn btn-danger">Xóa</button>
+                        </div>
+                        <hr class="text-primary" />
+                        <div class="mb-2">
+                            <p>
+                                <a class="link-primary" asp-area="Identity" asp-page="./AddRole" asp-route-id="@Model.user.Id">Quay về.</a>
+                            </p>
+                        </div>
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+}
+else
+{
+    <div class="alert-danger">Lỗi liên hệ admin</div>
+}
+
+@section Scripts{
+
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

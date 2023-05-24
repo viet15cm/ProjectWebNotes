@@ -6,6 +6,8 @@ using Services.Abstractions;
 
 namespace ProjectWebNotes.Areas.Manager.Controllers
 {
+
+    [Area("Manager")]
     public class BaseController : Controller
     {
         protected readonly IServiceManager _serviceManager;

@@ -1,0 +1,125 @@
+﻿@using Domain.IdentityModel;
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Authorization
+@inject UserManager<AppUser> userManager
+@inject SignInManager<AppUser> signInManager
+@inject IAuthorizationService authorizationService
+
+@{
+
+    string avatar = null;
+    @if (signInManager.IsSignedIn(User))
+    {
+        var appUser = await userManager.GetUserAsync(User);
+
+        avatar = appUser.UrlImage;
+    }
+
+    var resultAuthorization = await authorizationService.AuthorizeAsync(this.User, "Admin");
+}
+
+
+@if (signInManager.IsSignedIn(User))
+{
+     if (resultAuthorization.Succeeded)
+    {
+        <li>
+            <div class="collapse navbar-collapse" id="manager">
+                <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Manager
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="manager">
+                    <li><a class="dropdown-item" asp-area="Identity" asp-page="/User/index">Users</a></li>
+                    <li><a class="dropdown-item" asp-area="Identity" asp-page="/Role/index">Vai trò</a></li>
+
+                    </ul>
+                </li>
+                </ul>
+            </div>
+        </li>
+    }
+        
+    <li>
+        <div class="collapse navbar-collapse" id="dropdownMenuUser">
+            <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        @if (avatar != null)
+                        {
+                            
+                             <img class="rounded-circle" id="indexImg" src="~/ImageManager/Avatar/@avatar" style="width: 20px; height: 20px" />
+
+                        }
+                        
+                         else{
+                               <i class="bi bi-person-circle" ></i>
+                         }
+                    </a>
+                    
+
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuUser">
+                 
+                         <li><a class="dropdown-item btn btn-default" asp-area="Identity" asp-page="/Account/Manager/Index">Người dùng</a></li>
+                         <li> 
+                            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout">
+                                    <button class="dropdown-item" type="submit"><i class="bi bi-box-arrow-right"></i> Logout</button>
+                            </form>
+                         </li>
+                    </ul>
+            </li>
+            </ul>
+        </div>
+      </li>
+
+   @* <div class="dropdown">
+
+        <a class="btn btn-default dropdown-toggle text-light" href="#" role="button" id="dropdownMenuUser" data-bs-toggle="dropdown" aria-expanded="false">
+            @if (avatar != null)
+            {
+                
+                <img class="rounded-circle" id="indexImg" src="~/ImageManager/Avatar/@avatar" style="width: 35px; height: 35px" />
+            }
+            else
+            {
+               
+                <i style="font-size: 20px" class="bi bi-person-circle" ></i>
+
+            }
+
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuUser">
+            <li>
+                <a class="dropdown-item btn btn-default" asp-area="Identity" asp-page="/Account/Manager/Index" type="button">
+
+                    @if (avatar != null)
+                    {
+                        <img class="rounded-circle p-0 m-0" id="indexImg" src="~/ImageManager/Avatar/@avatar" style="width : 20px; height : 20px" /> @userManager.GetUserName(User)
+                    }
+                    else
+                    {
+                            <i style="font-size: 20px;" class="bi bi-person-circle"></i> @userManager.GetUserName(User)       
+                    }
+                </a>
+            </li>
+          
+            <li>
+                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout">
+                    <button class="dropdown-item" type="submit"><i class="bi bi-box-arrow-right"></i> Logout</button>
+                </form>
+            </li>
+            <li>
+                <a class="dropdown-item btn btn-default" asp-area="Identity" asp-page="/Account/Manager/Index" type="button">
+
+                </a>
+            </li>
+        </ul>
+    </div>*@
+}
+else
+{
+    <li><a class="nav-link" asp-area="Identity" asp-page="/Account/Login">Login</a></li>
+        <li><a class="nav-link" asp-area="Identity" asp-page="/Account/Register">Register</a></li>
+}

@@ -1,16 +1,20 @@
-using Domain.Extensions;
+﻿using Domain.Extensions;
+using Microsoft.AspNetCore.Routing.Constraints;
 using ProjectWebNotes.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
 builder.Services.ConfigureLoggerService();
 //builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.ConfigureServiceManager();
 builder.Services.ConfigureRepositoryWrapper();
 builder.Services.ConfigureMySqlContext(builder.Configuration);
+builder.Services.ConfigureAuthorizationHandlerService();
+builder.Services.AddControllers();
+builder.Services.AddRazorPages();
+
 
 var app = builder.Build();
 
@@ -28,7 +32,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthorization();
+app.UseAuthentication();   // Phục hồi thông tin đăng nhập (xác thực)
+app.UseAuthorization();   // Phục hồi thông tinn về quyền của User
 
 app.MapAreaControllerRoute(
             name: "Manager",
@@ -40,8 +45,13 @@ app.MapAreaControllerRoute(
                 action = "index"
             }
         );
+
+app.MapRazorPages();
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
 
 app.Run();

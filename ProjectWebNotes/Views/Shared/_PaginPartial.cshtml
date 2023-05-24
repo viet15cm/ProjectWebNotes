@@ -5,11 +5,24 @@
     var urlAction = Model.UrlAction;
     bool HasPrevious = Model.CurrentPage > 1;
     bool HasNext = Model.CurrentPage < Model.TotalPages;
+
+    Func<int?, string> generateUrl;
     
-    Func<int?, string> generateUrl = (int? _pagenumber) =>
+    if (Model.IsPage)
     {
-        return Url.Action(urlAction, new { pageNumber = _pagenumber });
-    };
+        generateUrl = (int? _pagenumber) =>
+        {
+            return Url.Page(urlAction, new { pageNumber = _pagenumber });
+        };
+    }
+    else
+    {
+        generateUrl = (int? _pagenumber) =>
+        {
+            return Url.Action(urlAction, new { pageNumber = _pagenumber });
+        };
+    }
+    
 
 }
 <nav class="Page navigation example">

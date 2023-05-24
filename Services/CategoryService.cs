@@ -8,7 +8,6 @@ using Microsoft.EntityFrameworkCore;
 using Services.Abstractions;
 using System.Reflection;
 
-
 namespace Services
 {
     internal class CategoryService : ServiceBase , ICategoryService

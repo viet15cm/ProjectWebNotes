@@ -1,0 +1,23 @@
+﻿@page
+@model AccessDeniedModel
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+
+<div class="text-wrapper container mt-2">
+    <div class="title fw-bold" data-content="404">
+        403 - TRUY CẬP BỊ TỪ CHỐI
+    </div>
+
+    <div class="subtitle">
+        Rất tiếc, Bạn không có quyền truy cập trang này.
+    </div>
+    <div class="isi">
+        Máy chủ web có thể trả về mã trạng thái HTTP 403 Bị cấm để phản hồi yêu cầu từ máy khách đối với trang web hoặc tài nguyên để cho biết rằng máy chủ có thể được tiếp cận và hiểu yêu cầu, nhưng từ chối thực hiện thêm bất kỳ hành động nào. Các phản hồi mã trạng thái 403 là kết quả của việc máy chủ web được định cấu hình để từ chối quyền truy cập, vì một lý do nào đó, vào tài nguyên được yêu cầu bởi máy khách.
+    </div>
+
+    <div class="buttons">
+        <a class="button" asp-action="index" asp-controller="Home" asp-area="" >Đi tới trang chủ</a>
+    </div>
+</div>

@@ -1,0 +1,154 @@
+﻿@page
+@model ProFileModel
+@{
+    ViewData["ActiveManager"] = "ProFile";
+    var statusmessage = TempData["StatusMessage"] as string;
+}
+
+<div class="container-xxl row mt-5">
+    <partial name="_AlertMessage" model="@statusmessage" />
+    <div class="col-md-6">
+        <form asp-page-handler="Image" id="submitAvartar" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <div class="personal-image">
+                    <h5 class="text-primary">Ảnh đại diện</h5>
+                    <label asp-for="FormFile">
+                        <input accept="image/png, image/jpeg , image/jpg , image/jfif" type="file" asp-for="FormFile" onchange="ShowImagePreview(this,indexImg )" />
+                        <figure class="personal-figure">
+                            @if (Model.Input.UrlImage == null)
+                            {
+                                <img src="~/Img/Avartar.jpg" class="personal-avatar" alt="avatar" id="indexImg" />
+                                <figcaption class="personal-figcaption">
+                                    <img src="~/Img/camera.png">
+                                </figcaption>
+                            }
+                            else
+                            {
+                                <img src="~/ImageManager/Avatar/@Model.Input.UrlImage" class="personal-avatar" alt="avatar" id="indexImg">
+                                <figcaption class="personal-figcaption">
+                                        <img src="~/Img/camera.png">
+                                </figcaption>
+                            }
+                        </figure>
+                    </label>
+                </div>
+                <hr />
+                <div asp-validation-summary="All"></div>
+                @*<button class="btn btn-primary" type="submit"><i class="fa-regular fa-pen-to-square"></i> Cập nhật</button>*@
+            </div>
+
+
+            @*<label asp-for="FormFile"></label>
+                @if (Model.Input.UrlImage == null)
+                {
+                    <img class="form-control" id="indexImg" src="~/Img/hinhnen.jpg" style="width : 250px; height : auto" />
+
+                }
+                else
+                {
+                    <img class="form-control" id="indexImg" src="~/ImageManager/Avatar/@Model.Input.UrlImage" style="width : 250px; height : auto" />
+
+                }
+                <div class="file-field">
+                    <div class="btn btn-light btn-sm float-left">
+                        <input class="form-control-file" asp-for="FormFile" onchange="ShowImagePreview(this,indexImg )" />
+                    </div>
+                </div>
+
+                <hr />
+                <button class="btn btn-primary" type="submit"><i class="fa-regular fa-pen-to-square"></i> Cập nhật</button>*@
+        </form>
+
+    </div>
+
+    <div class="col-md-6">
+        <form method="post" id="fromInformation">
+
+            <h5 class="text-primary">Thông tin</h5>
+            <hr class="text-primary" />
+            <div class="mb-3">
+                <label asp-for="Input.LastName"></label>
+                <input asp-for="Input.LastName" class="form-control" />
+                <span asp-validation-for="Input.LastName" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Input.FirstName"></label>
+                <input asp-for="Input.FirstName" class="form-control" />
+                <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Input.Address"></label>
+                <input asp-for="Input.Address" class="form-control" />
+                <span asp-validation-for="Input.Address" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Input.PhoneNumber"></label>
+                <input asp-for="Input.PhoneNumber" class="form-control" />
+                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" asp-for="Input.Company"></label>
+                <input class="form-control" asp-for="Input.Company" />
+                <span asp-validation-for="Input.Company"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" asp-for="Input.BirthDate"></label>
+                <input class="form-control" asp-for="Input.BirthDate" />
+                <span asp-validation-for="Input.BirthDate"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Input.NativePlace"></label>
+                <input asp-for="Input.NativePlace" class="form-control" />
+                <span asp-validation-for="Input.NativePlace" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <button form="fromInformation" type="submit" class="btn btn-primary">Cập nhật</button>
+                 <a class="btn btn-warning" asp-page="Describe"><i class="bi bi-pencil"></i> Mô tả bản thân</a>
+            </div>
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
+        </form>
+    </div>
+
+</div>
+
+
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script>
+        function ShowImagePreview(imgUpLoader, previewImg) {
+            if (imgUpLoader.files && imgUpLoader.files[0]) {
+                dt = new DataTransfer();
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $(previewImg).attr('src', e.target.result)
+                    var f = e.target.result;
+
+                }
+                reader.readAsDataURL(imgUpLoader.files[0]);
+
+                dt.items.add(imgUpLoader.files[0]);
+
+            }
+            imgUpLoader.files = dt.files
+        }
+    </script>
+
+    <script>
+        document.querySelector("input[type=file]").addEventListener('change', function () {
+            document.getElementById("submitAvartar").submit();
+        });
+       
+    </script>
+
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+
+}
+
+
+
+
+

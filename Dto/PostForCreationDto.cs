@@ -38,5 +38,9 @@ namespace Dto
 
         [Display(Name = "Số thứ tự")]
         public int Serial { get; set; }
+
+        [StringLength(50, ErrorMessage = "{0} có độ dài dưới 50 kí tự")]
+        [Display(Name = "Icon")]
+        public string IConFont { get; set; }
     }
 }

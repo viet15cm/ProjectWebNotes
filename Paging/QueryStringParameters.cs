@@ -4,9 +4,9 @@ namespace Paging
     public abstract class QueryStringParameters
     {
         const int maxPageSize = 50;
-        public int PageNumber { get; set; } = 1;
+        public virtual int PageNumber { get; set; } = 1;
         private int _pageSize = 15;
-        public int PageSize
+        public virtual int PageSize
         {
             get
             {

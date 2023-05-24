@@ -1,0 +1,104 @@
+﻿@page
+@model AddRoleModel
+@{
+    ViewData["Title"] = "Vai trò";
+    var statusMessage = TempData["StatusMessage"];
+}
+
+<div class="container">
+    <div>
+        <div class="alert alert-link p-0">
+            <a asp-page="./index" asp-area="Identity">User</a> /
+            <a href="#">@ViewData["Title"]</a>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <h5 class="card-header text-primary">
+                        @ViewData["title"]
+                    </h5>
+                    <form method="post">
+                        <div class="card-body">
+                            @Html.HiddenFor(x => x.Input.Id)
+                            <div class="mb-2">
+                                <label asp-for="RoleUsers"></label>
+                                <select id="SelectRole" asp-for="RoleUsers" asp-items="Model.addRoles" class="form-control"></select>
+                                <span asp-validation-for="RoleUsers" class="text-danger"></span>
+                            </div>
+                            <div class="mb-2">
+                                <button type="submit" class="btn btn-primary">Cập nhật</button>
+                            </div>
+                            <hr class="text-primary" />
+                            <div class="mb-2">
+                                <p>
+                                    <a class="link-primary" asp-area="Identity" asp-page="./index" a>Quay về.</a>
+                                </p>
+                            </div>
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row pt-3">
+                    <div class="col-6">
+                        <p class="text-primary">Các claims có trong vai trò :</p>
+                       
+                            @if (Model.roleCliamUser.Count > 0)
+                            {
+                                <ul>
+                                    @foreach (var item in Model.roleCliamUser)
+                                    {
+                                        <li>
+                                            @item.ClaimType = @item.ClaimValue
+                                        </li>
+                                    }
+                                </ul>
+                                
+                            }
+                            else
+                            {
+                                <p class="text-danger">chưa có</p>
+                            }
+                    </div>
+
+                    <div class="col-6">
+                        <partial name="_AlertMessage" model="@statusMessage" />
+                        <div class="d-flex flex-row bd-highlight">
+                            <p class="text-primary">Các claims của user : &nbsp;</p>
+                            <a class=" text-info fst-italic" asp-area="Identity" asp-page-handler="AddUserClaim" asp-page="./UserRoleClaim" asp-route-id="@Model.Input.Id">(+Thêm)</a>
+                        </div>
+                        @if (Model.userClaims.Count > 0)
+                        {
+
+                            <ul>
+                                @foreach (var item in Model.userClaims)
+                                {
+                                    <li class="d-flex flex-row bd-highlight">
+                                        <a class="fst-italic" asp-area="Identity" asp-page-handler="EditUserClaim"; asp-route-id="@item.Id" asp-page="./UserRoleClaim">@item.ClaimType = @item.ClaimValue</a>&nbsp;
+                                        <a class="fst-italic text-danger " asp-page-handler="DeleteUserClaim" asp-area="Identity" asp-route-id="@item.Id" asp-page="./UserRoleClaim">( xóa )</a>
+                                    </li>
+                                }
+                            </ul>
+
+                        }
+                        else
+                        {
+                            <p class="text-danger">Chưa có</p>
+                        }
+                    </div>
+                </div>
+                    
+             
+            </div>
+        </div>
+            
+
+    </div>
+</div>
+
+
+@section Scripts{
+   
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
