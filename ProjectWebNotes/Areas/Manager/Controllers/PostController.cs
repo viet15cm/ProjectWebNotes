@@ -4,6 +4,7 @@ using Domain.IdentityModel;
 using Dto;
 using Entities.Models;
 using ExtentionLinqEntitys;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -13,12 +14,14 @@ using Microsoft.Extensions.Caching.Memory;
 using Paging;
 using ProjectWebNotes.Areas.Manager.Models;
 using ProjectWebNotes.FileManager;
+using ProjectWebNotes.Security.Requirements;
 using Services.Abstractions;
 using System.ComponentModel.DataAnnotations;
 
 namespace ProjectWebNotes.Areas.Manager.Controllers
 {
 
+    [Authorize(Policy = "Employee")]
     public class PostController : BaseController
     {
         private const string _KeyList = "_listallPosts";
@@ -30,9 +33,11 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         public PostController(IServiceManager serviceManager, 
                                 IMemoryCache memoryCache,
                                 UserManager<AppUser> userManager,
+                                 IAuthorizationService authorizationService,
                                 IFileServices fileServices
+                               
                                 )
-            : base(serviceManager, memoryCache, userManager)
+            : base(serviceManager, memoryCache, userManager , authorizationService)
         {
             _fileServices = fileServices;
         }
@@ -102,6 +107,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         public BidingPostCategory bidingPostCategory;
 
         [HttpGet]
+        [Authorize(Policy = "Admin")]
         public async Task<IActionResult> AddCategory([FromRoute] string id)
         {
             var posts = await GetAllPostTreeViews();
@@ -124,6 +130,8 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             return View(bidingPostCategory);
         }
+
+        [Authorize(Policy = "Admin")]
 
         [HttpPost]
         public async Task<IActionResult> AddCategory([FromForm] BidingPostCategory bidingPostCategory, [FromRoute] string id)
@@ -169,7 +177,12 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
                                   .Include(x => x.PostCategories)
                                   .ThenInclude(x => x.Category)
                                   )));
+
+
+
             return post;
+            
+            
         }
 
         [HttpGet]
@@ -230,6 +243,13 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
                 return View(postFWDImgaesDto);
             }
 
+            var rs = await _authorizationService.AuthorizeAsync(User, id,
+                                                         new CanOptionPostUserRequirements(true));
+
+            if (!rs.Succeeded)
+            {
+                return Forbid();
+            }
 
             if (postForUpdateContentDto.DateUpdated is null)
             {
@@ -263,6 +283,9 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
                 postForCreationDto.DateCreate = _serviceManager.HttpClient.GetNistTime();
             }
 
+            var user = await _userManager.GetUserAsync(User);
+
+            postForCreationDto.AuthorId = user.Id;
 
             var post = await _serviceManager.PostService.CreateAsync(postForCreationDto);
 
@@ -291,6 +314,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             var post = await _serviceManager.PostService.GetByIdAsync(id);
 
+
             var postDto = ObjectMapper.Mapper.Map<PostDto>(post);
 
             return View(postDto);
@@ -316,6 +340,14 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             }
 
+            var rs = await _authorizationService.AuthorizeAsync(User, id,
+                                                          new CanOptionPostUserRequirements(true));
+
+            if (!rs.Succeeded)
+            {
+                return Forbid();
+            }
+
             var post = await _serviceManager.PostService.UpdateAsync(id, postForUpdateDto);
             StatusMessage = $"Cập nhật thành bài viết #{post.Title}#";
             return RedirectToAction("editpost", new { pageNumber = postParameters.PageNumber});
@@ -338,6 +370,14 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         [HttpPost]
         public async Task<IActionResult> DeletePost([FromRoute] string id, bool IsDelte)
         {
+            var rs = await _authorizationService.AuthorizeAsync(User, id,
+                                                          new CanOptionPostUserRequirements(true));
+
+            if (!rs.Succeeded)
+            {
+                return Forbid();
+            }
+
             var post = await _serviceManager.PostService.DeleteAsync(id);
            
             StatusMessage = $"Xóa thành công bài viết #{post.Title}# ";
@@ -347,6 +387,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         }
 
         [HttpGet]
+        [Authorize(Policy = "Admin")]
         public async Task<IActionResult> AddItemCategory([FromRoute] string id, [FromQuery] PostParameters postParameters)
         {
             
@@ -372,11 +413,13 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         }
 
         [HttpPost]
+        [Authorize(Policy = "Admin")]
         public async Task<IActionResult> AddItemCategory([FromForm] BidingPostCategory bidingPostCategory, 
                                                             [FromRoute] string id
                                                             )
         {
             var post = await RunPostDetail(id);
+
 
             if (bidingPostCategory.PostCategorys == null)
             {
@@ -407,6 +450,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         public async Task<IActionResult> CreateContent([FromRoute] string id)
         {
             var post = await RunPostDetail(id);
+
 
             var postFWDImgaesDto = ObjectMapper.Mapper.Map<PostsFWDContentImagesDto>(post);
 
@@ -458,6 +502,14 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
                 ViewData["TreeViewContentSelete"] = des;
 
                 return View(contentForCreateDto);
+            }
+
+            var rs = await _authorizationService.AuthorizeAsync(User, id,
+                                                          new CanOptionPostUserRequirements(true));
+
+            if (!rs.Succeeded)
+            {
+                return Forbid();
             }
 
             if (contentForCreateDto?.PostId is null)
@@ -528,6 +580,14 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
                 return View(contentForUpdateDto);
             }
 
+            var rs = await _authorizationService.AuthorizeAsync(User, id,
+                                                          new CanOptionPostUserRequirements(true));
+
+            if (!rs.Succeeded)
+            {
+                return Forbid();
+            }
+
             var contentDto = await _serviceManager.ContentService.UpdateAsync(contentid, contentForUpdateDto);
 
             StatusMessage = $"Chỉnh sửa thành công nội dung ---{contentDto.Title}---";
@@ -540,6 +600,15 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         [HttpPost]
         public async Task<IActionResult> DeleteContent([FromRoute]string id , [FromQuery]int contentid)        
         {
+
+            var rs = await _authorizationService.AuthorizeAsync(User, id,
+                                                          new CanOptionPostUserRequirements(true));
+
+            if (!rs.Succeeded)
+            {
+                return Forbid();
+            }
+
             var contentDto = await _serviceManager.ContentService.DeleteAsync(contentid);
 
             StatusMessage = $"Xóa thành công nội dung ---{contentDto.Title}---";
@@ -575,6 +644,14 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             }
 
             var post =  await RunPostDetail(id);
+
+            var rs = await _authorizationService.AuthorizeAsync(User, id,
+                                                          new CanOptionPostUserRequirements(true));
+
+            if (!rs.Succeeded)
+            {
+                return Forbid();
+            }
 
             var messgae = 0;
             var deleteImge = 0;

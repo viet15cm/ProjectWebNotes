@@ -42,5 +42,8 @@ namespace Dto
         [StringLength(50, ErrorMessage = "{0} có độ dài dưới 50 kí tự")]
         [Display(Name = "Icon")]
         public string IConFont { get; set; }
+
+        [Display(Name = "Tác giả")]
+        public string AuthorId { get; set; }
     }
 }

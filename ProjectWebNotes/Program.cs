@@ -11,6 +11,13 @@ builder.Services.ConfigureLoggerService();
 builder.Services.ConfigureServiceManager();
 builder.Services.ConfigureRepositoryWrapper();
 builder.Services.ConfigureMySqlContext(builder.Configuration);
+builder.Services.ConfigureApplicationCookie(option =>
+{
+    option.ExpireTimeSpan = TimeSpan.FromDays(1);
+    option.LoginPath = "/Identity/Account/Login";
+    option.LogoutPath = "/Identity/Account/Logout";
+    option.AccessDeniedPath = $"/Identity/Account/Manager/AccessDenied";
+});
 builder.Services.ConfigureAuthorizationHandlerService();
 builder.Services.AddControllers();
 builder.Services.AddRazorPages();

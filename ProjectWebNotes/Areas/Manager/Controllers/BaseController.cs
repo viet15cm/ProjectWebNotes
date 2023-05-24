@@ -1,4 +1,5 @@
 ﻿using Domain.IdentityModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
@@ -12,16 +13,18 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
     {
         protected readonly IServiceManager _serviceManager;
 
-        private readonly UserManager<AppUser> _userManager;
+        protected readonly UserManager<AppUser> _userManager;
 
+        protected readonly IAuthorizationService _authorizationService;
         protected readonly IMemoryCache _cache;
 
 
-        public BaseController(IServiceManager serviceManager , IMemoryCache memoryCache, UserManager<AppUser> userManager)
+        public BaseController(IServiceManager serviceManager , IMemoryCache memoryCache, UserManager<AppUser> userManager , IAuthorizationService authorizationService)
         {
             _serviceManager = serviceManager;
             _cache = memoryCache;
             _userManager = userManager;
+            _authorizationService = authorizationService;
         }
 
 

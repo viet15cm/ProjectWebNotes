@@ -3,6 +3,7 @@ using Domain.IdentityModel;
 using Dto;
 using Entities.Models;
 using ExtentionLinqEntitys;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.JsonPatch.Internal;
 using Microsoft.AspNetCore.Mvc;
@@ -14,7 +15,7 @@ using Services.Abstractions;
 
 namespace ProjectWebNotes.Areas.Manager.Controllers
 {
-
+    [Authorize(Policy = "Admin")]
     public class CategoryController : BaseController 
     {
         private const string _KeyListCatgorys = "_listallcategories";
@@ -22,8 +23,9 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
         public CategoryController(IServiceManager serviceManager, 
                                 IMemoryCache memoryCache, 
-                                UserManager<AppUser> userManager) 
-                                : base(serviceManager, memoryCache, userManager)
+                                UserManager<AppUser> userManager,
+                                IAuthorizationService authorizationService) 
+                                : base(serviceManager, memoryCache, userManager , authorizationService)
         {
         }
 
