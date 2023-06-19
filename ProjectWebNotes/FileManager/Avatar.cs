@@ -4,7 +4,7 @@
     {
         private Avatar() { }
 
-        private static Avatar _instance;
+        private static Avatar _instance = null;
 
         public static Avatar GetAvartar()
         {

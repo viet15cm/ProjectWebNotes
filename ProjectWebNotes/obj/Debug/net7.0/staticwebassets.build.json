@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JEbB32wf9Uh3ZiPN1VR+vptDi3XOzaz1r0/KTJaUk60=",
+  "Hash": "6oPa/TlEOeizh/LZaGV93URCuVe6aGnN9sfBRZUy2uI=",
   "Source": "ProjectWebNotes",
   "BasePath": "_content/ProjectWebNotes",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ProjectWebNotes.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\css\\multi-leve-hover.css",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "css/multi-leve-hover.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\multi-leve-hover.css"
     },
     {
       "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\css\\site-black.css",
@@ -136,6 +153,23 @@
       "OriginalItemSpec": "wwwroot\\ImageManager\\Avatar\\230510921_31ba5a6f.jpg"
     },
     {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\Avatar\\231314745_467cc45b.jpg",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "ImageManager/Avatar/231314745_467cc45b.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ImageManager\\Avatar\\231314745_467cc45b.jpg"
+    },
+    {
       "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\Avatar\\235210144_e4012b81.jpg",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
@@ -185,6 +219,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\230511145_6bfbd580.jpg"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\231034502_917fd59d.jpg",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "ImageManager/ImagePost/231034502_917fd59d.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\231034502_917fd59d.jpg"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\231034549_0a8468bd.jpg",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "ImageManager/ImagePost/231034549_0a8468bd.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\231034549_0a8468bd.jpg"
     },
     {
       "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\231503310_8be5a7f3.jpg",

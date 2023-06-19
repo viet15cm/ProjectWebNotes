@@ -5,12 +5,6 @@ html {
 
 
 
-@media (min-width: 768px) {
-  html {
-    font-size: 14px;
-    
-  }
-}
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
@@ -109,4 +103,34 @@ body {
     top: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
+}
+
+.box-category {
+    width: 400px;
+
+    padding: 10px;
+}
+
+.instruct-category ul li {
+    list-style: none;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar-brand {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .box-category {
+        width: 100%;
+    }
+   
 }

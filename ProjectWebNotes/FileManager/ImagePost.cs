@@ -6,7 +6,7 @@ namespace ProjectWebNotes.FileManager
     {
         private ImagePost() { }
 
-        private static ImagePost _instance;
+        private static ImagePost _instance = null;
 
         public static ImagePost GetImagePost()
         {

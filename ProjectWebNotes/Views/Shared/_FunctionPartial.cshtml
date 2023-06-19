@@ -6,21 +6,15 @@
 }
 
 @if (resultAuthorization.Succeeded)
-{      
-    <li>
-        <div class="collapse navbar-collapse" id="category">
-            <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="category" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Danh mục & bài biết
-                </a>
-                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="category">
-                    <li><a class="dropdown-item" asp-area="Manager" asp-controller="Category" asp-action="index">Danh mục</a></li>
-                    <li><a class="dropdown-item" asp-area="Manager" asp-controller="Post" asp-action="index">Bài viết</a></li>
-
-                </ul>
-            </li>
-            </ul>
-        </div>
+{
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="categorymanager" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Danh mục
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="categorymanager">
+            <li><a class="dropdown-item" asp-area="Manager" asp-controller="Category" asp-action="index">Danh mục</a></li>
+            <li><a class="dropdown-item" asp-area="Manager" asp-controller="Post" asp-action="index">Bài viết</a></li>
+        </ul>
     </li>
+
 }

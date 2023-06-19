@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\ImageManager\\Avatar\\230510921_31ba5a6f.jpg"
     },
     {
+      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\Avatar\\231314745_467cc45b.jpg",
+      "PackagePath": "staticwebassets\\ImageManager\\Avatar\\231314745_467cc45b.jpg"
+    },
+    {
       "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\Avatar\\235210144_e4012b81.jpg",
       "PackagePath": "staticwebassets\\ImageManager\\Avatar\\235210144_e4012b81.jpg"
     },
@@ -23,6 +27,14 @@
     {
       "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\230511145_6bfbd580.jpg",
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\230511145_6bfbd580.jpg"
+    },
+    {
+      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\231034502_917fd59d.jpg",
+      "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\231034502_917fd59d.jpg"
+    },
+    {
+      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\231034549_0a8468bd.jpg",
+      "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\231034549_0a8468bd.jpg"
     },
     {
       "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\231503310_8be5a7f3.jpg",
@@ -659,6 +671,10 @@
     {
       "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\summernote-bs4.min.js.map",
       "PackagePath": "staticwebassets\\Summernote-cr\\summernote-bs4.min.js.map"
+    },
+    {
+      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\css\\multi-leve-hover.css",
+      "PackagePath": "staticwebassets\\css\\multi-leve-hover.css"
     },
     {
       "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\css\\site-black.css",
