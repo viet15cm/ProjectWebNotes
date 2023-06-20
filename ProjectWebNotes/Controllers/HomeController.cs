@@ -1,4 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Dto;
+using Entities.Models;
+using ExtentionLinqEntitys;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
+using ProjectWebNotes.Areas.Manager.Models;
 using ProjectWebNotes.DbContextLayer;
 using ProjectWebNotes.FileManager;
 using ProjectWebNotes.Models;
@@ -12,20 +17,51 @@ namespace ProjectWebNotes.Controllers
     {
         private readonly AppDbcontext _context;
         private readonly IServiceManager _serviceManager;
- 
-        public HomeController(IServiceManager serviceManager, AppDbcontext context)
+
+        private readonly IMemoryCache _cache;
+        private const string _KeyListCatgorys = "_listallcategories";
+        public HomeController(IServiceManager serviceManager,
+                                AppDbcontext context,
+                                IMemoryCache memoryCache )
         {
             _serviceManager = serviceManager;
-           
+            _cache = memoryCache;
             _context = context;
         }
 
-        public  IActionResult Index()
+        [NonAction]
+        async Task<IEnumerable<Category>> GetAllTreeViewCategories()
         {
-           
-            
 
-            return View();
+            IEnumerable<Category> categories;
+
+
+            // Phục hồi categories từ Memory cache, không có thì truy vấn Db
+            if (!_cache.TryGetValue(_KeyListCatgorys, out categories))
+            {
+                categories = await _serviceManager
+                    .CategoryService
+                    .GetAllAsync(ExpLinqEntity<Category>.ResLinqEntity(null, x => x.OrderBy(x => x.Serial), true));
+
+                // Thiết lập cache - lưu vào cache
+                var cacheEntryOptions = new MemoryCacheEntryOptions()
+                    .SetSlidingExpiration(TimeSpan.FromMinutes(300));
+                _cache.Set(_KeyListCatgorys, categories, cacheEntryOptions);
+            }
+
+            categories = _cache.Get(_KeyListCatgorys) as IEnumerable<Category>;
+
+            return categories;
+        }
+
+        public  async Task<IActionResult> Index()
+        {
+
+            var cateforys = await GetAllTreeViewCategories();
+
+            cateforys = TreeViews.GetCategoryChierarchicalTree(cateforys);
+
+            return View(cateforys);
         }
 
         public IActionResult Privacy()

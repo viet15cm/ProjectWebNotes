@@ -1,0 +1,125 @@
+﻿@model List<Category>
+@{
+   
+}
+<div class="clearafter">
+    
+    @*<div  class="list-category-right">
+              
+        <h5 class="ribbon d-flex justify-content-lg-start"> 
+            <span class="icon-gem"><i class="bi bi-gem"></i></span>
+            <span class="highlights-category-header-title">
+                Bài viết nổi bậc
+            </span>
+        </h5>
+
+        <div class="highlights-category-list">
+            <ul>
+                @{
+                    await CategoryPrime(Model);
+                }
+                 
+            </ul>
+        </div>
+        
+    </div>*@
+
+    <div class="list-category-left">
+        @foreach (var item in Model)
+        {
+            if (item.ParentCategory == null)
+            {
+                <div class="main-body-content-child">
+
+                    <span class="icon-star"><i class="bi bi-star"></i></span>
+
+                    <h5 class=" d-flex justify-content-lg-start"> 
+                        <span class="icon-category">@Html.Raw(@item.IConFont)</span>
+                        <span style="margin: auto; padding-left: 10px; font-size: 17px; margin-left: 0px;">
+                            @item.Title
+                        </span>
+                    </h5>
+                    <div class="card-body">
+                        @{
+                            var categorys = item.CategoryChildren.ToList();
+
+                            await RenderCategory(categorys, 16);
+                        }
+                    </div>
+                </div>
+
+            }
+        }
+    </div>
+    
+</div>
+
+@{
+    async Task RenderCategory(List<Category> categories, int fontsize)
+    {
+
+
+        if (fontsize < 16)
+        {
+            fontsize = 16;
+
+        }
+
+        var fontz = fontsize + "px";
+
+        foreach (var category in categories)
+        {
+            var count = category.PostCategories?.Count() ?? 0;
+
+            <li style="position: relative" class="d-flex justify-content-starts">
+                @if (category.IConFont != null)
+                {
+                    <span style="font-size: @fontz;" class="mx-1">
+                        @Html.Raw(category.IConFont)
+                    </span>
+                }
+                else
+                {
+                    <span style="font-size: @fontz;" class="mx-1">
+                        <i class="bi bi-terminal"></i>
+                    </span>
+                }
+
+          
+                <span style="padding-left: 10px;">
+                      <a style="font-size: @fontz;" asp-area="Docs" asp-controller="ViewDocs" asp-action="index" asp-route-slug="@category.Slug">@category.Title </a>
+
+                </span>
+                <span class="count-post-category">@count</span>
+            </li>
+
+            if (category.CategoryChildren?.Count >= 0)
+            {
+                <ul>
+                    @{
+                        var categorys = category.CategoryChildren.ToList();
+                       
+                        await RenderCategory(categorys, fontsize - 2);
+                    }
+
+                </ul>
+            }
+        }
+    }
+
+    //async Task CategoryPrime(List<Category> categories)
+    //{
+    //    foreach (var item in categories)
+    //    {
+    //        foreach (var prime in item.PostCategories)
+    //        {
+    //            if (prime.Post.Prime)
+    //            {
+    //                <li><a asp-area="Docs"  asp-controller="ViewDocs" asp-action="Index" asp-route-post="@prime.Post.Slug" asp-route-slug="@prime.Category.Slug">@prime.Post.Title</a></li>
+    //            }
+    //        }
+
+    //        await CategoryPrime(item.CategoryChildren.ToList());
+    //    }
+    //}
+}

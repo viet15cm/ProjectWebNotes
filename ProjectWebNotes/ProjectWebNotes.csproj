@@ -67,6 +67,7 @@
     <None Include="Areas\Identity\Pages\_ValidationScriptsPartial.cshtml" />
     <None Include="Areas\Identity\Pages\_ViewImports.cshtml" />
     <None Include="Areas\Identity\Pages\_ViewStart.cshtml" />
+    <None Include="Views\Shared\Components\ViewListCategory\Default.cshtml" />
     <None Include="wwwroot\Summernote-cr\bootstrap.min.js" />
     <None Include="wwwroot\Summernote-cr\font\summernote.woff2" />
     <None Include="wwwroot\Summernote-cr\lang\summernote-ar-AR.js" />

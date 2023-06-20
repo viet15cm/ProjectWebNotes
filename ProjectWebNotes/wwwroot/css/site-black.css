@@ -2,11 +2,8 @@
     font-size: 14px;
     position: relative;
     min-height: 100%;
-    
-    
+
 }
-
-
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
     box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
@@ -114,6 +111,142 @@ body {
     list-style: none;
 }
 
+/*category-home*/
+
+
+
+.main-body-content {
+    float: left;
+    padding-bottom: 100px;
+
+}
+
+.icon-contact-service {
+    width: 5%;
+   
+    float: left;
+}
+
+.icon-contact-service ul {
+    margin: auto;
+    padding: 0px;
+    margin: 0px;
+}
+
+    .icon-contact-service ul li {
+        list-style: none;
+        text-align: center;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+.banner {
+    width: 62%;
+    background-size: 100%;
+    text-align: center;
+    font-family: Bahnschrift;
+    position: relative;
+    background-repeat: no-repeat;
+    min-height: 200px;
+    float: right;
+
+}
+
+.signature {
+    background: white;
+    margin-bottom: 15px;
+    box-shadow: #ffffff 0px 0px 10px;
+    box-sizing: inherit;
+}
+
+.list-category-left {
+    float: left;
+    width: 30%;
+    box-shadow: #ffffff 0px 0px 10px;
+    box-sizing: inherit;
+    box-sizing: inherit;
+    line-height: 1.6em;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.main-body-content-child {
+    padding: 10px;
+    border-bottom: 10px solid white;
+}
+
+
+    .main-body-content-child li {
+    }
+
+    .main-body-content-child span {
+    }
+
+.icon-category {
+    font-size: 35px;
+}
+
+
+.main-body-content-child li a {
+}
+
+.icon-star {
+    float: right;
+}
+
+.count-post-category {
+    margin-right: 0px;
+}
+
+.footer {
+}
+
+
+
+@media (max-width: 1000px) {
+    .main-body-content-child {
+        width: 45%;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .main-body-content-child {
+        width: 100%;
+    }
+
+    .list-category-left {
+        width: 100%;
+        float: none;
+        padding: 0px;
+    }
+
+    .icon-contact-service {
+        width: 100%;
+        float: none;
+        min-height: 50px;
+    }
+
+    .main-body-content-child {
+        width: 100%;
+    }
+
+
+    .icon-contact-service ul li {
+        float: left;
+        margin-right: 10px;
+    }
+
+    .banner {
+        margin-top: 20px;
+        width: 100%;
+        float: none;
+       
+    }
+   
+}
+
+
 @media (min-width: 768px) {
     html {
         font-size: 14px;
@@ -129,4 +262,9 @@ body {
     .box-category {
         width: 100%;
     }
+
+    .main-body-content-child {
+        width: 95%;
+    }
 }
+

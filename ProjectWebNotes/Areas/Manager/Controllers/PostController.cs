@@ -177,12 +177,8 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
                                   .Include(x => x.PostCategories)
                                   .ThenInclude(x => x.Category)
                                   )));
-
-
-
             return post;
-            
-            
+              
         }
 
         [HttpGet]

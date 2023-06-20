@@ -21,6 +21,18 @@
       "PackagePath": "staticwebassets\\ImageManager\\Avatar\\235210144_e4012b81.jpg"
     },
     {
+      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\Banner\\hinhok.jpg",
+      "PackagePath": "staticwebassets\\ImageManager\\Banner\\hinhok.jpg"
+    },
+    {
+      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\Banner\\hinhokn.jpg",
+      "PackagePath": "staticwebassets\\ImageManager\\Banner\\hinhokn.jpg"
+    },
+    {
+      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\Banner\\imagessa.jfif",
+      "PackagePath": "staticwebassets\\ImageManager\\Banner\\imagessa.jfif"
+    },
+    {
       "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\230510921_31ba5a6f.jpg",
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\230510921_31ba5a6f.jpg"
     },
@@ -87,6 +99,10 @@
     {
       "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\default.jpg",
       "PackagePath": "staticwebassets\\Img\\default.jpg"
+    },
+    {
+      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\signature.png",
+      "PackagePath": "staticwebassets\\Img\\signature.png"
     },
     {
       "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Summernote-cr\\bootstrap.min.css",
