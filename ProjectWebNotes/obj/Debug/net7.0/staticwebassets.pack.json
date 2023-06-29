@@ -89,6 +89,10 @@
       "PackagePath": "staticwebassets\\Img\\DefaultCategory.jpg"
     },
     {
+      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\banner-c-sharp.jpg",
+      "PackagePath": "staticwebassets\\Img\\banner-c-sharp.jpg"
+    },
+    {
       "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\camera.png",
       "PackagePath": "staticwebassets\\Img\\camera.png"
     },
@@ -99,6 +103,10 @@
     {
       "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\default.jpg",
       "PackagePath": "staticwebassets\\Img\\default.jpg"
+    },
+    {
+      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\java-icon-2048x2048-yxty4s2p.png",
+      "PackagePath": "staticwebassets\\Img\\java-icon-2048x2048-yxty4s2p.png"
     },
     {
       "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\signature.png",

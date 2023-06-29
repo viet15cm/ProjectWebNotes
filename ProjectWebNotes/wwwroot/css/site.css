@@ -93,6 +93,18 @@ body {
     }
 /*from login*/
 
+
+.box-category li a {
+    text-decoration: none;
+    font-weight: 500;
+}
+.box-category ul li a {
+    
+    font-weight: 400;
+}
+.box-category li {
+    margin-top: 10px;
+}
 .form-login {
     left: 50%;
     top: 50%;
@@ -109,6 +121,10 @@ body {
 .instruct-category ul li {
     list-style: none;
 }
+
+/*boxlist-category*/
+
+
 
 /*home*/
 
@@ -136,8 +152,8 @@ body {
    margin-top: 5px;
 }
 
-.banner {
-    border : 2px solid white;
+.introduce {
+    border: 2px solid white;
     width: 62%;
     background-size: 100%;
     text-align: center;
@@ -147,14 +163,23 @@ body {
     min-height: 200px;
     float: right;
 }
-
-.signature {
-    background: white;
-    margin-bottom : 15px;
+.banner {
     box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px;
     box-sizing: inherit;
+    padding: 20px;
+    width: 100%;
+    background-image: url(/Img/banner-c-sharp.jpg);
+    margin: auto;
+    margin-bottom: 20px;
+    background-position: center;
+    min-height: 320px;
 }
 
+.banner-avarta{
+    float: right;
+    margin-top: 20px;
+    
+}
 .list-category-left {
     float: left;
     width: 30%;
@@ -189,6 +214,9 @@ body {
 
 .main-body-content-child li a {
    
+    text-decoration : none;
+
+    color: #000000;
 }
 
 .icon-star{
@@ -198,7 +226,7 @@ body {
 
 .count-post-category {
    
-  position: relative;
+  position: absolute;
 
   right: 0px;
   top: 0px;

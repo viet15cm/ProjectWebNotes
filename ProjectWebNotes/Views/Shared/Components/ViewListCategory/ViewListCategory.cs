@@ -15,7 +15,7 @@ namespace ProjectWebNotes.Views.Shared.Components.ViewListCategory
 
         public const string COMPONENTNAME = "ViewListCategory";
 
-        public IViewComponentResult Invoke(List<Category> categorys)
+        public IViewComponentResult Invoke(IEnumerable<Category> categorys)
         {
             return  View(categorys);
         }

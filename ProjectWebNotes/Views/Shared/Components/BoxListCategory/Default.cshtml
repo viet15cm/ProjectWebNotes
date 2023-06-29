@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Category>
+@{
+
+}
+
+<ul class="dropdown-menu box-category" aria-labelledby="instruct">
+    @{
+        await RenderCategory(Model, 0);
+    }
+</ul>
+
+@{
+    async Task RenderCategory(IEnumerable<Category> categories, int leve)
+    {
+
+        var maginLeft = leve + "px";
+
+        foreach (var category in categories)
+        {
+            <li class="d-flex justify-content-starts">
+                @if (category.IConFont != null)
+                {
+                    <span class="mx-1">
+                        @Html.Raw(category.IConFont)
+                    </span>
+                }
+                else
+                {
+                    <span class="mx-1">
+                        <i class="bi bi-terminal"></i>
+                    </span>
+                }
+
+                <span>
+                    <a class="text-secondary" asp-area="Docs" asp-controller="ViewDocs" asp-action="index" asp-route-slug="@category.Slug">@category.Title</a>
+                </span>
+
+            </li>
+
+            if (category.CategoryChildren?.Count >= 0)
+            {
+                <ul>
+                    @{
+                        await RenderCategory(category.CategoryChildren, 30);
+                    }
+
+                </ul>
+            }
+        }
+    }
+}

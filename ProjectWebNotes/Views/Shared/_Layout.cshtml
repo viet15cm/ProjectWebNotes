@@ -100,26 +100,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="instruct" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Hướng Dẫn Lập Trình
                             </a>
-                            <ul class="dropdown-menu box-category" aria-labelledby="instruct">
-                                <li><a href="#!">Service item 1</a></li>
-                                <li class="has-children">
-                                    <a href="#!" aria-haspopup="true">Service item 2 Service item 2</a>
-                                    <ul aria-label="submenu">
-                                        <li><a href="#!">Service subitem 1</a></li>
-                                        <li class="has-children">
-                                            <a href="#!" aria-haspopup="true">Service subitem 2</a>
-                                            <ul aria-label="submenu">
-                                                <li><a href="#!">Service subsubitem 1 Service subsubitem 1</a></li>
-                                                <li><a href="#!">Service subsubitem 2</a></li>
-                                                <li><a href="#!">Service subsubitem 3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#!">Service subitem 3</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#!">Service item 3</a></li>
-                                <li><a href="#!">Service item 4</a></li>
-                            </ul>
+                            @await RenderSectionAsync("BoxListCategory", required: false)
                         </li>
                         
                         
@@ -127,6 +108,7 @@
      
                      <ul class="nav navbar-nav navbar-right">
                         @await Html.PartialAsync("_FunctionPartial")
+
                         @await Html.PartialAsync("_LoginPartial")
                          <li>
                            <select  id="theme-home" class="theme" name="theme-home" >

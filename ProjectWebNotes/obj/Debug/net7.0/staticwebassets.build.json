@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aHEVEt2WpyezBMxfUlkTkfoDp7O9KBlHNWrnJuxmNIA=",
+  "Hash": "h1p3kS68TKVxspAuD7tf312LF8NbTOSThl7dn/QH5V8=",
   "Source": "ProjectWebNotes",
   "BasePath": "_content/ProjectWebNotes",
   "Mode": "Default",
@@ -459,6 +459,23 @@
       "OriginalItemSpec": "wwwroot\\Img\\Avartar.jpg"
     },
     {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\banner-c-sharp.jpg",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "Img/banner-c-sharp.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\banner-c-sharp.jpg"
+    },
+    {
       "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\camera.png",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
@@ -525,6 +542,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Img\\DefaultCategory.jpg"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\java-icon-2048x2048-yxty4s2p.png",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "Img/java-icon-2048x2048-yxty4s2p.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\java-icon-2048x2048-yxty4s2p.png"
     },
     {
       "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\signature.png",
