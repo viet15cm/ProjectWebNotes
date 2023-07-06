@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="row">
+        <div class="col-xl-3">
+            <aside class="bd-sidebar d-none d-xl-block box-shadow">
+                @RenderSection("Sidebar", required: false)
+            </aside>
+        </div>
+
+        <div class="bd-main col-xl-9">
+            @RenderBody()
+        </div>
+    </div>
+
+@section BoxListCategory {
+
+    @await RenderSectionAsync("BoxListCategory", required: false)
+
+}
+
+@await RenderSectionAsync("Scripts", required: false)

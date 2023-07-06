@@ -1,7 +1,7 @@
 ﻿using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ProjectWebNotes.Areas.Docs.Views.Shared.Components
+namespace ProjectWebNotes.Areas.Docs.Views.Shared.Components.CategorySidebar
 {
     public class CategorySidebar : ViewComponent
     {

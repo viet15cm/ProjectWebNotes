@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YfawGkXkrTfIYLaJY93zJHlG8BOma3Tbf3WfFAVJ1MkkcUxo5y18TTy6YsYwrr96Qc3NNYW8cY7cTyeDQidbHQ==",
+  "dgSpecHash": "7Lrc9hzV9Se+65wSn8/rNE0omzkD1hMZ0JJS0J0Da43ujoTjRjB2XdfSONC9k2/WzHI7KWcdQrJEQB3a654B9w==",
   "success": true,
-  "projectFilePath": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\ProjectWebNotes.csproj",
+  "projectFilePath": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\ProjectWebNotes.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\thean\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\thean\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",

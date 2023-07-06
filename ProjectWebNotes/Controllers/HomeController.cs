@@ -58,12 +58,13 @@ namespace ProjectWebNotes.Controllers
             return categories;
         }
 
+        [HttpGet]
         public  async Task<IActionResult> Index()
         {
 
-            var categories = await GetAllTreeViewCategories();
+            var categories = await _context.Categories.ToListAsync();
 
-            categories = TreeViews.GetCategoryChierarchicalTree(categories);
+            
 
             return View(categories);
         }

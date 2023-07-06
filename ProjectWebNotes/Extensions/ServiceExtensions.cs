@@ -6,6 +6,7 @@ using Logger;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using ProjectWebNotes.DbContextLayer;
 using ProjectWebNotes.FileManager;
 using ProjectWebNotes.Security.Requirements;
@@ -23,17 +24,22 @@ namespace ProjectWebNotes.Extensions
             //var connectionString = config["mysqlconnection:connectionString"];
             //services.AddDbContext<RepositoryContext>(o => o.UseMySql(connectionString,
             //    MySqlServerVersion.LatlestSupportedServerVersion));
-            services.AddDbContext<AppDbcontext>(options =>
-                                                options.UseSqlServer(config.GetConnectionString("LocalHost")));;
+           
+            services.AddDbContext<AppDbcontext>(
+                    options => options.UseSqlServer(
+                    config.GetConnectionString("LocalHost"),
+                    providerOptions => providerOptions.EnableRetryOnFailure()));
 
-            services.AddDbContext<RepositoryContext>(options =>
-                                                        options.UseSqlServer(config.GetConnectionString("LocalHost"))); ;
+            services.AddDbContext<RepositoryContext>(options => options.UseSqlServer(
+                    config.GetConnectionString("LocalHost"),
+                    providerOptions => providerOptions.EnableRetryOnFailure())); ;
 
 
             services.AddIdentity<AppUser, IdentityRole>()
                           .AddEntityFrameworkStores<AppDbcontext>()
                           .AddDefaultTokenProviders();
 
+          
 
         }
         public static void ConfigureServiceManager(this IServiceCollection services)

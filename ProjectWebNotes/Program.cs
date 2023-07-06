@@ -6,11 +6,16 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
 builder.Services.ConfigureLoggerService();
+
 //builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.ConfigureServiceManager();
+
 builder.Services.ConfigureRepositoryWrapper();
+
 builder.Services.ConfigureMySqlContext(builder.Configuration);
+
 builder.Services.ConfigureApplicationCookie(option =>
 {
     option.ExpireTimeSpan = TimeSpan.FromDays(1);
@@ -19,7 +24,9 @@ builder.Services.ConfigureApplicationCookie(option =>
     option.AccessDeniedPath = $"/Identity/Account/Manager/AccessDenied";
 });
 builder.Services.ConfigureAuthorizationHandlerService();
+
 builder.Services.AddControllers();
+
 builder.Services.AddRazorPages();
 
 
@@ -69,7 +76,5 @@ app.MapRazorPages();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
-
 
 app.Run();

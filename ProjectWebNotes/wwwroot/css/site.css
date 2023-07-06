@@ -5,6 +5,24 @@ html {
     
 }
 
+.navbar-header {
+    /* background-color: #5f7d95; */
+    
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    
+
+
+}
+
+.fill-space {
+    height: 50px;
+    margin: auto;
+    text-align: center;
+}
+
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
@@ -132,6 +150,7 @@ body {
 .main-body-content {
     float: left;
     padding-bottom: 100px;
+    width: 100%;
 }
 
 .icon-contact-service{
@@ -166,11 +185,11 @@ body {
 .banner {
     box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px;
     box-sizing: inherit;
-    padding: 20px;
     width: 100%;
     background-image: url(/Img/banner-c-sharp.jpg);
     margin: auto;
     margin-bottom: 20px;
+    margin-top: 7px;
     background-position: center;
     min-height: 320px;
 }
@@ -231,6 +250,120 @@ body {
   right: 0px;
   top: 0px;
 }
+
+/*categorysidbar*/
+
+.bd-sidebar {
+    position: fixed;
+    z-index: 1;
+    width: 23%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+    padding-bottom: 100px;
+}
+
+.box-shadow {
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .05);
+}
+
+.title-category-content {
+    font-size: 18px;
+    margin: auto;
+    margin-left: 0px;
+    font-weight: 700;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+
+.badge-category {
+    font-size: 35px;
+    color: black;
+}
+
+.mycollapse {
+    display: none;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.myshow {
+    display: block;
+}
+
+.parent-size-text-post {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.child-size-text-post {
+    text-decoration: none;
+    color: #232323;
+    font-weight: 400;
+}
+
+.categorysidebar-title-post {
+    padding-bottom: 10px;
+    font-size: 16px;
+}
+
+
+
+.badge {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+.badge-category {
+    font-size: 35px;
+    color: black;
+}
+
+.tree-icon-mycollapse {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    padding-top: 3px;
+    padding-right: 7px;
+    padding-left: 0px;
+}
+
+    .tree-icon-mycollapse span::after {
+        display: inline-block;
+        vertical-align: middle;
+        font-weight: 900;
+        content: '\F234';
+        font-family: 'Bootstrap-icons';
+    }
+
+.tree-icon-mycollapse span:hover {
+    color: #245ce6;
+}
+
+    .tree-icon-mycollapse .myactive::after {
+        content: "\F229";
+        display: inline-block;
+        vertical-align: middle;
+        font-weight: 900;
+        font-family: 'Bootstrap-icons';
+    }
+
 
 .footer {
     
