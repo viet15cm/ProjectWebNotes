@@ -51,5 +51,10 @@ namespace Domain.Repository
         {
             return await Queryable(expLinqEntity).Where(x => x.Id.Equals(categoryId)).FirstOrDefaultAsync(cancellationToken);
         }
+
+        public async Task<Category> GetBySlugAsync(string slug, IExpLinqEntity<Category> expLinqEntity = null, CancellationToken cancellationToken = default)
+        {
+            return await Queryable(expLinqEntity).Where(x => x.Slug.Equals(slug)).FirstOrDefaultAsync(cancellationToken);
+        }
     }
 }

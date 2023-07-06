@@ -168,5 +168,16 @@ namespace Services
             return _repositoryManager.Category.GetAll(expLinqEntity);
         }
 
+        public async Task<Category> GetBySlugAsync(string slug, IExpLinqEntity<Category> expLinqEntity = null, CancellationToken cancellationToken = default)
+        {
+            var category = await _repositoryManager.Category.GetBySlugAsync(slug, expLinqEntity, cancellationToken);
+
+            if (category is null)
+            {
+                throw new CategoryNotFoundException(category.Id);
+            }
+
+            return category;
+        }
     }
 }

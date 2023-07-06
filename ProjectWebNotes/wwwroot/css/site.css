@@ -232,13 +232,9 @@ body {
   top: 0px;
 }
 
-
-
-
 .footer {
     
 }
-
 
 
 @media (max-width: 1000px) {
@@ -281,10 +277,14 @@ body {
         float: none;
         margin-top: 20px;
     }
+
+    .introduce {
+        margin-top: 20px;
+        float: none;
+        width: 100%;
+    }
    
 }
-
-
 
 
 
@@ -295,9 +295,6 @@ body {
 
     
 }
-
-
-
 
 
 @media only screen and (max-width: 600px) {
@@ -313,5 +310,6 @@ body {
     .main-body-content-child {
         width: 95%;
     }
+    
    
 }

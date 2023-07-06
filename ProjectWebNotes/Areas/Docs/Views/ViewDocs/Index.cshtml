@@ -1,0 +1,15 @@
+﻿@model Category
+@{
+    var categorys = ViewData["categorys"] as IEnumerable<Category>;
+}
+
+
+
+@{
+
+}
+<h1>Hemo</h1>
+
+@section BoxListCategory {
+    @await Component.InvokeAsync(BoxListCategory.COMPONENTNAME, categorys)
+}

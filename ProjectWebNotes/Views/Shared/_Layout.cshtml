@@ -95,15 +95,15 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-
+@*
                         <li class="nav-item dropdown instruct-category">
                             <a class="nav-link dropdown-toggle" href="#" id="instruct" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Hướng Dẫn Lập Trình
                             </a>
                             @await RenderSectionAsync("BoxListCategory", required: false)
-                        </li>
-                        
-                        
+                        </li>*@
+
+                        @await RenderSectionAsync("BoxListCategory", required: false)
                     </ul>
      
                      <ul class="nav navbar-nav navbar-right">
@@ -148,7 +148,6 @@
             document.getElementById("myDropdown").classList.toggle("show");
         }
 
-       
         window.onclick = function (event) {
             if (!event.target.matches('.dropbtn')) {
                 var dropdowns = document.getElementsByClassName("dropdown-content");

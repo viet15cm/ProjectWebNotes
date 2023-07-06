@@ -14,6 +14,7 @@ namespace Services.Abstractions
   
         Task<Category> GetByIdAsync(string categoryId , IExpLinqEntity<Category> expLinqEntity = default, CancellationToken cancellationToken = default);
 
+        Task<Category> GetBySlugAsync(string slug, IExpLinqEntity<Category> expLinqEntity = default, CancellationToken cancellationToken = default);
         Task<CategoryDto> CreateAsync(CategoryForCreationDto categoryDto, CancellationToken cancellationToken = default);
         
         Task<CategoryDto> UpdateAsync(string IdCategory , CategoryForUpdateDto categoryForUpdate, CancellationToken cancellationToken = default);

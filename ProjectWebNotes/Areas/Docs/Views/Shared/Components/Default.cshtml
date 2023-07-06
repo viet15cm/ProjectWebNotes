@@ -1,0 +1,148 @@
+﻿@model CategorySidebar.CategorySidebarData
+
+
+@{
+
+    var listSerialUrl = Model.listSerialUrl;
+    int i = 0;
+}
+
+<div class="categorysidebar">
+    <div class="item-cagory-parent d-flex flex-row" style="margin-bottom: 10px">
+        <div class="title-category d-flex justify-content-starts">
+            <a asp-controller="ViewDocs" asp-action="Index" asp-route-slug="@Model.currentCategory.Slug">
+                <span class="badge badge-category" aria-hidden="true">
+                    @if (Model.currentCategory.IConFont != null)
+                    {
+                        @Html.Raw(Model.currentCategory.IConFont)
+                    }
+                    else
+                    {
+                        <i class="bi bi-terminal"></i>
+                    }
+                </span>
+            </a>
+            <a class="title-category-content" asp-controller="ViewDocs" asp-action="Index" asp-route-slug="@Model.currentCategory.Slug">@Model.currentCategory.Title</a>
+        </div>
+    </div>
+
+
+    <ul class="categorysidebar-menu-post">
+        @{
+
+            await RenderPost(Model.listPostInCategory.OrderBy(c => c.Serial).ToList(), i);
+        }
+
+        @if (Model.currentCategory.CategoryChildren?.Count > 0)
+        {
+            var categorys = Model.currentCategory.CategoryChildren.OrderBy(x => x.Serial).ToList();
+
+            foreach (var category in categorys)
+            {
+                <li class="d-flex bd-highlight">
+
+                    <span class="icon-category parent-size-text-post tree-icon-mycollapse flex-shrink-1 bd-highlight" aria-hidden="true">
+
+                    </span>
+
+                    <span class="categorysidebar-title-post bd-highlight">
+                        <a class="parent-size-text-post" asp-action="Index" asp-route-slug="@category.Slug">
+                            @category.Title
+                        </a>
+
+                    </span>
+
+
+                </li>
+            }
+        }
+
+    </ul>
+</div>
+
+<script>
+    function showDetails(data) {
+
+        var icon = data.childNodes[1];
+        var collapse = data.parentElement.nextElementSibling;
+
+        if (!collapse.classList.contains("myshow")) {
+            collapse.classList.add("myshow");
+            icon.classList.add("myactive");
+        } else {
+            collapse.classList.remove("myshow");
+            icon.classList.remove("myactive")
+        }
+    }
+
+</script>
+
+@{
+    async Task RenderPost(List<Post> posts, int size)
+    {
+
+        foreach (var post in posts)
+        {
+            string activeCollapse = "";
+            string activelink = "";
+            var myShow = listSerialUrl.Contains(post?.Slug) ? "myshow" : null;
+
+            var myActive = listSerialUrl.Contains(post?.Slug) ? "myactive" : null;
+
+            @if (Model.slugPost == null)
+            {
+                myShow = "myshow";
+                myActive = "myactive";
+            }
+            @if (Model.slugPost != null)
+            {
+                activeCollapse = Model.slugPost.Equals(post?.Slug) ? "active-collapse" : null;
+                activelink = Model.slugPost.Equals(post.Slug) ? "active-link" : null;
+            }
+
+            string fontsize = "parent-size-text-post";
+
+            if (size > 0)
+            {
+                fontsize = "child-size-text-post";
+            }
+
+            <li class="d-flex bd-highlight">
+
+                @if (post.PostChilds?.Count > 0)
+                {
+
+                    <a class="tree-icon-mycollapse flex-shrink-1 bd-highlight @fontsize" onclick="showDetails(this)">
+
+                        <span class=" @myActive @activeCollapse" aria-hidden="true">
+
+                        </span>
+                    </a>
+                }
+                else
+                {
+                    <span class="tree-icon-mycollapse flex-shrink-1 bd-highlight">
+
+                    </span>
+                }
+
+                <span class="categorysidebar-title-post w-100 bd-highlight">
+                    <a class="@fontsize @activelink" asp-controller="ViewDocs" asp-action="Index" asp-route-post="@post.Slug" asp-route-slug="@Model.currentCategory.Slug">@post.Title</a>
+                </span>
+            </li>
+
+            if (post.PostChilds?.Count >= 0)
+            {
+                <ul class="mycollapse categorysidebar-menu-post-child @myShow">
+                    @{
+
+                        await RenderPost(post.PostChilds.OrderBy(x => x.Serial).ToList(), size + 1);
+                    }
+
+                </ul>
+            }
+
+        }
+    }
+}
+

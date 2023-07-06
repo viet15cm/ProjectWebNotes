@@ -13,7 +13,7 @@ namespace Contracts
         Task<IEnumerable<Category>> GetAllAsync(IExpLinqEntity<Category> expLinqEntity = default ,CancellationToken cancellationToken = default);
      
         Task<Category> GetByIdAsync(string categoryId , IExpLinqEntity<Category> expLinqEntity = default, CancellationToken cancellationToken = default);
-           
+        Task<Category> GetBySlugAsync(string slug, IExpLinqEntity<Category> expLinqEntity = default, CancellationToken cancellationToken = default);
         void Edit(Category category);
 
         void Insert(Category category);

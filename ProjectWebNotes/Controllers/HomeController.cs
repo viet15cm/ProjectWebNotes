@@ -2,6 +2,7 @@
 using Entities.Models;
 using ExtentionLinqEntitys;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using ProjectWebNotes.Areas.Manager.Models;
 using ProjectWebNotes.DbContextLayer;
@@ -19,7 +20,7 @@ namespace ProjectWebNotes.Controllers
         private readonly IServiceManager _serviceManager;
 
         private readonly IMemoryCache _cache;
-        private const string _KeyListCatgorys = "_listallcategories";
+        private const string _KeyListCategorys = "_listallcategories";
         public HomeController(IServiceManager serviceManager,
                                 AppDbcontext context,
                                 IMemoryCache memoryCache )
@@ -35,21 +36,24 @@ namespace ProjectWebNotes.Controllers
 
             IEnumerable<Category> categories;
 
-
             // Phục hồi categories từ Memory cache, không có thì truy vấn Db
-            if (!_cache.TryGetValue(_KeyListCatgorys, out categories))
+            if (!_cache.TryGetValue(_KeyListCategorys, out categories))
             {
                 categories = await _serviceManager
                     .CategoryService
-                    .GetAllAsync(ExpLinqEntity<Category>.ResLinqEntity(null, x => x.OrderBy(x => x.Serial), true));
+                    .GetAllAsync(ExpLinqEntity<Category>
+                    .ResLinqEntity(null, x => x.OrderBy(x => x.Serial), true));
 
                 // Thiết lập cache - lưu vào cache
                 var cacheEntryOptions = new MemoryCacheEntryOptions()
-                    .SetSlidingExpiration(TimeSpan.FromMinutes(300));
-                _cache.Set(_KeyListCatgorys, categories, cacheEntryOptions);
+                    .SetSlidingExpiration(TimeSpan.FromMinutes(500));
+                _cache.Set(_KeyListCategorys, categories, cacheEntryOptions);
             }
 
-            categories = _cache.Get(_KeyListCatgorys) as IEnumerable<Category>;
+            else
+            {
+                categories = _cache.Get(_KeyListCategorys) as IEnumerable<Category>;
+            }
 
             return categories;
         }
@@ -57,11 +61,11 @@ namespace ProjectWebNotes.Controllers
         public  async Task<IActionResult> Index()
         {
 
-            var cateforys = await GetAllTreeViewCategories();
+            var categories = await GetAllTreeViewCategories();
 
-            cateforys = TreeViews.GetCategoryChierarchicalTree(cateforys);
+            categories = TreeViews.GetCategoryChierarchicalTree(categories);
 
-            return View(cateforys);
+            return View(categories);
         }
 
         public IActionResult Privacy()
@@ -80,7 +84,6 @@ namespace ProjectWebNotes.Controllers
         [HttpPost]
         public IActionResult SetThemme([FromBody] string data)
         {
-
             CookieOptions cookie = new CookieOptions();
             cookie.Expires = DateTime.Now.AddDays(1);
             Response.Cookies.Append("theme", data, cookie);

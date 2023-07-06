@@ -52,6 +52,17 @@ app.MapAreaControllerRoute(
                 action = "index"
             }
         );
+app.MapAreaControllerRoute(
+           name: "Docs",
+            pattern: "Docs/{controller}/{action}/{category?}",
+            areaName: "Docs",
+            defaults: new
+            {
+                controller = "ViewDocs",
+                action = "index",
+
+            }
+        );
 
 app.MapRazorPages();
 

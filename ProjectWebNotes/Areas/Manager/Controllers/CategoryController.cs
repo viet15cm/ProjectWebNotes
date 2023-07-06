@@ -18,7 +18,8 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
     [Authorize(Policy = "Admin")]
     public class CategoryController : BaseController 
     {
-        private const string _KeyListCatgorys = "_listallcategories";
+
+        private const string _KeyListCategorys = "_listallCategorys";
         private const string _KeyCategory = "_category";
 
         public CategoryController(IServiceManager serviceManager, 
@@ -29,7 +30,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         {
         }
 
-        
+
         [NonAction]
         async Task<Category> GetByIdCategoy(string id)
         {
@@ -77,14 +78,14 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
 
         [NonAction]
-        async Task <IEnumerable<Category>> GetAllTreeViewCategories()
+        async Task<IEnumerable<Category>> GetAllTreeViewCategories()
         {
 
             IEnumerable<Category> categories;
 
 
             // Phục hồi categories từ Memory cache, không có thì truy vấn Db
-            if (!_cache.TryGetValue(_KeyListCatgorys, out categories))
+            if (!_cache.TryGetValue(_KeyListCategorys, out categories))
             {
                 categories = await _serviceManager
                     .CategoryService
@@ -92,17 +93,20 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
                 // Thiết lập cache - lưu vào cache
                 var cacheEntryOptions = new MemoryCacheEntryOptions()
-                    .SetSlidingExpiration(TimeSpan.FromMinutes(300));
-                _cache.Set(_KeyListCatgorys, categories, cacheEntryOptions);
+                    .SetSlidingExpiration(TimeSpan.FromMinutes(500));
+                _cache.Set(_KeyListCategorys, categories, cacheEntryOptions);
             }
-            
-            categories = _cache.Get(_KeyListCatgorys) as IEnumerable<Category>;
-            
+
+            else
+            {
+                categories = _cache.Get(_KeyListCategorys) as IEnumerable<Category>;
+            }
+
             return categories;
         }
 
 
-      
+
         [HttpGet]
         public async Task<IActionResult> Index()
         {
@@ -146,7 +150,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             
             StatusMessage = $"Thêm thành công danh mục #{category.Title}#";
 
-            _cache.Remove(_KeyListCatgorys);
+            _cache.Remove(_KeyListCategorys);
 
             return RedirectToAction("index");
             
@@ -206,7 +210,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             StatusMessage = $"Cập nhật thành công danh mục #{category.Title}#";
 
-            _cache.Remove(_KeyListCatgorys);
+            _cache.Remove(_KeyListCategorys);
 
             return RedirectToAction("Edit");
 
@@ -230,7 +234,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         {
            var category = await _serviceManager.CategoryService.DeleteAsync(id);            
             StatusMessage = $"Xóa thành công danh mục #{category.Title}# ";
-            _cache.Remove(_KeyListCatgorys);
+            _cache.Remove(_KeyListCategorys);
             return RedirectToAction("index");
 
         }

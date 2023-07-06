@@ -18,12 +18,14 @@ namespace ProjectWebNotes.Areas.Manager.Models
                                 Title = c.Title,
                                 Serial = c.Serial,
                                 Content = c.Content,
+                                Contents = c.Contents,
                                 Prime = c.Prime,
                                 Description = c.Description,
                                 Slug = c.Slug,
                                 PostParentId = c.PostParentId,
                                 PostCategories = c.PostCategories,
                                 PostChilds = GetPostChildren(allCats.ToList(), c.Id)
+
                             })
                             .ToList();
         }
@@ -37,6 +39,7 @@ namespace ProjectWebNotes.Areas.Manager.Models
                         Title = c.Title,
                         Serial = c.Serial,
                         Content = c.Content,
+                        Contents = c.Contents,
                         Description = c.Description,
                         Slug = c.Slug,          
                         Prime = c.Prime,
@@ -57,7 +60,6 @@ namespace ProjectWebNotes.Areas.Manager.Models
 
         public static List<Category> GetCategoryChierarchicalTree(IEnumerable<Category> allCats, string parentId = null)
         {
-
             return allCats.Where(c => c.ParentCategoryId == parentId)
                             .Select(c => new Category()
                             {
@@ -94,7 +96,46 @@ namespace ProjectWebNotes.Areas.Manager.Models
                     .ToList();
         }
 
-  
+
+        public static List<Content> GetContentChierarchicalTree(IEnumerable<Content> cats, int? parentId = null) 
+        {
+            return cats.Where(c => c.ParentContentId == parentId)
+                    .Select(c => new Content
+                    {
+                        Id = c.Id,
+                        Title = c.Title,
+                        KeyTitleId = c.KeyTitleId,
+                        TextContents = c.TextContents,
+                        PostId = c.PostId,
+                        ParentContent = c.ParentContent,
+                        ParentContentId = c.ParentContentId,
+                        Post = c.Post,
+                        ContentChildrens = GetContentChierarchicalTree(cats, c.Id)
+
+                    })
+                    .ToList();
+        }
+
+        public static List<Content> GetContentChildren(IEnumerable<Content> cats, int parentId)
+        {
+            return cats.Where(c => c.ParentContentId == parentId)
+                    .Select(c => new Content
+                    {
+                        Id = c.Id,
+                        Title = c.Title,
+                        KeyTitleId = c.KeyTitleId,
+                        TextContents = c.TextContents,
+                        PostId = c.PostId,
+                        ParentContent = c.ParentContent,
+                        ParentContentId = c.ParentContentId,
+                        Post = c.Post,
+                        ContentChildrens = GetContentChildren(cats, c.Id)
+                    })
+                    .ToList();
+        }
+
+
+
         public static void CreateTreeViewPostSeleteItems(List<Post> postTreeLayerDtos
                                              , List<PostSelectDto> des,
                                               int leve)

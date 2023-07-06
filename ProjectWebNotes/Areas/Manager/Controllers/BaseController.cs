@@ -16,6 +16,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         protected readonly UserManager<AppUser> _userManager;
 
         protected readonly IAuthorizationService _authorizationService;
+        
         protected readonly IMemoryCache _cache;
 
 
