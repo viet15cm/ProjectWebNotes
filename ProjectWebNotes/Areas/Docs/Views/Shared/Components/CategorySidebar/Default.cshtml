@@ -4,6 +4,7 @@
 @{
 
     var listSerialUrl = Model.listSerialUrl;
+
     int i = 0;
 }
 
@@ -118,17 +119,19 @@
 
                         </span>
                     </a>
+
                 }
                 else
                 {
                     <span class="tree-icon-mycollapse flex-shrink-1 bd-highlight">
 
                     </span>
-                }
 
+                }
                 <span class="categorysidebar-title-post w-100 bd-highlight">
                     <a class="@fontsize @activelink" asp-controller="ViewDocs" asp-action="Index" asp-route-post="@post.Slug" asp-route-slug="@Model.currentCategory.Slug">@post.Title</a>
                 </span>
+              
             </li>
 
             if (post.PostChilds?.Count >= 0)

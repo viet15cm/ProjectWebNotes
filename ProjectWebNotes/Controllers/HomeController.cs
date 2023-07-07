@@ -62,9 +62,9 @@ namespace ProjectWebNotes.Controllers
         public  async Task<IActionResult> Index()
         {
 
-            var categories = await _context.Categories.ToListAsync();
+            var categories = await GetAllTreeViewCategories();
 
-            
+            categories =  TreeViews.GetCategoryChierarchicalTree(categories);
 
             return View(categories);
         }

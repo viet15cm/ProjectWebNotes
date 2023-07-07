@@ -235,10 +235,11 @@ body {
     overflow-y: auto;
     height: 100%;
     padding-bottom: 100px;
+
 }
 
 .box-shadow {
-    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .05);
+    border-right: 1px solid white;
 }
 
 .title-category-content {
@@ -246,6 +247,8 @@ body {
     margin: auto;
     margin-left: 0px;
     font-weight: 700;
+    text-decoration: none;
+    color: white;
 }
 
 .mycollapse {
@@ -256,6 +259,23 @@ body {
 
 .myshow {
     display: block;
+}
+
+.parent-size-text-post {
+    text-decoration: none;
+    
+}
+
+.child-size-text-post {
+    text-decoration: none;
+   
+    
+}
+
+.categorysidebar-title-post {
+    padding-bottom: 10px;
+    font-size: 17px;
+   
 }
 
 
@@ -271,6 +291,7 @@ body {
     vertical-align: baseline;
     border-radius: 0.25rem;
 }
+
 .badge-category {
     font-size: 35px;
     color: white;
@@ -289,7 +310,7 @@ body {
     display: inline-block;
     vertical-align: middle;
     font-weight: 900;
-    content: '\F233';
+    content: '\F234';
     font-family: 'Bootstrap-icons';
 }
 
@@ -298,13 +319,34 @@ body {
 }
 
 .tree-icon-mycollapse .myactive::after {
-    content: "\F22B";
+    content: "\F229";
     display: inline-block;
     vertical-align: middle;
     font-weight: 900;
     font-family: 'Bootstrap-icons';
 }
 
+.categorysidebar-menu-post a {
+    color: white;
+}
+
+.db-toc::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+.db-toc::-webkit-scrollbar-thumb {
+    background-color: #808080;
+}
+
+.bd-sidebar::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+.bd-sidebar::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+}
 
 
 .footer {

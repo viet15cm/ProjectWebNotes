@@ -303,7 +303,7 @@ body {
 .parent-size-text-post {
     text-decoration: none;
     color: black;
-    font-weight: 500;
+    
 }
 
 .child-size-text-post {
@@ -364,6 +364,14 @@ body {
         font-family: 'Bootstrap-icons';
     }
 
+.bd-sidebar::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+.bd-sidebar::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+}
 
 .footer {
     
