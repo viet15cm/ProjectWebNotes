@@ -1,0 +1,132 @@
+﻿@model Post
+@{
+    var categorys = ViewData["categorys"] as IEnumerable<Category>;
+}
+
+<div class="main-content">
+    <h1>
+        @Model.Title
+    </h1>
+    <div class="db-post-content">
+
+        @if (@Model?.Description != null)
+        {
+            <p class="db-post-content-description">@Model.Description</p>
+        }
+
+        @if (Model?.Content != null)
+        {
+            @Html.Raw(Model.Content)
+        }
+
+    </div>
+
+</div>
+
+
+<div class="rank-content scrollspy-example" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-offset="0" tabindex="0">
+    <strong class="d-block"><a href="#">Nội dung <i class="bi bi-arrow-up-short"></i> </a></strong>
+    <nav id="TableOfContents">
+        <ul>
+            @if (Model.Contents?.Count > 0)
+            {
+
+                await RenderTitleContents(Model.Contents);
+                
+            }
+
+        </ul>
+    </nav>
+
+  
+</div>
+
+@{
+    
+    async Task RenderContents(Content content, int size)
+    {
+        string fontsize = "";
+
+        @if (size <= 0)
+        {
+            fontsize = "font-size-prarent-post";
+        }
+        else if (size == 1)
+        {
+            fontsize = "font-size-child-post-0";
+        }
+        else if (size == 2)
+        {
+            fontsize = "font-size-child-post-1";
+        }
+        else
+        {
+            fontsize = "font-size-child-post-2";
+        }
+
+        <div class="d-flex justify-content-between">
+                <h1 class="@fontsize" id="@content.KeyTitleId">
+                @content.Title
+            </h1>
+        </div>
+        @if (content?.TextContents != null)
+        {
+            <div class="content">
+                @Html.Raw(content.TextContents)
+            </div>
+
+        }
+        @if (content.ContentChildrens?.Count > 0)
+        {
+            var listcontents = content.ContentChildrens.ToList();
+
+            size += 1;
+
+            foreach (var item in listcontents)
+            {
+                await RenderContents(item, size);
+            }
+
+        }
+    }
+
+    async Task RenderTitleContents(IEnumerable<Content> contents)
+    {
+        
+        
+        foreach (var content in contents)
+        {
+            <li><a href="#@content.KeyTitleId">@content.Title</a></li>
+
+            if (content.ContentChildrens?.Count > 0)
+            {
+                <ul>
+                @{
+                        await RenderTitleContents(content.ContentChildrens);
+                }
+                   
+                </ul>
+            }
+        }
+
+        
+    }
+}
+
+@section Sidebar {
+    @await Component.InvokeAsync(CategorySidebar.COMPONENTNAME,
+             new CategorySidebar.CategorySidebarData()
+             {
+                 slugCategory = ViewBag.slugCategory,
+                 listSerialUrl = ViewBag.listSerialUrl,
+                 slugPost = ViewBag.slugPost,
+                 currentCategory = ViewBag.currentCategory,
+                 listPostInCategory = ViewBag.listPostInCategory,
+
+             })
+
+}
+
+@section BoxListCategory {
+    @await Component.InvokeAsync(BoxListCategory.COMPONENTNAME, categorys)
+}

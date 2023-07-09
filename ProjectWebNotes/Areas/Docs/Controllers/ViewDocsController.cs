@@ -6,6 +6,7 @@ using ExtentionLinqEntitys;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ActionConstraints;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Hosting;
@@ -167,7 +168,6 @@ namespace ProjectWebNotes.Areas.Docs.Controllers
             }
             return View(category);
         }
-
 
         [NonAction]
         Category FindCategoryBySlug(List<Category> categories, string Slug, List<Category> listCategory)

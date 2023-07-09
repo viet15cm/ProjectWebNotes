@@ -3,10 +3,16 @@
     var categorys = ViewData["categorys"] as IEnumerable<Category>;
 }
 
-@{
+<div class="main-content">
+    <h1>
+        @Model.Title
+    </h1>
+    
+</div>
 
-}
-<h1>Hemo</h1>
+<div class="rank-content">
+    <h1>content</h1>
+</div>
 
 @section Sidebar {
     @await Component.InvokeAsync(CategorySidebar.COMPONENTNAME,

@@ -10,11 +10,11 @@
         "projectUniqueName": "D:\\C#\\ProjectWebNotes\\ATMapper\\ATMapper.csproj",
         "projectName": "ATMapper",
         "projectPath": "D:\\C#\\ProjectWebNotes\\ATMapper\\ATMapper.csproj",
-        "packagesPath": "C:\\Users\\thean\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\viet_key\\.nuget\\packages\\",
         "outputPath": "D:\\C#\\ProjectWebNotes\\ATMapper\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\thean\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\viet_key\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -68,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -78,11 +78,11 @@
         "projectUniqueName": "D:\\C#\\ProjectWebNotes\\Contracts\\Contracts.csproj",
         "projectName": "Contracts",
         "projectPath": "D:\\C#\\ProjectWebNotes\\Contracts\\Contracts.csproj",
-        "packagesPath": "C:\\Users\\thean\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\viet_key\\.nuget\\packages\\",
         "outputPath": "D:\\C#\\ProjectWebNotes\\Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\thean\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\viet_key\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -133,7 +133,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -143,11 +143,11 @@
         "projectUniqueName": "D:\\C#\\ProjectWebNotes\\Dto\\Dto.csproj",
         "projectName": "Dto",
         "projectPath": "D:\\C#\\ProjectWebNotes\\Dto\\Dto.csproj",
-        "packagesPath": "C:\\Users\\thean\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\viet_key\\.nuget\\packages\\",
         "outputPath": "D:\\C#\\ProjectWebNotes\\Dto\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\thean\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\viet_key\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -188,7 +188,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -198,11 +198,11 @@
         "projectUniqueName": "D:\\C#\\ProjectWebNotes\\Entities\\Entities.csproj",
         "projectName": "Entities",
         "projectPath": "D:\\C#\\ProjectWebNotes\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\thean\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\viet_key\\.nuget\\packages\\",
         "outputPath": "D:\\C#\\ProjectWebNotes\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\thean\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\viet_key\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -243,7 +243,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -253,11 +253,11 @@
         "projectUniqueName": "D:\\C#\\ProjectWebNotes\\Exceptions\\Exceptions.csproj",
         "projectName": "Exceptions",
         "projectPath": "D:\\C#\\ProjectWebNotes\\Exceptions\\Exceptions.csproj",
-        "packagesPath": "C:\\Users\\thean\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\viet_key\\.nuget\\packages\\",
         "outputPath": "D:\\C#\\ProjectWebNotes\\Exceptions\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\thean\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\viet_key\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -298,7 +298,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -308,11 +308,11 @@
         "projectUniqueName": "D:\\C#\\ProjectWebNotes\\ExtentionLinqEntitys\\ExtentionLinqEntitys.csproj",
         "projectName": "ExtentionLinqEntitys",
         "projectPath": "D:\\C#\\ProjectWebNotes\\ExtentionLinqEntitys\\ExtentionLinqEntitys.csproj",
-        "packagesPath": "C:\\Users\\thean\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\viet_key\\.nuget\\packages\\",
         "outputPath": "D:\\C#\\ProjectWebNotes\\ExtentionLinqEntitys\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\thean\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\viet_key\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -353,7 +353,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -363,11 +363,11 @@
         "projectUniqueName": "D:\\C#\\ProjectWebNotes\\Paging\\Paging.csproj",
         "projectName": "Paging",
         "projectPath": "D:\\C#\\ProjectWebNotes\\Paging\\Paging.csproj",
-        "packagesPath": "C:\\Users\\thean\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\viet_key\\.nuget\\packages\\",
         "outputPath": "D:\\C#\\ProjectWebNotes\\Paging\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\thean\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\viet_key\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -408,7 +408,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -418,11 +418,11 @@
         "projectUniqueName": "D:\\C#\\ProjectWebNotes\\Services.Abstractions\\Services.Abstractions.csproj",
         "projectName": "Services.Abstractions",
         "projectPath": "D:\\C#\\ProjectWebNotes\\Services.Abstractions\\Services.Abstractions.csproj",
-        "packagesPath": "C:\\Users\\thean\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\viet_key\\.nuget\\packages\\",
         "outputPath": "D:\\C#\\ProjectWebNotes\\Services.Abstractions\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\thean\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\viet_key\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -476,7 +476,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -486,11 +486,11 @@
         "projectUniqueName": "D:\\C#\\ProjectWebNotes\\Services\\Services.csproj",
         "projectName": "Services",
         "projectPath": "D:\\C#\\ProjectWebNotes\\Services\\Services.csproj",
-        "packagesPath": "C:\\Users\\thean\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\viet_key\\.nuget\\packages\\",
         "outputPath": "D:\\C#\\ProjectWebNotes\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\thean\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\viet_key\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -550,7 +550,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

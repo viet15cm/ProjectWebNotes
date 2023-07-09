@@ -62,7 +62,10 @@ namespace ProjectWebNotes.Controllers
         public  async Task<IActionResult> Index()
         {
 
-            var categories = await GetAllTreeViewCategories();
+            var categories = await _serviceManager
+                    .CategoryService
+                    .GetAllAsync(ExpLinqEntity<Category>
+                    .ResLinqEntity(null, x => x.OrderBy(x => x.Serial), true));
 
             categories =  TreeViews.GetCategoryChierarchicalTree(categories);
 

@@ -8,7 +8,7 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\thean\\.nuget\\packages\\": {}
+    "C:\\Users\\viet_key\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -16,11 +16,11 @@
       "projectUniqueName": "D:\\C#\\ProjectWebNotes\\Dto\\Dto.csproj",
       "projectName": "Dto",
       "projectPath": "D:\\C#\\ProjectWebNotes\\Dto\\Dto.csproj",
-      "packagesPath": "C:\\Users\\thean\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\viet_key\\.nuget\\packages\\",
       "outputPath": "D:\\C#\\ProjectWebNotes\\Dto\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\thean\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\viet_key\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

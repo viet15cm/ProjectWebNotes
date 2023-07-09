@@ -14,13 +14,11 @@
     }).then(response => {
 
         if (item == '0') {
-            document.getElementById('site-theme').href = '/css/site.css';
-            document.getElementById('site-post-theme').href = '/css/site-post.css';
+            document.getElementById('site-theme').href = '/css/site.css';         
             document.getElementById('arduino-light-theme').href = '/highlight/styles/arduino-light.min.css';
 
         } else {
-            document.getElementById('site-theme').href = '/css/site-black.css';
-            document.getElementById('site-post-theme').href = '/css/site-post-black.css';
+            document.getElementById('site-theme').href = '/css/site-black.css';      
             document.getElementById('arduino-light-theme').href = '/highlight/styles/a11y-dark.min.css';
 
         }
