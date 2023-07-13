@@ -44131,3 +44131,32 @@
 2023-07-13 15:50:42.2067 Debug FileTarget(Name=logfile): Preparing for new file: 'D:\C#\ProjectWebNotes\projectwebnotes\bin\Debug\net7.0\.\logs\2023-07-13_logfile.txt'
 2023-07-13 15:50:42.2067 Debug FileTarget(Name=logfile): Creating file appender: 'D:\C#\ProjectWebNotes\projectwebnotes\bin\Debug\net7.0\.\logs\2023-07-13_logfile.txt'
 2023-07-13 15:50:42.2067 Trace FileTarget(Name=logfile): Opening D:\C#\ProjectWebNotes\projectwebnotes\bin\Debug\net7.0\.\logs\2023-07-13_logfile.txt with allowFileSharedWriting=False
+2023-07-13 16:27:19.8669 Info AppDomain Shutting down. LogFactory closing...
+2023-07-13 16:27:19.8669 Debug Stopping file watching for path 'D:\C#\ProjectWebNotes\projectwebnotes\bin\Debug\net7.0' filter 'NLog.config'
+2023-07-13 16:27:19.8669 Trace Flushing all 1 targets...
+2023-07-13 16:27:19.8669 Trace ForEachItemInParallel() 1 items
+2023-07-13 16:27:19.8669 Trace FileTarget(Name=logfile): FlushAsync
+2023-07-13 16:27:19.8669 Trace Continuation invoked: 
+2023-07-13 16:27:19.8669 Trace Parallel task completed. 0 items remaining
+2023-07-13 16:27:19.8669 Debug Flush completed
+2023-07-13 16:27:19.8669 Trace FileTarget(Name=logfile): FlushAsync Done
+2023-07-13 16:27:19.8669 Debug Targets not configured for Logger: Logger.LoggerManager
+2023-07-13 16:27:19.8669 Debug Closing logging configuration...
+2023-07-13 16:27:19.8669 Trace Closing FileTarget(Name=logfile)
+2023-07-13 16:27:19.8772 Debug FileTarget(Name=logfile): Closing...
+2023-07-13 16:27:19.8772 Trace FileTarget(Name=logfile): FinalizeFile 'D:\C#\ProjectWebNotes\projectwebnotes\bin\Debug\net7.0\.\logs\2023-07-13_logfile.txt, isArchiving: False'
+2023-07-13 16:27:19.8772 Debug FileTarget(Name=logfile): FileAppender Closing Invalidate - D:\C#\ProjectWebNotes\projectwebnotes\bin\Debug\net7.0\.\logs\2023-07-13_logfile.txt
+2023-07-13 16:27:19.8772 Trace FileTarget: Closing 'D:\C#\ProjectWebNotes\projectwebnotes\bin\Debug\net7.0\.\logs\2023-07-13_logfile.txt'
+2023-07-13 16:27:19.8772 Debug FileTarget(Name=logfile): Closed.
+2023-07-13 16:27:19.8772 Trace Closing .\logs\${shortdate}_logfile.txt
+2023-07-13 16:27:19.8772 Trace Closing Layout Renderer: ${literal}
+2023-07-13 16:27:19.8772 Trace Closing Layout Renderer: ${shortdate}
+2023-07-13 16:27:19.8772 Trace Closing Layout Renderer: ${literal}
+2023-07-13 16:27:19.8772 Trace Closing ${longdate} ${level:uppercase=true} ${message}
+2023-07-13 16:27:19.8772 Trace Closing Layout Renderer: ${longdate}
+2023-07-13 16:27:19.8772 Trace Closing Layout Renderer: ${literal}
+2023-07-13 16:27:19.8772 Trace Closing Layout Renderer: ${level}
+2023-07-13 16:27:19.8772 Trace Closing Layout Renderer: ${literal}
+2023-07-13 16:27:19.8772 Trace Closing Layout Renderer: ${message}
+2023-07-13 16:27:19.8772 Debug Finished closing logging configuration.
+2023-07-13 16:27:19.8772 Info LogFactory has been closed.
