@@ -9,361 +9,361 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProjectWebNotes
 build_property.RootNamespace = ProjectWebNotes
-build_property.ProjectDir = D:\C#\ProjectWebNotes\ProjectWebNotes\
+build_property.ProjectDir = D:\C#\ProjectWebNotes\projectwebnotes\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\C#\ProjectWebNotes\ProjectWebNotes
+build_property.MSBuildProjectDirectory = D:\C#\ProjectWebNotes\projectwebnotes
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Docs/Views/Shared/Components/CategorySidebar/Default.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Docs/Views/Shared/Components/CategorySidebar/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRG9jc1xWaWV3c1xTaGFyZWRcQ29tcG9uZW50c1xDYXRlZ29yeVNpZGViYXJcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Docs/Views/Shared/_LayoutDocs.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Docs/Views/Shared/_LayoutDocs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRG9jc1xWaWV3c1xTaGFyZWRcX0xheW91dERvY3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Docs/Views/ViewDocs/Index.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Docs/Views/ViewDocs/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRG9jc1xWaWV3c1xWaWV3RG9jc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Docs/Views/ViewDocs/Post.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Docs/Views/ViewDocs/Post.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRG9jc1xWaWV3c1xWaWV3RG9jc1xQb3N0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Docs/_ViewImports.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Docs/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRG9jc1xfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Docs/_ViewStart.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Docs/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRG9jc1xfVmlld1N0YXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Account/ConfirmedEmail.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Account/ConfirmedEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtZWRFbWFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Account/ConfirmedNumberCodeEmail.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Account/ConfirmedNumberCodeEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtZWROdW1iZXJDb2RlRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Account/ExternalLogin.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Account/ExternalLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxFeHRlcm5hbExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Account/Index.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Account/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Account/Lockout.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Account/Lockout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2Nrb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Account/Login.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Account/Logout.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Account/Manager/AccessDenied.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Account/Manager/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VyXEFjY2Vzc0RlbmllZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Account/Manager/ChangeEmail.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Account/Manager/ChangeEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VyXENoYW5nZUVtYWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Account/Manager/ChangePassword.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Account/Manager/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VyXENoYW5nZVBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Account/Manager/ConfirmedChangeEmail.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Account/Manager/ConfirmedChangeEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VyXENvbmZpcm1lZENoYW5nZUVtYWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Account/Manager/Describe.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Account/Manager/Describe.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VyXERlc2NyaWJlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Account/Manager/Index.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Account/Manager/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Account/Manager/OnOff2fa.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Account/Manager/OnOff2fa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VyXE9uT2ZmMmZhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Account/Manager/ProFile.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Account/Manager/ProFile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VyXFByb0ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Account/Manager/SuccessConfirmEmail.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Account/Manager/SuccessConfirmEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VyXFN1Y2Nlc3NDb25maXJtRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Account/Manager/_ValidationScriptsPartial.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Account/Manager/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VyXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Account/Manager/_ViewImports.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Account/Manager/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VyXF9WaWV3SW1wb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Account/Manager/_ViewStart.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Account/Manager/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VyXF9WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Account/Register.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Account/ResetPassword.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Account/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Role/AddRoleClaim.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Role/AddRoleClaim.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcUm9sZVxBZGRSb2xlQ2xhaW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Role/Create.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Role/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcUm9sZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Role/Delete.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Role/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcUm9sZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Role/DeleteRoleClaim.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Role/DeleteRoleClaim.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcUm9sZVxEZWxldGVSb2xlQ2xhaW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Role/Edit.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Role/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcUm9sZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Role/EditRoleClaim.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Role/EditRoleClaim.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcUm9sZVxFZGl0Um9sZUNsYWltLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Role/Index.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Role/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcUm9sZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Role/RolePage.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Role/RolePage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcUm9sZVxSb2xlUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Role/_ViewImports.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Role/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcUm9sZVxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Role/_ViewStart.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Role/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcUm9sZVxfVmlld1N0YXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/Shared/_LayoutManager.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/Shared/_LayoutManager.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcU2hhcmVkXF9MYXlvdXRNYW5hZ2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/User/AddRole.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/User/AddRole.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcVXNlclxBZGRSb2xlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/User/Index.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/User/UserPage.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/User/UserPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcVXNlclxVc2VyUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/User/UserRoleClaim.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/User/UserRoleClaim.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcVXNlclxVc2VyUm9sZUNsYWltLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/User/_ViewImports.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/User/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcVXNlclxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/User/_ViewStart.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/User/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcVXNlclxfVmlld1N0YXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/_ViewImports.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Identity/Pages/_ViewStart.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/Views/Category/Delete.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Category/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xDYXRlZ29yeVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/Views/Category/DeletePost.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Category/DeletePost.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xDYXRlZ29yeVxEZWxldGVQb3N0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/Views/Category/Edit.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Category/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xDYXRlZ29yeVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/Views/Category/EditPost.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Category/EditPost.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xDYXRlZ29yeVxFZGl0UG9zdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/Views/Category/Index.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xDYXRlZ29yeVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/Views/Category/Posts.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Category/Posts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xDYXRlZ29yeVxQb3N0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/Views/Post/AddCategory.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Post/AddCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xQb3N0XEFkZENhdGVnb3J5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/Views/Post/AddItemCategory.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Post/AddItemCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xQb3N0XEFkZEl0ZW1DYXRlZ29yeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/Views/Post/Contents.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Post/Contents.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xQb3N0XENvbnRlbnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/Views/Post/CreateContent.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Post/CreateContent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xQb3N0XENyZWF0ZUNvbnRlbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/Views/Post/DeletePost.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Post/DeletePost.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xQb3N0XERlbGV0ZVBvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/Views/Post/Detail.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Post/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xQb3N0XERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/Views/Post/EditContent.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Post/EditContent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xQb3N0XEVkaXRDb250ZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/Views/Post/EditPost.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Post/EditPost.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xQb3N0XEVkaXRQb3N0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/Views/Post/Images.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Post/Images.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xQb3N0XEltYWdlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/Views/Post/Index.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Post/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xQb3N0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/Views/Shared/PagingPartial.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Shared/PagingPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xTaGFyZWRcUGFnaW5nUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/Views/Shared/_GetAllCategoryPartial.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Shared/_GetAllCategoryPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xTaGFyZWRcX0dldEFsbENhdGVnb3J5UGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/Views/Shared/_GetAllPostPartial.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Shared/_GetAllPostPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xTaGFyZWRcX0dldEFsbFBvc3RQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/Views/Shared/_GetPostBranchPartial.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Shared/_GetPostBranchPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xTaGFyZWRcX0dldFBvc3RCcmFuY2hQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/Views/Shared/_LayoutSummernote.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Shared/_LayoutSummernote.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xTaGFyZWRcX0xheW91dFN1bW1lcm5vdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/Views/Shared/_MessageBoxPartial.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Shared/_MessageBoxPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xTaGFyZWRcX01lc3NhZ2VCb3hQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/Views/Shared/_PostPagingPartial.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Shared/_PostPagingPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xTaGFyZWRcX1Bvc3RQYWdpbmdQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/Views/Shared/_Summernote.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Shared/_Summernote.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xTaGFyZWRcX1N1bW1lcm5vdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/_ViewImports.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Areas/Manager/_ViewStart.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxfVmlld1N0YXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Views/Home/Index.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Views/Home/Privacy.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Views/Shared/Components/BoxListCategory/Default.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Views/Shared/Components/BoxListCategory/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQm94TGlzdENhdGVnb3J5XERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Views/Shared/Components/ViewListCategory/Default.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Views/Shared/Components/ViewListCategory/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVmlld0xpc3RDYXRlZ29yeVxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Views/Shared/Error.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Views/Shared/_AlertMessage.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Views/Shared/_AlertMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BbGVydE1lc3NhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Views/Shared/_FunctionPartial.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Views/Shared/_FunctionPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9GdW5jdGlvblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Views/Shared/_HelloWorldPartial.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Views/Shared/_HelloWorldPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWxsb1dvcmxkUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Views/Shared/_LoginPartial.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Views/Shared/_PaginPartial.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Views/Shared/_PaginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYWdpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Views/_ViewImports.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Views/_ViewStart.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/ProjectWebNotes/Views/Shared/_Layout.cshtml]
+[D:/C\#/ProjectWebNotes/projectwebnotes/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-45cutl0j7m

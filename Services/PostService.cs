@@ -76,9 +76,9 @@ namespace Services
             {
                 postForCreationDto.Id = Guid.NewGuid().ToString();
             }
-            //if (postForCreationDto.DateUpdated == null)
+            //if (postForCreationDto.DateCreate == null)
             //{
-            //    postForCreationDto.DateUpdated = _httpClient.GetNistTime();
+            //    postForCreationDto.DateCreate = _httpClient.GetNistTime();
             //}
 
 

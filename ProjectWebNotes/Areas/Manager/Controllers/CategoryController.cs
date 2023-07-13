@@ -280,6 +280,15 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
                 return View("Posts", postForCreationDto);
             }
 
+            if (postForCreationDto.DateCreate is null)
+            {
+                postForCreationDto.DateCreate = _serviceManager.HttpClient.GetNistTime();
+            }
+
+            var user = await _userManager.GetUserAsync(User);
+
+            postForCreationDto.AuthorId = user.Id;
+
             var post = await _serviceManager.PostService.CreateAsync(postForCreationDto, id);
 
             StatusMessage = $"Thêm thành bài viết #{post.Title}#";
