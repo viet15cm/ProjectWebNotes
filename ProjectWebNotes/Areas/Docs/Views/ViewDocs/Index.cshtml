@@ -4,15 +4,26 @@
 }
 
 <div class="main-content">
-    <h1>
+    <h1 class="main-content-title">
         @Model.Title
     </h1>
-    
+    <div class="db-post-content">
+
+        @if (@Model?.Description != null)
+        {
+            <p class="db-post-content-description">@Model.Description</p>
+        }
+
+        @if (Model?.Content != null)
+        {
+            @Html.Raw(Model.Content)
+        }
+
+    </div>
+
+
 </div>
 
-<div class="rank-content">
-    <h1>content</h1>
-</div>
 
 @section Sidebar {
     @await Component.InvokeAsync(CategorySidebar.COMPONENTNAME,

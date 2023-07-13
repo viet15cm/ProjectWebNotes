@@ -1,15 +1,17 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-        <div class="bd-left">
-            <aside class="bd-sidebar d-none d-xl-block box-shadow">
-                @RenderSection("Sidebar", required: false)
-            </aside>
-        </div>
 
-        <div class="bd-main">
-            @RenderBody()
-        </div>
+    <div class="bd-left">
+        <aside class="bd-sidebar">
+            @RenderSection("Sidebar", required: false)
+        </aside>
+    </div>
+     
+    <div class="bd-main">
+       
+        @RenderBody()
+    </div>
 
 
 @section BoxListCategory {

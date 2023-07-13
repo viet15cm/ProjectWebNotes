@@ -2,7 +2,7 @@ html {
     font-size: 14px;
     position: relative;
     min-height: 100%;
-    
+    scroll-padding-top: 60px;
 }
 
 .navbar-header {
@@ -28,8 +28,7 @@ html {
 }
 
 .theme{
-    margin-top: 7px;
-   
+    margin-top: 7px;  
     border: none;
 }
 
@@ -82,9 +81,9 @@ body {
     transition: all ease-in-out .3s;
 }
 
-    .personal-avatar:hover {
-        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
-    }
+.personal-avatar:hover {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
 
 .personal-figcaption {
     cursor: pointer;
@@ -96,19 +95,19 @@ body {
     transition: all ease-in-out .3s;
 }
 
-    .personal-figcaption:hover {
-        background-color: rgba(0, 0, 0, .5);
-    }
+.personal-figcaption:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
 
-    .personal-figcaption > img {
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        top: 50%; /* position the top  edge of the element at the middle of the parent */
-        left: 50%; /* position the left edge of the element at the middle of the parent */
+.personal-figcaption > img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%; /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
 
-        transform: translate(-50%, -50%);
-    }
+    transform: translate(-50%, -50%);
+}
 /*from login*/
 
 
@@ -141,11 +140,7 @@ body {
 }
 
 /*boxlist-category*/
-
-
-
 /*home*/
-
 
 .main-body-content {
     float: left;
@@ -200,6 +195,7 @@ body {
     
 }
 .list-category-left {
+
     float: left;
     width: 30%;
     box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px;
@@ -227,14 +223,14 @@ body {
 }
 
 .icon-category{
+
     font-size: 35px;
 }
 
 
 .main-body-content-child li a {
-   
+    
     text-decoration : none;
-
     color: #000000;
 }
 
@@ -256,32 +252,82 @@ body {
 .bd-left {
     width: 20%;
     float: left;
-    padding-bottom: 35px;
+    padding: 10px 0px 10px 0px;
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .05);
-    
+    margin: 0px 0px 60px 0px;
 }
+
+
 .bd-sidebar {
     overflow-x: hidden;
     overflow-y: auto;
-   
+  
 }
 
 .bd-main {
+   
     width: 80%;
     float: left;
-   
 }
+
 
 .main-content {
     width: 80%;
     float: left;
-
+    padding: 0px 10px 20px 10px;
 }
 
-.rank-content{
+.font-size-prarent-post {
+    font-size: 30px;
+}
+
+.font-size-child-post-0 {
+    font-size: 26px;
+}
+
+.font-size-child-post-1 {
+    font-size: 23px;
+}
+
+.font-size-child-post-2 {
+    font-size: 20px;
+}
+.main-content-title{
+    margin-top: 15px;
+    color: #800;
+}
+.rank-content {
+    padding-top: 60px;
     width: 20%;
     float: right;
-   
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.rank-content-title li  {
+   list-style: none;
+}
+
+.rank-content-title li a {
+     text-decoration: none;
+     color: #800;
+}
+
+
+
+#TableOfContents ul {
+    margin-top: 12px;
+}
+
+#TableOfContents ul li{
+    margin-bottom: 8px;
+    list-style: none;
+}
+
+#TableOfContents ul li a {
+    text-decoration: none;
+    color: #232323;
 }
 
 
@@ -330,6 +376,7 @@ body {
     text-decoration: none;
     color: #232323;
     font-weight: 400;
+    
 }
 
 .categorysidebar-title-post {
@@ -394,6 +441,10 @@ body {
 }
 
 /*frame-code*/
+
+.box-shadow-frame-code {
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .05);
+}
 
 .title-frame-code {
     padding-top: 3px;

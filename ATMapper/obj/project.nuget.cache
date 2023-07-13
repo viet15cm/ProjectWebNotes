@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "iFovkmFPW8SiNv9eRXKLqxz9oGkVyFw3kjXna1AxRsmdMmox3G1z3XzMrQK8VGlnAaIti/ZyRMX8ZzV/6HSnLA==",
+  "dgSpecHash": "tHGN4k5G/Ntl1Nz1TxuZ4YI4pWPOOu+gNxEFUpFJdEqiCaJQ0mXkcYKQkx5STFuE1DNKBmXzjQkvUdLQ3/7YQA==",
   "success": true,
   "projectFilePath": "D:\\C#\\ProjectWebNotes\\ATMapper\\ATMapper.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\viet_key\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
-    "C:\\Users\\viet_key\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+    "C:\\Users\\thean\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\thean\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }
