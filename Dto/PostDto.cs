@@ -16,6 +16,11 @@ namespace Dto
         public string Content { set; get; }
 
         public DateTime? DateUpdated { set; get; }
+
+
+        [Display(Name = "Ngày tạo")]
+        public DateTime? DateCreate { set; get; }
+
         public string PostParentId { get; set; }
 
         [Display(Name = "Nổi bậc")]

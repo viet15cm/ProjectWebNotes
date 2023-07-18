@@ -39,6 +39,19 @@
 
 }
 
+@section SidebarSmall{
+    @await Component.InvokeAsync(CategorySidebar.COMPONENTNAME,
+             new CategorySidebar.CategorySidebarData()
+             {
+                 slugCategory = ViewBag.slugCategory,
+                 listSerialUrl = ViewBag.listSerialUrl,
+                 slugPost = ViewBag.slugPost,
+                 currentCategory = ViewBag.currentCategory,
+                 listPostInCategory = ViewBag.listPostInCategory,
+
+             })
+}
+
 @section BoxListCategory {
     @await Component.InvokeAsync(BoxListCategory.COMPONENTNAME, categorys)
 }

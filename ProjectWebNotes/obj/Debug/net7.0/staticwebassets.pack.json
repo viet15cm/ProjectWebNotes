@@ -5,8 +5,20 @@
       "PackagePath": "staticwebassets\\ProjectWebNotes.bundle.scp.css"
     },
     {
+      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Commercial\\Aspnetcore.png",
+      "PackagePath": "staticwebassets\\Commercial\\Aspnetcore.png"
+    },
+    {
+      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Commercial\\commercial.png",
+      "PackagePath": "staticwebassets\\Commercial\\commercial.png"
+    },
+    {
       "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\Avartar\\234709212_d03b429e.jpg",
       "PackagePath": "staticwebassets\\ImageManager\\Avartar\\234709212_d03b429e.jpg"
+    },
+    {
+      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\Avatar\\230207837_6c85b46a.jpg",
+      "PackagePath": "staticwebassets\\ImageManager\\Avatar\\230207837_6c85b46a.jpg"
     },
     {
       "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\Avatar\\230510921_31ba5a6f.jpg",
@@ -93,6 +105,10 @@
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\235733944_1fa5aa5c.jpg"
     },
     {
+      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\Aspnetcore.png",
+      "PackagePath": "staticwebassets\\Img\\Aspnetcore.png"
+    },
+    {
       "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\Avartar.jpg",
       "PackagePath": "staticwebassets\\Img\\Avartar.jpg"
     },
@@ -107,6 +123,10 @@
     {
       "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\camera.png",
       "PackagePath": "staticwebassets\\Img\\camera.png"
+    },
+    {
+      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\commercial.png",
+      "PackagePath": "staticwebassets\\Img\\commercial.png"
     },
     {
       "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\csharp.jpg",

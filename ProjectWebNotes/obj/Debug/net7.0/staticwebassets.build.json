@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Xy2F98tonv00HC/jT8qYgF4W5nSFeGLbwhFQ93VXThk=",
+  "Hash": "yDt8diwR3QfDm3QHgCabzkuW0lA74PpqRPzoB9TWoGM=",
   "Source": "ProjectWebNotes",
   "BasePath": "_content/ProjectWebNotes",
   "Mode": "Default",
@@ -49,6 +49,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ProjectWebNotes.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Commercial\\Aspnetcore.png",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "Commercial/Aspnetcore.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Commercial\\Aspnetcore.png"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Commercial\\commercial.png",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "Commercial/commercial.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Commercial\\commercial.png"
     },
     {
       "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\css\\multi-leve-hover.css",
@@ -11118,6 +11152,23 @@
       "OriginalItemSpec": "wwwroot\\ImageManager\\Avartar\\234709212_d03b429e.jpg"
     },
     {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\Avatar\\230207837_6c85b46a.jpg",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "ImageManager/Avatar/230207837_6c85b46a.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ImageManager\\Avatar\\230207837_6c85b46a.jpg"
+    },
+    {
       "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\Avatar\\230510921_31ba5a6f.jpg",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
@@ -11475,6 +11526,23 @@
       "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\235733944_1fa5aa5c.jpg"
     },
     {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\Aspnetcore.png",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "Img/Aspnetcore.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\Aspnetcore.png"
+    },
+    {
       "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\Avartar.jpg",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
@@ -11524,6 +11592,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Img\\camera.png"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\commercial.png",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "Img/commercial.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\commercial.png"
     },
     {
       "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\csharp.jpg",

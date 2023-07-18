@@ -31,8 +31,8 @@ namespace ProjectWebNotes.Security.Requirements
                 
                 return Task.CompletedTask;
             }
-
             return Task.CompletedTask;
         }
+       
     }
 }

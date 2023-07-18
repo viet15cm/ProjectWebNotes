@@ -1,9 +1,12 @@
-﻿using Dto;
+﻿using Domain.IdentityModel;
+using Dto;
 using Entities.Models;
 using ExtentionLinqEntitys;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
+using Paging;
 using ProjectWebNotes.Areas.Manager.Models;
 using ProjectWebNotes.DbContextLayer;
 using ProjectWebNotes.FileManager;
@@ -20,14 +23,18 @@ namespace ProjectWebNotes.Controllers
         private readonly IServiceManager _serviceManager;
 
         private readonly IMemoryCache _cache;
-        private const string _KeyListCategorys = "_listallcategories";
+
+        private readonly UserManager<AppUser> _userManager;
+        private const string _KeyListCategorys = "_listallCategorys";
         public HomeController(IServiceManager serviceManager,
                                 AppDbcontext context,
-                                IMemoryCache memoryCache )
+                                IMemoryCache memoryCache,
+                                UserManager<AppUser> userManager)
         {
             _serviceManager = serviceManager;
             _cache = memoryCache;
             _context = context;
+            _userManager = userManager;
         }
 
         [NonAction]
@@ -59,19 +66,24 @@ namespace ProjectWebNotes.Controllers
         }
 
         [HttpGet]
-        public  async Task<IActionResult> Index()
+        public  async Task<IActionResult> Index([FromQuery]PostParameters postParameters)
         {
 
-            var categories = await _serviceManager
-                    .CategoryService
-                    .GetAllAsync(ExpLinqEntity<Category>
-                    .ResLinqEntity(null, x => x.OrderBy(x => x.Serial), true));
+            var categories = await GetAllTreeViewCategories();
 
             categories =  TreeViews.GetCategoryChierarchicalTree(categories);
+
+            var posts =  _serviceManager.PostService.Posts(postParameters);
+
+            var admin = await _userManager.FindByNameAsync("admin");
+
+            ViewData["admin"] = admin;
+            ViewData["posts"] = posts;
 
             return View(categories);
         }
 
+        [HttpGet]
         public IActionResult Privacy()
         {
             return View();

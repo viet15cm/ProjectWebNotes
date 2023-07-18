@@ -4,41 +4,35 @@
 }
 <div class="clearafter">
     
-    @*<div  class="list-category-right">
-              
-        <h5 class="ribbon d-flex justify-content-lg-start"> 
-            <span class="icon-gem"><i class="bi bi-gem"></i></span>
-            <span class="highlights-category-header-title">
-                Bài viết nổi bậc
-            </span>
-        </h5>
-
-        <div class="highlights-category-list">
-            <ul>
-                @{
-                    await CategoryPrime(Model);
-                }
-                 
-            </ul>
-        </div>
-        
-    </div>*@
 
     <div class="list-category-left">
+        <div class="new-post-title">
+            <h6>Danh Mục</h6>
+        </div>
         @foreach (var item in Model)
         {
             if (item.ParentCategory == null)
             {
                 <div class="main-body-content-child">
 
+                   @* <span class="icon-star"><i class="bi bi-star"></i></span>
                     <span class="icon-star"><i class="bi bi-star"></i></span>
+                    <span class="icon-star"><i class="bi bi-star"></i></span>*@
+                    
 
-                    <h5 class=" d-flex justify-content-lg-start"> 
-                        <span class="icon-category">@Html.Raw(@item.IConFont)</span>
+                    <h5 class=" d-flex justify-content-lg-start">
+                        @if (@item.IConFont != null )
+                        {
+                            <span class="icon-category">@Html.Raw(@item.IConFont)</span>
+                        }else
+                        {
+                            <span class="icon-category"><i class="bi bi-terminal"></i></span>
+                        }
+                       
                         @*<span class="icon-category">
                             <img style="margin: auto; width: 50px; height: 50px;" src="~/img/java-icon-2048x2048-yxty4s2p.png" />
                         </span>*@
-                        <span style="margin: auto; padding-left: 10px; font-size: 17px; margin-left: 0px;">
+                        <span style="margin: auto; padding-left: 10px; font-size: 16px; margin-left: 0px;">
                             @item.Title
                         </span>
                         
@@ -47,7 +41,7 @@
                         @{
                             if (item.CategoryChildren?.Count >= 0)
                             {
-                                await RenderCategory(item.CategoryChildren, 16);
+                                await RenderCategory(item.CategoryChildren, 14);
                             }
 
                             
@@ -64,14 +58,12 @@
 @{
     async Task RenderCategory(IEnumerable<Category> categories, int fontsize)
     {
-
-
-        if (fontsize < 16)
+        if (fontsize < 14)
         {
-            fontsize = 16;
+            fontsize = 14;
 
         }
-
+        
         var fontz = fontsize + "px";
 
         foreach (var category in categories)
@@ -105,7 +97,7 @@
                 <ul>
                     @{
 
-                        await RenderCategory(category.CategoryChildren, fontsize - 2);
+                       await RenderCategory(category.CategoryChildren, fontsize - 1);
                     }
 
                 </ul>
@@ -113,19 +105,5 @@
         }
     }
 
-    //async Task CategoryPrime(List<Category> categories)
-    //{
-    //    foreach (var item in categories)
-    //    {
-    //        foreach (var prime in item.PostCategories)
-    //        {
-    //            if (prime.Post.Prime)
-    //            {
-    //                <li><a asp-area="Docs"  asp-controller="ViewDocs" asp-action="Index" asp-route-post="@prime.Post.Slug" asp-route-slug="@prime.Category.Slug">@prime.Post.Title</a></li>
-    //            }
-    //        }
-
-    //        await CategoryPrime(item.CategoryChildren.ToList());
-    //    }
-    //}
+  
 }

@@ -24,13 +24,32 @@
             @Html.Raw(Model.Content)
         }
 
+        <div class="rank-content-title-small">
+            <p>
+                <a class="btn" data-bs-toggle="collapse" href="#content-title" role="button" aria-expanded="false" aria-controls="content-title">
+                    Nội dung chính <i class="bi bi-arrow-down-up"></i>
+                </a> 
+            </p>
+            <div class="collapse show" id="content-title">
+                <div class="card card-body">
+                    <ul>
+                        @{
+
+                            await RenderTitleContents(Model.Contents);
+                        }
+                    </ul>
+                   
+                 
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <div class="db-content-main scrollspy-example" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-offset="0" tabindex="0">
         @if (Model.Contents?.Count > 0)
         {
             int size = 0;
-
             @foreach (var content in Model.Contents)
             {
                 await RenderContents(content, size);
@@ -142,6 +161,19 @@
 }
 
 @section Sidebar {
+    @await Component.InvokeAsync(CategorySidebar.COMPONENTNAME,
+             new CategorySidebar.CategorySidebarData()
+             {
+                 slugCategory = ViewBag.slugCategory,
+                 listSerialUrl = ViewBag.listSerialUrl,
+                 slugPost = ViewBag.slugPost,
+                 currentCategory = ViewBag.currentCategory,
+                 listPostInCategory = ViewBag.listPostInCategory,
+
+             })
+
+}
+@section SidebarSmall {
     @await Component.InvokeAsync(CategorySidebar.COMPONENTNAME,
              new CategorySidebar.CategorySidebarData()
              {

@@ -24,7 +24,7 @@ namespace ProjectWebNotes.Areas.Docs.Controllers
 
         private const string _KeyCategory = "_KeyCategory";
 
-        private const string _KeyListCategorys = "_listallcategories";
+        private const string _KeyListCategorys = "_listallCategorys";
         public ViewDocsController(IServiceManager serviceManager , IMemoryCache memoryCache)
         {
             _serviceManager = serviceManager;
@@ -144,7 +144,6 @@ namespace ProjectWebNotes.Areas.Docs.Controllers
             if (!string.IsNullOrEmpty(post))
             {
                 postCurent = FindPostBySlug(listPostInCategory, post, listSerialPosts);
-
 
             }
 
