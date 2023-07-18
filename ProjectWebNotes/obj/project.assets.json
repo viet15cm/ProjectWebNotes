@@ -1853,7 +1853,7 @@
           "bin/placeholder/ExtentionLinqEntitys.dll": {}
         }
       },
-      "Logger/1.0.0": {
+      "LoggerManager/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -1861,17 +1861,17 @@
           "NLog": "5.1.2"
         },
         "compile": {
-          "bin/placeholder/Logger.dll": {}
+          "bin/placeholder/LoggerManager.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Logger.dll": {}
+          "bin/placeholder/LoggerManager.dll": {}
         }
       },
       "Middleware/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Logger": "1.0.0",
+          "LoggerManager": "1.0.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0"
         },
         "compile": {
@@ -5071,10 +5071,10 @@
       "path": "../ExtentionLinqEntitys/ExtentionLinqEntitys.csproj",
       "msbuildProject": "../ExtentionLinqEntitys/ExtentionLinqEntitys.csproj"
     },
-    "Logger/1.0.0": {
+    "LoggerManager/1.0.0": {
       "type": "project",
-      "path": "../LoggerManager/Logger.csproj",
-      "msbuildProject": "../LoggerManager/Logger.csproj"
+      "path": "../LoggerManager/LoggerManager.csproj",
+      "msbuildProject": "../LoggerManager/LoggerManager.csproj"
     },
     "Middleware/1.0.0": {
       "type": "project",
@@ -5105,7 +5105,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Domain >= 1.0.0",
-      "Logger >= 1.0.0",
+      "LoggerManager >= 1.0.0",
       "MailKit >= 3.4.3",
       "Microsoft.AspNetCore.Mvc.Formatters.Json >= 2.2.0",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.8",
@@ -5149,8 +5149,8 @@
             "D:\\C#\\ProjectWebNotes\\Domain\\Domain.csproj": {
               "projectPath": "D:\\C#\\ProjectWebNotes\\Domain\\Domain.csproj"
             },
-            "D:\\C#\\ProjectWebNotes\\LoggerManager\\Logger.csproj": {
-              "projectPath": "D:\\C#\\ProjectWebNotes\\LoggerManager\\Logger.csproj"
+            "D:\\C#\\ProjectWebNotes\\LoggerManager\\LoggerManager.csproj": {
+              "projectPath": "D:\\C#\\ProjectWebNotes\\LoggerManager\\LoggerManager.csproj"
             },
             "D:\\C#\\ProjectWebNotes\\Middleware\\Middleware.csproj": {
               "projectPath": "D:\\C#\\ProjectWebNotes\\Middleware\\Middleware.csproj"

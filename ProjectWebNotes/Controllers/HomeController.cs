@@ -73,7 +73,7 @@ namespace ProjectWebNotes.Controllers
 
             categories =  TreeViews.GetCategoryChierarchicalTree(categories);
 
-            var posts =  _serviceManager.PostService.Posts(postParameters);
+            var posts = _serviceManager.PostService.Posts(postParameters);
 
             var admin = await _userManager.FindByNameAsync("admin");
 

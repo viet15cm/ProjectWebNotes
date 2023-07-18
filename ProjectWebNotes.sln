@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Middleware", "Middleware\Middleware.csproj", "{B5F73712-4673-44A5-A53E-0629CCE03569}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logger", "LoggerManager\Logger.csproj", "{1AB63799-8740-4855-A98A-A345B092DD12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggerManager", "LoggerManager\LoggerManager.csproj", "{1AB63799-8740-4855-A98A-A345B092DD12}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{7E098F60-0170-4B1D-9E9A-34A4958D0795}"
 EndProject

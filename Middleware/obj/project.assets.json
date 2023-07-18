@@ -135,7 +135,7 @@
           "bin/placeholder/ExtentionLinqEntitys.dll": {}
         }
       },
-      "Logger/1.0.0": {
+      "LoggerManager/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -143,10 +143,10 @@
           "NLog": "5.1.2"
         },
         "compile": {
-          "bin/placeholder/Logger.dll": {}
+          "bin/placeholder/LoggerManager.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Logger.dll": {}
+          "bin/placeholder/LoggerManager.dll": {}
         }
       },
       "Paging/1.0.0": {
@@ -309,10 +309,10 @@
       "path": "../ExtentionLinqEntitys/ExtentionLinqEntitys.csproj",
       "msbuildProject": "../ExtentionLinqEntitys/ExtentionLinqEntitys.csproj"
     },
-    "Logger/1.0.0": {
+    "LoggerManager/1.0.0": {
       "type": "project",
-      "path": "../LoggerManager/Logger.csproj",
-      "msbuildProject": "../LoggerManager/Logger.csproj"
+      "path": "../LoggerManager/LoggerManager.csproj",
+      "msbuildProject": "../LoggerManager/LoggerManager.csproj"
     },
     "Paging/1.0.0": {
       "type": "project",
@@ -322,7 +322,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Logger >= 1.0.0",
+      "LoggerManager >= 1.0.0",
       "Microsoft.AspNetCore.Http.Abstractions >= 2.2.0"
     ]
   },
@@ -353,8 +353,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\C#\\ProjectWebNotes\\LoggerManager\\Logger.csproj": {
-              "projectPath": "D:\\C#\\ProjectWebNotes\\LoggerManager\\Logger.csproj"
+            "D:\\C#\\ProjectWebNotes\\LoggerManager\\LoggerManager.csproj": {
+              "projectPath": "D:\\C#\\ProjectWebNotes\\LoggerManager\\LoggerManager.csproj"
             }
           }
         }

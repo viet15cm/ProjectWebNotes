@@ -80,9 +80,7 @@ D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\System.CodeDom.dll
 D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\nlog.config
 D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\NLog.dll
 D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\Contracts.dll
-D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\Logger.dll
 D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\Middleware.dll
-D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\Logger.pdb
 D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\Middleware.pdb
 D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\Contracts.pdb
 D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\AutoMapper.dll
@@ -113,3 +111,5 @@ D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\Microsoft.Extensions.Opti
 D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\MailKit.dll
 D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\MimeKit.dll
 D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\BouncyCastle.Crypto.dll
+D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\LoggerManager.dll
+D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\LoggerManager.pdb

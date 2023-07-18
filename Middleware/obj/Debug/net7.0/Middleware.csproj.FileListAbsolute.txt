@@ -3,8 +3,6 @@ D:\C#\ProjectWebNotes\Middleware\bin\Debug\net7.0\Middleware.dll
 D:\C#\ProjectWebNotes\Middleware\bin\Debug\net7.0\Middleware.pdb
 D:\C#\ProjectWebNotes\Middleware\bin\Debug\net7.0\Contracts.dll
 D:\C#\ProjectWebNotes\Middleware\bin\Debug\net7.0\Entities.dll
-D:\C#\ProjectWebNotes\Middleware\bin\Debug\net7.0\Logger.dll
-D:\C#\ProjectWebNotes\Middleware\bin\Debug\net7.0\Logger.pdb
 D:\C#\ProjectWebNotes\Middleware\bin\Debug\net7.0\Contracts.pdb
 D:\C#\ProjectWebNotes\Middleware\bin\Debug\net7.0\Entities.pdb
 D:\C#\ProjectWebNotes\Middleware\obj\Debug\net7.0\Middleware.csproj.AssemblyReference.cache
@@ -21,3 +19,5 @@ D:\C#\ProjectWebNotes\Middleware\bin\Debug\net7.0\Paging.dll
 D:\C#\ProjectWebNotes\Middleware\bin\Debug\net7.0\Paging.pdb
 D:\C#\ProjectWebNotes\Middleware\bin\Debug\net7.0\ExtentionLinqEntitys.dll
 D:\C#\ProjectWebNotes\Middleware\bin\Debug\net7.0\ExtentionLinqEntitys.pdb
+D:\C#\ProjectWebNotes\Middleware\bin\Debug\net7.0\LoggerManager.dll
+D:\C#\ProjectWebNotes\Middleware\bin\Debug\net7.0\LoggerManager.pdb

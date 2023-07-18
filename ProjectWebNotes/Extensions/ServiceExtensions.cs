@@ -2,7 +2,7 @@
 using Domain.IdentityModel;
 using Domain.Reposirory;
 using Domain.Repository;
-using Logger;
+using LoggerManager;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -63,7 +63,7 @@ namespace ProjectWebNotes.Extensions
 
         public static void ConfigureLoggerService(this IServiceCollection services)
         {
-            services.AddSingleton<ILoggerManager, LoggerManager>();
+            services.AddSingleton<ILoggerManager, LoggerManager.LoggerManager>();
         }
 
         public static void ConfigureAuthorizationHandlerService(this IServiceCollection services)

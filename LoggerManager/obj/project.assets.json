@@ -120,9 +120,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#\\ProjectWebNotes\\LoggerManager\\Logger.csproj",
-      "projectName": "Logger",
-      "projectPath": "D:\\C#\\ProjectWebNotes\\LoggerManager\\Logger.csproj",
+      "projectUniqueName": "D:\\C#\\ProjectWebNotes\\LoggerManager\\LoggerManager.csproj",
+      "projectName": "LoggerManager",
+      "projectPath": "D:\\C#\\ProjectWebNotes\\LoggerManager\\LoggerManager.csproj",
       "packagesPath": "C:\\Users\\thean\\.nuget\\packages\\",
       "outputPath": "D:\\C#\\ProjectWebNotes\\LoggerManager\\obj\\",
       "projectStyle": "PackageReference",

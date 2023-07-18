@@ -9,7 +9,7 @@
       "ProjectWebNotes/1.0.0": {
         "dependencies": {
           "Domain": "1.0.0",
-          "Logger": "1.0.0",
+          "LoggerManager": "1.0.0",
           "MailKit": "3.4.3",
           "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.2.0",
           "Microsoft.EntityFrameworkCore.Design": "7.0.8",
@@ -975,18 +975,18 @@
           "ExtentionLinqEntitys.dll": {}
         }
       },
-      "Logger/1.0.0": {
+      "LoggerManager/1.0.0": {
         "dependencies": {
           "Contracts": "1.0.0",
           "NLog": "5.1.2"
         },
         "runtime": {
-          "Logger.dll": {}
+          "LoggerManager.dll": {}
         }
       },
       "Middleware/1.0.0": {
         "dependencies": {
-          "Logger": "1.0.0",
+          "LoggerManager": "1.0.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0"
         },
         "runtime": {
@@ -1814,7 +1814,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Logger/1.0.0": {
+    "LoggerManager/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,5 +1,5 @@
 ﻿using Entities.GlobalErrorHandling.Model;
-using Logger;
+using LoggerManager;
 using Microsoft.AspNetCore.Http;
 using System.Net;
 
