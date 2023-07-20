@@ -49,11 +49,14 @@ namespace ProjectWebNotes.Controllers
                 categories = await _serviceManager
                     .CategoryService
                     .GetAllAsync(ExpLinqEntity<Category>
-                    .ResLinqEntity(null, x => x.OrderBy(x => x.Serial), true));
+                    .ResLinqEntity
+                    (ExpExpressions
+                    .ExtendInclude<Category>(x => x.Include(x => x.PostCategories))
+                    , x => x.OrderBy(x => x.Serial), true));
 
                 // Thiết lập cache - lưu vào cache
                 var cacheEntryOptions = new MemoryCacheEntryOptions()
-                    .SetSlidingExpiration(TimeSpan.FromMinutes(500));
+                    .SetSlidingExpiration(TimeSpan.FromMinutes(200));
                 _cache.Set(_KeyListCategorys, categories, cacheEntryOptions);
             }
 
@@ -70,15 +73,40 @@ namespace ProjectWebNotes.Controllers
         {
 
             var categories = await GetAllTreeViewCategories();
-
-            categories =  TreeViews.GetCategoryChierarchicalTree(categories);
-
             var posts = _serviceManager.PostService.Posts(postParameters);
 
+            var postNews = posts.Select(p => new PostNew
+            {
+                Id = p.Id,
+                Slug = p.Slug,
+                Title = p.Title,
+                DateCreate = p.DateCreate,
+                DateUpdated = p.DateUpdated,
+            }).ToList();
+
+            foreach (var category in categories)
+            {
+                foreach (var post in postNews)
+                {
+                    if (post.UrlCategory is null)
+                    {
+                        if (category.PostCategories.Any(x => x.PostID == post.Id))
+                        {
+                            post.UrlCategory = category.Slug;
+                        }
+                    }
+
+                    continue;
+                   
+                }
+            }
+
+            categories = TreeViews.GetCategoryChierarchicalTree(categories);
+            
             var admin = await _userManager.FindByNameAsync("admin");
 
             ViewData["admin"] = admin;
-            ViewData["posts"] = posts;
+            ViewData["posts"] = postNews;
 
             return View(categories);
         }

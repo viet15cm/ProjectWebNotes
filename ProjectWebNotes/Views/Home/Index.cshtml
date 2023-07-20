@@ -3,7 +3,7 @@
 
 @{
     var admin = ViewData["admin"] as AppUser;
-    var posts = ViewData["posts"] as PagedList<PostDto>;
+    var posts = ViewData["posts"] as List<PostNew>;
     var name = admin.LastName + " " + admin.FirstName;
 
 
@@ -12,6 +12,7 @@
 
 <div class="main-body-content">
     <div class="banner">
+        
         <div class="banner-avarta">
             <img src="~/ImageManager/Avatar/@admin.UrlImage" class="rounded-circle mb-3" style="width: 150px;"
                      alt="Avatar" />
@@ -61,14 +62,33 @@
                 <ul>
                     @foreach (var post in posts)
                     {
-                        <li><a href="#">@post.Title</a><span>@post.DateCreate</span></li>
+                        @if (post.UrlCategory is null)
+                        {
+                            <li>
+                                <a href="#">@post.Title</a>
+                                <span class="date">
+                                    @post.DateCreate
+                                </span>
+                                <span style="font-style: oblique;" class="text-danger">(Chờ hoàn thành )</span>
+                            </li>
+                        }else
+                        {
+                            <li>
+                                <a asp-area="Docs" asp-controller="ViewDocs" asp-action="index" asp-route-category="@post.UrlCategory" asp-route-post="@post.Slug">@post.Title</a>
+                                <span class="date">
+                                    @post.DateCreate
+                                </span>
+                            </li>
+                        }
+
+                        
                     }
                 </ul>
             </div>
         </div>
         <div class="commercial">
-            @*<img src="~/commercial/aspnetcore.png" />*@
-            <img src="~/commercial/commercial.png" />
+            <img src="~/commercial/dotnet-core-banner.png" />
+            @*<img src="~/commercial/commercial.png" />*@
         </div>
  
     </div>

@@ -11,6 +11,9 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
     [Area("Manager")]
     public class BaseController : Controller
     {
+        public const string _KeyListCategorys = "_listallCategorys";
+        public const string _KeyCategory = "_KeyCategory";
+
         protected readonly IServiceManager _serviceManager;
 
         protected readonly UserManager<AppUser> _userManager;

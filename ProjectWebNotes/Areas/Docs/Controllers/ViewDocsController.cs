@@ -47,7 +47,7 @@ namespace ProjectWebNotes.Areas.Docs.Controllers
 
                 // Thiết lập cache - lưu vào cache
                 var cacheEntryOptions = new MemoryCacheEntryOptions()
-                    .SetSlidingExpiration(TimeSpan.FromMinutes(500));
+                    .SetSlidingExpiration(TimeSpan.FromMinutes(200));
                 _cache.Set(_KeyListCategorys, categories, cacheEntryOptions);
             }
 
@@ -74,17 +74,15 @@ namespace ProjectWebNotes.Areas.Docs.Controllers
                     .GetBySlugAsync(slug, ExpLinqEntity<Category>
                     .ResLinqEntity(ExpExpressions
                     .ExtendInclude<Category>(x => x.Include(x => x.PostCategories)
-                    .ThenInclude(x => x.Post).ThenInclude(x => x.Contents)), null, true));
+                    .ThenInclude(x => x.Post).ThenInclude(x => x.Contents)), x => x.OrderBy(x => x.Serial), true));
              
                 var cacheEntryOptions = new MemoryCacheEntryOptions()
-                    .SetSlidingExpiration(TimeSpan.FromMinutes(500));
+                    .SetSlidingExpiration(TimeSpan.FromMinutes(200));
                 _cache.Set(_KeyCategory, category, cacheEntryOptions);
             }
 
-            else
-            {
-                category = _cache.Get(_KeyCategory) as Category;
-            }          
+            category = _cache.Get(_KeyCategory) as Category;
+        
 
             if (category.Slug != slug)
             {
@@ -94,11 +92,13 @@ namespace ProjectWebNotes.Areas.Docs.Controllers
                     .ResLinqEntity(ExpExpressions
                     .ExtendInclude<Category>(x => x.Include(x => x.PostCategories)
                     .ThenInclude(x => x.Post)
-                    .ThenInclude(x => x.Contents)), null, true));
+                    .ThenInclude(x => x.Contents)), x => x.OrderBy(x => x.Serial), true));
                 // Thiết lập cache - lưu vào cache             
                 var cacheEntryOptions = new MemoryCacheEntryOptions()
-                    .SetSlidingExpiration(TimeSpan.FromMinutes(500));
+                    .SetSlidingExpiration(TimeSpan.FromMinutes(200));
                 _cache.Set(_KeyCategory, category, cacheEntryOptions);
+
+                category = _cache.Get(_KeyCategory) as Category;
             }
 
             return category;
@@ -148,13 +148,15 @@ namespace ProjectWebNotes.Areas.Docs.Controllers
             }
 
             var listSerialUrl = listSerialPosts.Select(p => p.Slug).ToList();
-
+            
+           
             ViewData["slugCategory"] = slugCategory;
             ViewData["slugPost"] = post;
             ViewData["listSerialUrl"] = listSerialUrl;
             ViewData["listPostInCategory"] = listPostInCategory;
             ViewData["currentCategory"] = category;
             ViewData["categorys"] = categorys;
+           
             //ViewData["relateToPost"] = relateToPost;
             //ViewData["currentParentCategory"] = currentParentCategory;
 

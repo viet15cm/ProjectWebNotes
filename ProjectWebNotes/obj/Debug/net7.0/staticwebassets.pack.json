@@ -9,8 +9,20 @@
       "PackagePath": "staticwebassets\\Commercial\\Aspnetcore.png"
     },
     {
+      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Commercial\\bannernetcore.png",
+      "PackagePath": "staticwebassets\\Commercial\\bannernetcore.png"
+    },
+    {
       "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Commercial\\commercial.png",
       "PackagePath": "staticwebassets\\Commercial\\commercial.png"
+    },
+    {
+      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Commercial\\dotnet-core-banner.png",
+      "PackagePath": "staticwebassets\\Commercial\\dotnet-core-banner.png"
+    },
+    {
+      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Commercial\\hinh-banner-asp.png",
+      "PackagePath": "staticwebassets\\Commercial\\hinh-banner-asp.png"
     },
     {
       "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\Avartar\\234709212_d03b429e.jpg",

@@ -79,6 +79,7 @@ namespace ProjectWebNotes.Areas.Manager.Models
                                 ParentCategoryId = c.ParentCategoryId,
                                 PostCategories = c.PostCategories,
                                 CategoryChildren = GetCateogryChildren(allCats.ToList(), c.Id)
+                                
                             })
                             .ToList();
         }

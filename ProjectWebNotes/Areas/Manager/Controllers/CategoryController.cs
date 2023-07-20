@@ -19,8 +19,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
     public class CategoryController : BaseController 
     {
 
-        private const string _KeyListCategorys = "_listallCategorys";
-        private const string _KeyCategory = "_category";
+        
 
         public CategoryController(IServiceManager serviceManager, 
                                 IMemoryCache memoryCache, 
@@ -35,45 +34,58 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         async Task<Category> GetByIdCategoy(string id)
         {
 
-            Category category;
+            //Category category;
 
-            // Phục hồi categories từ Memory cache, không có thì truy vấn Db
-            if (!_cache.TryGetValue(_KeyCategory, out category))
-            {
+            //// Phục hồi categories từ Memory cache, không có thì truy vấn Db
+            //if (!_cache.TryGetValue(_KeyCategory, out category))
+            //{
 
-                category = await _serviceManager
+            //    category = await _serviceManager
+            //        .CategoryService
+            //        .GetByIdAsync(id, ExpLinqEntity<Category>.ResLinqEntity(null, null, true));
+            //    category.PostCategories = (await _serviceManager
+            //                            .PostCategoryService
+            //                            .GetByIdCategoryAsync(id,
+            //                            ExpLinqEntity<PostCategory>
+            //                            .ResLinqEntity(ExpExpressions.ExtendInclude<PostCategory>(x => x.Include(x => x.Post)), null, true))).ToList();
+
+            //    var cacheEntryOptions = new MemoryCacheEntryOptions()
+            //        .SetSlidingExpiration(TimeSpan.FromMinutes(300));
+            //    _cache.Set(_KeyCategory, category, cacheEntryOptions);
+            //}
+            //else
+            //{
+            //    category = _cache.Get(_KeyCategory) as Category;
+
+            //}
+
+            //if (category.Id != id)
+            //{
+            //    category = await _serviceManager
+            //        .CategoryService
+            //        .GetByIdAsync(id, ExpLinqEntity<Category>.ResLinqEntity(null, null, true));
+            //    category.PostCategories = (await _serviceManager
+            //                            .PostCategoryService
+            //                            .GetByIdCategoryAsync(id,
+            //                            ExpLinqEntity<PostCategory>.ResLinqEntity(ExpExpressions.ExtendInclude<PostCategory>(x => x.Include(x => x.Post)), null, true))).ToList();
+
+
+            //    // Thiết lập cache - lưu vào cache             
+            //    var cacheEntryOptions = new MemoryCacheEntryOptions()
+            //        .SetSlidingExpiration(TimeSpan.FromMinutes(300));
+            //    _cache.Set(_KeyCategory, category, cacheEntryOptions);
+
+            //    category = _cache.Get(_KeyCategory) as Category;
+            //}
+
+            //return category;
+
+           return await _serviceManager
                     .CategoryService
-                    .GetByIdAsync(id, ExpLinqEntity<Category>.ResLinqEntity(null, null, true));
-                category.PostCategories = (await _serviceManager
-                                        .PostCategoryService
-                                        .GetByIdCategoryAsync(id,
-                                        ExpLinqEntity<PostCategory>.ResLinqEntity(ExpExpressions.ExtendInclude<PostCategory>(x => x.Include(x => x.Post)), null, true))).ToList();
-
-                var cacheEntryOptions = new MemoryCacheEntryOptions()
-                    .SetSlidingExpiration(TimeSpan.FromMinutes(300));
-                _cache.Set(_KeyCategory, category, cacheEntryOptions);
-            }
-
-            category = _cache.Get(_KeyCategory) as Category;
-
-            if (category.Id != id)
-            {
-                category = await _serviceManager
-                    .CategoryService
-                    .GetByIdAsync(id, ExpLinqEntity<Category>.ResLinqEntity(null, null, true));
-                category.PostCategories = (await _serviceManager
-                                        .PostCategoryService
-                                        .GetByIdCategoryAsync(id,
-                                        ExpLinqEntity<PostCategory>.ResLinqEntity(ExpExpressions.ExtendInclude<PostCategory>(x => x.Include(x => x.Post)), null, true))).ToList();
-
-
-                // Thiết lập cache - lưu vào cache             
-                var cacheEntryOptions = new MemoryCacheEntryOptions()
-                    .SetSlidingExpiration(TimeSpan.FromMinutes(300));
-                _cache.Set(_KeyCategory, category, cacheEntryOptions);
-            }
-
-            return category;
+                    .GetBySlugAsync(id, ExpLinqEntity<Category>
+                    .ResLinqEntity(ExpExpressions
+                    .ExtendInclude<Category>(x => x.Include(x => x.PostCategories)
+                    .ThenInclude(x => x.Post)), x => x.OrderBy(x => x.Serial), true));
         }
 
 
@@ -81,28 +93,40 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         async Task<IEnumerable<Category>> GetAllTreeViewCategories()
         {
 
-            IEnumerable<Category> categories;
+            //IEnumerable<Category> categories;
 
 
-            // Phục hồi categories từ Memory cache, không có thì truy vấn Db
-            if (!_cache.TryGetValue(_KeyListCategorys, out categories))
-            {
-                categories = await _serviceManager
+            //// Phục hồi categories từ Memory cache, không có thì truy vấn Db
+            //if (!_cache.TryGetValue(_KeyListCategorys, out categories))
+            //{
+            //    categories = await _serviceManager
+            //        .CategoryService
+            //        .GetAllAsync(ExpLinqEntity<Category>
+            //        .ResLinqEntity
+            //        (ExpExpressions
+            //        .ExtendInclude<Category>(x => x.Include(x => x.PostCategories))
+            //        , x => x.OrderBy(x => x.Serial), true));
+
+            //    // Thiết lập cache - lưu vào cache
+            //    var cacheEntryOptions = new MemoryCacheEntryOptions()
+            //        .SetSlidingExpiration(TimeSpan.FromMinutes(200));
+            //    _cache.Set(_KeyListCategorys, categories, cacheEntryOptions);
+            //}
+
+            //else
+            //{
+            //    categories = _cache.Get(_KeyListCategorys) as IEnumerable<Category>;
+            //}
+
+            //return categories;
+
+            return  await _serviceManager
                     .CategoryService
-                    .GetAllAsync(ExpLinqEntity<Category>.ResLinqEntity(null, x => x.OrderBy(x => x.Serial), true));
-
-                // Thiết lập cache - lưu vào cache
-                var cacheEntryOptions = new MemoryCacheEntryOptions()
-                    .SetSlidingExpiration(TimeSpan.FromMinutes(500));
-                _cache.Set(_KeyListCategorys, categories, cacheEntryOptions);
-            }
-
-            else
-            {
-                categories = _cache.Get(_KeyListCategorys) as IEnumerable<Category>;
-            }
-
-            return categories;
+                    .GetAllAsync(ExpLinqEntity<Category>
+                    .ResLinqEntity
+                    (ExpExpressions
+                    .ExtendInclude<Category>(x => x.Include(x => x.PostCategories))
+                    , x => x.OrderBy(x => x.Serial), true));
         }
 
 
@@ -294,7 +318,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             StatusMessage = $"Thêm thành bài viết #{post.Title}#";
 
             _cache.Remove(_KeyCategory);
-
+            _cache.Remove(_KeyListCategorys);
             return RedirectToAction("Posts", new { id = id });
         }
 
@@ -344,6 +368,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             StatusMessage = $"Cập nhật thành bài viết #{result.Title}#";
            
             _cache.Remove(_KeyCategory);
+            _cache.Remove(_KeyListCategorys);
 
             return RedirectToAction("EditPost", new { id = id , postid = postid});
         }
@@ -373,6 +398,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             StatusMessage = $"Xóa thành công bài viết #{post.Title}# ";
 
             _cache.Remove(_KeyCategory);
+            _cache.Remove(_KeyListCategorys);
             return RedirectToAction("posts", new {id = id});
 
         }

@@ -23,6 +23,7 @@ builder.Services.ConfigureApplicationCookie(option =>
     option.LogoutPath = "/Identity/Account/Logout";
     option.AccessDeniedPath = $"/Identity/Account/Manager/AccessDenied";
 });
+
 builder.Services.ConfigureAuthorizationHandlerService();
 
 builder.Services.AddControllers();

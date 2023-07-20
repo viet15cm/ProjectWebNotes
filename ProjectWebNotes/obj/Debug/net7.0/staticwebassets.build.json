@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yDt8diwR3QfDm3QHgCabzkuW0lA74PpqRPzoB9TWoGM=",
+  "Hash": "3bsxHpAbjYQ+zmKu6M9MVYk3TgNENxxddWA1J9H6YMg=",
   "Source": "ProjectWebNotes",
   "BasePath": "_content/ProjectWebNotes",
   "Mode": "Default",
@@ -68,6 +68,23 @@
       "OriginalItemSpec": "wwwroot\\Commercial\\Aspnetcore.png"
     },
     {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Commercial\\bannernetcore.png",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "Commercial/bannernetcore.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Commercial\\bannernetcore.png"
+    },
+    {
       "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Commercial\\commercial.png",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
@@ -83,6 +100,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Commercial\\commercial.png"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Commercial\\dotnet-core-banner.png",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "Commercial/dotnet-core-banner.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Commercial\\dotnet-core-banner.png"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Commercial\\hinh-banner-asp.png",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "Commercial/hinh-banner-asp.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Commercial\\hinh-banner-asp.png"
     },
     {
       "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\css\\multi-leve-hover.css",

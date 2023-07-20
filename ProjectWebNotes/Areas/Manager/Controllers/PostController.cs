@@ -46,25 +46,29 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         async Task<IEnumerable<Category>> GetAllTreeViewCategories()
         {
 
-            IEnumerable<Category> categories;
+            //IEnumerable<Category> categories;
 
 
-            // Phục hồi categories từ Memory cache, không có thì truy vấn Db
-            if (!_cache.TryGetValue(_KeyListCatgorys, out categories))
-            {
-                categories = await _serviceManager.
+            //// Phục hồi categories từ Memory cache, không có thì truy vấn Db
+            //if (!_cache.TryGetValue(_KeyListCatgorys, out categories))
+            //{
+            //    categories = await _serviceManager.
+            //        CategoryService
+            //        .GetAllAsync(ExpLinqEntity<Category>.ResLinqEntity(null, null, true));
+
+            //    // Thiết lập cache - lưu vào cache
+            //    var cacheEntryOptions = new MemoryCacheEntryOptions()
+            //        .SetSlidingExpiration(TimeSpan.FromMinutes(300));
+            //    _cache.Set(_KeyListCatgorys, categories, cacheEntryOptions);
+            //}
+
+            //categories = _cache.Get(_KeyListCatgorys) as IEnumerable<Category>;
+
+            //return categories;
+
+            return  await _serviceManager.
                     CategoryService
-                    .GetAllAsync(ExpLinqEntity<Category>.ResLinqEntity(null, null, true));
-
-                // Thiết lập cache - lưu vào cache
-                var cacheEntryOptions = new MemoryCacheEntryOptions()
-                    .SetSlidingExpiration(TimeSpan.FromMinutes(300));
-                _cache.Set(_KeyListCatgorys, categories, cacheEntryOptions);
-            }
-
-            categories = _cache.Get(_KeyListCatgorys) as IEnumerable<Category>;
-
-            return categories;
+                   .GetAllAsync(ExpLinqEntity<Category>.ResLinqEntity(null, null, true));
         }
 
 
@@ -72,23 +76,25 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         async Task<IEnumerable<Post>> GetAllPostTreeViews()
         {
 
-            IEnumerable<Post> posts;
+            //IEnumerable<Post> posts;
 
-            // Phục hồi categories từ Memory cache, không có thì truy vấn Db
-            if (!_cache.TryGetValue(_KeyList, out posts))
-            {
+            //// Phục hồi categories từ Memory cache, không có thì truy vấn Db
+            //if (!_cache.TryGetValue(_KeyList, out posts))
+            //{
 
-                posts = await _serviceManager.PostService.GetAllAsync();
+            //    posts = await _serviceManager.PostService.GetAllAsync();
 
-                // Thiết lập cache - lưu vào cache
-                var cacheEntryOptions = new MemoryCacheEntryOptions()
-                    .SetSlidingExpiration(TimeSpan.FromMinutes(300));
-                _cache.Set(_KeyList, posts, cacheEntryOptions);
-            }
+            //    // Thiết lập cache - lưu vào cache
+            //    var cacheEntryOptions = new MemoryCacheEntryOptions()
+            //        .SetSlidingExpiration(TimeSpan.FromMinutes(300));
+            //    _cache.Set(_KeyList, posts, cacheEntryOptions);
+            //}
 
-            posts = _cache.Get(_KeyList) as IEnumerable<Post>;
+            //posts = _cache.Get(_KeyList) as IEnumerable<Post>;
 
-            return posts;
+            //return posts;
+
+            return await _serviceManager.PostService.GetAllAsync();
         }
 
 
@@ -99,7 +105,6 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             [Display(Name ="Danh mục")]
             public string[] PostCategorys { get; set; }
 
-           
             public SelectList addCategory { get; set; }
         }
 
@@ -404,6 +409,8 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             bidingPostCategory.addCategory = new SelectList(des, "Id", "Title");
 
             bidingPostCategory.IdPost = post.Id;
+
+            _cache.Remove(_KeyListCategorys);
 
             return View(bidingPostCategory);
         }

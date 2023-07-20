@@ -1,12 +1,29 @@
-﻿@model Post
+﻿@using Entities.Models;
+@model Post
 @{
     var categorys = ViewData["categorys"] as IEnumerable<Category>;
+    var category = ViewData["currentCategory"] as Category; 
 }
 
 <div class="main-content">
     
     <div class="main-content-introduce">
-        <p>Tác giả : Admin - @Model.DateCreate</p>
+
+        
+        <div class="list-title-curent">
+            <ul>
+                <li>
+                    <a style="color: #0065b3" asp-area="Docs" asp-controller="ViewDocs" asp-action="index" asp-route-category="@category.Slug">@category.Title</a>
+                    <span><i class="bi bi-chevron-bar-right"></i></span>
+                    <a style="color: #624991;" asp-area="Docs" asp-controller="ViewDocs" asp-action="index" asp-route-category="@category.Slug" asp-route-post="@Model.Slug">@Model.Title</a>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="author-date">
+            <p class="author-date">Tác giả : Admin - @Model.DateCreate</p>
+        </div>
+
     </div>
     
     <h1 class="main-content-title">
@@ -27,7 +44,7 @@
         <div class="rank-content-title-small">
             <p>
                 <a class="btn" data-bs-toggle="collapse" href="#content-title" role="button" aria-expanded="false" aria-controls="content-title">
-                    Nội dung chính <i class="bi bi-arrow-down-up"></i>
+                    Nội dung chính <i class="bi bi-arrows-collapse"></i>
                 </a> 
             </p>
             <div class="collapse show" id="content-title">
@@ -156,8 +173,10 @@
             }
         }
 
-        
+
     }
+
+    
 }
 
 @section Sidebar {
