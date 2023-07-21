@@ -4,24 +4,20 @@
 }
 
 <div class="main-content">
-    <h1 class="main-content-title">
+    
+    <h1 class="main-content-title mt-3">
         @Model.Title
     </h1>
-    <div class="db-post-content">
-
+    <div class="db-categorry-content">
         @if (@Model?.Description != null)
         {
-            <p class="db-post-content-description">@Model.Description</p>
+            <p class="db-description">@Model.Description</p>
         }
-
         @if (Model?.Content != null)
         {
             @Html.Raw(Model.Content)
         }
-
     </div>
-
-
 </div>
 
 

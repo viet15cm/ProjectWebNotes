@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using ProjectWebNotes.Areas.Manager.Models;
+using ProjectWebNotes.FileManager;
 using Services.Abstractions;
 
 
@@ -82,7 +83,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
            return await _serviceManager
                     .CategoryService
-                    .GetBySlugAsync(id, ExpLinqEntity<Category>
+                    .GetByIdAsync(id, ExpLinqEntity<Category>
                     .ResLinqEntity(ExpExpressions
                     .ExtendInclude<Category>(x => x.Include(x => x.PostCategories)
                     .ThenInclude(x => x.Post)), x => x.OrderBy(x => x.Serial), true));
@@ -401,6 +402,37 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             _cache.Remove(_KeyListCategorys);
             return RedirectToAction("posts", new {id = id});
 
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Content([FromRoute] string id)
+        {
+           var category = await _serviceManager.CategoryService.GetByIdAsync(id);
+
+            if (category is null)
+            {
+                return NotFound();
+            }
+
+            var contentDto = ObjectMapper.Mapper.Map<CategoryDto>(category);
+
+            return View(contentDto);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Content([FromForm] CategoryForUpdateContentDto categoryForUpdateContentDto, [FromRoute] string id)
+        {
+            if (categoryForUpdateContentDto is null)
+            {
+                return NotFound();
+            }
+            var cateoryUpdate = await _serviceManager.CategoryService.UpdateAsync(id, categoryForUpdateContentDto);
+
+            StatusMessage = $"Cập nhật thành công nội dung --{cateoryUpdate.Title}--";
+
+            return RedirectToAction("Content", new { id });
+
+            
         }
 
         //[HttpPost]

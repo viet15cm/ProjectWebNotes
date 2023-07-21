@@ -578,7 +578,6 @@ width: 50%;
 }
 
 
-
 .badge {
     display: inline-block;
     padding: 0.35em 0.65em;
@@ -589,7 +588,6 @@ width: 50%;
     white-space: nowrap;
     vertical-align: baseline;
     border-radius: 0.25rem;
-    
 }
 
 .badge-category {
@@ -627,10 +625,6 @@ width: 50%;
     font-family: 'Bootstrap-icons';
 }
 
-.categorysidebar-menu-post a {
-    color: #F5F5F5;
-}
-
 .db-toc::-webkit-scrollbar {
     width: 6px;
     background-color: #F5F5F5;
@@ -648,6 +642,18 @@ width: 50%;
 .bd-sidebar::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.2);
 }
+
+.active-link {
+    text-decoration: underline;
+    color: #fba056;
+    font-weight: 500;
+}
+
+.categorysidebar-menu-post a {
+    color: #F5F5F5;
+    
+}
+
 .offcanvas-body {
     overflow-x: hidden;
     overflow-y: auto;
@@ -669,6 +675,11 @@ width: 50%;
     padding-top: 3px;
     color: black;
     font-weight: 500;
+}
+
+.db-description {
+    font-size: 16px;
+    font-weight: 400;
 }
 
 /*//careful*/
@@ -741,7 +752,7 @@ width: 50%;
     }
    
     .categorysidebar-menu-post a {
-        color: #000000;
+       
         font-size: 14px;
     }
     .rank-content-title-small{

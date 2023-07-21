@@ -1,0 +1,41 @@
+﻿@model CategoryDto
+@{
+    Layout = "~/Areas/Manager/Views/Shared/_LayoutSummernote.cshtml";
+
+    var statusMessage = TempData["StatusMessage"] as string;
+
+    string id = "Content";
+}
+
+<div class="container">
+    <partial name="_MessageBoxPartial" model="@statusMessage" />
+    <div class="row">
+        <div class="col-md-9 pb-3 pt-3 ">
+
+
+            <h5 class="alert alert-info">Cập nhật nội dung danh mục <span class="text-danger">--@Model.Title--</span></h5>
+
+            <form method="post" asp-route-id="@Model.Id">
+                
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.Content"></label>
+                    <textarea id="Content" name="Content" rows="4" class="form-control" asp-for="@Model.Content"></textarea>
+                    <span asp-validation-for="@Model.Content"></span>
+                </div>
+
+                <button class="btn btn-sm btn-info" type="submit">Cập nhật</button>
+                @Html.ActionLink("Quay trở lại danh sách", "index", "category")
+            </form>
+        </div>
+      
+    </div>
+</div>
+
+@section Scripts{
+
+    <partial name="_Summernote" model="@id" />
+
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+
+}
+

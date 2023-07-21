@@ -410,8 +410,7 @@ body {
     clear: both;
 }
 
-.list-title-curent {
-    
+.list-title-curent {    
     float: left;
     width: 50%;
 }
@@ -590,7 +589,10 @@ body {
     font-size: 16px;
 }
 
-
+.categorysidebar-title-post a {
+    display: block;
+    
+}
 
 .badge {
 
@@ -648,6 +650,12 @@ body {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
+.active-link {
+    text-decoration: underline;
+    color: #800;
+    font-weight: 500;
+}
+
 .offcanvas-body {
     overflow-x: hidden;
     overflow-y: auto;
@@ -669,8 +677,12 @@ body {
     font-weight: 500;
 }
 
-/*//careful*/
+.db-description {
+    font-size: 16px;
+    font-weight: 400;
+}
 
+/*//careful*/
 .careful-azure {
     background: #e4fafa;
     border-left: 7px solid #28eaea;
@@ -726,7 +738,7 @@ body {
         float: none;
     }
     .categorysidebar-menu-post a {
-        color: #000000;
+        
         font-size: 14px;
     }
 

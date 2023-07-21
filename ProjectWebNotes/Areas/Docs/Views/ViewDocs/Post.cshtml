@@ -1,4 +1,6 @@
 ﻿@using Entities.Models;
+@using ProjectWebNotes.Areas.Docs.Views.Shared.Components.CategorySidebar;
+@using ProjectWebNotes.Views.Shared.Components.BoxListCategory;
 @model Post
 @{
     var categorys = ViewData["categorys"] as IEnumerable<Category>;
@@ -21,7 +23,7 @@
             </ul>
         </div>
         <div class="author-date">
-            <p class="author-date">Tác giả : Admin - @Model.DateCreate</p>
+            <p class="author-date">Tác giả : Admin - <i class="bi bi-alarm"></i> @String.Format($"{Model.DateCreate:d}")</p>
         </div>
 
     </div>
@@ -33,7 +35,7 @@
 
         @if (@Model?.Description != null)
         {
-            <p class="db-post-content-description">@Model.Description</p>
+            <p class="db-description">@Model.Description</p>
         }
 
         @if (Model?.Content != null)
