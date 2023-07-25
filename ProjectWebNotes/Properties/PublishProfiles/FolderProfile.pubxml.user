@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>D:\webnotes</_PublishTargetUrl>
-    <History>True|2023-04-08T08:23:48.0397529Z;True|2023-04-08T15:19:41.3957691+07:00;True|2023-04-08T15:19:01.5141309+07:00;True|2023-04-06T14:02:17.3860084+07:00;</History>
+    <_PublishTargetUrl>D:\publish</_PublishTargetUrl>
+    <History>True|2023-07-23T12:40:20.6747475Z;True|2023-07-23T14:03:03.8674427+07:00;True|2023-07-21T22:49:52.7734363+07:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

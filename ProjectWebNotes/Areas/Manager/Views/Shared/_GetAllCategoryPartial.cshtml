@@ -12,7 +12,7 @@
                       <th scope="col">#</th>
                       <th scope="col">Tiêu đề</th>
                       <th scope="col">Slug</th> 
-                      <th scope="col">Biểu tượng</th>
+                      <th scope="col">Icon</th>
                       <th scope="col">Nội dung</th>
                       <th scope="col">Tùy chọn</th>
                     </tr>
@@ -38,9 +38,9 @@
                 <td style="padding-left: @padingletf">
                     <a asp-action="Posts" asp-controller="Category" asp-route-id="@category.Id">@category.Title</a>
                 </td>
-                <td>@category.Slug</td>         
-                <td>@Html.Raw(@category.IConFont)</td>
-                <td><a asp-action="Content" asp-controller="Category" asp-route-id="@category.Id"><i class="bi bi-pencil-square"></i></a></td>
+                <td>@category.Slug</td>
+                <td><a asp-action="Icon" asp-controller="Category" asp-route-id="@category.Id">Edit</a></td>
+                <td><a asp-action="Contents" asp-controller="Category" asp-route-id="@category.Id"><i class="bi bi-pencil-square"></i></a></td>
                 <td>
                      <a asp-action="Edit" asp-controller="Category" asp-route-id="@category.Id" >
                         Sửa

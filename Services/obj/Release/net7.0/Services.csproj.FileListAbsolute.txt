@@ -21,3 +21,9 @@ D:\C#\ProjectWebNotes\Services\obj\Release\net7.0\Services.dll
 D:\C#\ProjectWebNotes\Services\obj\Release\net7.0\refint\Services.dll
 D:\C#\ProjectWebNotes\Services\obj\Release\net7.0\Services.pdb
 D:\C#\ProjectWebNotes\Services\obj\Release\net7.0\ref\Services.dll
+D:\C#\ProjectWebNotes\Services\bin\Release\net7.0\Dto.dll
+D:\C#\ProjectWebNotes\Services\bin\Release\net7.0\ExtentionLinqEntitys.dll
+D:\C#\ProjectWebNotes\Services\bin\Release\net7.0\Paging.dll
+D:\C#\ProjectWebNotes\Services\bin\Release\net7.0\Dto.pdb
+D:\C#\ProjectWebNotes\Services\bin\Release\net7.0\ExtentionLinqEntitys.pdb
+D:\C#\ProjectWebNotes\Services\bin\Release\net7.0\Paging.pdb

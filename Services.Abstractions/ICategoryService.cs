@@ -19,6 +19,7 @@ namespace Services.Abstractions
         
         Task<CategoryDto> UpdateAsync(string IdCategory , CategoryForUpdateDto categoryForUpdate, CancellationToken cancellationToken = default);
 
+        Task<CategoryDto> UpdateAsync(string IdCategory, CategoryForUpdateIconDto categoryForUpdate, CancellationToken cancellationToken = default);
         Task<CategoryDto> UpdateAsync(string IdCategory, CategoryForUpdateContentDto categoryForUpdate, CancellationToken cancellationToken = default);
 
         Task<CategoryDto> DeleteAsync(string IdCategory , CancellationToken cancellationToken = default);

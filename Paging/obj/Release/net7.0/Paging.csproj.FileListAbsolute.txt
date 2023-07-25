@@ -1,0 +1,12 @@
+D:\C#\ProjectWebNotes\Paging\bin\Release\net7.0\Paging.deps.json
+D:\C#\ProjectWebNotes\Paging\bin\Release\net7.0\Paging.dll
+D:\C#\ProjectWebNotes\Paging\bin\Release\net7.0\Paging.pdb
+D:\C#\ProjectWebNotes\Paging\obj\Release\net7.0\Paging.csproj.AssemblyReference.cache
+D:\C#\ProjectWebNotes\Paging\obj\Release\net7.0\Paging.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\ProjectWebNotes\Paging\obj\Release\net7.0\Paging.AssemblyInfoInputs.cache
+D:\C#\ProjectWebNotes\Paging\obj\Release\net7.0\Paging.AssemblyInfo.cs
+D:\C#\ProjectWebNotes\Paging\obj\Release\net7.0\Paging.csproj.CoreCompileInputs.cache
+D:\C#\ProjectWebNotes\Paging\obj\Release\net7.0\Paging.dll
+D:\C#\ProjectWebNotes\Paging\obj\Release\net7.0\refint\Paging.dll
+D:\C#\ProjectWebNotes\Paging\obj\Release\net7.0\Paging.pdb
+D:\C#\ProjectWebNotes\Paging\obj\Release\net7.0\ref\Paging.dll

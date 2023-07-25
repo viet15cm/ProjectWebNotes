@@ -1,0 +1,12 @@
+D:\C#\ProjectWebNotes\ModelValidation\bin\Release\net7.0\ModelValidation.deps.json
+D:\C#\ProjectWebNotes\ModelValidation\bin\Release\net7.0\ModelValidation.dll
+D:\C#\ProjectWebNotes\ModelValidation\bin\Release\net7.0\ModelValidation.pdb
+D:\C#\ProjectWebNotes\ModelValidation\obj\Release\net7.0\ModelValidation.csproj.AssemblyReference.cache
+D:\C#\ProjectWebNotes\ModelValidation\obj\Release\net7.0\ModelValidation.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\ProjectWebNotes\ModelValidation\obj\Release\net7.0\ModelValidation.AssemblyInfoInputs.cache
+D:\C#\ProjectWebNotes\ModelValidation\obj\Release\net7.0\ModelValidation.AssemblyInfo.cs
+D:\C#\ProjectWebNotes\ModelValidation\obj\Release\net7.0\ModelValidation.csproj.CoreCompileInputs.cache
+D:\C#\ProjectWebNotes\ModelValidation\obj\Release\net7.0\ModelValidation.dll
+D:\C#\ProjectWebNotes\ModelValidation\obj\Release\net7.0\refint\ModelValidation.dll
+D:\C#\ProjectWebNotes\ModelValidation\obj\Release\net7.0\ModelValidation.pdb
+D:\C#\ProjectWebNotes\ModelValidation\obj\Release\net7.0\ref\ModelValidation.dll

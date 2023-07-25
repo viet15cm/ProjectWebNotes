@@ -1,0 +1,23 @@
+﻿*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.coppy-code {
+    position: relative;
+}
+
+.coppy-code button {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        overflow: auto;
+        margin: 5px 0;
+        border-radius: 8px;
+        font-size: 13px;
+        border: 1px solid #bcbabb
+
+}
+ .coppy-code button:hover {
+   cursor: pointer;
+   background-color: #bcbabb;
+}

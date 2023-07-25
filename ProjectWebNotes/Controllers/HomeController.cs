@@ -58,12 +58,10 @@ namespace ProjectWebNotes.Controllers
                 var cacheEntryOptions = new MemoryCacheEntryOptions()
                     .SetSlidingExpiration(TimeSpan.FromMinutes(200));
                 _cache.Set(_KeyListCategorys, categories, cacheEntryOptions);
+
             }
 
-            else
-            {
-                categories = _cache.Get(_KeyListCategorys) as IEnumerable<Category>;
-            }
+            categories = _cache.Get(_KeyListCategorys) as IEnumerable<Category>;
 
             return categories;
         }

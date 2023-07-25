@@ -9,25 +9,28 @@ using Microsoft.AspNetCore.JsonPatch.Internal;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
+using ModelValidation;
 using ProjectWebNotes.Areas.Manager.Models;
 using ProjectWebNotes.FileManager;
 using Services.Abstractions;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace ProjectWebNotes.Areas.Manager.Controllers
 {
     [Authorize(Policy = "Admin")]
-    public class CategoryController : BaseController 
+    public class CategoryController : BaseController
     {
 
-        
 
-        public CategoryController(IServiceManager serviceManager, 
-                                IMemoryCache memoryCache, 
+        private readonly IFileServices _fileServices;
+        public CategoryController(IServiceManager serviceManager,
+                                IMemoryCache memoryCache,
                                 UserManager<AppUser> userManager,
-                                IAuthorizationService authorizationService) 
-                                : base(serviceManager, memoryCache, userManager , authorizationService)
+                                IAuthorizationService authorizationService,
+                                IFileServices fileServices)
+                                : base(serviceManager, memoryCache, userManager, authorizationService)
         {
+            _fileServices = fileServices;
         }
 
 
@@ -81,12 +84,12 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             //return category;
 
-           return await _serviceManager
-                    .CategoryService
-                    .GetByIdAsync(id, ExpLinqEntity<Category>
-                    .ResLinqEntity(ExpExpressions
-                    .ExtendInclude<Category>(x => x.Include(x => x.PostCategories)
-                    .ThenInclude(x => x.Post)), x => x.OrderBy(x => x.Serial), true));
+            return await _serviceManager
+                     .CategoryService
+                     .GetByIdAsync(id, ExpLinqEntity<Category>
+                     .ResLinqEntity(ExpExpressions
+                     .ExtendInclude<Category>(x => x.Include(x => x.PostCategories)
+                     .ThenInclude(x => x.Post)), x => x.OrderBy(x => x.Serial), true));
         }
 
 
@@ -121,7 +124,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             //return categories;
 
-            return  await _serviceManager
+            return await _serviceManager
                     .CategoryService
                     .GetAllAsync(ExpLinqEntity<Category>
                     .ResLinqEntity
@@ -139,7 +142,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             var cateforys = await GetAllTreeViewCategories();
 
             cateforys = TreeViews.GetCategoryChierarchicalTree(cateforys);
-            
+
             ViewData["categorys"] = cateforys;
             var des = new List<Category>();
 
@@ -149,11 +152,11 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             return View(new CategoryForCreationDto());
         }
 
-       
+
         [HttpPost]
         public async Task<IActionResult> Create([FromForm] CategoryForCreationDto categoryForCreationDto)
         {
-            
+
             if (!ModelState.IsValid)
             {
                 var cateforys = await GetAllTreeViewCategories();
@@ -172,13 +175,14 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             }
 
             var category = await _serviceManager.CategoryService.CreateAsync(categoryForCreationDto);
-            
+
             StatusMessage = $"Thêm thành công danh mục #{category.Title}#";
 
+            
             _cache.Remove(_KeyListCategorys);
 
             return RedirectToAction("index");
-            
+
         }
 
 
@@ -188,7 +192,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             var categories = await GetAllTreeViewCategories();
 
             var treeViewcategories = TreeViews.GetCategoryChierarchicalTree(categories);
-            
+
             ViewData["categorys"] = treeViewcategories;
 
             var des = new List<Category>();
@@ -204,7 +208,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit([FromRoute]string id, [FromForm]CategoryForUpdateDto categoryForUpdate)
+        public async Task<IActionResult> Edit([FromRoute] string id, [FromForm] CategoryForUpdateDto categoryForUpdate)
         {
             if (id == null)
             {
@@ -219,7 +223,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
                 ViewData["categorys"] = treeViewcategories;
 
-               
+
                 var des = new List<Category>();
 
                 TreeViews.CreateTreeViewCategorySeleteItems(treeViewcategories, des, 0);
@@ -235,6 +239,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             StatusMessage = $"Cập nhật thành công danh mục #{category.Title}#";
 
+            _cache.Remove(_KeyCategory);
             _cache.Remove(_KeyListCategorys);
 
             return RedirectToAction("Edit");
@@ -242,7 +247,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Delete(string id) 
+        public async Task<IActionResult> Delete(string id)
         {
             var categories = await GetAllTreeViewCategories();
 
@@ -250,15 +255,128 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             ViewData["categorys"] = treeViewcategories;
 
-            var category = categories.Where(c => c.Id == id).FirstOrDefault();    
+            var category = categories.Where(c => c.Id == id).FirstOrDefault();
 
             return View(category);
         }
+
+        public class IFromFileViewModel
+        {
+            public Category Category { get; set; }
+
+            [BindProperty]
+            [FileImgValidations(new string[] { ".jpg", ".jpeg", ".png", ".jfif" })]
+            [Display(Name = "Icon")]
+            public IFormFile FormFile { get; set; }
+        }
+
+
+
+        [HttpGet]
+        public async Task<IActionResult> Icon(string id)
+        {
+            var categories = await GetAllTreeViewCategories();
+
+            var treeViewcategories = TreeViews.GetCategoryChierarchicalTree(categories);
+
+            ViewData["categorys"] = treeViewcategories;
+
+            var category = categories.Where(c => c.Id == id).FirstOrDefault();
+
+            if (category is null)
+            {
+                return NotFound();
+            }
+            var fromFileViewModel = new IFromFileViewModel();
+
+            fromFileViewModel.Category = category;
+
+            return View(fromFileViewModel);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Icon([FromForm] IFromFileViewModel fromFileViewModel, [FromRoute] string id)
+        {
+
+            if (fromFileViewModel is null)
+            {
+                return NotFound();
+            }
+
+            var category = ObjectMapper.Mapper.Map<CategoryForUpdateIconDto>(fromFileViewModel.Category);
+
+            if (category is null)
+            {
+                return NotFound(id);
+            }
+
+            var FormFile = fromFileViewModel.FormFile;
+
+            if (FormFile == null)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                string olUrl = category.IConFont;
+
+                string Url = FileServices.GetUniqueFileName(FormFile.FileName);
+
+                var resultFile = await _fileServices.CreateFileAsync(IconCategory.GetIcon(), FormFile, Url);
+
+
+                if (resultFile)
+                {
+                    category.IConFont = Url;
+
+                    var categoryDto = await _serviceManager.CategoryService.UpdateAsync(id, category);
+
+                    StatusMessage = $"Biểu tượng danh mục {categoryDto.Title} của bạn đã cập nhật";
+
+                    if (olUrl != null)
+                    {
+                        await _fileServices.DeleteFileAsync(IconCategory.GetIcon(), olUrl);
+                    }
+
+
+                    _cache.Remove(_KeyCategory);
+                    _cache.Remove(_KeyListCategorys);
+
+                    return RedirectToAction("Icon", new { id = id });
+                }
+
+                await _fileServices.DeleteFileAsync(IconCategory.GetIcon(), Url);
+
+            }
+
+            var categories = await GetAllTreeViewCategories();
+
+            var treeViewcategories = TreeViews.GetCategoryChierarchicalTree(categories);
+
+            ViewData["categorys"] = treeViewcategories;
+            var categori = categories.Where(c => c.Id == id).FirstOrDefault();
+
+            if (categori is null)
+            {
+                return NotFound();
+            }
+
+            fromFileViewModel.Category = categori;
+
+            _cache.Remove(_KeyCategory);
+            _cache.Remove(_KeyListCategorys);
+
+            return View(fromFileViewModel);
+        }
+
         [HttpPost]
         public async Task<IActionResult> Delete([FromRoute] string id , bool IsDelte)
         {
            var category = await _serviceManager.CategoryService.DeleteAsync(id);            
             StatusMessage = $"Xóa thành công danh mục #{category.Title}# ";
+
+            _cache.Remove(_KeyCategory);
             _cache.Remove(_KeyListCategorys);
             return RedirectToAction("index");
 
@@ -392,7 +510,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> DeletePost([FromRoute] string id , [FromQuery] string postid, bool íDelete)
+        public async Task<IActionResult> DeletePost([FromRoute] string id , [FromQuery] string postid, bool isDelete)
         {
             var post = await _serviceManager.PostService.DeleteAsync(postid);
 
@@ -400,12 +518,13 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             _cache.Remove(_KeyCategory);
             _cache.Remove(_KeyListCategorys);
+
             return RedirectToAction("posts", new {id = id});
 
         }
 
         [HttpGet]
-        public async Task<IActionResult> Content([FromRoute] string id)
+        public async Task<IActionResult> Contents([FromRoute] string id)
         {
            var category = await _serviceManager.CategoryService.GetByIdAsync(id);
 
@@ -420,7 +539,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Content([FromForm] CategoryForUpdateContentDto categoryForUpdateContentDto, [FromRoute] string id)
+        public async Task<IActionResult> Contents([FromForm] CategoryForUpdateContentDto categoryForUpdateContentDto, [FromRoute] string id)
         {
             if (categoryForUpdateContentDto is null)
             {
@@ -430,7 +549,8 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             StatusMessage = $"Cập nhật thành công nội dung --{cateoryUpdate.Title}--";
 
-            return RedirectToAction("Content", new { id });
+            _cache.Remove(_KeyListCategorys);
+            return RedirectToAction("Contents", new { id });
 
             
         }

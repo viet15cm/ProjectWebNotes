@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "DWhOWhGCJThCZHe9BHi/QCapcz94goMWhGgq0Cu6FiorcK9qqrSSonMxvPzRQJrYRGbGNhxu0cOLSdhzcbhjWQ==",
+  "dgSpecHash": "UW2tPQmwP5GFXpTVz9MbAdAIk86rgpVvwkqco+OmFYIyx1aPuRrgWJ/mUL6fLkOQTPJUkVdkCxsNu7/dzYi1rA==",
   "success": true,
   "projectFilePath": "D:\\C#\\ProjectWebNotes\\LoggerManager\\LoggerManager.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\thean\\.nuget\\packages\\nlog\\5.1.2\\nlog.5.1.2.nupkg.sha512"
+    "C:\\Users\\Viet_Key\\.nuget\\packages\\nlog\\5.1.2\\nlog.5.1.2.nupkg.sha512"
   ],
   "logs": []
 }

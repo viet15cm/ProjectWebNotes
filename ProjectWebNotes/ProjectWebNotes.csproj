@@ -576,4 +576,8 @@
     <ProjectReference Include="..\Services\Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\ImageManager\IconCategory\" />
+  </ItemGroup>
+
 </Project>

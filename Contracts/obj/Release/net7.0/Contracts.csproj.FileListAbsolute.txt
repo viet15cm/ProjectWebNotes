@@ -13,3 +13,7 @@ D:\C#\ProjectWebNotes\Contracts\obj\Release\net7.0\Contracts.dll
 D:\C#\ProjectWebNotes\Contracts\obj\Release\net7.0\refint\Contracts.dll
 D:\C#\ProjectWebNotes\Contracts\obj\Release\net7.0\Contracts.pdb
 D:\C#\ProjectWebNotes\Contracts\obj\Release\net7.0\ref\Contracts.dll
+D:\C#\ProjectWebNotes\Contracts\bin\Release\net7.0\ExtentionLinqEntitys.dll
+D:\C#\ProjectWebNotes\Contracts\bin\Release\net7.0\Paging.dll
+D:\C#\ProjectWebNotes\Contracts\bin\Release\net7.0\ExtentionLinqEntitys.pdb
+D:\C#\ProjectWebNotes\Contracts\bin\Release\net7.0\Paging.pdb

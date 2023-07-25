@@ -15,6 +15,9 @@ namespace ATMapper
             CreateMap<CategoryForCreationDto, Category>();
 
             CreateMap<Category, CategoryForUpdateContentDto>();
+            
+            CreateMap<Category, CategoryForUpdateIconDto>();
+            
             CreateMap<Post, PostDto>();
 
             CreateMap<Post, PostForCreationDto>();

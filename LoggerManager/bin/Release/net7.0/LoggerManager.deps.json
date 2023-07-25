@@ -1,0 +1,87 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "LoggerManager/1.0.0": {
+        "dependencies": {
+          "Contracts": "1.0.0",
+          "NLog": "5.1.2"
+        },
+        "runtime": {
+          "LoggerManager.dll": {}
+        }
+      },
+      "NLog/5.1.2": {
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.1.2.1561"
+          }
+        }
+      },
+      "Contracts/1.0.0": {
+        "dependencies": {
+          "Entities": "1.0.0",
+          "ExtentionLinqEntitys": "1.0.0",
+          "Paging": "1.0.0"
+        },
+        "runtime": {
+          "Contracts.dll": {}
+        }
+      },
+      "Entities/1.0.0": {
+        "runtime": {
+          "Entities.dll": {}
+        }
+      },
+      "ExtentionLinqEntitys/1.0.0": {
+        "runtime": {
+          "ExtentionLinqEntitys.dll": {}
+        }
+      },
+      "Paging/1.0.0": {
+        "runtime": {
+          "Paging.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LoggerManager/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NLog/5.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JfQY93ure3IPVTN3eabBewBGvrcXcWIlaesFEXdy5UzIymfIT9yCgLISYtM0cOhjWziIaUr/6Z9NC2RwtjwrsQ==",
+      "path": "nlog/5.1.2",
+      "hashPath": "nlog.5.1.2.nupkg.sha512"
+    },
+    "Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ExtentionLinqEntitys/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Paging/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

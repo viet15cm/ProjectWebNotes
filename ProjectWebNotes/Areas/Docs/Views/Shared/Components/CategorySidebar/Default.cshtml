@@ -15,11 +15,11 @@
                 <span class="badge badge-category" aria-hidden="true">
                     @if (Model.currentCategory.IConFont != null)
                     {
-                        @Html.Raw(Model.currentCategory.IConFont)
+                        <img src="~/imagemanager/iconcategory/@Model.currentCategory.IConFont" />
                     }
                     else
                     {
-                        <i class="bi bi-terminal"></i>
+                        <i class="bi bi-folder-plus"></i>
                     }
                 </span>
             </a>
@@ -35,18 +35,17 @@
 
         @if (Model.currentCategory.CategoryChildren?.Count > 0)
         {
-            var categorys = Model.currentCategory.CategoryChildren.OrderBy(x => x.Serial).ToList();
 
-            foreach (var category in categorys)
+            foreach (var category in Model.currentCategory.CategoryChildren)
             {
                 <li class="d-flex bd-highlight">
 
                     <span class="icon-category parent-size-text-post tree-icon-mycollapse flex-shrink-1 bd-highlight" aria-hidden="true">
-
+                        <img style="width: 20px; height: 20px;" src="~/ImageManager/IconCategory/@category.IConFont" />
                     </span>
 
                     <span class="categorysidebar-title-post bd-highlight">
-                        <a class="parent-size-text-post" asp-action="Index" asp-route-slug="@category.Slug">
+                        <a class="parent-size-text-post" asp-action="Index" asp-route-category="@category.Slug">
                             @category.Title
                         </a>
 

@@ -15,3 +15,7 @@ D:\C#\ProjectWebNotes\Domain\obj\Release\net7.0\Domain.dll
 D:\C#\ProjectWebNotes\Domain\obj\Release\net7.0\refint\Domain.dll
 D:\C#\ProjectWebNotes\Domain\obj\Release\net7.0\Domain.pdb
 D:\C#\ProjectWebNotes\Domain\obj\Release\net7.0\ref\Domain.dll
+D:\C#\ProjectWebNotes\Domain\bin\Release\net7.0\ExtentionLinqEntitys.dll
+D:\C#\ProjectWebNotes\Domain\bin\Release\net7.0\Paging.dll
+D:\C#\ProjectWebNotes\Domain\bin\Release\net7.0\ExtentionLinqEntitys.pdb
+D:\C#\ProjectWebNotes\Domain\bin\Release\net7.0\Paging.pdb

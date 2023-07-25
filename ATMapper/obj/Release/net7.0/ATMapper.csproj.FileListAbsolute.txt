@@ -1,0 +1,17 @@
+D:\C#\ProjectWebNotes\ATMapper\bin\Release\net7.0\ATMapper.deps.json
+D:\C#\ProjectWebNotes\ATMapper\bin\Release\net7.0\ATMapper.dll
+D:\C#\ProjectWebNotes\ATMapper\bin\Release\net7.0\ATMapper.pdb
+D:\C#\ProjectWebNotes\ATMapper\bin\Release\net7.0\Dto.dll
+D:\C#\ProjectWebNotes\ATMapper\bin\Release\net7.0\Entities.dll
+D:\C#\ProjectWebNotes\ATMapper\bin\Release\net7.0\Dto.pdb
+D:\C#\ProjectWebNotes\ATMapper\bin\Release\net7.0\Entities.pdb
+D:\C#\ProjectWebNotes\ATMapper\obj\Release\net7.0\ATMapper.csproj.AssemblyReference.cache
+D:\C#\ProjectWebNotes\ATMapper\obj\Release\net7.0\ATMapper.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\ProjectWebNotes\ATMapper\obj\Release\net7.0\ATMapper.AssemblyInfoInputs.cache
+D:\C#\ProjectWebNotes\ATMapper\obj\Release\net7.0\ATMapper.AssemblyInfo.cs
+D:\C#\ProjectWebNotes\ATMapper\obj\Release\net7.0\ATMapper.csproj.CoreCompileInputs.cache
+D:\C#\ProjectWebNotes\ATMapper\obj\Release\net7.0\ATMapper.csproj.CopyComplete
+D:\C#\ProjectWebNotes\ATMapper\obj\Release\net7.0\ATMapper.dll
+D:\C#\ProjectWebNotes\ATMapper\obj\Release\net7.0\refint\ATMapper.dll
+D:\C#\ProjectWebNotes\ATMapper\obj\Release\net7.0\ATMapper.pdb
+D:\C#\ProjectWebNotes\ATMapper\obj\Release\net7.0\ref\ATMapper.dll

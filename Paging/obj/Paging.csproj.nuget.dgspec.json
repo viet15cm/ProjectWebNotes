@@ -10,11 +10,11 @@
         "projectUniqueName": "D:\\C#\\ProjectWebNotes\\Paging\\Paging.csproj",
         "projectName": "Paging",
         "projectPath": "D:\\C#\\ProjectWebNotes\\Paging\\Paging.csproj",
-        "packagesPath": "C:\\Users\\thean\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Viet_Key\\.nuget\\packages\\",
         "outputPath": "D:\\C#\\ProjectWebNotes\\Paging\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\thean\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Viet_Key\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }

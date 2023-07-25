@@ -18,7 +18,7 @@ namespace Dto
 
         [Display(Name = "Mô tả")]
         [DataType(DataType.Text)]
-        [StringLength(200, ErrorMessage = "{0} tối đa 200 ký tự ")]
+        [StringLength(1000, ErrorMessage = "{0} tối đa 1000 ký tự ")]
         public string Description { set; get; }
 
         [Required(ErrorMessage = "{0} không được bỏ trống.")]

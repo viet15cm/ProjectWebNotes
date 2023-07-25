@@ -24,10 +24,6 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
     [Authorize(Policy = "Employee")]
     public class PostController : BaseController
     {
-        private const string _KeyList = "_listallPosts";
-        private const string _KeyObj = "_post";
-
-        private const string _KeyListCatgorys = "_listallPosts";
 
         private readonly IFileServices _fileServices;
         public PostController(IServiceManager serviceManager, 
@@ -164,6 +160,8 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             StatusMessage = $"Cập nhật thành công danh mục cho bài viết --{post.Title}--";
 
+            _cache.Remove(_KeyCategory);
+
             return RedirectToAction("AddCategory", new {id = post.Id });
 
         }
@@ -216,7 +214,6 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
                 }
             }
 
-
             return View(postFWDImgaesDto);
         }
 
@@ -261,6 +258,8 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             var postUpdate = await _serviceManager.PostService.UpdateAsync(id, postForUpdateContentDto);
 
             StatusMessage = $"Cập nhật thành công nội dung --{postUpdate.Title}--";
+            
+            _cache.Remove(_KeyCategory);
 
             return RedirectToAction("Contents", new { id});
         }
@@ -351,6 +350,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             var post = await _serviceManager.PostService.UpdateAsync(id, postForUpdateDto);
             StatusMessage = $"Cập nhật thành bài viết #{post.Title}#";
+            _cache.Remove(_KeyCategory);
             return RedirectToAction("editpost", new { pageNumber = postParameters.PageNumber});
         }
 
@@ -382,7 +382,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             var post = await _serviceManager.PostService.DeleteAsync(id);
            
             StatusMessage = $"Xóa thành công bài viết #{post.Title}# ";
-            
+            _cache.Remove(_KeyCategory);
             return RedirectToAction("index");
 
         }
@@ -442,7 +442,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             await _serviceManager.PostService.AddToCategorysAsync(post.Id, addCategory);
 
             StatusMessage = $"Cập nhật thành công danh mục cho bài viết --{post.Title}--";
-
+            _cache.Remove(_KeyCategory);
             return RedirectToAction("detail", new { id = post.Id});
 
 
@@ -523,7 +523,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             var contentDto = await _serviceManager.ContentService.CreateAsync(contentForCreateDto);
 
             StatusMessage = $"Thêm thành công nội dung ---{contentDto.Title}---";
-
+            _cache.Remove(_KeyCategory);
             return RedirectToAction("detail", new { id = id });
         }
 
@@ -615,7 +615,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             var contentDto = await _serviceManager.ContentService.DeleteAsync(contentid);
 
             StatusMessage = $"Xóa thành công nội dung ---{contentDto.Title}---";
-
+            _cache.Remove(_KeyCategory);
             return RedirectToAction("detail", new { id = id });
         }
 
@@ -709,7 +709,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             image.SelectImages = post.Images.Select(x => x.Url).ToList();
 
             image.AvailableImages = post.Images.Select(x => new ImageSelectList() { Text = x.Url, Value = x.Url }).ToList();
-
+            _cache.Remove(_KeyCategory);
 
             return View("Images", image);
         }

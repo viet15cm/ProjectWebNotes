@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "Middleware/1.0.0": {
         "dependencies": {
-          "Logger": "1.0.0",
+          "LoggerManager": "1.0.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0"
         },
         "runtime": {
@@ -63,7 +63,9 @@
       "System.Text.Encodings.Web/4.5.0": {},
       "Contracts/1.0.0": {
         "dependencies": {
-          "Entities": "1.0.0"
+          "Entities": "1.0.0",
+          "ExtentionLinqEntitys": "1.0.0",
+          "Paging": "1.0.0"
         },
         "runtime": {
           "Contracts.dll": {}
@@ -74,13 +76,23 @@
           "Entities.dll": {}
         }
       },
-      "Logger/1.0.0": {
+      "ExtentionLinqEntitys/1.0.0": {
+        "runtime": {
+          "ExtentionLinqEntitys.dll": {}
+        }
+      },
+      "LoggerManager/1.0.0": {
         "dependencies": {
           "Contracts": "1.0.0",
           "NLog": "5.1.2"
         },
         "runtime": {
-          "Logger.dll": {}
+          "LoggerManager.dll": {}
+        }
+      },
+      "Paging/1.0.0": {
+        "runtime": {
+          "Paging.dll": {}
         }
       }
     }
@@ -150,7 +162,17 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Logger/1.0.0": {
+    "ExtentionLinqEntitys/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LoggerManager/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Paging/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -28,9 +28,9 @@
 
     </div>
     
-    <h1 class="main-content-title">
+    <h2 class="main-content-title">
         @Model.Title
-    </h1>
+    </h2>
     <div class="db-post-content">
 
         @if (@Model?.Description != null)
@@ -43,25 +43,29 @@
             @Html.Raw(Model.Content)
         }
 
-        <div class="rank-content-title-small">
-            <p>
-                <a class="btn" data-bs-toggle="collapse" href="#content-title" role="button" aria-expanded="false" aria-controls="content-title">
-                    Nội dung chính <i class="bi bi-arrows-collapse"></i>
-                </a> 
-            </p>
-            <div class="collapse show" id="content-title">
-                <div class="card card-body">
-                    <ul>
-                        @{
+        @if (Model.Contents?.Count > 0)
+        {
+            <div class="rank-content-title-small">
+                <p>
+                    <a class="btn btn-small" data-bs-toggle="collapse" href="#content-title" role="button" aria-expanded="false" aria-controls="content-title">
+                        Nội dung chính <i class="bi bi-arrows-collapse"></i>
+                    </a>
+                </p>
+                <div class="collapse show" id="content-title">
+                    <div class="card card-body">
+                        <ul>
+                            @{
 
-                            await RenderTitleContents(Model.Contents);
-                        }
-                    </ul>
-                   
-                 
+                                await RenderTitleContents(Model.Contents);
+                            }
+                        </ul>
+
+
+                    </div>
                 </div>
             </div>
-        </div>
+        }
+        
 
     </div>
 

@@ -50,11 +50,9 @@ namespace ProjectWebNotes.Areas.Docs.Controllers
                     .SetSlidingExpiration(TimeSpan.FromMinutes(200));
                 _cache.Set(_KeyListCategorys, categories, cacheEntryOptions);
             }
-
-            else
-            {
-                categories = _cache.Get(_KeyListCategorys) as IEnumerable<Category>;
-            }
+            
+            categories = _cache.Get(_KeyListCategorys) as IEnumerable<Category>;
+            
 
             return categories;
         }
@@ -73,8 +71,11 @@ namespace ProjectWebNotes.Areas.Docs.Controllers
                     .CategoryService
                     .GetBySlugAsync(slug, ExpLinqEntity<Category>
                     .ResLinqEntity(ExpExpressions
-                    .ExtendInclude<Category>(x => x.Include(x => x.PostCategories)
-                    .ThenInclude(x => x.Post).ThenInclude(x => x.Contents)), x => x.OrderBy(x => x.Serial), true));
+                    .ExtendInclude<Category>(x => x.Include(x => x.CategoryChildren)
+                                                    .Include(x => x.PostCategories)
+                                                    .ThenInclude(x => x.Post)
+                                                    .ThenInclude(x => x.Contents)),
+                                                    x => x.OrderBy(x => x.Serial), true));
              
                 var cacheEntryOptions = new MemoryCacheEntryOptions()
                     .SetSlidingExpiration(TimeSpan.FromMinutes(200));
@@ -90,9 +91,10 @@ namespace ProjectWebNotes.Areas.Docs.Controllers
                     .CategoryService
                     .GetBySlugAsync(slug, ExpLinqEntity<Category>
                     .ResLinqEntity(ExpExpressions
-                    .ExtendInclude<Category>(x => x.Include(x => x.PostCategories)
-                    .ThenInclude(x => x.Post)
-                    .ThenInclude(x => x.Contents)), x => x.OrderBy(x => x.Serial), true));
+                    .ExtendInclude<Category>(x => x.Include(x => x.CategoryChildren)
+                                                    .Include(x => x.PostCategories)
+                                                    .ThenInclude(x => x.Post)
+                                                    .ThenInclude(x => x.Contents)), x => x.OrderBy(x => x.Serial), true));
                 // Thiết lập cache - lưu vào cache             
                 var cacheEntryOptions = new MemoryCacheEntryOptions()
                     .SetSlidingExpiration(TimeSpan.FromMinutes(200));

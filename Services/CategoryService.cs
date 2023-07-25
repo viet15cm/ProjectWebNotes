@@ -213,5 +213,39 @@ namespace Services
 
             return ObjectMapper.Mapper.Map<CategoryDto>(category);
         }
+
+        public async Task<CategoryDto> UpdateAsync(string idCategory, CategoryForUpdateIconDto categoryForUpdate, CancellationToken cancellationToken = default)
+        {
+            var category = await _repositoryManager
+              .Category
+              .GetByIdAsync(idCategory,
+                                      ExpLinqEntity<Category>.ResLinqEntity(ExpExpressions.ExtendInclude<Category>(x => x.Include(x => x.PostCategories).ThenInclude(x => x.Post))),
+                                      cancellationToken);
+
+            if (category == null)
+            {
+                throw new CategoryNotFoundException(category.Id);
+            }
+
+
+            Type TypeCategoryForupdateDto = categoryForUpdate.GetType();
+
+            Type TypeCategory = category.GetType();
+
+            IList<PropertyInfo> props = new List<PropertyInfo>(TypeCategoryForupdateDto.GetProperties());
+
+            foreach (PropertyInfo prop in props)
+            {
+                PropertyInfo propertyInfo = TypeCategory.GetProperty(prop.Name);
+                propertyInfo.SetValue(category, prop.GetValue(categoryForUpdate, null));
+
+            }
+
+            _repositoryManager.Category.Update(category);
+
+            await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
+
+            return ObjectMapper.Mapper.Map<CategoryDto>(category);
+        }
     }
 }

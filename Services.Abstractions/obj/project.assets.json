@@ -75,7 +75,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\thean\\.nuget\\packages\\": {}
+    "C:\\Users\\Viet_Key\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -83,11 +83,11 @@
       "projectUniqueName": "D:\\C#\\ProjectWebNotes\\Services.Abstractions\\Services.Abstractions.csproj",
       "projectName": "Services.Abstractions",
       "projectPath": "D:\\C#\\ProjectWebNotes\\Services.Abstractions\\Services.Abstractions.csproj",
-      "packagesPath": "C:\\Users\\thean\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Viet_Key\\.nuget\\packages\\",
       "outputPath": "D:\\C#\\ProjectWebNotes\\Services.Abstractions\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\thean\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Viet_Key\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -141,7 +141,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }

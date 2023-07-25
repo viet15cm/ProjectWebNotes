@@ -24,7 +24,8 @@ namespace ProjectWebNotes.Extensions
             //var connectionString = config["mysqlconnection:connectionString"];
             //services.AddDbContext<RepositoryContext>(o => o.UseMySql(connectionString,
             //    MySqlServerVersion.LatlestSupportedServerVersion));
-           
+            //LocalHost
+            //Freeasphosting
             services.AddDbContext<AppDbcontext>(
                     options => options.UseSqlServer(
                     config.GetConnectionString("LocalHost"),

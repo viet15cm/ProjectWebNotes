@@ -1,0 +1,12 @@
+D:\C#\ProjectWebNotes\ExtentionLinqEntitys\bin\Release\net7.0\ExtentionLinqEntitys.deps.json
+D:\C#\ProjectWebNotes\ExtentionLinqEntitys\bin\Release\net7.0\ExtentionLinqEntitys.dll
+D:\C#\ProjectWebNotes\ExtentionLinqEntitys\bin\Release\net7.0\ExtentionLinqEntitys.pdb
+D:\C#\ProjectWebNotes\ExtentionLinqEntitys\obj\Release\net7.0\ExtentionLinqEntitys.csproj.AssemblyReference.cache
+D:\C#\ProjectWebNotes\ExtentionLinqEntitys\obj\Release\net7.0\ExtentionLinqEntitys.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\ProjectWebNotes\ExtentionLinqEntitys\obj\Release\net7.0\ExtentionLinqEntitys.AssemblyInfoInputs.cache
+D:\C#\ProjectWebNotes\ExtentionLinqEntitys\obj\Release\net7.0\ExtentionLinqEntitys.AssemblyInfo.cs
+D:\C#\ProjectWebNotes\ExtentionLinqEntitys\obj\Release\net7.0\ExtentionLinqEntitys.csproj.CoreCompileInputs.cache
+D:\C#\ProjectWebNotes\ExtentionLinqEntitys\obj\Release\net7.0\ExtentionLinqEntitys.dll
+D:\C#\ProjectWebNotes\ExtentionLinqEntitys\obj\Release\net7.0\refint\ExtentionLinqEntitys.dll
+D:\C#\ProjectWebNotes\ExtentionLinqEntitys\obj\Release\net7.0\ExtentionLinqEntitys.pdb
+D:\C#\ProjectWebNotes\ExtentionLinqEntitys\obj\Release\net7.0\ref\ExtentionLinqEntitys.dll
