@@ -1,7 +1,7 @@
 ﻿@model PostForCreationDto
 @{
     var posts = ViewData["Posts"] as PagedList<PostDto>;
-    var paging = new Paging()
+    var paging = new Pagin()
             {
                 UrlAction = "index",
                 CurrentPage = posts.CurrentPage,

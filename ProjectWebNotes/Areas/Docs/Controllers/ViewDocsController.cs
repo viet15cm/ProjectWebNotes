@@ -120,6 +120,11 @@ namespace ProjectWebNotes.Areas.Docs.Controllers
             }
 
             categorys = TreeViews.GetCategoryChierarchicalTree(categorys);
+
+            if (categorys is null)
+            {
+                return NotFound("Categorys is null ");
+            }
             
             //Memory cache
             var category = await GetBySlugCategoy(slugCategory);
@@ -127,7 +132,7 @@ namespace ProjectWebNotes.Areas.Docs.Controllers
 
             if (category == null)
             {
-                return NotFound();
+                return NotFound("Category is null");
             }
 
             var listPostInCategory = new List<Post>();

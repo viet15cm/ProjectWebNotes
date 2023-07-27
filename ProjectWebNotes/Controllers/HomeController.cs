@@ -1,4 +1,5 @@
-﻿using Domain.IdentityModel;
+﻿using ATMapper;
+using Domain.IdentityModel;
 using Dto;
 using Entities.Models;
 using ExtentionLinqEntitys;
@@ -61,36 +62,33 @@ namespace ProjectWebNotes.Controllers
 
             }
 
-            categories = _cache.Get(_KeyListCategorys) as IEnumerable<Category>;
-
+            categories = _cache.Get<IEnumerable<Category>>(_KeyListCategorys);
+            
             return categories;
         }
 
+       
         [HttpGet]
-        public  async Task<IActionResult> Index([FromQuery]PostParameters postParameters)
+        public  async Task<IActionResult> Index([FromQuery] NewPostParameters postParameters)
         {
-
             var categories = await GetAllTreeViewCategories();
-            var posts = _serviceManager.PostService.Posts(postParameters);
 
-            var postNews = posts.Select(p => new PostNew
-            {
-                Id = p.Id,
-                Slug = p.Slug,
-                Title = p.Title,
-                DateCreate = p.DateCreate,
-                DateUpdated = p.DateUpdated,
-            }).ToList();
+
+            var posts = _serviceManager.PostService.Posts(postParameters);
+            var listPosNews = ObjectMapper.Mapper.Map<List<PostSlugCategoryDto>>(posts.ToList());
+
+            var postnews = new PagedList<PostSlugCategoryDto>(listPosNews, posts.TotalCount, postParameters.PageNumber, postParameters.PageSize);
+
 
             foreach (var category in categories)
             {
-                foreach (var post in postNews)
+                foreach (var post in postnews)
                 {
-                    if (post.UrlCategory is null)
+                    if (post.SlugCategory is null)
                     {
                         if (category.PostCategories.Any(x => x.PostID == post.Id))
                         {
-                            post.UrlCategory = category.Slug;
+                            post.SlugCategory = category.Slug;
                         }
                     }
 
@@ -104,15 +102,30 @@ namespace ProjectWebNotes.Controllers
             var admin = await _userManager.FindByNameAsync("admin");
 
             ViewData["admin"] = admin;
-            ViewData["posts"] = postNews;
-
+            ViewData["posts"] = postnews;    
             return View(categories);
         }
 
         [HttpGet]
-        public IActionResult Privacy()
+        public async Task<IActionResult> Privacy()
         {
-            return View();
+            var categories = await GetAllTreeViewCategories();
+
+            if (categories is null)
+            {
+                _cache.Remove(_KeyListCategorys);
+
+                categories = await GetAllTreeViewCategories();
+            }
+
+
+            categories = TreeViews.GetCategoryChierarchicalTree(categories);
+
+            var admin = await _userManager.FindByNameAsync("admin");
+
+            ViewData["categorys"] = categories;
+
+            return View(admin);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

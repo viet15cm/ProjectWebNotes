@@ -280,8 +280,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xQb3N0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Shared/PagingPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xTaGFyZWRcUGFnaW5nUGFydGlhbC5jc2h0bWw=
+[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Shared/Components/ImgManager/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xTaGFyZWRcQ29tcG9uZW50c1xJbWdNYW5hZ2VyXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Shared/_GetAllCategoryPartial.cshtml]
@@ -296,20 +296,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xTaGFyZWRcX0dldFBvc3RCcmFuY2hQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Shared/_LayoutSummernote.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xTaGFyZWRcX0xheW91dFN1bW1lcm5vdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Shared/_MessageBoxPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xTaGFyZWRcX01lc3NhZ2VCb3hQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Shared/_PostPagingPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xTaGFyZWRcX1Bvc3RQYWdpbmdQYXJ0aWFsLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/Views/Shared/_Summernote.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xTaGFyZWRcX1N1bW1lcm5vdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/C\#/ProjectWebNotes/projectwebnotes/Areas/Manager/_ViewImports.cshtml]
@@ -352,12 +344,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWxsb1dvcmxkUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/C\#/ProjectWebNotes/projectwebnotes/Views/Shared/_LayoutHome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRIb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#/ProjectWebNotes/projectwebnotes/Views/Shared/_LayoutSummernote.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRTdW1tZXJub3RlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/C\#/ProjectWebNotes/projectwebnotes/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/C\#/ProjectWebNotes/projectwebnotes/Views/Shared/_PaginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYWdpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#/ProjectWebNotes/projectwebnotes/Views/Shared/_Summernote.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TdW1tZXJub3RlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/C\#/ProjectWebNotes/projectwebnotes/Views/Shared/_ValidationScriptsPartial.cshtml]

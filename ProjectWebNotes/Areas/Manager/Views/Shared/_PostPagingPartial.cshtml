@@ -25,11 +25,11 @@
                     @Html.ActionLink("Chi tiết", "detail" , "post" , new{id = item.Id})
                 </td>
               <td>
-                <a asp-action="EditPost" asp-route-pageNumber="@Model.CurrentPage" asp-controller="Post" asp-route-id="@item.Id" >
+                <a asp-action="EditPost" asp-route-page="@Model.CurrentPage" asp-controller="Post" asp-route-id="@item.Id" >
                     Sửa
                 </a>
                 |
-                 <a  asp-action="DeletePost"  asp-route-pageNumber="@Model.CurrentPage" asp-controller="Post" asp-route-id="@item.Id" >
+                 <a  asp-action="DeletePost"  asp-route-page="@Model.CurrentPage" asp-controller="Post" asp-route-id="@item.Id" >
                     Xóa
                 </a>
               </td>

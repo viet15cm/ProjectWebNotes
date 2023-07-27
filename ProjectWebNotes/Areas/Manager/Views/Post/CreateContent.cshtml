@@ -1,7 +1,7 @@
 ﻿@model ContentForCreateDto
 
 @{
-    Layout = "~/Areas/Manager/Views/Shared/_LayoutSummernote.cshtml";
+    Layout = "~/Views/Shared/_LayoutSummernote.cshtml";
 
     var postFWDImgaesDto = ViewData["postFWDImgaesDto"] as PostsFWDImagesDto;
     var treeViewContent = ViewData["TreeViewContentSelete"] as List<ContentSelectDto>;
@@ -10,13 +10,13 @@
 }
 
 <div class="container">
-    
+    <p class="alert alert-info mt-1">Tạo nội dung phân cấp bài viết <span style="color: red;">@postFWDImgaesDto.Title</span></p>
     <div class="row">
-        <div class="col-md-5 pb-3 pt-3 ">
-
-
-             <h5 class="alert alert-info">Tạo nội dung bài viết --@postFWDImgaesDto.Title--</h5>
-
+        
+        <div class="col-md-8">
+            <a asp-area="" asp-action="index" asp-controller="home">Quay về trang chủ</a> /
+            @Html.ActionLink("Quay trở lại bài viết", "detail", "post", new{id = postFWDImgaesDto.Id})
+            <hr />
               <form method="post" asp-route-id="@postFWDImgaesDto.Id">
                 <div class="mb-3">
                     <label class="form-label" asp-for="@Model.Title"></label>
@@ -41,29 +41,16 @@
                 </div>
 
                 <button class="btn btn-sm btn-info" type="submit">Tạo</button>
-                @Html.ActionLink("Quay trở lại bài viết", "detail", "post", new{id = postFWDImgaesDto.Id})
+               
              </form>
+             <hr />
         </div>
-        <div class="col-md-7 pb-3 pt-3 ">
-            @if (postFWDImgaesDto.Images?.Count > 0)
-            {
-                @foreach (var item in postFWDImgaesDto.Images)
-                {
-
-                    <div class="card mx-2 mb-2" style="float: left">
-                        <div class="card-body" style=" height: 100px; width: 180px; border-radius: 6px;">
-                            <img src="@item.Url" style="height: 100%; width: auto;" />
-                        </div>
-                        <div class="card-footer">
-                            <button class="btn btn-sm btn-outline-primary" type="button" onclick="copyToClipboard('@item.Url')">Copy url</button>
-                        </div>
-                    </div>
-                }
-            }
-            else
-            {
-                 <h6 class="alert alert-danger">Chưa có</h6>
-            }
+        <div class="col-md-4 pb-3 pt-3 ">
+            <div class="card">
+                <h6 class="card-header">Danh sánh ảnh trong bài viết <span class="text-danger">@postFWDImgaesDto.Title</span></h6>
+                @await Component.InvokeAsync("ImgManager",postFWDImgaesDto.Images)
+            
+            </div>
         </div>
     </div>
 </div>
@@ -71,7 +58,7 @@
 @section Scripts{
 
         <partial name="_Summernote" model="@id"/>
-             <script>
+         <script>
             function copyToClipboard(valueText) {
 
                 window.prompt("Sao chép dịa chỉ ảnh nhấn : Ctrl+C, Enter", valueText);

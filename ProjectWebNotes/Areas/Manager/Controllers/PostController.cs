@@ -291,6 +291,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             StatusMessage = $"Thêm thành công bài viết #{post.Title}#";
 
+            _cache.Remove(_KeyCategory);
             return RedirectToAction("index");
         }
 
@@ -335,7 +336,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
 
                 ViewData["Posts"] = posts;
-
+                _cache.Remove(_KeyCategory);
                 return View(postDto);
 
             }
@@ -410,7 +411,6 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             bidingPostCategory.IdPost = post.Id;
 
-            _cache.Remove(_KeyListCategorys);
 
             return View(bidingPostCategory);
         }
@@ -442,7 +442,10 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             await _serviceManager.PostService.AddToCategorysAsync(post.Id, addCategory);
 
             StatusMessage = $"Cập nhật thành công danh mục cho bài viết --{post.Title}--";
+
+            _cache.Remove(_KeyListCategorys);
             _cache.Remove(_KeyCategory);
+
             return RedirectToAction("detail", new { id = post.Id});
 
 
@@ -593,9 +596,11 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             var contentDto = await _serviceManager.ContentService.UpdateAsync(contentid, contentForUpdateDto);
 
-            StatusMessage = $"Chỉnh sửa thành công nội dung ---{contentDto.Title}---";
+            StatusMessage = $"Cập nhật thành công";
 
-            return RedirectToAction("detail", new { id = id });
+            _cache.Remove(_KeyCategory);
+
+            return RedirectToAction("EditContent", new { id = id, contentid = contentid });
 
 
         }
@@ -616,7 +621,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             StatusMessage = $"Xóa thành công nội dung ---{contentDto.Title}---";
             _cache.Remove(_KeyCategory);
-            return RedirectToAction("detail", new { id = id });
+            return RedirectToAction("detail", new { id = id  });
         }
 
         [HttpGet]
@@ -709,6 +714,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             image.SelectImages = post.Images.Select(x => x.Url).ToList();
 
             image.AvailableImages = post.Images.Select(x => new ImageSelectList() { Text = x.Url, Value = x.Url }).ToList();
+
             _cache.Remove(_KeyCategory);
 
             return View("Images", image);

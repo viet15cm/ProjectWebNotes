@@ -9,10 +9,6 @@
       "PackagePath": "staticwebassets\\Commercial\\dotnet-core-banner.png"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\Avartar\\234709212_d03b429e.jpg",
-      "PackagePath": "staticwebassets\\ImageManager\\Avartar\\234709212_d03b429e.jpg"
-    },
-    {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\Avatar\\230207837_6c85b46a.jpg",
       "PackagePath": "staticwebassets\\ImageManager\\Avatar\\230207837_6c85b46a.jpg"
     },
@@ -35,18 +31,6 @@
     {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\Avatar\\235210144_e4012b81.jpg",
       "PackagePath": "staticwebassets\\ImageManager\\Avatar\\235210144_e4012b81.jpg"
-    },
-    {
-      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\Banner\\hinhok.jpg",
-      "PackagePath": "staticwebassets\\ImageManager\\Banner\\hinhok.jpg"
-    },
-    {
-      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\Banner\\hinhokn.jpg",
-      "PackagePath": "staticwebassets\\ImageManager\\Banner\\hinhokn.jpg"
-    },
-    {
-      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\Banner\\imagessa.jfif",
-      "PackagePath": "staticwebassets\\ImageManager\\Banner\\imagessa.jfif"
     },
     {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\IconCategory\\231006847_b0ab584c.png",
@@ -93,6 +77,14 @@
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\231034549_0a8468bd.jpg"
     },
     {
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\231448217_acc7425d.png",
+      "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\231448217_acc7425d.png"
+    },
+    {
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\231448470_7c4b8343.png",
+      "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\231448470_7c4b8343.png"
+    },
+    {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\231503310_8be5a7f3.jpg",
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\231503310_8be5a7f3.jpg"
     },
@@ -121,12 +113,12 @@
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\232556834_a802e0f8.jpg"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\234141069_31c8fb82.jpg",
-      "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\234141069_31c8fb82.jpg"
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\233923480_bffbfac6.png",
+      "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\233923480_bffbfac6.png"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\234141244_3291dccf.png",
-      "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\234141244_3291dccf.png"
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\233943832_1115c4af.png",
+      "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\233943832_1115c4af.png"
     },
     {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\234141250_404010e9.png",
@@ -137,20 +129,16 @@
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\234151129_45dea67f.png"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\234151135_0346d155.png",
-      "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\234151135_0346d155.png"
-    },
-    {
-      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\234151138_2ee5fad9.png",
-      "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\234151138_2ee5fad9.png"
-    },
-    {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\234215584_48753884.png",
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\234215584_48753884.png"
     },
     {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\234215959_6425d1de.png",
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\234215959_6425d1de.png"
+    },
+    {
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\234759779_e1a54715.png",
+      "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\234759779_e1a54715.png"
     },
     {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\234944477_f4398e9a.png",
@@ -777,6 +765,10 @@
       "PackagePath": "staticwebassets\\Summernote-cr\\summernote-bs4.min.js.map"
     },
     {
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
+    },
+    {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\css\\multi-leve-hover.css",
       "PackagePath": "staticwebassets\\css\\multi-leve-hover.css"
     },
@@ -787,6 +779,10 @@
     {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\css\\stie-image.css",
+      "PackagePath": "staticwebassets\\css\\stie-image.css"
     },
     {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\favicon.ico",
@@ -3623,6 +3619,10 @@
     {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\shortcut-icon\\icon-shortcut-avartar.jpg",
+      "PackagePath": "staticwebassets\\shortcut-icon\\icon-shortcut-avartar.jpg"
     },
     {
       "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.ProjectWebNotes.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -9,66 +9,69 @@
 
 
 }
-
-<form method="post" asp-action="EditImages" asp-route-id="@post.Id"   enctype="multipart/form-data">
-    <div class="row">
-        <div class="col-md-7 mb-3">
-            <div class="card">
-                <h6 class="card-header">Danh sánh ảnh trong bài viết <span class="text-danger">@post.Title</span> </h6>
-                <div class="card-body">
-                    @if (Model.AvailableImages.Count > 0)
-                    {
-                        @foreach (var item in Model.AvailableImages)
+<div class="mt-5">
+    <form method="post" asp-action="EditImages" asp-route-id="@post.Id" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-7 mb-3">
+                <div class="card">
+                    <h6 class="card-header">Danh sánh ảnh trong bài viết <span class="text-danger">@post.Title</span> </h6>
+                    <div class="card-body">
+                        @if (Model.AvailableImages.Count > 0)
                         {
-                            <div class="card mx-2 mb-2" style="float: left">
-                                <div class="card-body" style=" height: 120px; width: 200px; border-radius: 6px;">
-                                    <img src="~/ImageManager/ImagePost/@item.Value" style="height: 100%; width: auto; margin: auto; object-fit: cover; " />
-                                </div>
-                                <div class="card-footer checkbox">
+       
+                            @foreach (var item in Model.AvailableImages)
+                            {
+                                <div style="float: left;">
+                                    <div class="image_container-checkbox d-flex justify-content-center position-relative">
+                                        <img src="~/ImageManager/ImagePost/@item.Value" />
+                                    </div>
                                     <label>
                                         <input type="checkbox"
                                                name="SelectImages"
                                                value="@item.Value"
-                                               @*@if (Model.SelectImages.Contains(item.Value)) { <text> checked </text> }*@ /> @item.Text
-                                        </label>
-
-                                    </div>
+                                        @*@if (Model.SelectImages.Contains(item.Value)) { <text> checked </text> }*@ /> @item.Text
+                                    </label>
                                 </div>
-
+                                
                             }
-                    }
-                    else
-                    {
-                        <h6 class="alert alert-danger">Chưa có</h6>
-                    }
+                        }
+                        else
+                        {
+                            <h6 class="alert alert-danger">Chưa có</h6>
+                        }
+
+                    </div>
+                    <div class="card-footer text-danger">
+                        Chọn để xóa.
+                    </div>
 
                 </div>
-                <div class="card-footer text-danger">
-                    Chọn để xóa.
+            </div>
+
+            <div class="col-md-5 mb-3">
+                <div class="card-body d-flex flex-wrap justify-content-start mb-3 border border-1" id="container_picture">
                 </div>
+                <div class="mb-3">
+                    <input type="file" asp-for="@Model.FormFiles" id="image" multiple onchange="image_select()">
+                    <br />
 
+                    <span asp-validation-for="@Model.FormFiles"></span>
+                </div>
+                <hr />
+                <button class="btn btn-primary" type="submit"><i class="fa-regular fa-pen-to-square"></i> Lưu</button>
+                <a class="btn btn-primary" asp-controller="post" asp-route-id="@post.Id" asp-action="detail"><i class="fa-solid fa-arrow-rotate-left"></i> Quay về</a>
+                <div asp-validation-summary="All"></div>
             </div>
+
         </div>
 
-        <div class="col-md-5 mb-3">
-            <div class="card-body d-flex flex-wrap justify-content-start mb-3 border border-1" id="container_picture">
+    </form>
+</div>
 
-            </div>
-            <div class="mb-3">
-                <input type="file" asp-for="@Model.FormFiles" id="image" multiple onchange="image_select()">
-                <br />
-
-                <span asp-validation-for="@Model.FormFiles"></span>
-            </div>
-            <hr />
-            <button class="btn btn-primary" type="submit"><i class="fa-regular fa-pen-to-square"></i> Lưu</button>
-            <a class="btn btn-primary" asp-controller="post" asp-route-id="@post.Id" asp-action="detail"><i class="fa-solid fa-arrow-rotate-left"></i> Quay về</a>
-            <div asp-validation-summary="All"></div>
-        </div>
-
-    </div>
-
-</form>
+@section CSSImageManager
+{
+    <link href="~/css/stie-image.css" rel="stylesheet" />
+}
 
 
 

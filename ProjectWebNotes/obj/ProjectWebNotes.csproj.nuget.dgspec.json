@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\ProjectWebNotes.csproj": {}
+    "D:\\C#\\ProjectWebNotes\\projectwebnotes\\ProjectWebNotes.csproj": {}
   },
   "projects": {
     "D:\\C#\\ProjectWebNotes\\ATMapper\\ATMapper.csproj": {
@@ -680,14 +680,14 @@
         }
       }
     },
-    "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\ProjectWebNotes.csproj": {
+    "D:\\C#\\ProjectWebNotes\\projectwebnotes\\ProjectWebNotes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\ProjectWebNotes.csproj",
+        "projectUniqueName": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\ProjectWebNotes.csproj",
         "projectName": "ProjectWebNotes",
-        "projectPath": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\ProjectWebNotes.csproj",
+        "projectPath": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\ProjectWebNotes.csproj",
         "packagesPath": "C:\\Users\\Viet_Key\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\obj\\",
+        "outputPath": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Viet_Key\\AppData\\Roaming\\NuGet\\NuGet.Config",

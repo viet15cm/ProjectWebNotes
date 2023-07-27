@@ -3,59 +3,63 @@
    
 }
 <div class="clearafter">
-    
 
     <div class="list-category-left">
         <div class="new-post-title">
             <h6>Danh Mục</h6>
         </div>
-        @foreach (var item in Model)
+        @if (Model != null)
         {
-            var count = item.PostCategories?.Count() ?? 0;
-            
-            if (item.ParentCategory == null)
+            @foreach (var item in Model)
             {
-                <div class="main-body-content-child">
+                var count = item.PostCategories?.Count() ?? 0;
 
-                    <h5 class=" d-flex justify-content-lg-start">
-                        @if (@item.IConFont != null )
-                        {
-                            <span class="icon-category-img">
-                                <img src="~/imagemanager/iconcategory/@item.IConFont"/>
-                            </span>
-                        }else
-                        {
-                            <span class="icon-category-img">
-                                <img src="~/img/aspnetcore.png" />
-                            </span>
-                        }
-                       
-                        <span style="margin: auto; padding-left: 10px; margin-left: 0px;">
-                            <a asp-area="Docs" asp-controller="ViewDocs" asp-action="index" asp-route-category="@item.Slug">
-                                @item.Title
-                            </a>
-                            
-                        </span>
+                if (item.ParentCategory == null)
+                {
+                    <div class="main-body-content-child">
 
-                        <span class="count-parent-category">
-                            @count
-                        </span>
-
-                    </h5>
-                    <div class="card-body">
-                        @{
-                            if (item.CategoryChildren?.Count >= 0)
+                        <h5 class=" d-flex justify-content-lg-start">
+                            @if (@item.IConFont != null)
                             {
-                                await RenderCategory(item.CategoryChildren, 14);
+                                <span class="icon-category-img">
+                                    <img src="~/imagemanager/iconcategory/@item.IConFont" />
+                                </span>
+                            }
+                            else
+                            {
+                                <span class="icon-category-img">
+                                    <img src="~/img/aspnetcore.png" />
+                                </span>
                             }
 
-                            
-                        }
-                    </div>
-                </div>
+                            <span style="margin: auto; padding-left: 10px; margin-left: 0px;">
+                                <a asp-area="Docs" asp-controller="ViewDocs" asp-action="index" asp-route-category="@item.Slug">
+                                    @item.Title
+                                </a>
 
+                            </span>
+
+                            <span class="count-parent-category">
+                                @count
+                            </span>
+
+                        </h5>
+                        <div class="card-body">
+                            @{
+                                if (item.CategoryChildren?.Count >= 0)
+                                {
+                                    await RenderCategory(item.CategoryChildren, 14);
+                                }
+
+
+                            }
+                        </div>
+                    </div>
+
+                }
             }
         }
+        
     </div>
     
 </div>

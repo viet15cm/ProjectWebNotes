@@ -1,8 +1,16 @@
-﻿@{
-    ViewData["Title"] = "Thông Tin Website";
-}
-<h1>@ViewData["Title"]</h1>
+﻿@using Domain.IdentityModel;
 
-<p>
-    Chưa có
-</p>
+@model AppUser
+
+@{
+    ViewData["Title"] = "Thông Tin Website";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+    var categorys = ViewData["categorys"] as IEnumerable<Category>;
+}
+
+
+@section BoxListCategory {
+
+    @await Component.InvokeAsync(BoxListCategory.COMPONENTNAME, categorys)
+
+}

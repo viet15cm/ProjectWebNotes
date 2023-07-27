@@ -1,6 +1,8 @@
-﻿@model Category
+﻿
+@model Category
 @{
     var categorys = ViewData["categorys"] as IEnumerable<Category>;
+   
 }
 
 <div class="main-content">
@@ -50,7 +52,7 @@
                     
                     <p>
                         <h5>
-                            <a href="#">@category.Title</a>
+                            <a asp-controller="ViewDocs" asp-action="Index" asp-route-category="@category.Slug">@category.Title</a>
                         </h5>
                         @category.Description
                     </p>

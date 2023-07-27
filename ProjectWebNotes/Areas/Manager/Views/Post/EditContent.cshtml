@@ -1,18 +1,28 @@
 ﻿@model Content
 
 @{
-    Layout = "~/Areas/Manager/Views/Shared/_LayoutSummernote.cshtml";
+    Layout = "~/Views/Shared/_LayoutSummernote.cshtml";
 
     var treeViewContent = ViewData["TreeViewContentSelete"] as List<ContentSelectDto>;
-    
+    var statusMessage = TempData["StatusMessage"] as string;
     var id = "TextContents";
 }
 
 <div class="container">
+   
+    <p class="alert alert-info mt-1">Cập nhật nội dung <span style="color: red;">@Model.Title</span></p>
 
     <div class="row">
-        <div class="col-md-6 pb-3 pt-3 ">
-             <h5 class="alert alert-info" >Chỉnh sửa nội dung <span class="text-danger" >--@Model.Title--</span></h5>
+        <div class="col-md-8 ">
+            <partial name="_MessageBoxPartial" model="@statusMessage" />
+           
+            <form id="DeletContent" asp-action="DeleteContent" asp-controller="post" method="post" asp-route-contentid="@Model.Id" asp-route-id="@Model.PostId">
+                <button class="btn btn-sm btn-danger m-0" onclick="DeletContent()">Xóa</button> /
+                <a asp-area="" asp-action="index" asp-controller="home">Quay về trang chủ</a> /
+                @Html.ActionLink("Quay trở lại bài viết", "detail", "post", new{id = Model.PostId})
+               
+            </form>
+            <hr />
 
               <form method="post" asp-route-contentid="@Model.Id" asp-route-id="@Model.PostId">
                 <div class="mb-3">
@@ -36,31 +46,28 @@
                     <span asp-validation-for="@Model.TextContents"></span>
                 </div>
 
-                <button class="btn btn-sm btn-info" type="submit">Update</button>
-                @Html.ActionLink("Quay trở lại bài viết", "detail", "post", new{id = Model.PostId})
-              
+                <button class="btn btn-sm btn-info" type="submit">Update</button> 
+                
              </form>
-            <hr />
-            <form id="DeletContent" asp-action="DeleteContent" asp-controller="post" method="post" asp-route-contentid="@Model.Id" asp-route-id="@Model.PostId" >
-                    <button class="btn btn-sm btn-danger m-0" onclick="DeletContent()">Xóa</button>
-            </form>
+            
+             <hr />
         </div>
-        <div class="col-md-6 pb-3 pt-3 ">
+        <div class="col-md-4 pb-3 pt-3 ">
             <div class="card">
                 <h6 class="card-header">Danh sánh ảnh trong bài viết <span class="text-danger">@Model.Post.Title</span> @*(<a class="link-primary" asp-controller="Image" asp-action="index" asp-route-id="@Model.PostId">+ Cập nhật quản lý ảnh</a>)*@</h6>
-                <div class="card-body">
+              
                     @if (Model.Post.Images?.Count > 0)
                     {
                         @foreach (var item in Model.Post.Images)
                         {
 
-                            <div class="card mx-2 mb-2" style="float: left">
-                                <div class="card-body" style=" height: 100px; width: 180px; border-radius: 6px;">
+                            <div>
+                                <div class="image_container-checkbox d-flex justify-content-center position-relative">
                                     <img src="@item.Url" style="height: 100%; width: auto;" />
                                 </div>
-                                <div class="card-footer">
+                                <label>
                                     <button class="btn btn-sm btn-outline-primary" type="button" onclick="copyToClipboard('@item.Url')">Copy url</button>
-                                </div>
+                                </label>
                             </div>
                         }
                     }
@@ -68,8 +75,6 @@
                     {
                         <h6 class="alert alert-danger">Chưa có</h6>
                     }
-
-                </div>
 
             </div>
         </div>

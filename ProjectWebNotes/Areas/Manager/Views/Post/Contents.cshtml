@@ -1,7 +1,7 @@
 ﻿@model PostsFWDImagesDto
 
 @{
-    Layout = "~/Areas/Manager/Views/Shared/_LayoutSummernote.cshtml";
+    Layout = "~/Views/Shared/_LayoutSummernote.cshtml";
 
     var statusMessage = TempData["StatusMessage"] as string;
 
@@ -9,13 +9,14 @@
 }
 
 <div class="container">
-      <partial name="_MessageBoxPartial" model="@statusMessage" />
+   
+    <p class="alert alert-info mt-1">Cập nhật nội dung <span style="color: red;">@Model.Title</span></p>
     <div class="row">
-        <div class="col-md-5 pb-3 pt-3 ">
-
-
-             <h5 class="alert alert-info">Cập nhật nội dung bài viết <span class="text-danger">--@Model.Title--</span></h5>
-
+        <div class="col-md-8">
+            <partial name="_MessageBoxPartial" model="@statusMessage" />
+            <a asp-area="" asp-action="index" asp-controller="home">Quay về trang chủ</a> /
+            @Html.ActionLink("Quay trở lại bài viết", "detail", "post", new{id = Model.Id})
+                <hr />
                 <form method="post" asp-route-id="@Model.Id">
                 <div class="mb-3">
                     <label class="form-label" asp-for="@Model.DateUpdated"></label>
@@ -28,35 +29,14 @@
                     <span asp-validation-for="@Model.Content"></span>
                 </div>
 
-                <button class="btn btn-sm btn-info" type="submit">Cập nhật</button>
-                @Html.ActionLink("Quay trở lại bài viết", "detail", "post", new{id = Model.Id})
+                <button class="btn btn-sm btn-info" type="submit">Cập nhật</button>          
                 </form>
+                <hr />
         </div>
-        <div class="col-md-7 pb-3 pt-3 ">
+        <div class="col-md-4 pb-3 pt-3 ">
            <div class="card">
                 <h6 class="card-header">Danh sánh ảnh trong bài viết <span class="text-danger">@Model.Title</span> @*(<a class="link-primary" asp-controller="Image" asp-action="index" asp-route-id="@Model.PostId">+ Cập nhật quản lý ảnh</a>)*@</h6>
-                <div class="card-body">
-                    @if (Model.Images?.Count > 0)
-                    {
-                        @foreach (var item in Model.Images)
-                        {
-
-                                    <div class="card mx-2 mb-2" style="float: left">
-                                        <div class="card-body" style=" height: 100px; width: 180px; border-radius: 6px;">
-                                            <img src="@item.Url" style="height: 100%; width: auto;" />
-                                        </div>
-                                        <div class="card-footer">
-                                            <button class="btn btn-sm btn-outline-primary" type="button" onclick="copyToClipboard('@item.Url')">Copy url</button>
-                                        </div>
-                                    </div>
-                        }
-                    }
-                    else
-                    {
-                            <h6 class="alert alert-danger">Chưa có</h6>
-                    }
-
-                </div>
+                @await Component.InvokeAsync("ImgManager", Model.Images)
 
             </div>
         </div>
@@ -68,15 +48,6 @@
      <partial name="_Summernote" model="@id"/>
 
     @await Html.PartialAsync("_ValidationScriptsPartial")
-
-    
-
-    <script>
-        function copyToClipboard(valueText) {
-
-            window.prompt("Sao chép dịa chỉ ảnh nhấn : Ctrl+C, Enter", valueText);
-        }
-    </script>
 
 }
 

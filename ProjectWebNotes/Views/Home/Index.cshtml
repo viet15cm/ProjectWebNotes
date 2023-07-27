@@ -2,15 +2,24 @@
 @model IEnumerable<Category>
 
 @{
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+
     var admin = ViewData["admin"] as AppUser;
-    var posts = ViewData["posts"] as List<PostNew>;
+    var posts = ViewData["posts"] as PagedList<PostSlugCategoryDto>;
+
     var name = "";
 
     if (admin != null)
     {
-         name = admin.LastName + " " + admin.FirstName;
+        name = admin.LastName + " " + admin.FirstName;
     }
-   
+
+    var paging = new Pagin()
+    {
+        UrlAction = "index",
+        CurrentPage = posts.CurrentPage,
+        TotalPages = posts.TotalPages,
+    };
 
 
 }
@@ -24,7 +33,6 @@
                 <img src="~/ImageManager/Avatar/@admin.UrlImage" class="rounded-circle mb-3" style="width: 150px;"
                  alt="Avatar" />
             }
-         
 
             <h5 class="mb-2"><strong>@name </strong></h5>
             <p class="text-muted">Admin Website Design <span class="badge bg-primary">PRO</span></p>
@@ -72,7 +80,7 @@
   
                     @foreach (var post in posts)
                     {
-                        @if (post?.UrlCategory is null)
+                        @if (post?.SlugCategory is null)
                         {
                             <li>
                                 <a href="#">@post.Title</a>
@@ -85,7 +93,7 @@
                         else
                         {
                             <li>
-                                <a asp-area="Docs" asp-controller="ViewDocs" asp-action="index" asp-route-category="@post.UrlCategory" asp-route-post="@post.Slug">@post.Title</a>
+                                <a asp-area="Docs" asp-controller="ViewDocs" asp-action="index" asp-route-category="@post.SlugCategory" asp-route-post="@post.Slug">@post.Title</a>
                                 <span class="date">
                                     @post.DateCreate
                                 </span>
@@ -95,8 +103,11 @@
 
                     }
                     
-                   
+                        @await Html.PartialAsync("_PaginPartial", paging)
+                    
+                  
                 </ul>
+               
             </div>
         </div>
         <div class="commercial">
@@ -109,19 +120,6 @@
    
 
 </div>
-
-@section CSSHighlight
-{
-    <link href="~/highlight/button/button.css" rel="stylesheet" />
-}
-
-@section highlight
-    {
-    <script src="~/highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-    <script src="~/highlight/button/buttonhighlight.js"></script>
-    <script src="~/js/theme.js"></script>
-}
 
 
 @section BoxListCategory {

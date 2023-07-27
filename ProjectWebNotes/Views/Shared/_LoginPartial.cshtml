@@ -8,11 +8,19 @@
 @{
 
     string avatar = null;
+    
     @if (signInManager.IsSignedIn(User))
     {
         var appUser = await userManager.GetUserAsync(User);
 
-        avatar = appUser.UrlImage;
+        if (appUser!= null)
+        {
+            avatar = appUser.UrlImage;
+        }else
+        {
+            avatar = "Avartar.jpg";
+        }
+        
     }
 
     var resultAuthorization = await authorizationService.AuthorizeAsync(this.User, "Admin");

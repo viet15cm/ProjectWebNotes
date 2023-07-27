@@ -1,5 +1,9 @@
-﻿@{
+﻿@inject IHttpContextAccessor iHttpContextAccessor
+
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var theme = iHttpContextAccessor.HttpContext.Request.Cookies["theme"]?.ToString();
 }
 
     <div class="bd-left">
@@ -11,6 +15,35 @@
     <div class="bd-main">      
         @RenderBody()
     </div>
+
+@section CSSBackroundSite{
+        @if (theme == null || theme == "0")
+        {
+            <link id="site-theme" href="~/css/site.css" rel="stylesheet" />
+            <link id="arduino-light-theme" href="~/highlight/styles/arduino-light.min.css" rel="stylesheet" />
+        }
+        else
+        {
+            <link id="site-theme" href="~/css/site-black.css" rel="stylesheet" />
+            <link id="arduino-light-theme" href="~/highlight/styles/a11y-dark.min.css" rel="stylesheet" />
+        }
+}
+@section BackroundSite {
+    <li>
+        <select id="theme" class="theme" name="theme">
+            @if (theme == null || theme == "0")
+            {
+                <option selected value="0">&#9788;</option>
+                <option value="1">&#9790;</option>
+            }
+            else
+            {
+                <option value="0">&#9788;</option>
+                <option selected value="1">&#9790;</option>
+            }
+        </select>
+    </li>
+}
 
 @section IconOffcanvasListPost {
     <div class="justify-content-end iconOffcanvasListPost">
