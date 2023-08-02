@@ -1,10 +1,11 @@
 ﻿@page 
+@using Paging;
 @model IndexModel
 @{
     var statusMessage = TempData["StatusMessage"] as string;
     ViewData["title"] = "Danh sách users";
 
-    var paging = new ProjectWebNotes.Models.Paging()
+    var paging = new Pagin()
             {
                 UrlAction = "index",
                 CurrentPage = Model.users.CurrentPage,

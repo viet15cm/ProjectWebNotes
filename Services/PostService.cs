@@ -161,7 +161,7 @@ namespace Services
         }
 
 
-        public PagedList<PostDto> Posts(PostParameters postParameters)
+        public PagedList<PostDto> Posts(QueryStringParameters postParameters)
         {
             var posts = _repositoryManager.Post.Posts(postParameters);
 

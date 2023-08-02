@@ -13,6 +13,7 @@ using ProjectWebNotes.DbContextLayer;
 using ProjectWebNotes.FileManager;
 using ProjectWebNotes.Models;
 using Services.Abstractions;
+using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using System.Xml.Linq;
 
@@ -25,12 +26,18 @@ namespace ProjectWebNotes.Controllers
 
         private readonly IMemoryCache _cache;
 
+        public const string _administrator = "Administrator";
+        public const string _admin = "Admin";
+        public const string _employee = "Employee";
+
         private readonly UserManager<AppUser> _userManager;
         private const string _KeyListCategorys = "_listallCategorys";
         public HomeController(IServiceManager serviceManager,
                                 AppDbcontext context,
                                 IMemoryCache memoryCache,
-                                UserManager<AppUser> userManager)
+                                UserManager<AppUser> userManager
+                                
+                                )
         {
             _serviceManager = serviceManager;
             _cache = memoryCache;
@@ -67,7 +74,14 @@ namespace ProjectWebNotes.Controllers
             return categories;
         }
 
-       
+
+        public class Administrator : AppUser
+        {
+            [Display(Name = "Role")]
+            public string RoleName { get; set; }
+        }
+
+
         [HttpGet]
         public  async Task<IActionResult> Index([FromQuery] NewPostParameters postParameters)
         {
@@ -98,12 +112,28 @@ namespace ProjectWebNotes.Controllers
             }
 
             categories = TreeViews.GetCategoryChierarchicalTree(categories);
-            
-            var admin = await _userManager.FindByNameAsync("admin");
 
-            ViewData["admin"] = admin;
+            var administrator = await (from r in _context.Roles
+                                join ur in _context.UserRoles on r.Id equals ur.RoleId
+                                join u in _context.Users on ur.UserId equals u.Id
+                                where r.Name.Equals(_administrator) 
+                                select new Administrator
+                                {
+                                    RoleName = r.Name,
+                                    UrlImage = u.UrlImage,
+                                    LastName = u.LastName,
+                                    FirstName = u.FirstName,
+                                }
+                                ).FirstOrDefaultAsync();
+
+            ViewData["administrator"] = administrator;
             ViewData["posts"] = postnews;    
             return View(categories);
+        }
+
+        public class Manager : Administrator
+        {
+
         }
 
         [HttpGet]
@@ -118,14 +148,33 @@ namespace ProjectWebNotes.Controllers
                 categories = await GetAllTreeViewCategories();
             }
 
-
             categories = TreeViews.GetCategoryChierarchicalTree(categories);
 
-            var admin = await _userManager.FindByNameAsync("admin");
+            var managers = await (from r in _context.Roles
+                                       join ur in _context.UserRoles on r.Id equals ur.RoleId
+                                       join u in _context.Users on ur.UserId equals u.Id
+                                       where r.Name.Equals(_administrator) || r.Name.Equals(_admin) || r.Name.Equals(_employee)
+                                       select new Manager
+                                       {
+                                           RoleName = r.Name,
+                                           UrlImage = u.UrlImage,
+                                           LastName = u.LastName,
+                                           FirstName = u.FirstName,
+                                           Describe = u.Describe,
+                                           BirthDate = u.BirthDate,
+                                           PhoneNumber = u.PhoneNumber,
+                                           Address = u.Address,
+                                           Company = u.Company,
+                                           Email = u.Email,
+                                           NativePlace = u.NativePlace,
+                                       }
+                               ).ToListAsync();
+
+            ViewData["managers"] = managers;
 
             ViewData["categorys"] = categories;
 
-            return View(admin);
+            return View(managers);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

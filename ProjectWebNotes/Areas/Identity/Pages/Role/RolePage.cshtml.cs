@@ -12,7 +12,8 @@ using ProjectWebNotes.DbContextLayer;
 
 namespace ProjectWebNotes.Areas.Identity.Pages.Role
 {
-    //[Authorize(Policy = "Admin")]
+    
+    [Authorize(Policy = "Admin")]
     public class RolePageModel : PageModel
     {
         protected readonly RoleManager<IdentityRole> _roleManager;

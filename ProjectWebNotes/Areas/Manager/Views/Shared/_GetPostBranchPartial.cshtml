@@ -12,9 +12,9 @@
                       <th scope="col">#</th>
                       <th scope="col">Tiêu đề</th>
                       <th scope="col">Slug</th>
-                      <th scope="col">Mô tả</th>
-                       <th scope="col">Chi tiết</th>
-                      <th scope="col">Tùy chọn</th>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -36,20 +36,20 @@
             <tr>
                 <th style="padding-left: @padingletf" scope="row">@post.Serial</th>
                 <td style="padding-left: @padingletf">@post.Title</td>
-                <td>@post.Slug</td>
-                <td>@post.Description</td>
+                <td>@post.Slug</td>             
                 <td>
                     <a asp-action="detail" asp-route-id="@post.Id"  asp-controller="post">
                         Chi tiết
                     </a>
                 </td>
                 <td>
-                    <a asp-action="EditPost" asp-route-postid="@post.Id"  asp-controller="category" asp-route-id="@category.Id" >
+                    <a asp-action="EditPost" asp-route-postid="@post.Id" asp-controller="category" asp-route-id="@category.Id">
                         Sửa
                     </a>
-                    |
+                </td>
+                <td>
                     <a  asp-action="DeletePost" asp-route-postid="@post.Id"  asp-controller="category" asp-route-id="@category.Id" >
-                        Xóa
+                       Xóa
                     </a>
                 </td>
             </tr>

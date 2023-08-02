@@ -25,7 +25,7 @@ namespace ProjectWebNotes.Security.Requirements
         {
             //var user = _userManager.GetUserAsync(context.User).Result;
 
-            if (context.User.IsInRole("Admin"))
+            if (context.User.IsInRole("Admin") || context.User.IsInRole("Administrator"))
             {
                 context.Succeed(requirement);
                 

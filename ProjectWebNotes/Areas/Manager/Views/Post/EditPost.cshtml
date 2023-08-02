@@ -4,7 +4,7 @@
     ViewBag.Title = "Chỉnh sửa";
 
     var posts = ViewData["Posts"] as PagedList<PostDto>;
-    var paging = new Paging()
+    var paging = new Pagin()
             {
                 UrlAction = "index",
                 CurrentPage = posts.CurrentPage,
@@ -50,7 +50,7 @@
 
                 <div asp-validation-summary="All"></div>
                 <button class="btn btn-sm btn-primary" type="submit">Update</button> |
-                @Html.ActionLink("Quay trở lại danh sách", "index", new {pageNumber = posts.CurrentPage})
+                @Html.ActionLink("Quay trở lại danh sách", "index", new {pagenumber = posts.CurrentPage})
             </form>
         </div>
     </div>

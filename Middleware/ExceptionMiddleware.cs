@@ -44,7 +44,7 @@ namespace Middleware
             await context.Response.WriteAsync(new ErrorDetails()
             {
                 StatusCode = context.Response.StatusCode,
-                Message = $"Lỗi Máy chủ Nội bộ từ phần mềm trung gian tùy chỉnh.{exception.Message} "
+                Message = $"Internal Server Error from custom middleware .{exception.Message} "
             }.ToString());
         }
     }

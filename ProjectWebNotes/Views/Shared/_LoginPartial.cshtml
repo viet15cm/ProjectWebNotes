@@ -8,7 +8,7 @@
 @{
 
     string avatar = null;
-    
+    string  userName = null;
     @if (signInManager.IsSignedIn(User))
     {
         var appUser = await userManager.GetUserAsync(User);
@@ -16,6 +16,7 @@
         if (appUser!= null)
         {
             avatar = appUser.UrlImage;
+            userName = appUser.UserName;
         }else
         {
             avatar = "Avartar.jpg";
@@ -61,7 +62,7 @@
 
 
         <ul class="dropdown-menu" aria-labelledby="UserDropdown">
-            <li><a class="dropdown-item btn btn-default" asp-area="Identity" asp-page="/Account/Manager/Index"><i class="bi bi-person-circle"></i> Người dùng</a></li>
+            <li><a class="dropdown-item btn btn-default" asp-area="Identity" asp-page="/Account/Manager/Index"><i class="bi bi-person-circle"></i> @userName</a></li>
             <li>
                 <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout">
                     <button class="dropdown-item" type="submit"><i class="bi bi-box-arrow-right"></i> Logout</button>

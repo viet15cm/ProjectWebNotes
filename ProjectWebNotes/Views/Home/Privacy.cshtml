@@ -1,13 +1,95 @@
 ﻿@using Domain.IdentityModel;
-
-@model AppUser
+@using static ProjectWebNotes.Controllers.HomeController;
+@model IEnumerable<Manager>
 
 @{
-    ViewData["Title"] = "Thông Tin Website";
+    ViewData["Title"] = "Thành viên Website";
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
+
     var categorys = ViewData["categorys"] as IEnumerable<Category>;
+
+    var administrator = Model.Where(x => x.RoleName.Equals(_administrator)).ToList();
+
+    var admin = Model.Where(x => x.RoleName.Equals(_admin)).ToList();
+
+    var employee = Model.Where(x => x.Equals(_employee)).ToList();
 }
 
+<div class="manager">
+    @{
+        await Information(administrator);
+        await Information(admin);
+        await Information(employee);
+    }
+
+</div>
+
+
+@{
+    async Task  Information(List<Manager> managers)
+    {
+        if (managers?.Count > 0)
+        {
+            @foreach (var item in managers)
+            {
+                <div class="manager-container">
+                    <div class="manager-img">
+                        <img src="~/imagemanager/avatar/@item.UrlImage" />
+                    </div>
+
+                    <div class="manager-information">
+                        <table>
+
+                            <tr>
+                                <td> @Html.LabelFor(modelItem => item.FirstName)</td>
+                                <td>@Html.DisplayFor(modelItem => item.FirstName)</td>
+
+                            </tr>
+                            <tr>
+                                <td>@Html.LabelFor(modelItem => item.LastName)</td>
+                                <td>@Html.DisplayFor(modelItem => item.LastName)</td>
+
+                            </tr>
+                            <tr>
+                                <td>@Html.LabelFor(modelItem => item.Address)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Address)</td>
+
+                            </tr>
+                            <tr>
+                                <td>@Html.LabelFor(modelItem => item.PhoneNumber)</td>
+                                <td>@Html.DisplayFor(modelItem => item.PhoneNumber)</td>
+
+                            </tr>
+                            <tr>
+                                <td>@Html.LabelFor(modelItem => item.BirthDate)</td>
+                                <td>@Html.DisplayFor(modelItem => item.BirthDate)</td>
+
+                            </tr>
+                         
+                            <tr>
+                                <td>@Html.LabelFor(modelItem => item.Email)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+
+                            </tr>
+
+                            <tr>
+                                <td>@Html.LabelFor(modelItem => item.NativePlace)</td>
+                                <td>@Html.DisplayFor(modelItem => item.NativePlace)</td>
+
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <div class="manager-description">
+                        <p>@Html.LabelFor(modelItem => item.RoleName) : <span>@Html.DisplayFor(modelItem => item.RoleName)</span></p>
+                        @Html.Raw(item.Describe)
+                    </div>
+                </div>
+            }
+        }
+    }
+}
 
 @section BoxListCategory {
 

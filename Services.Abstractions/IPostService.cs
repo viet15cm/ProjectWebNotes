@@ -14,7 +14,7 @@ namespace Services.Abstractions
         Task<IEnumerable<Post>> GetAllAsync(IExpLinqEntity<Post> expLinqEntity = default, CancellationToken cancellationToken = default);
 
         Task<Post> GetByIdAsync(string postId, IExpLinqEntity<Post> expLinqEntity = default, CancellationToken cancellationToken = default);
-        PagedList<PostDto> Posts(PostParameters postParameters);
+        PagedList<PostDto> Posts(QueryStringParameters postParameters);
 
         Task<PostDto> CreateAsync(PostForCreationDto postForCreationDto, CancellationToken cancellationToken = default);
 

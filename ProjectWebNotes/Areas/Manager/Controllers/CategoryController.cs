@@ -21,7 +21,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
     public class CategoryController : BaseController
     {
 
-
+        public const string admin = "_listallCategorys";
         private readonly IFileServices _fileServices;
         public CategoryController(IServiceManager serviceManager,
                                 IMemoryCache memoryCache,

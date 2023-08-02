@@ -1,31 +1,4 @@
 ﻿@model Pagin
-@*@{
-    var totalPages = Model.TotalPages;
-    var currentPage = Model.CurrentPage;
-   
-    var urlAction = Model.UrlAction;
-    bool HasPrevious = Model.CurrentPage > 1;
-    bool HasNext = Model.CurrentPage < Model.TotalPages;
-
-    Func<int?, string> generateUrl;
-    
-    if (Model.IsPage)
-    {
-        generateUrl = (int? _pagenumber) =>
-        {
-            return Url.Page(urlAction, new { pageNumber = _pagenumber });
-        };
-    }
-    else
-    {
-        generateUrl = (int? _pagenumber) =>
-        {
-            return Url.Action(urlAction, new { pageNumber = _pagenumber });
-        };
-    //}
-    
-
-}*@
 
 @{
     int currentPage = Model.CurrentPage;
@@ -163,6 +136,35 @@
         </li>
     }
 </ul>
+
+
+@*@{
+    var totalPages = Model.TotalPages;
+    var currentPage = Model.CurrentPage;
+
+    var urlAction = Model.UrlAction;
+    bool HasPrevious = Model.CurrentPage > 1;
+    bool HasNext = Model.CurrentPage < Model.TotalPages;
+
+    Func<int?, string> generateUrl;
+
+    if (Model.IsPage)
+    {
+        generateUrl = (int? _pagenumber) =>
+        {
+            return Url.Page(urlAction, new { pageNumber = _pagenumber });
+        };
+    }
+    else
+    {
+        generateUrl = (int? _pagenumber) =>
+        {
+            return Url.Action(urlAction, new { pageNumber = _pagenumber });
+        };
+    //}
+
+
+}*@
 
 
 

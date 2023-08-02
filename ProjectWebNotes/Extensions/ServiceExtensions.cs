@@ -72,41 +72,25 @@ namespace ProjectWebNotes.Extensions
 
             services.AddAuthorization(options => {
 
-                options.AddPolicy("Admin", builder => {
+
+                options.AddPolicy("Administrator", builder => {
                     builder.RequireAuthenticatedUser();
-                    builder.RequireRole("Admin");
+                    builder.RequireRole("Administrator");
 
                 });
 
-                options.AddPolicy("ProEmployee", builder =>
-                {
+                options.AddPolicy("Admin", builder => {
                     builder.RequireAuthenticatedUser();
-                    builder.RequireRole("Admin", "ProEmployee");
+                    builder.RequireRole("Administrator", "Admin");
 
                 });
 
                 options.AddPolicy("Employee", builder =>
                 {
                     builder.RequireAuthenticatedUser();
-                    builder.RequireRole("Admin", "Employee", "ProEmployee");
+                    builder.RequireRole("Administrator", "Admin", "Employee");
 
                 });
-
-                //options.AddPolicy("EmployeeSharedpostCategory", builder =>
-                //{
-                //    builder.RequireAuthenticatedUser();
-                //    builder.RequireRole("Admin", "Employee", "ProEmployee");
-
-                //    builder.RequireClaim("sharedpost", "sharedpost");
-                //});
-
-                //options.AddPolicy("EmployeeSharedAdvancedAddChildPost", builder =>
-                //{
-                //    builder.RequireAuthenticatedUser();
-                //    builder.RequireRole("Admin", "ProEmployee");
-
-                //    builder.RequireClaim("advancedaddchildpost", "advancedaddchildpost");
-                //});
 
             });
 

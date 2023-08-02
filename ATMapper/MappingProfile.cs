@@ -20,6 +20,8 @@ namespace ATMapper
             
             CreateMap<Post, PostDto>();
 
+            CreateMap<PostDto, PostSlugCategoryDto>();
+
             CreateMap<Post, PostForCreationDto>();
 
             CreateMap<Post, PostForUpdateDto>();

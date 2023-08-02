@@ -30,7 +30,7 @@ namespace ProjectWebNotes.Security.Requirements
 
             var post = await _context.Posts.FirstOrDefaultAsync(x => x.Id == PostId);
 
-            if (context.User.IsInRole("Admin"))
+            if (context.User.IsInRole("Admin") || context.User.IsInRole("Administrator"))
             {
                 context.Succeed(requirement);
                 await Task.CompletedTask;

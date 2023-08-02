@@ -30,7 +30,7 @@ namespace Domain.Repository
             Update(post);
         }
 
-        public PagedList<Post> Posts(PostParameters postParameters)
+        public PagedList<Post> Posts(QueryStringParameters postParameters)
         {
             return  PagedList<Post>.ToPagedList(FindAll().OrderByDescending(on => on.DateCreate),
                     postParameters.PageNumber,

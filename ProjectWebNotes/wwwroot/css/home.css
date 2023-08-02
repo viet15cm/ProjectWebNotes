@@ -194,3 +194,60 @@ body {
 
 /*background black*/
 
+.manager-container {
+    margin-top: 20px;
+    padding: 10px;
+   box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px;
+   border: 1px solid white;
+}
+
+.manager-container::after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.manager-img {
+    float: left;
+    width: 20%;
+
+}
+
+.manager-img img{
+    width: 100%;
+    height: auto;
+}
+
+.manager-information {
+    
+    float: left;
+    font-style: oblique;
+     padding-left :20px;
+    width: 70%;
+}
+
+.manager-description{
+
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+
+}
+
+.manager-information table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.manager-information th, td {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    text-align: left;
+    padding: 8px;
+}
+
+.manager-information tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.2);   
+}

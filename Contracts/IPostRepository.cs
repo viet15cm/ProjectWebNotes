@@ -9,7 +9,7 @@ namespace Contracts
     public interface IPostRepository : IRepositoryBase<Post>
     {
 
-        PagedList<Post> Posts(PostParameters postParameters);
+        PagedList<Post> Posts(QueryStringParameters postParameters);
         void Insert(Post post);
         void Remove(Post post);
         void Edit(Post post);

@@ -352,7 +352,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             var post = await _serviceManager.PostService.UpdateAsync(id, postForUpdateDto);
             StatusMessage = $"Cập nhật thành bài viết #{post.Title}#";
             _cache.Remove(_KeyCategory);
-            return RedirectToAction("editpost", new { pageNumber = postParameters.PageNumber});
+            return RedirectToAction("editpost", new { pagenumber = postParameters.PageNumber});
         }
 
         [HttpGet]

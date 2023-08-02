@@ -2,35 +2,38 @@
 @{
     var statusMessage = TempData["StatusMessage"] as string;
 }
+
 <h2>Danh sách bài viết</h2>
  <partial name="_MessageBoxPartial" model="@statusMessage" />
 <table class="table table-dark table-striped table-sm">
     <thead>
         <tr>
            
-            <th scope="col">ID</th>
-            <th scope="col">Tiêu đề</th>  
+            <th scope="col">Tiêu đề</th>
+            <th scope="col">Slug</th>
             <th scope="col"></th>
-            <th scope="col">Tùy chọn</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
         </tr>      
     </thead>
       <tbody>
         @foreach (var item in Model)
         {
              <tr>
-              @*<th> @item.Serial</th>*@
-              <th> @item.Id</th>
-              <th> @item.Title</th>
+              <td> @item.Title</td>
+                <td> @item.Slug</td>
                 <td>
                     @Html.ActionLink("Chi tiết", "detail" , "post" , new{id = item.Id})
                 </td>
+
+                 <td>
+                    <a asp-action="EditPost" asp-route-pagenumber="@Model.CurrentPage" asp-controller="Post" asp-route-id="@item.Id">
+                     Sửa
+                    </a>
+                </td>
               <td>
-                <a asp-action="EditPost" asp-route-page="@Model.CurrentPage" asp-controller="Post" asp-route-id="@item.Id" >
-                    Sửa
-                </a>
-                |
-                 <a  asp-action="DeletePost"  asp-route-page="@Model.CurrentPage" asp-controller="Post" asp-route-id="@item.Id" >
-                    Xóa
+                <a asp-action="DeletePost" asp-route-pagenumber="@Model.CurrentPage" asp-controller="Post" asp-route-id="@item.Id">
+                Xóa
                 </a>
               </td>
             </tr>
