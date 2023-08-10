@@ -183,11 +183,11 @@ body {
 /*categorysidbar*/
 
 .bd-left {
-    width: 20%;
+    width: 25%;
     float: left;
     padding-bottom: 35px;
     padding: 10px 0px 10px 0px;
-    border: 1px solid white;
+  
     border-top: none;
     margin: 0px 0px 60px 0px;
 }
@@ -204,7 +204,7 @@ body {
 
 
 .bd-main {
-    width: 80%;
+    width: 75%;
     float: left;
    
     margin-bottom: 50px;
@@ -220,6 +220,9 @@ body {
 
 .main-content-introduce {
     padding-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
 }
 
 .main-content-introduce::after {
@@ -256,11 +259,24 @@ body {
 .list-title-curent ul li a {
     text-decoration: none;
 }
+.link-curent {
+    padding: 0px;
 
+}
+
+.link-curent li{
+    list-style: none;
+}
+
+.link-curent li a {
+    text-decoration: none;
+}
 .main-content-title {
    
     color: #fba056;
     font-style: oblique;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 .font-size-prarent-post {
     font-size: 30px;
@@ -397,6 +413,11 @@ body {
     padding-bottom: 10px;
 }
 
+.categorysidebar-menu-post li {
+    margin-bottom: 8px;
+}
+
+
 .badge {
     display: inline-block;
     padding: 0.35em 0.65em;
@@ -420,7 +441,7 @@ body {
 }
 
 .categorysidebar-menu-post {
-    margin-left: 0px;
+    margin-left: 24px;
     margin-top: 9px;
 }
 
@@ -437,6 +458,10 @@ body {
     padding-top: 3px;
     padding-right: 7px;
     padding-left: 0px;
+}
+
+.categorysidebar-title-post a {
+    display: block;
 }
 
 .tree-icon-mycollapse span::after {
@@ -478,9 +503,9 @@ body {
 }
 
 .active-link {
-    text-decoration: underline;
+    /*text-decoration: underline;*/
     color: #fba056;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 .categorysidebar-menu-post a {
@@ -513,7 +538,7 @@ body {
 
 .db-description {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: bold;
 }
 
 .db-description-category {
@@ -532,7 +557,8 @@ body {
 
 .db-description-category p {
     min-height: 200px;
-    text-align: left;
+    text-align : justify ;
+    font-weight: bold;
 }
 
 .db-description-category img {
@@ -560,6 +586,26 @@ body {
     height: auto;
     float: left;
 }
+.category-introduce-box a {
+    text-decoration: none;
+    font-weight: bold;
+}
+.category-introduce-box p {
+    font-weight: bold;
+    text-align : justify;
+    height: 100px;
+    overflow-y: auto;
+}
+
+.category-introduce-box p::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+.category-introduce-box p::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
 
 /*//careful*/
 

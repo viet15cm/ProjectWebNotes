@@ -169,6 +169,10 @@
       "PackagePath": "staticwebassets\\Img\\Avartar.jpg"
     },
     {
+      "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\Icon-default.png",
+      "PackagePath": "staticwebassets\\Img\\Icon-default.png"
+    },
+    {
       "Id": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\banner-c-sharp.jpg",
       "PackagePath": "staticwebassets\\Img\\banner-c-sharp.jpg"
     },

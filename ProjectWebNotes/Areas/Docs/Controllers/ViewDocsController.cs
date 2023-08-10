@@ -47,7 +47,7 @@ namespace ProjectWebNotes.Areas.Docs.Controllers
 
                 // Thiết lập cache - lưu vào cache
                 var cacheEntryOptions = new MemoryCacheEntryOptions()
-                    .SetSlidingExpiration(TimeSpan.FromMinutes(200));
+                    .SetSlidingExpiration(TimeSpan.FromMinutes(300));
                 _cache.Set(_KeyListCategorys, categories, cacheEntryOptions);
             }
             

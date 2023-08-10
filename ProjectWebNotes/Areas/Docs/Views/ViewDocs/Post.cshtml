@@ -6,21 +6,35 @@
     var categorys = ViewData["categorys"] as IEnumerable<Category>;
     var category = ViewData["currentCategory"] as Category; 
 
+    ViewData["Title"] = category.Title + "-" + Model.Title;
+
 }
 
 <div class="main-content">
     
     <div class="main-content-introduce">
 
-        
+        <ul class="link-curent">
+            <li>
+                <span><i class="bi bi-chevron-bar-right"></i></span>
+                <a style="color: #0065b3" asp-area="Docs" asp-controller="ViewDocs" asp-action="index" asp-route-category="@category.Slug">@category.Title</a>
+
+                @*<a style="color: #624991;" asp-area="Docs" asp-controller="ViewDocs" asp-action="index" asp-route-category="@category.Slug" asp-route-post="@Model.Slug">@Model.Title</a>*@
+            </li>
+
+        </ul>
+        <h2 class="main-content-title">
+            @Model.Title
+        </h2>
         <div class="list-title-curent">
             <ul>
                 <li>
-                    <a style="color: #0065b3" asp-area="Docs" asp-controller="ViewDocs" asp-action="index" asp-route-category="@category.Slug">@category.Title</a>
-                    <span><i class="bi bi-chevron-bar-right"></i></span>
-                    <a style="color: #624991;" asp-area="Docs" asp-controller="ViewDocs" asp-action="index" asp-route-category="@category.Slug" asp-route-post="@Model.Slug">@Model.Title</a>
+                    <a><span class="badge bg-primary"><i class="bi bi-check"></i> Thích</span></a>
                 </li>
-                
+                <li>
+                    <a><span class="badge bg-primary"><i class="bi bi-share"></i> Chia Sẻ</span></a>
+                </li>
+
             </ul>
         </div>
         <div class="author-date">
@@ -28,10 +42,7 @@
         </div>
 
     </div>
-    
-    <h2 class="main-content-title">
-        @Model.Title
-    </h2>
+ 
     <div class="db-post-content">
 
         @if (@Model?.Description != null)

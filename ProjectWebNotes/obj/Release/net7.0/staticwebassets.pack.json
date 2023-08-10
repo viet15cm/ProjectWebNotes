@@ -21,12 +21,16 @@
       "PackagePath": "staticwebassets\\ImageManager\\Avatar\\230510921_31ba5a6f.jpg"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\Avatar\\230904925_185d792f.jpg",
-      "PackagePath": "staticwebassets\\ImageManager\\Avatar\\230904925_185d792f.jpg"
-    },
-    {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\Avatar\\231314745_467cc45b.jpg",
       "PackagePath": "staticwebassets\\ImageManager\\Avatar\\231314745_467cc45b.jpg"
+    },
+    {
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\Avatar\\231424087_bf9fdd45.jpg",
+      "PackagePath": "staticwebassets\\ImageManager\\Avatar\\231424087_bf9fdd45.jpg"
+    },
+    {
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\Avatar\\235132192_7aee7641.jpg",
+      "PackagePath": "staticwebassets\\ImageManager\\Avatar\\235132192_7aee7641.jpg"
     },
     {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\Avatar\\235210144_e4012b81.jpg",
@@ -163,6 +167,10 @@
     {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Img\\Avartar.jpg",
       "PackagePath": "staticwebassets\\Img\\Avartar.jpg"
+    },
+    {
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Img\\Icon-default.png",
+      "PackagePath": "staticwebassets\\Img\\Icon-default.png"
     },
     {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Img\\banner-c-sharp.jpg",

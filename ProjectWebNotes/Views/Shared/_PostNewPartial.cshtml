@@ -1,0 +1,39 @@
+﻿@model PagedList<PostSlugCategoryDto>
+@{
+    var posts = Model;
+
+    var paging = new Pagin()
+    {
+        UrlAction = "index",
+        CurrentPage = posts.CurrentPage,
+        TotalPages = posts.TotalPages,
+    };
+}
+<ul>
+
+    @foreach (var post in posts)
+    {
+        @if (post?.SlugCategory is null)
+        {
+            <li>
+                <a href="#">@post.Title</a>
+                <span class="date">
+                    @post.DateCreate
+                </span>
+                <span style="font-style: oblique;" class="text-danger">(Chờ hoàn thành )</span>
+            </li>
+        }
+        else
+        {
+            <li>
+                <a asp-area="Docs" asp-controller="ViewDocs" asp-action="index" asp-route-category="@post.SlugCategory" asp-route-post="@post.Slug">@post.Title</a>
+                <span class="date">
+                    @post.DateCreate
+                </span>
+            </li>
+        }
+
+    }
+    @await Html.PartialAsync("_PaginPartial", paging)
+</ul>
+

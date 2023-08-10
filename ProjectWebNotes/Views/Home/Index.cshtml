@@ -4,7 +4,7 @@
 
 @{
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
-
+    ViewData["Title"] = "Home";
     var admin = ViewData["administrator"] as Administrator;
     var posts = ViewData["posts"] as PagedList<PostSlugCategoryDto>;
 
@@ -14,13 +14,6 @@
     {
         name = admin.LastName + " " + admin.FirstName;
     }
-
-    var paging = new Pagin()
-    {
-        UrlAction = "index",
-        CurrentPage = posts.CurrentPage,
-        TotalPages = posts.TotalPages,
-    };
 
 
 }
@@ -36,7 +29,11 @@
             }
 
             <h5 class="mb-2"><strong>@name </strong></h5>
-            <p class="text-muted">@admin.RoleName <span class="badge bg-primary">PRO</span></p>
+            <p class="text-muted">
+                @if (admin != null)
+                {
+                    @admin.RoleName
+                } <span class="badge bg-primary">PRO</span></p>
         </div>
     </div>
    <div class="run-source">
@@ -68,47 +65,22 @@
 
         </ul>
     </div>
-
-    @await Component.InvokeAsync("ViewListCategory", Model)
-   
+    @if (Model != null)
+    {
+        @await Component.InvokeAsync("ViewListCategory", Model)
+    }
+ 
     <div class="introduce">
-        <div class="new-post">
+        <div id="newpost" class="new-post">
             <div class="new-post-title">
                 <h6>Bài Viết Mới Nhất</h6>
             </div>
             <div class="new-post-body">
-                <ul>
-  
-                    @foreach (var post in posts)
-                    {
-                        @if (post?.SlugCategory is null)
-                        {
-                            <li>
-                                <a href="#">@post.Title</a>
-                                <span class="date">
-                                    @post.DateCreate
-                                </span>
-                                <span style="font-style: oblique;" class="text-danger">(Chờ hoàn thành )</span>
-                            </li>
-                        }
-                        else
-                        {
-                            <li>
-                                <a asp-area="Docs" asp-controller="ViewDocs" asp-action="index" asp-route-category="@post.SlugCategory" asp-route-post="@post.Slug">@post.Title</a>
-                                <span class="date">
-                                    @post.DateCreate
-                                </span>
-                            </li>
-                        }
-
-
-                    }
-                    
-                        @await Html.PartialAsync("_PaginPartial", paging)
-                    
-                  
-                </ul>
-               
+                @if (posts != null)
+                {
+                    @await Html.PartialAsync("_PostNewPartial", posts)
+                }
+            
             </div>
         </div>
         <div class="commercial">
@@ -125,4 +97,90 @@
 
 @section BoxListCategory {
     @await Component.InvokeAsync(BoxListCategory.COMPONENTNAME, Model)
+
 }
+@section Scripts{
+    <script>
+
+        function getPaging(valueText) {
+
+            var numberpage = valueText;
+            $.ajax({
+                url: "/Home/NewPostPartial",
+                contentType: 'application/html; charset=utf-8',
+                data: { "PageNumber": numberpage },
+                type: 'GET',
+                dataType: 'html',
+                success: function (response) {
+                    debugger
+
+                    $("#newpost").find(".new-post-body").html(response);
+                },
+                error: function (response) {
+                    debugger
+                    alert(response);
+                }
+            });
+        }
+
+        $(document).ready(function () {
+
+            //$("ul.pagination").on("click", "li", function () {
+
+            //    debugger
+            //    var numberpage = $(this).attr("value");
+
+            //    $.ajax({
+            //        url: "/Home/NewPostPartial",
+            //        contentType: 'application/html; charset=utf-8',
+            //        data: { "PageNumber": numberpage },
+            //        type: 'GET',
+            //        dataType: 'html',
+            //        success: function (response) {
+            //            debugger
+
+            //            $("#newpost").find(".new-post-body").html(response);
+            //        },
+            //        error: function (response) {
+            //            debugger
+            //            alert(response);
+            //        }
+            //    });
+
+
+
+            //});
+
+            //let x = document.getElementById('pagination').getElementsByTagName('li');
+
+            //for (let i = 0; i < x.length; i++) {
+
+            //    x[i].onclick = function () {
+            //        var numberpage = this.value;
+            //        $.ajax({
+            //            url: "/Home/NewPostPartial",
+            //            contentType: 'application/html; charset=utf-8',
+            //            data: { "PageNumber": numberpage },
+            //            type: 'GET',
+            //            dataType: 'html',
+            //            success: function (response) {
+            //                debugger
+
+            //                $("#newpost").find(".new-post-body").html(response);
+            //            },
+            //            error: function (response) {
+            //                debugger
+            //                alert(response);
+            //            }
+            //        });
+
+            //    };
+            //}
+
+         
+        });
+
+
+    </script>
+}
+

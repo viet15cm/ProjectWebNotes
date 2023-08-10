@@ -1,6 +1,7 @@
 ﻿@model Pagin
 
 @{
+
     int currentPage = Model.CurrentPage;
     int countPages = Model.TotalPages;
     Func<int?, string> generateUrl;
@@ -87,12 +88,12 @@
 
 }
 
-<ul class="pagination">
+<ul id="pagination" class="pagination">
     <!-- Previous page link -->
     @if (preview != null)
     {
-        <li class="page-item">
-            <a class="page-link" href="@generateUrl(preview)">Trang trước</a>
+        <li onclick="Paging(this.value)" value="@preview" class="page-item">
+            <a class="page-link" @*href="@generateUrl(preview)"*@>Trang trước</a>
         </li>
     }
     else
@@ -107,15 +108,15 @@
     {
         if (pageitem != currentPage)
         {
-            <li class="page-item">
-                <a class="page-link" href="@generateUrl(pageitem)">
+            <li onclick="getPaging(this.value)" value="@pageitem" class="page-item">
+                <a  class="page-link" @*href="@generateUrl(pageitem)"*@>
                     @pageitem
                 </a>
             </li>
         }
         else
         {
-            <li class="page-item active" aria-current="page">
+            <li onclick="getPaging(this.value)" value="@pageitem" class="page-item active" aria-current="page">
                 <a class="page-link" href="#">@pageitem <span class="sr-only">(current)</span></a>
             </li>
         }
@@ -125,8 +126,8 @@
     <!-- Next page link -->
     @if (next != null)
     {
-        <li class="page-item">
-            <a class="page-link" href="@generateUrl(next)">Trang sau</a>
+        <li onclick="getPaging(this.value)"  value="@next" class="page-item">
+            <a class="page-link"@* href="@generateUrl(next)"*@>Trang sau</a>
         </li>
     }
     else

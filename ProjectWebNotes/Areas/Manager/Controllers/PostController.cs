@@ -93,6 +93,18 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             return await _serviceManager.PostService.GetAllAsync();
         }
 
+        [HttpGet]
+        public  PartialViewResult PostsPartial(int PageNumber)
+        {
+            var postParameters = new PostParameters() { PageNumber = PageNumber };
+
+            var posts = _serviceManager.PostService.Posts(postParameters);
+
+            ViewData["Posts"] = posts;
+
+            return PartialView("_PostPagingPartial", posts);
+        }
+
 
         public class BidingPostCategory
         {

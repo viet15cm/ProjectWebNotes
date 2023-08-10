@@ -3,35 +3,33 @@
 @model IEnumerable<Manager>
 
 @{
-    ViewData["Title"] = "Thành viên Website";
+    ViewData["Title"] = "Thông tin";
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
 
     var categorys = ViewData["categorys"] as IEnumerable<Category>;
 
-    var administrator = Model.Where(x => x.RoleName.Equals(_administrator)).ToList();
-
-    var admin = Model.Where(x => x.RoleName.Equals(_admin)).ToList();
-
-    var employee = Model.Where(x => x.Equals(_employee)).ToList();
 }
 
 <div class="manager">
     @{
-        await Information(administrator);
-        await Information(admin);
-        await Information(employee);
+       await  Information(Model);
     }
 
 </div>
 
 
 @{
-    async Task  Information(List<Manager> managers)
+    async Task Information(IEnumerable<Manager> managers)
     {
-        if (managers?.Count > 0)
+        if (managers?.Count() > 0)
         {
             @foreach (var item in managers)
             {
+                var role = "";
+                @if (item.Roles?.Count > 0)
+                {
+                    role = "[" + string.Join(", ", item.Roles.Select(s => string.Format("'{0}'", s))) + "]";
+                 }
                 <div class="manager-container">
                     <div class="manager-img">
                         <img src="~/imagemanager/avatar/@item.UrlImage" />
@@ -82,7 +80,8 @@
                     </div>
 
                     <div class="manager-description">
-                        <p>@Html.LabelFor(modelItem => item.RoleName) : <span>@Html.DisplayFor(modelItem => item.RoleName)</span></p>
+                        <p>@Html.LabelFor(modelItem => item.RoleName) : @role <span>@Html.DisplayFor(modelItem => item.RoleName)</span></p>
+                        
                         @Html.Raw(item.Describe)
                     </div>
                 </div>

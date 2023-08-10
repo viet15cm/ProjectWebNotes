@@ -182,10 +182,10 @@
 /*categorysidbar*/
 
 .bd-left {
-    width: 20%;
+    width: 25%;
     float: left;
     padding: 10px 0px 10px 0px;
-    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .05);
+    box-shadow: rgba(0, 0, 0, .05)initial;
     margin: 0px 0px 60px 0px;
 }
 
@@ -202,7 +202,7 @@
 }
 
 .bd-main {
-    width: 80%;
+    width: 75%;
     float: left;
     margin-bottom: 50px;
 }
@@ -216,6 +216,9 @@
 
 .main-content-introduce {
     padding-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(0 0 0 / 20%);
+    padding-bottom: 10px;
 }
 .main-content-introduce::after {
     content: ".";
@@ -246,10 +249,19 @@
     width: 50%;
     
 }
-
+.link-curent li {
+    
+    list-style: none;
+}
+.link-curent{
+    
+    padding: 0px;
+}
+.link-curent li a{
+    text-decoration: none;
+}
 .list-title-curent ul li a {
-   text-decoration: none;
-   
+    text-decoration: none;
 }
 
 .font-size-prarent-post {
@@ -269,10 +281,12 @@
 }
 
 .main-content-title {
-    
-   clear: right;
+    clear: right;
     color: #800;
     font-style: oblique;
+    font-weight: bold;
+
+    margin-bottom: 15px;
 }
 
 .rank-content {
@@ -358,8 +372,12 @@
 }
 
 .categorysidebar-menu-post{
-    margin-left: 0px;
+    margin-left: 24px;
     margin-top: 9px;
+}
+
+.categorysidebar-menu-post li {
+    margin-bottom: 8px;
 }
 
 .title-category-content {
@@ -484,9 +502,10 @@
 }
 
 .active-link {
-    text-decoration: underline;
+   /* text-decoration: underline;*/
     color: #800;
     font-weight: 500;
+
 }
 
 .offcanvas-body {
@@ -510,10 +529,10 @@
     font-weight: 500;
 }
 
-.db-description{
-  
+.db-description {
     font-size: 16px;
     font-weight: 400;
+    font-weight: bold;
 }
 
 .db-description-category {
@@ -531,10 +550,11 @@
     content: ".";
 }
 .db-description-category p {
-    
-    vertical-align: bottom;
     min-height: 200px;
-}   
+    text-align: justify;
+    font-weight: bold;
+}
+ 
 .db-description-category img{
     padding-right: 10px;
     width: 200px;
@@ -557,12 +577,30 @@
 }
 .category-introduce-box h5 a{
     display: block;
+    font-weight: bold;
+    text-decoration: none;
 }
 .category-introduce-box img{
     padding-right: 10px;
     width: 150px;
     height:auto;
     float: left;
+}
+
+.category-introduce-box p {
+    font-weight: bold;
+    text-align : justify;
+    height: 100px;
+    overflow-y: auto;
+}
+
+.category-introduce-box p::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+.category-introduce-box p::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 

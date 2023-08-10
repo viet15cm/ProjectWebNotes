@@ -1,6 +1,13 @@
 ﻿@model PagedList<PostDto>
 @{
     var statusMessage = TempData["StatusMessage"] as string;
+
+    var paging = new Pagin()
+            {
+                UrlAction = "index",
+                CurrentPage = Model.CurrentPage,
+                TotalPages = Model.TotalPages,
+            };
 }
 
 <h2>Danh sách bài viết</h2>
@@ -41,3 +48,4 @@
       </tbody>
    
 </table>
+@await Html.PartialAsync("_PaginPartial", paging)

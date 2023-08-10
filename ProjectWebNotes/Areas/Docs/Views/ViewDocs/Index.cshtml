@@ -1,7 +1,8 @@
-﻿
-@model Category
+﻿@model Category
 @{
     var categorys = ViewData["categorys"] as IEnumerable<Category>;
+
+    ViewData["Title"] = Model.Title;
    
 }
 
@@ -11,33 +12,50 @@
 
         <p style="text-align: right"><i class="bi bi-alarm"></i> @DateTime.Now.ToString()</p>
 
-    </div>
-    
-    <h2 class="main-content-title">
-        @Model.Title
-    </h2>
-    <div class="db-description-category">      
-           
-        @if (Model.IConFont != null)
-        {
-            <img src="~/ImageManager/IconCategory/@Model.IConFont" />
-        }else
-        {
-            <img src="~/img/aspnetcore.png" />
-        }
-        <p>@Model.Description</p>
+        <h2 class="main-content-title">
+            @Model.Title
+        </h2>
+        <div class="db-description-category">
+
+            @if (Model.IConFont != null)
+            {
+                <img src="~/ImageManager/IconCategory/@Model.IConFont" />
+            }
+            else
+            {
+                <img src="~/img/icon-default.png" />
+            }
+            <p>@Model.Description</p>
+
+        </div>
+        <div class="list-title-curent">
+            <ul>
+                <li>
+                    <a><span class="badge bg-primary"><i class="bi bi-check"></i> Thích</span></a>
+                </li>
+                <li>
+                    <a><span class="badge bg-primary"><i class="bi bi-share"></i> Chia Sẻ</span></a>
+                </li>
+
+            </ul>
+        </div>
+
 
     </div>
-    <div class="db-categorry-content">
+    
+    
+    <div class="db-categorry-content mt-3">
 
         @if (Model?.Content != null)
         {
             @Html.Raw(Model.Content)
         }
     </div>
+
     
     @if (Model.CategoryChildren?.Count > 0)
     {
+        
         <div class="db-category-introduce-box">
             @foreach (var category in Model.CategoryChildren)
             {
@@ -47,13 +65,12 @@
                         <img src="~/ImageManager/IconCategory/@category.IConFont" />
                     }else
                     {
-                        <img src="~/img/aspnetcore.png" />
+                        <img src="~/img/icon-default.png" />
                     }
-                    
+                    <h5>
+                        <a asp-controller="ViewDocs" asp-action="Index" asp-route-category="@category.Slug">@category.Title</a>
+                    </h5>
                     <p>
-                        <h5>
-                            <a asp-controller="ViewDocs" asp-action="Index" asp-route-category="@category.Slug">@category.Title</a>
-                        </h5>
                         @category.Description
                     </p>
                 </div>

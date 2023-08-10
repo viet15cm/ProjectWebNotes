@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CNfQ/mkV7N94x1o9KjdFORvyLZmemXpfZK5kKMbfMnk=",
+  "Hash": "6+PWSN4J/KP6xQMwGSNzISRmsFG9S2UBFPtUpD1F4lE=",
   "Source": "ProjectWebNotes",
   "BasePath": "_content/ProjectWebNotes",
   "Mode": "Default",
@@ -11898,6 +11898,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Img\\default.jpg"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\Img\\Icon-default.png",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "Img/Icon-default.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\Icon-default.png"
     },
     {
       "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\js\\dropdownBtn.js",
