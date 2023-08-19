@@ -12,9 +12,8 @@
         {
             @foreach (var item in Model)
             {
-                var count = item.PostCategories?.Count() ?? 0;
 
-                if (item.ParentCategory == null)
+                if (item.ParentCategoryId == null)
                 {
                     <div class="main-body-content-child">
 
@@ -40,7 +39,7 @@
                             </span>
 
                             <span class="count-parent-category">
-                                @count
+                                <i class="bi bi-stars"></i>
                             </span>
 
                         </h5>
@@ -50,8 +49,6 @@
                                 {
                                     await RenderCategory(item.CategoryChildren, 14);
                                 }
-
-
                             }
                         </div>
                     </div>
@@ -77,7 +74,6 @@
 
         foreach (var category in categories)
         {
-            var count = category.PostCategories?.Count() ?? 0;
 
             <li style="position: relative" class="d-flex justify-content-starts">
                 @if (category.IConFont != null)
@@ -98,7 +94,9 @@
                       <a style="font-size: @fontz;" asp-area="Docs" asp-controller="ViewDocs" asp-action="index" asp-route-category="@category.Slug">@category.Title </a>
 
                 </span>
-                <span class="count-post-category">@count</span>
+                <span class="count-post-category">
+                    <i class="bi bi-stars"></i>
+                </span>
             </li>
 
             if (category.CategoryChildren?.Count >= 0)

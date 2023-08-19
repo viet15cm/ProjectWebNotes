@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "Xóa";
 
-    var category = ViewData["category"] as CategoryBranchPosts;    
+    var category = ViewData["category"] as Category;    
 }
 
 <div class="container">
@@ -15,7 +15,7 @@
         </div>
         <div class="col-md-4">
             <h2>@ViewBag.Title</h2>
-            <form method="post" asp-route-id="@category.Category.Id" asp-route-postid="@Model.Id">
+            <form method="post" asp-route-id="@Model.Id">
 
                 <dl>
                     <dt>

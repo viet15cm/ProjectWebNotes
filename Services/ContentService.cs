@@ -54,7 +54,7 @@ namespace Services
             var content = await _repositoryManager
                .Content
                .GetByIdAsync(Id,
-               ExpLinqEntity<Content>.ResLinqEntity(ExpExpressions.ExtendInclude<Content>(x => x.Include(x => x.ContentChildrens))), cancellationToken);
+               ExtendedQuery<Content>.Set(ExtendedInclue.Set<Content>(x => x.Include(x => x.ContentChildrens))), cancellationToken);
 
 
             if (content.ContentChildrens?.Count > 0)
@@ -74,12 +74,13 @@ namespace Services
             return ObjectMapper.Mapper.Map<ContentDto>(content);
         }
 
-        public async Task<IEnumerable<Content>> GetAllAsync(IExpLinqEntity<Content> expLinqEntity = null, CancellationToken cancellationToken = default)
+
+        public async Task<IEnumerable<Content>> GetAllAsync(IExtendedQuery<Content> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
             return await _repositoryManager.Content.GetAllAsync(expLinqEntity, cancellationToken);
         }
 
-        public async Task<Content> GetByIdAsync(int Id, IExpLinqEntity<Content> expLinqEntity = null, CancellationToken cancellationToken = default)
+        public async Task<Content> GetByIdAsync(int Id, IExtendedQuery<Content> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
             return await _repositoryManager.Content.GetByIdAsync(Id, expLinqEntity, cancellationToken);
         }
@@ -90,7 +91,7 @@ namespace Services
             var content = await _repositoryManager
                 .Content
                 .GetByIdAsync(Id,
-                ExpLinqEntity<Content>.ResLinqEntity(ExpExpressions.ExtendInclude<Content>(x => x.Include(x => x.ContentChildrens).Include(x=> x.ParentContent))), cancellationToken);
+                ExtendedQuery<Content>.Set(ExtendedInclue.Set<Content>(x => x.Include(x => x.ContentChildrens).Include(x=> x.ParentContent))), cancellationToken);
 
             if (content == null)
             {

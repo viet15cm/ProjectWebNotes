@@ -10,111 +10,94 @@ using Microsoft.AspNetCore.Mvc.ActionConstraints;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Hosting;
+using ProjectWebNotes.Areas.Manager.Controllers;
 using ProjectWebNotes.Areas.Manager.Models;
 using Services.Abstractions;
+using System.Threading;
 
 namespace ProjectWebNotes.Areas.Docs.Controllers
 {
     [Area("Docs")]
-    public class ViewDocsController : Controller
+    public class ViewDocsController : BaseController
     {
-        protected readonly IServiceManager _serviceManager;
-
-        protected readonly IMemoryCache _cache;
-
-        private const string _KeyCategory = "_KeyCategory";
-
-        private const string _KeyListCategorys = "_listallCategorys";
-        public ViewDocsController(IServiceManager serviceManager , IMemoryCache memoryCache)
+        public ViewDocsController(IServiceManager serviceManager, IMemoryCache memoryCache, UserManager<AppUser> userManager, IAuthorizationService authorizationService, ILogger<BaseController> logger) : base(serviceManager, memoryCache, userManager, authorizationService, logger)
         {
-            _serviceManager = serviceManager;
-            _cache = memoryCache;
         }
 
-        [NonAction]
-        async Task<IEnumerable<Category>> GetAllTreeViewCategories()
-        {
-
-            IEnumerable<Category> categories;
-
-            // Phục hồi categories từ Memory cache, không có thì truy vấn Db
-            if (!_cache.TryGetValue(_KeyListCategorys, out categories))
-            {
-                categories = await _serviceManager
-                    .CategoryService
-                    .GetAllAsync(ExpLinqEntity<Category>
-                    .ResLinqEntity(null, x => x.OrderBy(x => x.Serial), true));
-
-                // Thiết lập cache - lưu vào cache
-                var cacheEntryOptions = new MemoryCacheEntryOptions()
-                    .SetSlidingExpiration(TimeSpan.FromMinutes(300));
-                _cache.Set(_KeyListCategorys, categories, cacheEntryOptions);
-            }
-            
-            categories = _cache.Get(_KeyListCategorys) as IEnumerable<Category>;
-            
-
-            return categories;
-        }
-
-        [NonAction]
-        async Task<Category> GetBySlugCategoy(string slug)
-        {
-
-            Category category;
-
-            // Phục hồi categories từ Memory cache, không có thì truy vấn Db
-            if (!_cache.TryGetValue(_KeyCategory, out category))
-            {
-
-                category = await _serviceManager
-                    .CategoryService
-                    .GetBySlugAsync(slug, ExpLinqEntity<Category>
-                    .ResLinqEntity(ExpExpressions
-                    .ExtendInclude<Category>(x => x.Include(x => x.CategoryChildren)
-                                                    .Include(x => x.PostCategories)
-                                                    .ThenInclude(x => x.Post)
-                                                    .ThenInclude(x => x.Contents)),
-                                                    x => x.OrderBy(x => x.Serial), true));
-             
-                var cacheEntryOptions = new MemoryCacheEntryOptions()
-                    .SetSlidingExpiration(TimeSpan.FromMinutes(200));
-                _cache.Set(_KeyCategory, category, cacheEntryOptions);
-            }
-
-            category = _cache.Get(_KeyCategory) as Category;
-        
-
-            if (category.Slug != slug)
-            {
-                category = await _serviceManager
-                    .CategoryService
-                    .GetBySlugAsync(slug, ExpLinqEntity<Category>
-                    .ResLinqEntity(ExpExpressions
-                    .ExtendInclude<Category>(x => x.Include(x => x.CategoryChildren)
-                                                    .Include(x => x.PostCategories)
-                                                    .ThenInclude(x => x.Post)
-                                                    .ThenInclude(x => x.Contents)), x => x.OrderBy(x => x.Serial), true));
-                // Thiết lập cache - lưu vào cache             
-                var cacheEntryOptions = new MemoryCacheEntryOptions()
-                    .SetSlidingExpiration(TimeSpan.FromMinutes(200));
-                _cache.Set(_KeyCategory, category, cacheEntryOptions);
-
-                category = _cache.Get(_KeyCategory) as Category;
-            }
-
-            return category;
-        }
-
-
-        [Route("Docs/{category?}")]
-        public async Task<IActionResult> Index([FromRoute(Name = "category")] string slugCategory, [FromQuery] string post)
+      
+        [HttpGet]
+        [Route("post/{post?}")]
+        public async Task<IActionResult> Post([FromRoute] string post)
         {
 
             //Memory cache
             var categorys = await GetAllTreeViewCategories();
 
-            if (slugCategory == null)
+            if (post is null)
+            {
+                return NotFound();
+            }
+
+            categorys = TreeViews.GetCategoryChierarchicalTree(categorys);
+
+            if (categorys is null)
+            {
+                return NotFound("Categorys is null ");
+            }
+
+            var curentPost = await _serviceManager.PostService.GetBySlugAsync(post, ExtendedQuery<Post>.Set(ExtendedInclue
+                                    .Set<Post>(x => x.Include(x => x.Category).Include(x => x.Contents)),
+                                                                    x => x.OrderBy(x => x.Serial), true));
+
+            if (curentPost.Category is null)
+            {
+                return NotFound();
+            }
+
+            var category = await _serviceManager
+                                    .CategoryService
+                                    .GetBySlugAsync(curentPost.Category.Slug, ExtendedQuery<Category>
+                                    .Set(ExtendedInclue
+                                    .Set<Category>(x => x.Include(x => x.CategoryChildren)
+                                                                   .Include(x => x.Posts)),
+                                                                    x => x.OrderBy(x => x.Serial), true));
+
+            if (category == null)
+            {
+                return NotFound("Category is null");
+            }
+
+            var listPostInCategory = category.Posts.ToList();
+
+            listPostInCategory = TreeViews.GetPostChierarchicalTree(listPostInCategory);
+
+            var listSerialPosts = new List<Post>();
+
+
+            var data = FindPostBySlug(listPostInCategory, post, listSerialPosts); // chỉnh lại code
+
+            var listSerialUrl = listSerialPosts.Select(p => p.Slug).ToList();
+            
+            ViewData["slugPost"] = curentPost.Slug;
+            ViewData["listSerialUrl"] = listSerialUrl;
+            ViewData["currentCategory"] = category;
+            ViewData["categorys"] = categorys;
+
+            curentPost.Contents = TreeViews.GetContentChierarchicalTree(curentPost.Contents);
+
+            return View(curentPost);
+
+        }
+
+        [Route("category/{category?}")]
+        [HttpGet]
+        public async Task<IActionResult> Index([FromRoute(Name = "category")] string slugCategory)
+        {
+
+            //Memory cache
+            var categorys = await GetAllTreeViewCategories();
+
+            if (slugCategory is null)
             {
                 return NotFound();
             }
@@ -126,54 +109,29 @@ namespace ProjectWebNotes.Areas.Docs.Controllers
                 return NotFound("Categorys is null ");
             }
             
-            //Memory cache
-            var category = await GetBySlugCategoy(slugCategory);
 
+            var category = await _serviceManager
+                                    .CategoryService
+                                    .GetBySlugAsync(slugCategory, ExtendedQuery<Category>
+                                    .Set(ExtendedInclue
+                                    .Set<Category>(x => x.Include(x => x.CategoryChildren)
+                                                                    .Include(x => x.Posts)),                                                                  
+                                                                    x => x.OrderBy(x => x.Serial), true));
 
             if (category == null)
             {
                 return NotFound("Category is null");
             }
 
-            var listPostInCategory = new List<Post>();
 
-            foreach (var item in category.PostCategories)
-            {
-                listPostInCategory.Add(item.Post);
-            }
+            category.Posts = TreeViews.GetPostChierarchicalTree(category.Posts.ToList());
 
-            listPostInCategory = TreeViews.GetPostChierarchicalTree(listPostInCategory);
-
-            Post postCurent = null;
-
-            var listSerialPosts = new List<Post>();
-
-            if (!string.IsNullOrEmpty(post))
-            {
-                postCurent = FindPostBySlug(listPostInCategory, post, listSerialPosts);
-
-            }
-
-            var listSerialUrl = listSerialPosts.Select(p => p.Slug).ToList();
-            
-           
-            ViewData["slugCategory"] = slugCategory;
-            ViewData["slugPost"] = post;
-            ViewData["listSerialUrl"] = listSerialUrl;
-            ViewData["listPostInCategory"] = listPostInCategory;
+            ViewData["slugPost"] = null;
+            ViewData["listSerialUrl"] = new List<string>();
             ViewData["currentCategory"] = category;
             ViewData["categorys"] = categorys;
-           
-            //ViewData["relateToPost"] = relateToPost;
-            //ViewData["currentParentCategory"] = currentParentCategory;
 
-            if (postCurent != null)
-            {
-                postCurent.Contents = TreeViews.GetContentChierarchicalTree(postCurent.Contents);
-                
-                return View("post", postCurent);
 
-            }
             return View(category);
         }
 

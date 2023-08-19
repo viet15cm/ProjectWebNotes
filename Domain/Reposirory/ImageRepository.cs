@@ -17,16 +17,16 @@ namespace Domain.Reposirory
             Update(image);
         }
   
-        public async Task<IEnumerable<Image>> GetAllAsync(IExpLinqEntity<Image> expLinqEntity = null, CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<Image>> GetAllAsync(IExtendedQuery<Image> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
            return await Queryable(expLinqEntity).ToListAsync(cancellationToken);
         }
        
-        public async Task<Image> GetByIdAsync(int Id, IExpLinqEntity<Image> expLinqEntity = null, CancellationToken cancellationToken = default)
+        public async Task<Image> GetByIdAsync(int Id, IExtendedQuery<Image> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
             return await Queryable(expLinqEntity).Where(x => x.Id.Equals(Id)).FirstOrDefaultAsync(cancellationToken);
         }
-        public async Task<Image> GetByUrlAsync(string url, IExpLinqEntity<Image> expLinqEntity = null, CancellationToken cancellationToken = default)
+        public async Task<Image> GetByUrlAsync(string url, IExtendedQuery<Image> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
             return await Queryable(expLinqEntity).Where(x => x.Url.Equals(url)).FirstOrDefaultAsync(cancellationToken);
         }

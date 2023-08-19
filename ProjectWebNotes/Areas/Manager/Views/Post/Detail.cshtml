@@ -56,11 +56,28 @@
                           @Html.ActionLink("Cập nhật", "contents", "post", new {id = Model.Id})
                     </dd>
 
+                    <dt>
+                            @Html.ActionLink("Banner post", "banner", "post" , new {id = Model.Id})
+                    </dt>
 
+                    <dd>
+                        <div>
+                            @if (@Model.Banner is null)
+                            {
+                                <span class="text-danger">Chưa có</span>
+                            }
+                            else
+                            {
+                                <img src="@Model.Banner" style="width: 50px; height: 50px; margin-top: 7px;" />
+                            }
+                        </div>
+
+                    </dd>
+                          
                     <dt>
                           @Html.ActionLink("Ảnh", "images", "post", new {id = Model.Id})
                     </dt>
-
+                        
                     <dd>
                           <div>
                               @if (Model.Images?.Count <=0)
@@ -102,22 +119,13 @@
 
 
                     <dt>
-                          @Html.ActionLink("Danh mục hiện tại", "AddItemCategory", "post", new {id = Model.Id})
+                          @Html.ActionLink("Danh mục hiện tại", "AddCategory", "post", new {id = Model.Id})
                     </dt>
 
                     <dd>
-                        @if (Model.PostCategories?.Count >0)
+                        @if (Model.Category != null)
                         {
-                            <ul>
-                                @foreach (var item in Model.PostCategories)
-                                {
-
-                                      <li>
-                                        @item.Category.Title
-                                      </li>
-                                }
-                            </ul>
-                           
+                            @Model.Category.Title
                         }else
                         {
                             <span class="text-danger">Chưa có</span>

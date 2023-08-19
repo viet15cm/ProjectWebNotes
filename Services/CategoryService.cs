@@ -53,8 +53,8 @@ namespace Services
 
             var category = await _repositoryManager
                 .Category
-                .GetByIdAsync(categoryId, ExpLinqEntity<Category>
-                .ResLinqEntity(ExpExpressions.ExtendInclude<Category>(x => x.Include(x => x.PostCategories).Include(x => x.CategoryChildren))), cancellationToken);
+                .GetByIdAsync(categoryId, ExtendedQuery<Category>
+                .Set(ExtendedInclue.Set<Category>(x => x.Include(x => x.PostCategories).Include(x => x.CategoryChildren))), cancellationToken);
 
             if (category.CategoryChildren?.Count > 0)
             {
@@ -81,13 +81,13 @@ namespace Services
         }
 
 
-        public async Task<IEnumerable<Category>> GetAllAsync(IExpLinqEntity<Category> expLinqEntity = null ,CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<Category>> GetAllAsync(IExtendedQuery<Category> expLinqEntity = null ,CancellationToken cancellationToken = default)
         {
              return await _repositoryManager.Category.GetAllAsync(expLinqEntity, cancellationToken);
 
         }
 
-        public async Task<Category> GetByIdAsync(string categoryId, IExpLinqEntity<Category> expLinqEntity = null, CancellationToken cancellationToken = default)
+        public async Task<Category> GetByIdAsync(string categoryId, IExtendedQuery<Category> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
             var category = await _repositoryManager.Category.GetByIdAsync(categoryId, expLinqEntity , cancellationToken);
 
@@ -105,7 +105,7 @@ namespace Services
             var category = await _repositoryManager
                 .Category
                 .GetByIdAsync(idCategory,
-                                        ExpLinqEntity<Category>.ResLinqEntity(ExpExpressions.ExtendInclude<Category>(x => x.Include(x => x.PostCategories).ThenInclude(x => x.Post))),
+                                        ExtendedQuery<Category>.Set(ExtendedInclue.Set<Category>(x => x.Include(x => x.PostCategories).ThenInclude(x => x.Post))),
                                         cancellationToken);
 
             if (category == null)
@@ -158,17 +158,17 @@ namespace Services
         }
 
 
-        public Category GetById(string categoryId, IExpLinqEntity<Category> expLinqEntity = null)
+        public Category GetById(string categoryId, IExtendedQuery<Category> expLinqEntity = null)
         {
             return _repositoryManager.Category.GetById(categoryId, expLinqEntity);
         }
 
-        public IEnumerable<Category> GetAll(IExpLinqEntity<Category> expLinqEntity = null)
+        public IEnumerable<Category> GetAll(IExtendedQuery<Category> expLinqEntity = null)
         {
             return _repositoryManager.Category.GetAll(expLinqEntity);
         }
 
-        public async Task<Category> GetBySlugAsync(string slug, IExpLinqEntity<Category> expLinqEntity = null, CancellationToken cancellationToken = default)
+        public async Task<Category> GetBySlugAsync(string slug, IExtendedQuery<Category> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
             var category = await _repositoryManager.Category.GetBySlugAsync(slug, expLinqEntity, cancellationToken);
 
@@ -185,7 +185,7 @@ namespace Services
             var category = await _repositoryManager
                .Category
                .GetByIdAsync(idCategory,
-                                       ExpLinqEntity<Category>.ResLinqEntity(ExpExpressions.ExtendInclude<Category>(x => x.Include(x => x.PostCategories).ThenInclude(x => x.Post))),
+                                       ExtendedQuery<Category>.Set(ExtendedInclue.Set<Category>(x => x.Include(x => x.PostCategories).ThenInclude(x => x.Post))),
                                        cancellationToken);
 
             if (category == null)
@@ -219,7 +219,7 @@ namespace Services
             var category = await _repositoryManager
               .Category
               .GetByIdAsync(idCategory,
-                                      ExpLinqEntity<Category>.ResLinqEntity(ExpExpressions.ExtendInclude<Category>(x => x.Include(x => x.PostCategories).ThenInclude(x => x.Post))),
+                                      ExtendedQuery<Category>.Set(ExtendedInclue.Set<Category>(x => x.Include(x => x.PostCategories).ThenInclude(x => x.Post))),
                                       cancellationToken);
 
             if (category == null)

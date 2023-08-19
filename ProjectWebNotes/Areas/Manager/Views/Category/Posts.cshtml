@@ -1,7 +1,7 @@
 ﻿@model PostForCreationDto
 @{
     ViewBag.Title = "Tạo bài viết";
-    var category = ViewData["category"] as CategoryBranchPosts; 
+    var category = ViewData["category"] as Category; 
     var SeletePosts = ViewData["SeletePosts"] as List<PostSelectDto>;
 }
 <div class="container">
@@ -15,7 +15,8 @@
         </div>
         <div class="col-md-4">
             <h2>@ViewBag.Title</h2>
-            <form method="post" asp-action="CreatePost" asp-route-id="@category.Category.Id">
+            <form method="post" asp-action="CreatePost" asp-route-id="@category.Id">
+                @Html.HiddenFor(x => x.CategoryId)
                   <div class="mb-3">
                     <label asp-for="@Model.Title" class="form-label"></label>
                     <input asp-for="@Model.Title"  class="form-control" >

@@ -17,7 +17,7 @@ namespace Services.Abstractions
 
         Task<IEnumerable<ImageDto>> CreateFromAsync(IEnumerable<ImageForCreateDto> imageForCreateDtos, CancellationToken cancellationToken = default);
         
-        Task<Image> GetByIdAsync(int idImage ,ExpLinqEntity<Image> expLinqEntity, CancellationToken cancellationToken = default);
+        Task<Image> GetByIdAsync(int idImage ,ExtendedQuery<Image> expLinqEntity, CancellationToken cancellationToken = default);
 
         Task<bool> DeleteFormImagesAsync(IList<int> idImage, CancellationToken cancellationToken = default);
     }

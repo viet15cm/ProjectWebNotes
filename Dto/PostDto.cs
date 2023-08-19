@@ -28,6 +28,13 @@ namespace Dto
 
         public int Serial { get; set; }
 
+        public string CategoryId { get; set; }
+
+        [Display(Name = "Tác giả")]
+        public string AuthorId { get; set; }
+
+        public string Banner { get; set; }
+
     }
     
 

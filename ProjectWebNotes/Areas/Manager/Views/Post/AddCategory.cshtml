@@ -1,34 +1,21 @@
-﻿@model PostController.BidingPostCategory
+﻿@model PostController.ViewAddCategory
 
 @{
-
-    ViewBag.Title = "Chọn gán danh mục.";
-
-    var posts = ViewData["Posts"] as IEnumerable<Post>;
-
-    var postTreeView = ViewData["TreeViewPosts"] as List<Post>;
-
-
+    ViewBag.Title = "Chọn danh mục.";
 }
 
 <div class="container">
 
     <div class="row">
-        <div class="col-md-8" id="tablePosts">
-            @{
-                @await Html.PartialAsync("_GetAllPostPartial", posts)       
-            }
-        </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
             <h2>@ViewBag.Title</h2>
-            <form method="post" asp-action="AddCategory">
-                  
-                  <div class="mb-3">
-                        <label class="form-label" asp-for="@Model.PostCategorys"></label>
-                        <select  id="multiple-select-field"  class="form-select"  asp-for="@Model.PostCategorys"
-                                asp-items="@Model.addCategory">                               
-                        </select>
-                   </div>
+            <form method="post" asp-action="AddCategory" asp-route-id="@Model.PostId" >
+                <label class="form-label" asp-for="@Model.CategoryId"></label>
+                <select class="form-select" aria-label="Default select example" asp-for="@Model.CategoryId"
+                        asp-items="@(new SelectList(@Model.categories,"Id","Title"))">
+                    <option value="">Không</option>
+                </select>
+                <span asp-validation-for="@Model.CategoryId"></span>
                     <button type="submit"  class="btn btn-primary w-100">Cập nhật</button>
                 </form>
         </div>

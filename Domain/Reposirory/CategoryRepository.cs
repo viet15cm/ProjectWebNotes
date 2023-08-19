@@ -20,17 +20,17 @@ namespace Domain.Repository
             Update(category);
         }
 
-        public IEnumerable<Category> GetAll(IExpLinqEntity<Category> expLinqEntity = null)
+        public IEnumerable<Category> GetAll(IExtendedQuery<Category> expLinqEntity = null)
         {
             return  Queryable(expLinqEntity).ToList();
         }
 
-        public async Task<IEnumerable<Category>> GetAllAsync(IExpLinqEntity<Category> expLinqEntity = null , CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<Category>> GetAllAsync(IExtendedQuery<Category> expLinqEntity = null , CancellationToken cancellationToken = default)
         {
             return await Queryable(expLinqEntity).ToListAsync(cancellationToken);
         }
 
-        public Category GetById(string categoryId, IExpLinqEntity<Category> expLinqEntity = null)
+        public Category GetById(string categoryId, IExtendedQuery<Category> expLinqEntity = null)
         {
             return  Queryable(expLinqEntity).Where(x => x.Id.Equals(categoryId)).FirstOrDefault();
         }
@@ -47,12 +47,12 @@ namespace Domain.Repository
             Delete(category);
         }
 
-        public async Task<Category> GetByIdAsync(string categoryId, IExpLinqEntity<Category> expLinqEntity = null, CancellationToken cancellationToken = default)
+        public async Task<Category> GetByIdAsync(string categoryId, IExtendedQuery<Category> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
             return await Queryable(expLinqEntity).Where(x => x.Id.Equals(categoryId)).FirstOrDefaultAsync(cancellationToken);
         }
 
-        public async Task<Category> GetBySlugAsync(string slug, IExpLinqEntity<Category> expLinqEntity = null, CancellationToken cancellationToken = default)
+        public async Task<Category> GetBySlugAsync(string slug, IExtendedQuery<Category> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
             return await Queryable(expLinqEntity).Where(x => x.Slug.Equals(slug)).FirstOrDefaultAsync(cancellationToken);
         }

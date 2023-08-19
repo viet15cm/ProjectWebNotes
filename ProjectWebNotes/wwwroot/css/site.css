@@ -13,7 +13,7 @@
     width: 5%;
     float: left;
     padding-top: 5px;
-    border-top: 1px solid black;
+   /* border-top: 1px solid black;*/
 }
 .icon-contact-service ul{
     margin: auto;
@@ -28,20 +28,18 @@
    margin-top: 5px;
 }
 
+
 .introduce {
-    
-    width: 59%;
+    width: 21%;
     min-height: 200px;
     float: right;
 }
 .new-post {
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    width: 65%;
-    float: left;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 10px;
 }
 .new-post-title {
-    background: #e6e6e6;
-    padding: 10px;
+    padding: 8px;
+    border-bottom: 1px solid black;
 }
 
 .new-post-body ul li {
@@ -64,51 +62,19 @@
 
 /*commercial quang cao*/
 
-.commercial {
-    width: 35%;
-    padding-left: 5px;
-   
-    float: right;
-}
-
-.commercial img{
-    width: 100%;
-    height: auto;
-}
-
-
-.banner {
-    box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px;
-    box-sizing: inherit;
-    width: 100%;
-    background-image: url(/Img/banner-c-sharp.jpg);
-    margin: auto;
-    margin: auto;
-    margin-bottom: 20px;
-    margin-top: 7px;
-    background-position: center;
-    min-height: 320px;
-    background-repeat: no-repeat;
-}
-
-
-.banner-avarta {
-    float: right;
-    margin: 30px 30px 0px 0px;
-}
 
 .list-category-left {
    
     float: left;
-    width: 35%;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    width: 20%;
+   
     
-    /* box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 10px;
     box-sizing: inherit;
     box-sizing: inherit;
     line-height: 1.6em;
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.2);*/
+    
+   
 }
 
 .icon-category-img img {
@@ -265,19 +231,23 @@
 }
 
 .font-size-prarent-post {
-    font-size: 30px;
+    font-size: 26px;
+    padding-bottom: 8px;
 }
 
 .font-size-child-post-0 {
-    font-size: 26px;
+    font-size: 24px;
+    padding-bottom: 7px;
 }
 
 .font-size-child-post-1 {
-    font-size: 23px;
+    font-size: 22px;
+    padding-bottom: 5px;
 }
 
 .font-size-child-post-2 {
     font-size: 20px;
+    padding-bottom: 4px;
 }
 
 .main-content-title {
@@ -674,11 +644,6 @@
     .title-frame-code {
         font-size: 15px;
     }
-    .commercial {
-        width: 100%;      
-        float: none;
-        display: none;
-    }
     .new-post{
         padding-top: 10px;
         width: 100%;
@@ -722,21 +687,24 @@
     }
 
     .font-size-prarent-post {
-        font-size: 26px;
+        font-size: 24px;
+       
     }
 
     .font-size-child-post-0 {
-        font-size: 23px;
+        font-size: 22px;
+        
     }
 
     .font-size-child-post-1 {
-        font-size: 21px;
+        font-size: 20px;
+       
     }
 
     .font-size-child-post-2 {
-        font-size: 19px;
+        font-size: 10px;
+        
     }
-
 
     .icon-contact-service ul li {
         float: left;
@@ -771,11 +739,6 @@
 
 @media only screen and (max-width: 600px) {
 
-    .banner-avarta {
-        float: right;
-        margin-top: 20px;
-       margin-right: 0px;
-    }
 
     .navbar-brand {
         margin-left: auto;
@@ -789,20 +752,6 @@
     .main-body-content-child {
         width: 95%;
     }
-    .font-size-prarent-post {
-        font-size: 25px;
-    }
-
-    .font-size-child-post-0 {
-        font-size: 23px;
-    }
-
-    .font-size-child-post-1 {
-        font-size: 21px;
-    }
-
-    .font-size-child-post-2 {
-        font-size: 19px;
-    }
+   
        
 }

@@ -47,7 +47,10 @@ namespace Entities.Models
         [Display(Name = "Icon")]
         public string IConFont { get; set; }
 
+        public virtual ICollection<Post> Posts { get; set; }
+
         public virtual ICollection<PostCategory> PostCategories { get; set; }
 
+        
     }
 }

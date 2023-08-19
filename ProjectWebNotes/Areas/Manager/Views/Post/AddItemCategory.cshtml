@@ -23,6 +23,8 @@
                     <button type="submit"  class="btn btn-primary">Cập nhật</button>
                     @Html.ActionLink("Quay trở lại bài viết", "detail" ,"post" , new {id = Model.IdPost})
                 </form>
+                <hr />
+            @Html.ActionLink("Quay về bài viết", "detail", "post" , new {id = @Model.IdPost})
         </div>
     </div>
 </div>

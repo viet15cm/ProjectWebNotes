@@ -22,13 +22,17 @@ namespace Domain.Reposirory
             Update(content);
         }
 
+        public  IEnumerable<Content> GetAll()
+        {
+            return FindAll().ToList();
+        }
 
-        public async Task<IEnumerable<Content>> GetAllAsync(IExpLinqEntity<Content> expLinqEntity = null, CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<Content>> GetAllAsync(IExtendedQuery<Content> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
             return await Queryable(expLinqEntity).ToListAsync(cancellationToken);
         }
 
-        public async Task<Content> GetByIdAsync(int Id , IExpLinqEntity<Content> expLinqEntity = null, CancellationToken cancellationToken = default)
+        public async Task<Content> GetByIdAsync(int Id , IExtendedQuery<Content> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
             return await Queryable(expLinqEntity).Where(x => x.Id == Id).FirstOrDefaultAsync(cancellationToken);
         }

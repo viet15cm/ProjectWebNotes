@@ -10,10 +10,11 @@ using System.Threading.Tasks;
 namespace Services.Abstractions
 {
     public interface IContentService
-    {   
-        Task<IEnumerable<Content>> GetAllAsync(IExpLinqEntity<Content> expLinqEntity = default, CancellationToken cancellationToken = default);
+    {
     
-        Task<Content> GetByIdAsync(int Id, IExpLinqEntity<Content> expLinqEntity = default, CancellationToken cancellationToken = default);
+        Task<IEnumerable<Content>> GetAllAsync(IExtendedQuery<Content> expLinqEntity = default, CancellationToken cancellationToken = default);
+    
+        Task<Content> GetByIdAsync(int Id, IExtendedQuery<Content> expLinqEntity = default, CancellationToken cancellationToken = default);
 
         Task<ContentDto> CreateAsync(ContentForCreateDto contentForCreateDto, CancellationToken cancellationToken = default);
 

@@ -8,6 +8,6 @@ namespace Paging
 {
     public class NewPostParameters : QueryStringParameters
     {
-        public override int PageSize { get; set; } = 10;
+        public override int PageSize { get; set; } = 7;
     }
 }

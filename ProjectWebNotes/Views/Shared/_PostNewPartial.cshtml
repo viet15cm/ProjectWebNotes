@@ -1,4 +1,4 @@
-﻿@model PagedList<PostSlugCategoryDto>
+﻿@model PagedList<PostNewDto>
 @{
     var posts = Model;
 
@@ -13,7 +13,7 @@
 
     @foreach (var post in posts)
     {
-        @if (post?.SlugCategory is null)
+        @if (post.CategoryId is null)
         {
             <li>
                 <a href="#">@post.Title</a>
@@ -26,7 +26,7 @@
         else
         {
             <li>
-                <a asp-area="Docs" asp-controller="ViewDocs" asp-action="index" asp-route-category="@post.SlugCategory" asp-route-post="@post.Slug">@post.Title</a>
+                <a asp-area="Docs" asp-controller="ViewDocs" asp-action="post" asp-route-post="@post.Slug">@post.Title</a>
                 <span class="date">
                     @post.DateCreate
                 </span>

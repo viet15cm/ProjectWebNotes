@@ -92,14 +92,14 @@
     <!-- Previous page link -->
     @if (preview != null)
     {
-        <li onclick="Paging(this.value)" value="@preview" class="page-item">
-            <a class="page-link" @*href="@generateUrl(preview)"*@>Trang trước</a>
+        <li onclick="getPaging(this.value)" value="@preview" class="page-item">
+            <a class="page-link" @*href="@generateUrl(preview)"*@><span aria-hidden="true">&laquo;</span></a>
         </li>
     }
     else
     {
         <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Trang trước</a>
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><span aria-hidden="true">&laquo;</span></a>
         </li>
     }
 
@@ -117,7 +117,7 @@
         else
         {
             <li onclick="getPaging(this.value)" value="@pageitem" class="page-item active" aria-current="page">
-                <a class="page-link" href="#">@pageitem <span class="sr-only">(current)</span></a>
+                <a class="page-link" href="#">@pageitem @*<span class="sr-only">(current)</span>*@</a>
             </li>
         }
     }
@@ -127,13 +127,13 @@
     @if (next != null)
     {
         <li onclick="getPaging(this.value)"  value="@next" class="page-item">
-            <a class="page-link"@* href="@generateUrl(next)"*@>Trang sau</a>
+            <a class="page-link" @* href="@generateUrl(next)"*@> <span aria-hidden="true">&raquo;</span></a>
         </li>
     }
     else
     {
         <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Trang sau</a>
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true"> <span aria-hidden="true">&raquo;</span></a>
         </li>
     }
 </ul>

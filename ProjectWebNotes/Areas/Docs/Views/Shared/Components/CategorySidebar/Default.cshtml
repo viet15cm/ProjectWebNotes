@@ -30,7 +30,7 @@
     <ul class="categorysidebar-menu-post">
         @{
 
-            await RenderPost(Model.listPostInCategory.OrderBy(c => c.Serial).ToList(), i);
+            await RenderPost(Model.currentCategory.Posts, i);
         }
 
         @if (Model.currentCategory.CategoryChildren?.Count > 0)
@@ -45,7 +45,7 @@
                     </span>
 
                     <span class="categorysidebar-title-post bd-highlight">
-                        <a class="parent-size-text-post" asp-action="Index" asp-route-category="@category.Slug">
+                        <a class="parent-size-text-post" asp-action="index" asp-route-category="@category.Slug">
                             @category.Title
                         </a>
 
@@ -79,7 +79,7 @@
 </script>
 
 @{
-    async Task RenderPost(List<Post> posts, int size)
+    async Task RenderPost(IEnumerable<Post> posts, int size)
     {
 
         foreach (var post in posts)
@@ -129,7 +129,7 @@
 
                 }
                 <span class="categorysidebar-title-post w-100 bd-highlight">
-                    <a class="@fontsize @activelink" asp-controller="ViewDocs" asp-action="Index" asp-route-post="@post.Slug">@post.Title</a>
+                    <a class="@fontsize @activelink" asp-controller="viewdocs" asp-action="post" asp-route-post="@post.Slug">@post.Title</a>
                 </span>
               
             </li>

@@ -95,7 +95,7 @@ namespace Services
             throw new NotImplementedException();
         }
 
-        public  async Task<Image> GetByIdAsync(int idImage ,ExpLinqEntity<Image> expLinqEntity , CancellationToken cancellationToken = default)
+        public  async Task<Image> GetByIdAsync(int idImage ,ExtendedQuery<Image> expLinqEntity , CancellationToken cancellationToken = default)
         {
             var image = await _repositoryManager.Image.GetByIdAsync(idImage, expLinqEntity , cancellationToken);
 

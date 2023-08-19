@@ -7,15 +7,14 @@ namespace ProjectWebNotes.Areas.Docs.Views.Shared.Components.CategorySidebar
     {
         public class CategorySidebarData
         {
-            public string slugCategory { set; get; }
-
+      
             public string slugPost { get; set; }
 
             public List<string> listSerialUrl { get; set; }
 
             public Category currentCategory { get; set; }
 
-            public List<Post> listPostInCategory { get; set; }
+      
 
         }
 

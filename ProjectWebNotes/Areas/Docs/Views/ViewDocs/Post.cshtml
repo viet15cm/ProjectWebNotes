@@ -4,9 +4,8 @@
 @model Post
 @{
     var categorys = ViewData["categorys"] as IEnumerable<Category>;
-    var category = ViewData["currentCategory"] as Category; 
 
-    ViewData["Title"] = category.Title + "-" + Model.Title;
+    ViewData["Title"] = Model.Category.Title + "-" + Model.Title;
 
 }
 
@@ -17,7 +16,7 @@
         <ul class="link-curent">
             <li>
                 <span><i class="bi bi-chevron-bar-right"></i></span>
-                <a style="color: #0065b3" asp-area="Docs" asp-controller="ViewDocs" asp-action="index" asp-route-category="@category.Slug">@category.Title</a>
+                <a style="color: #0065b3" asp-area="Docs" asp-controller="ViewDocs" asp-action="index" asp-route-category="@Model.Category.Slug">@Model.Category.Title</a>
 
                 @*<a style="color: #624991;" asp-area="Docs" asp-controller="ViewDocs" asp-action="index" asp-route-category="@category.Slug" asp-route-post="@Model.Slug">@Model.Title</a>*@
             </li>
@@ -36,11 +35,24 @@
                 </li>
 
             </ul>
+          
         </div>
+
         <div class="author-date">
             <p class="author-date">Tác giả : Admin - <i class="bi bi-alarm"></i> @String.Format($"{Model.DateCreate:d}")</p>
         </div>
 
+    </div>
+
+    <div class="banner-post mb-3">
+        @if (Model.Banner is null)
+        {
+            <img style="width: 200px; height: auto" src="~/img/default-baner-post.jpeg" />
+        }
+        else
+        {
+            <img style="width: 200px; height: auto" src="@Model.Banner" />
+        }
     </div>
  
     <div class="db-post-content">
@@ -201,11 +213,11 @@
     @await Component.InvokeAsync(CategorySidebar.COMPONENTNAME,
              new CategorySidebar.CategorySidebarData()
              {
-                 slugCategory = ViewBag.slugCategory,
+                 
                  listSerialUrl = ViewBag.listSerialUrl,
                  slugPost = ViewBag.slugPost,
                  currentCategory = ViewBag.currentCategory,
-                 listPostInCategory = ViewBag.listPostInCategory,
+                
 
              })
 
@@ -214,11 +226,11 @@
     @await Component.InvokeAsync(CategorySidebar.COMPONENTNAME,
              new CategorySidebar.CategorySidebarData()
              {
-                 slugCategory = ViewBag.slugCategory,
+                
                  listSerialUrl = ViewBag.listSerialUrl,
                  slugPost = ViewBag.slugPost,
                  currentCategory = ViewBag.currentCategory,
-                 listPostInCategory = ViewBag.listPostInCategory,
+               
 
              })
 

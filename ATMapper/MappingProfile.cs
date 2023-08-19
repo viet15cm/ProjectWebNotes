@@ -10,6 +10,8 @@ namespace ATMapper
         {
             CreateMap<Category, CategoryDto>();
             CreateMap<CategoryDto, Category>();
+
+            CreateMap<CategoryDto, CategoryFWDetailCountPost>();
             CreateMap<Category, CategoryForUpdateDto>();
             CreateMap<Category, CategoryForCreationDto>();
             CreateMap<CategoryForCreationDto, Category>();
@@ -20,7 +22,9 @@ namespace ATMapper
             
             CreateMap<Post, PostDto>();
 
-            CreateMap<PostDto, PostSlugCategoryDto>();
+            CreateMap<Post, PostForUpdateBannerDto>();
+
+            CreateMap<PostDto, PostNewDto>();
 
             CreateMap<Post, PostForCreationDto>();
 

@@ -52,6 +52,7 @@ namespace ProjectWebNotes.Areas.Manager.Models
                                 IConFont = c.IConFont,
                                 Description = c.Description,
                                 Slug = c.Slug,
+                                Posts = c.Posts,
                                 ParentCategoryId = c.ParentCategoryId,
                                 PostCategories = c.PostCategories,
                                 CategoryChildren = GetCategoryChierarchicalTree(allCats.ToList(), c.Id)
@@ -60,7 +61,25 @@ namespace ProjectWebNotes.Areas.Manager.Models
                             .ToList();
         }
 
-        
+        public static List<CategoryFWDetailCountPost> GetCategoryFWDetailCountPostChierarchicalTree(IEnumerable<CategoryFWDetailCountPost> allCats, string parentId = null)
+        {
+            return allCats.Where(c => c.ParentCategoryId == parentId)
+                           .Select(c => new CategoryFWDetailCountPost()
+                           {
+                               Id = c.Id,
+                               Title = c.Title,
+                               Serial = c.Serial,
+                               IConFont = c.IConFont,
+                               Description = c.Description,
+                               Slug = c.Slug,
+                               CountPost = c.CountPost,
+                               ParentCategoryId = c.ParentCategoryId,
+                               CategoryChildren = GetCategoryFWDetailCountPostChierarchicalTree(allCats.ToList(), c.Id)
+
+                           })
+                           .ToList();
+        }
+
 
         public static List<Content> GetContentChierarchicalTree(IEnumerable<Content> cats, int? parentId = null) 
         {
@@ -80,6 +99,8 @@ namespace ProjectWebNotes.Areas.Manager.Models
                     })
                     .ToList();
         }
+
+        
 
         public static void CreateTreeViewPostSeleteItems(List<Post> postTreeLayerDtos
                                              , List<PostSelectDto> des,

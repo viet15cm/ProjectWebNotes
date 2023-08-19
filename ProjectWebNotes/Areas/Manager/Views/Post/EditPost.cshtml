@@ -14,11 +14,10 @@
 <div class="container">
 
     <div class="row">
-        <div class="col-md-8">
+        <div id="posts-item" class="col-md-8">
             @{
-                @await Html.PartialAsync("_PostPagingPartial", posts)       
+                @await Html.PartialAsync("_PostPagingPartial", posts)
             }
-            @await Html.PartialAsync("_PaginPartial", paging)
         </div>
         <div class="col-md-4">
             <h2>@ViewBag.Title</h2>
@@ -57,6 +56,35 @@
 </div>
 
 @section Scripts {
+    
 
     @await Html.PartialAsync("_ValidationScriptsPartial")
+
+    <script>
+
+        function getPaging(valueText) {
+
+            var numberpage = valueText;
+            $.ajax({
+                url: "/Manager/Post/PostsPartial",
+                contentType: 'application/html; charset=utf-8',
+                data: { "PageNumber": numberpage },
+                type: 'GET',
+                dataType: 'html',
+                success: function (response) {
+                    debugger
+
+                    $("#posts-item").html(response);
+                },
+                error: function (response) {
+                    debugger
+                    alert(response);
+                }
+            });
+        }
+
+    </script>
+
+
+   
 }

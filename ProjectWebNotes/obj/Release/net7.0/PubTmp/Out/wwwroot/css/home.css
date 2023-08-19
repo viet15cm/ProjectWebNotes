@@ -252,3 +252,19 @@ body {
 .manager-information tr:nth-child(even) {
     background-color: rgba(0, 0, 0, 0.2);   
 }
+
+.pagination a {
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+    pre {
+        font-size: 12px;
+    }
+
+    code span {
+        font-size: 12px;
+    }
+
+}

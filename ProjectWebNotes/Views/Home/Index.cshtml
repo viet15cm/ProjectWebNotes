@@ -1,43 +1,21 @@
 ﻿@using Domain.IdentityModel;
-@using static ProjectWebNotes.Controllers.HomeController;
+@using static ProjectWebNotes.Controllers.BaseController;
 @model IEnumerable<Category>
 
 @{
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
     ViewData["Title"] = "Home";
-    var admin = ViewData["administrator"] as Administrator;
-    var posts = ViewData["posts"] as PagedList<PostSlugCategoryDto>;
+    var admin = ViewData["administrator"] as Manager;
+    var posts = ViewData["posts"] as PagedList<PostNewDto>;
 
-    var name = "";
-
-    if (admin != null)
-    {
-        name = admin.LastName + " " + admin.FirstName;
-    }
-
+   
 
 }
 
 <div class="main-body-content">
-    <div class="banner">
-        
-        <div class="banner-avarta">
-            @if (admin != null)
-            {
-                <img src="~/ImageManager/Avatar/@admin.UrlImage" class="rounded-circle mb-3" style="width: 150px;"
-                 alt="Avatar" />
-            }
-
-            <h5 class="mb-2"><strong>@name </strong></h5>
-            <p class="text-muted">
-                @if (admin != null)
-                {
-                    @admin.RoleName
-                } <span class="badge bg-primary">PRO</span></p>
-        </div>
-    </div>
+  
    <div class="run-source">
-        <p>Website ASP.NET Core runtime version 7.0.1</p>
+        <p>Web Viet IT ASP.NET Core version 7.0</p>
    </div>
     <div class="icon-contact-service">
         <ul>
@@ -69,11 +47,82 @@
     {
         @await Component.InvokeAsync("ViewListCategory", Model)
     }
- 
+    
+    <div class="main-center-content">
+        @foreach (var post in posts)
+        {
+            <div class="main-post">
+                <div class="main-post-banner">
+                    <a asp-area="Docs" asp-controller="viewdocs" asp-action="post" asp-route-post="@post.Slug">
+                        @if (post.Banner is null)
+                        {
+                            <img src="~/img/default-baner-post.jpeg" />
+                        }
+                        else
+                        {
+                            <img src="@post.Banner" />
+                        }
+                    </a>
+                  
+                   
+                </div>
+                <div class="main-post-title">
+                    <p style="font-weight: bold;">Chia sẻ kiến thức kinh nghiệm về lập trình</p>
+
+                    <h3>
+                       @post.Title
+                    </h3>
+
+                    <p style="text-align: right;"><i class="bi bi-person"></i> @post.AuthorName - <i class="bi bi-alarm"></i> @String.Format($"{ post.DateCreate.ToString():d}")</p>
+
+                    <p>
+                       @post.Description
+                    </p>
+
+                    <a asp-area="Docs" asp-controller="viewdocs" asp-action="post" asp-route-post="@post.Slug">Xem tiếp →</a>
+                </div>
+            </div>
+        }    
+
+    </div>
+
     <div class="introduce">
-        <div id="newpost" class="new-post">
+        @if (admin != null)
+        {
+            <div class="commercial mb-3">
+                <div class="new-post-title">
+                    <h6>About Me</h6>
+                </div>
+                <div class="banner-avarta">
+
+                    @if (admin != null)
+                    {
+
+                        <img class="commercial-avatar" src="~/ImageManager/Avatar/@admin.UrlImage"
+                             alt="Avatar" />
+                    }
+
+                    <h6 class="mb-2"><strong>@admin.LastName &nbsp; @admin.FirstName </strong></h6>
+                    <p class="commercial-content">
+
+
+                       @Html.Raw("[" + string.Join(", ", admin.Roles.Select(s => string.Format("'{0}'", s))) + "]")
+
+                       <span class="badge bg-primary">PRO</span>
+
+                       @Html.Raw(@admin.Describe)
+
+                     </p>
+
+                    <a asp-controller="home" asp-action="privacy">Biết thêm về tôi và blog này !</a>
+                    </div>
+                </div>
+
+        }
+       
+        <div id="newpost" class="new-post pb-3">
             <div class="new-post-title">
-                <h6>Bài Viết Mới Nhất</h6>
+                <h6>Bài viết mới nhất</h6>
             </div>
             <div class="new-post-body">
                 @if (posts != null)
@@ -82,12 +131,11 @@
                 }
             
             </div>
+
+            
+           
         </div>
-        <div class="commercial">
-            <img src="~/commercial/dotnet-core-banner.png" />
-            @*<img src="~/commercial/commercial.png" />*@
-        </div>
- 
+
     </div>
 
    
@@ -177,7 +225,6 @@
             //    };
             //}
 
-         
         });
 
 

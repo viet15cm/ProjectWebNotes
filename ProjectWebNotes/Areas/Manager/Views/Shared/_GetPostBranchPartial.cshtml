@@ -1,11 +1,10 @@
-﻿@model CategoryBranchPosts
+﻿@model Category
 @{
-    var posts = Model.Posts;
-    var category = Model.Category;
     var statusMessage = TempData["StatusMessage"] as string;
 }
- <partial name="_MessageBoxPartial" model="@statusMessage" />
- <h2>Danh sách bài viết thuộc danh mục <span>@category.Title</span></h2>
+ 
+<partial name="_MessageBoxPartial" model="@statusMessage" />
+ <h2>Danh sách bài viết thuộc danh mục <span>@Model.Title</span></h2>
 <table class="table table-dark table-striped table-sm">
                   <thead>
                     <tr>
@@ -19,12 +18,12 @@
                   </thead>
                   <tbody>
         @{
-            await RenderTreeViewTable(posts, 0);
+           await RenderTreeViewTable(Model.Posts, 0);
         }
 </table>
 
 @{
-    async Task RenderTreeViewTable(IEnumerable<PostFWDetailChilds> posts, int leve)
+    async Task RenderTreeViewTable(IEnumerable<Post> posts, int leve)
     {
         var temp = leve;
 
@@ -43,12 +42,12 @@
                     </a>
                 </td>
                 <td>
-                    <a asp-action="EditPost" asp-route-postid="@post.Id" asp-controller="category" asp-route-id="@category.Id">
+                    <a asp-action="EditPost" asp-route-id="@post.Id" asp-controller="category">
                         Sửa
                     </a>
                 </td>
                 <td>
-                    <a  asp-action="DeletePost" asp-route-postid="@post.Id"  asp-controller="category" asp-route-id="@category.Id" >
+                    <a  asp-action="DeletePost" asp-route-id="@post.Id"  asp-controller="category" >
                        Xóa
                     </a>
                 </td>

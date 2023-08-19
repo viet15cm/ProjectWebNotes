@@ -228,6 +228,13 @@ namespace ProjectWebNotes.Migrations
                     b.Property<string>("AuthorId")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("Banner")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("CategoryId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("Content")
                         .HasColumnType("nvarchar(max)");
 
@@ -263,6 +270,8 @@ namespace ProjectWebNotes.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("AuthorId");
+
+                    b.HasIndex("CategoryId");
 
                     b.HasIndex("PostParentId");
 
@@ -462,9 +471,15 @@ namespace ProjectWebNotes.Migrations
                         .WithMany("Posts")
                         .HasForeignKey("AuthorId");
 
+                    b.HasOne("Entities.Models.Category", "Category")
+                        .WithMany("Posts")
+                        .HasForeignKey("CategoryId");
+
                     b.HasOne("Entities.Models.Post", "PostParent")
                         .WithMany("PostChilds")
                         .HasForeignKey("PostParentId");
+
+                    b.Navigation("Category");
 
                     b.Navigation("PostParent");
                 });
@@ -549,6 +564,8 @@ namespace ProjectWebNotes.Migrations
                     b.Navigation("CategoryChildren");
 
                     b.Navigation("PostCategories");
+
+                    b.Navigation("Posts");
                 });
 
             modelBuilder.Entity("Entities.Models.Content", b =>

@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
+using ModelValidation;
 using Paging;
 using ProjectWebNotes.Areas.Manager.Models;
 using ProjectWebNotes.FileManager;
@@ -26,71 +27,15 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
     {
 
         private readonly IFileServices _fileServices;
-        public PostController(IServiceManager serviceManager, 
-                                IMemoryCache memoryCache,
-                                UserManager<AppUser> userManager,
-                                 IAuthorizationService authorizationService,
-                                IFileServices fileServices
-                               
-                                )
-            : base(serviceManager, memoryCache, userManager , authorizationService)
+
+        public PostController(IServiceManager serviceManager,
+            IMemoryCache memoryCache,
+            UserManager<AppUser> userManager,
+            IAuthorizationService authorizationService, 
+            ILogger<BaseController> logger,
+            IFileServices fileServices) : base(serviceManager, memoryCache, userManager, authorizationService, logger)
         {
             _fileServices = fileServices;
-        }
-
-        [NonAction]
-        async Task<IEnumerable<Category>> GetAllTreeViewCategories()
-        {
-
-            //IEnumerable<Category> categories;
-
-
-            //// Phục hồi categories từ Memory cache, không có thì truy vấn Db
-            //if (!_cache.TryGetValue(_KeyListCatgorys, out categories))
-            //{
-            //    categories = await _serviceManager.
-            //        CategoryService
-            //        .GetAllAsync(ExpLinqEntity<Category>.ResLinqEntity(null, null, true));
-
-            //    // Thiết lập cache - lưu vào cache
-            //    var cacheEntryOptions = new MemoryCacheEntryOptions()
-            //        .SetSlidingExpiration(TimeSpan.FromMinutes(300));
-            //    _cache.Set(_KeyListCatgorys, categories, cacheEntryOptions);
-            //}
-
-            //categories = _cache.Get(_KeyListCatgorys) as IEnumerable<Category>;
-
-            //return categories;
-
-            return  await _serviceManager.
-                    CategoryService
-                   .GetAllAsync(ExpLinqEntity<Category>.ResLinqEntity(null, null, true));
-        }
-
-
-        [NonAction]
-        async Task<IEnumerable<Post>> GetAllPostTreeViews()
-        {
-
-            //IEnumerable<Post> posts;
-
-            //// Phục hồi categories từ Memory cache, không có thì truy vấn Db
-            //if (!_cache.TryGetValue(_KeyList, out posts))
-            //{
-
-            //    posts = await _serviceManager.PostService.GetAllAsync();
-
-            //    // Thiết lập cache - lưu vào cache
-            //    var cacheEntryOptions = new MemoryCacheEntryOptions()
-            //        .SetSlidingExpiration(TimeSpan.FromMinutes(300));
-            //    _cache.Set(_KeyList, posts, cacheEntryOptions);
-            //}
-
-            //posts = _cache.Get(_KeyList) as IEnumerable<Post>;
-
-            //return posts;
-
-            return await _serviceManager.PostService.GetAllAsync();
         }
 
         [HttpGet]
@@ -106,6 +51,93 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         }
 
 
+        public class IFromFileViewModel
+        {
+            public Post Post  { get; set; }
+
+            [BindProperty]
+            [FileImgValidations(new string[] { ".jpg", ".jpeg", ".png", ".jfif" })]
+            [Display(Name = "Banner Post")]
+            public IFormFile FormFile { get; set; }
+        }
+
+
+        [HttpGet]
+        public  async Task<IActionResult> Banner(string id)
+        {
+
+            var post = await _serviceManager.PostService.GetByIdAsync(id);
+           
+            var fromFileViewModel = new IFromFileViewModel();
+
+            fromFileViewModel.Post = post;
+
+            return View(fromFileViewModel);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Banner([FromForm] IFromFileViewModel fromFileViewModel, [FromRoute] string id)
+        {
+
+            if (fromFileViewModel is null)
+            {
+                return NotFound();
+            }
+
+
+            var postForUpdate = ObjectMapper.Mapper.Map<PostForUpdateBannerDto>(fromFileViewModel.Post);
+
+            if (postForUpdate is null)
+            {
+                return NotFound(id);
+            }
+
+            var FormFile = fromFileViewModel.FormFile;
+
+            if (FormFile == null)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                string olUrl = postForUpdate.Banner;
+
+                string Url = FileServices.GetUniqueFileName(FormFile.FileName);
+
+                var resultFile = await _fileServices.CreateFileAsync(BannerPost.GetBannerPost(), FormFile, Url);
+
+
+                if (resultFile)
+                {
+                    postForUpdate.Banner = Url;
+
+                    var postDto = await _serviceManager.PostService.UpdateAsync(id, postForUpdate);
+
+                    StatusMessage = $"Banner post {postDto.Title} của bạn đã cập nhật";
+
+                    if (olUrl != null)
+                    {
+                        await _fileServices.DeleteFileAsync(BannerPost.GetBannerPost(), olUrl);
+                    }
+
+                    return RedirectToAction("Banner", new { id = id });
+                }
+
+                await _fileServices.DeleteFileAsync(BannerPost.GetBannerPost(), Url);
+
+            }
+
+            var post = await _serviceManager.PostService.GetByIdAsync(id);
+
+         
+            fromFileViewModel.Post = post;
+
+            return View(fromFileViewModel);
+
+          
+        }
+
         public class BidingPostCategory
         {
             public string IdPost { get; set; }
@@ -119,78 +151,19 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
         public BidingPostCategory bidingPostCategory;
 
-        [HttpGet]
-        [Authorize(Policy = "Admin")]
-        public async Task<IActionResult> AddCategory([FromRoute] string id)
-        {
-            var posts = await GetAllPostTreeViews();
-
-            ViewData["Posts"] = posts;
-
-            var cateforys = await GetAllTreeViewCategories();
-
-            var des = new List<Category>();
-
-            TreeViews.CreateTreeViewCategorySeleteItems(cateforys, des, 0);
-
-            var post = await _serviceManager.PostService.GetByIdAsync(id);
-
-            bidingPostCategory = new BidingPostCategory();
-
-            bidingPostCategory.PostCategorys = post.PostCategories.Select(c => c.CategoryID).ToArray();
-            
-            bidingPostCategory.addCategory = new SelectList(des, "Id", "Title");
-
-            return View(bidingPostCategory);
-        }
-
-        [Authorize(Policy = "Admin")]
-
-        [HttpPost]
-        public async Task<IActionResult> AddCategory([FromForm] BidingPostCategory bidingPostCategory, [FromRoute] string id)
-        {
-            var post = await _serviceManager.PostService.GetByIdAsync(id);
-
-            if (bidingPostCategory.PostCategorys == null)
-            {
-                bidingPostCategory.PostCategorys = new string[] {};
-            }
-
-            var oldPostCategorys = (await _serviceManager
-                .PostService
-                .GetByIdAsync(id))
-                ?.PostCategories.Select(c => c.CategoryID);
-
-
-            var deleteCategorys = oldPostCategorys.Where(x => !bidingPostCategory.PostCategorys.Contains(x));
-
-            var addCategory = bidingPostCategory.PostCategorys.Where(x => !oldPostCategorys.Contains(x));
-
-            await _serviceManager.PostService.RemoveFromCategorysAsync(post.Id, deleteCategorys);
-
-            await _serviceManager.PostService.AddToCategorysAsync(post.Id, addCategory);
-
-            StatusMessage = $"Cập nhật thành công danh mục cho bài viết --{post.Title}--";
-
-            _cache.Remove(_KeyCategory);
-
-            return RedirectToAction("AddCategory", new {id = post.Id });
-
-        }
-
+      
         async Task<Post> RunPostDetail(string id)
         {
             var post = await _serviceManager
               .PostService
-              .GetByIdAsync(id, ExpLinqEntity<Post>
-              .ResLinqEntity(ExpExpressions
-              .ExtendInclude<Post>(x => x.Include(x => x.Images)
+              .GetByIdAsync(id, ExtendedQuery<Post>
+              .Set(ExtendedInclue
+              .Set<Post>(x => x.Include(x => x.Images)
                                   .Include(x => x.PostChilds)
                                   .Include(x => x.PostParent)
                                   .Include(x => x.PostChilds)
                                   .Include(x => x.Contents)
-                                  .Include(x => x.PostCategories)
-                                  .ThenInclude(x => x.Category)
+                                  .Include(x => x.Category)
                                   )));
             return post;
               
@@ -201,11 +174,21 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         {
             var post = await RunPostDetail(id);
 
+            if (post == null)
+            {
+                return NotFound();
+            }
+
+            if (post.Banner != null)
+            {
+                post.Banner = _fileServices.HttpContextAccessorPathImgSrcIndex(BannerPost.GetBannerPost(), post.Banner);
+            }
+
             if (post.Images?.Count > 0)
             {
                 foreach (var item in post.Images)
                 {
-                    item.Url = _fileServices.HttpContextAccessorPathImgSrcIndex(ImagePost.GetImagePost(), item.Url);
+                    item.Url = _fileServices.HttpContextAccessorPathImgSrcIndex(ImagePost.GetImagePost(), item.Url);                 
                 }
             }
             return View(post);
@@ -271,7 +254,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             StatusMessage = $"Cập nhật thành công nội dung --{postUpdate.Title}--";
             
-            _cache.Remove(_KeyCategory);
+       
 
             return RedirectToAction("Contents", new { id});
         }
@@ -303,7 +286,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             StatusMessage = $"Thêm thành công bài viết #{post.Title}#";
 
-            _cache.Remove(_KeyCategory);
+   
             return RedirectToAction("index");
         }
 
@@ -348,7 +331,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
 
                 ViewData["Posts"] = posts;
-                _cache.Remove(_KeyCategory);
+         
                 return View(postDto);
 
             }
@@ -363,7 +346,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             var post = await _serviceManager.PostService.UpdateAsync(id, postForUpdateDto);
             StatusMessage = $"Cập nhật thành bài viết #{post.Title}#";
-            _cache.Remove(_KeyCategory);
+           
             return RedirectToAction("editpost", new { pagenumber = postParameters.PageNumber});
         }
 
@@ -395,8 +378,56 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             var post = await _serviceManager.PostService.DeleteAsync(id);
            
             StatusMessage = $"Xóa thành công bài viết #{post.Title}# ";
-            _cache.Remove(_KeyCategory);
+         
             return RedirectToAction("index");
+
+        }
+
+        public class ViewAddCategory : PostForUpdateIdCategoryDto
+        {
+            public string PostId;
+
+            public List<Category> categories;
+
+        }
+
+        [HttpGet]
+        [Authorize(Policy = "Admin")]
+        public async Task<IActionResult> AddCategory([FromRoute] string id, [FromQuery] PostParameters postParameters)
+        {
+
+            var post = await _serviceManager.PostService.GetByIdAsync(id);
+
+            if (post == null)
+            {
+                return NotFound();
+            }
+           
+            var cateforys = await GetAllTreeViewCategories();
+
+            var treeViewcategories = TreeViews.GetCategoryChierarchicalTree(cateforys);
+
+            ViewData["categorys"] = treeViewcategories;
+
+            var des = new List<Category>();
+
+            TreeViews.CreateTreeViewCategorySeleteItems(treeViewcategories, des, 0);
+
+            return View(new ViewAddCategory() { PostId = id , categories = des , CategoryId =  post.CategoryId} );
+           
+        }
+
+        [HttpPost]
+        [Authorize(Policy = "Admin")]
+        public async Task<IActionResult> AddCategory([FromRoute] string id, [FromForm] ViewAddCategory viewAddCategory)
+        {
+
+            var post = await _serviceManager.PostService.UpDateAsync(id, viewAddCategory);
+
+            StatusMessage = $"Cập nhật thành công danh mục cho bài viết --{post.Title}--";
+
+
+            return RedirectToAction("detail", new { id = post.Id });
 
         }
 
@@ -455,9 +486,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             StatusMessage = $"Cập nhật thành công danh mục cho bài viết --{post.Title}--";
 
-            _cache.Remove(_KeyListCategorys);
-            _cache.Remove(_KeyCategory);
-
+      
             return RedirectToAction("detail", new { id = post.Id});
 
 
@@ -538,7 +567,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             var contentDto = await _serviceManager.ContentService.CreateAsync(contentForCreateDto);
 
             StatusMessage = $"Thêm thành công nội dung ---{contentDto.Title}---";
-            _cache.Remove(_KeyCategory);
+     
             return RedirectToAction("detail", new { id = id });
         }
 
@@ -548,9 +577,9 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             var content = await _serviceManager
                 .ContentService
                 .GetByIdAsync(contentid
-                , ExpLinqEntity<Content>
-                .ResLinqEntity(ExpExpressions
-                .ExtendInclude<Content>(x => x.Include(x => x.Post)
+                , ExtendedQuery<Content>
+                .Set(ExtendedInclue
+                .Set<Content>(x => x.Include(x => x.Post)
                 .ThenInclude(x => x.Contents)
                 .Include(x => x.Post)
                 .ThenInclude(x => x.Images))));
@@ -582,9 +611,9 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
                 var content = await _serviceManager
                 .ContentService
                 .GetByIdAsync(contentid
-                , ExpLinqEntity<Content>
-                .ResLinqEntity(ExpExpressions
-                .ExtendInclude<Content>(x => x.Include(x => x.Post)
+                ,ExtendedQuery<Content>
+                .Set(ExtendedInclue
+                .Set<Content>(x => x.Include(x => x.Post)
                 .ThenInclude(x => x.Contents))));
 
                 var postFWDImgaesDto = ObjectMapper.Mapper.Map<PostsFWDContentImagesDto>(content.Post);
@@ -610,7 +639,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             StatusMessage = $"Cập nhật thành công";
 
-            _cache.Remove(_KeyCategory);
+    
 
             return RedirectToAction("EditContent", new { id = id, contentid = contentid });
 
@@ -632,7 +661,6 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             var contentDto = await _serviceManager.ContentService.DeleteAsync(contentid);
 
             StatusMessage = $"Xóa thành công nội dung ---{contentDto.Title}---";
-            _cache.Remove(_KeyCategory);
             return RedirectToAction("detail", new { id = id  });
         }
 
@@ -727,7 +755,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             image.AvailableImages = post.Images.Select(x => new ImageSelectList() { Text = x.Url, Value = x.Url }).ToList();
 
-            _cache.Remove(_KeyCategory);
+     
 
             return View("Images", image);
         }

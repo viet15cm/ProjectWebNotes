@@ -43,6 +43,8 @@ namespace Dto
         [Display(Name = "Icon")]
         public string IConFont { get; set; }
 
+        public string CategoryId { get; set; }
+
         [Display(Name = "Tác giả")]
         public string AuthorId { get; set; }
     }

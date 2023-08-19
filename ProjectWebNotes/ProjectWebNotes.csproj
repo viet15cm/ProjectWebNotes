@@ -577,6 +577,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\ImageManager\BannerPost\" />
     <Folder Include="wwwroot\ImageManager\IconCategory\" />
   </ItemGroup>
 

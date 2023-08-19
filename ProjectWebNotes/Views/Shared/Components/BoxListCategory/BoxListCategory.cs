@@ -1,4 +1,5 @@
-﻿using Entities.Models;
+﻿using Dto;
+using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ProjectWebNotes.Views.Shared.Components.BoxListCategory

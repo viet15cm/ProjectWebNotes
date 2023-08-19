@@ -9,17 +9,19 @@ namespace Contracts
     public interface IPostRepository : IRepositoryBase<Post>
     {
 
-        PagedList<Post> Posts(QueryStringParameters postParameters);
+        PagedList<Post> Posts(QueryStringParameters postParameters, IExtendedQuery<Post> expLinqEntity = default);
         void Insert(Post post);
         void Remove(Post post);
         void Edit(Post post);
 
-        IEnumerable<Post> GetAll(IExpLinqEntity<Post> expLinqEntity = default);
+        IEnumerable<Post> GetAll(IExtendedQuery<Post> expLinqEntity = default);
 
-        Post GetById(string postId, IExpLinqEntity<Post> expLinqEntity = default);
+        Post GetById(string postId, IExtendedQuery<Post> expLinqEntity = default);
 
-        Task<IEnumerable<Post>> GetAllAsync(IExpLinqEntity<Post> expLinqEntity = default, CancellationToken cancellationToken = default);
+        Task<Post> GetBySlugAsync(string slug, IExtendedQuery<Post> expLinqEntity = default, CancellationToken cancellationToken = default);
+        
+        Task<IEnumerable<Post>> GetAllAsync(IExtendedQuery<Post> expLinqEntity = default, CancellationToken cancellationToken = default);
 
-        Task<Post> GetByIdAsync(string postId, IExpLinqEntity<Post> expLinqEntity = default, CancellationToken cancellationToken = default);
+        Task<Post> GetByIdAsync(string postId, IExtendedQuery<Post> expLinqEntity = default, CancellationToken cancellationToken = default);
     }
 }

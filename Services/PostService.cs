@@ -8,14 +8,14 @@ using Exceptions;
 using Services.Abstractions;
 using System.Linq;
 using System.Reflection;
-using System.Security.Cryptography.X509Certificates;
+
 using System.Linq.Expressions;
 using ExtentionLinqEntitys;
 using Microsoft.EntityFrameworkCore;
 
 namespace Services
 {
-    public class PostService : ServiceBase , IPostService
+    public class PostService : ServiceBase, IPostService
     {
       
         public PostService(IRepositoryWrapper repositoryManager) : base(repositoryManager)
@@ -108,8 +108,8 @@ namespace Services
             var post = await _repositoryManager
                .Post
                .GetByIdAsync(postId,
-                ExpLinqEntity<Post>.ResLinqEntity(ExpExpressions
-                .ExtendInclude<Post>(p => p.Include(p => p.PostCategories)
+                ExtendedQuery<Post>.Set(ExtendedInclue
+                .Set<Post>(p => p.Include(p => p.PostCategories)
                 .Include(p => p.PostChilds))));
 
 
@@ -136,34 +136,45 @@ namespace Services
             return ObjectMapper.Mapper.Map<PostDto>(post);
         }
 
-        public IEnumerable<Post> GetAll(IExpLinqEntity<Post> expLinqEntity = null)
+        public IEnumerable<Post> GetAll(IExtendedQuery<Post> expLinqEntity = null)
         {
             return _repositoryManager.Post.GetAll(expLinqEntity);
         }
 
-        public async Task<IEnumerable<Post>> GetAllAsync(IExpLinqEntity<Post> expLinqEntity = null ,CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<Post>> GetAllAsync(IExtendedQuery<Post> expLinqEntity = null ,CancellationToken cancellationToken = default)
         {
             return await _repositoryManager.Post.GetAllAsync(expLinqEntity);
 
         }  
 
-        public Post GetById(string postId, IExpLinqEntity<Post> expLinqEntity = null)
+        public Post GetById(string postId, IExtendedQuery<Post> expLinqEntity = null)
         {
             var post =  _repositoryManager.Post.GetById(postId, expLinqEntity);
 
             return post;
         }
 
-        public async Task<Post> GetByIdAsync(string postId , IExpLinqEntity<Post> expLinqEntity, CancellationToken cancellationToken = default)
+        public async Task<Post> GetByIdAsync(string postId , IExtendedQuery<Post> expLinqEntity, CancellationToken cancellationToken = default)
         {
            return await _repositoryManager.Post.GetByIdAsync(postId, expLinqEntity);
   
         }
 
-
-        public PagedList<PostDto> Posts(QueryStringParameters postParameters)
+        public async Task<Post> GetBySlugAsync(string slug, IExtendedQuery<Post> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
-            var posts = _repositoryManager.Post.Posts(postParameters);
+            var post = await _repositoryManager.Post.GetBySlugAsync(slug, expLinqEntity, cancellationToken);
+
+            if (post is null)
+            {
+                throw new CategoryNotFoundException(post.Id);
+            }
+
+            return post;
+        }
+
+        public PagedList<PostDto> Posts(QueryStringParameters postParameters, IExtendedQuery<Post> expLinqEntity = default)
+        {
+            var posts = _repositoryManager.Post.Posts(postParameters, expLinqEntity);
 
             var listPostDto = ObjectMapper.Mapper.Map<List<PostDto>>(posts.ToList());
 
@@ -171,6 +182,21 @@ namespace Services
 
             return postDtos;
 
+
+        }
+
+        public async Task<PagedList<Post>> PostPaging(QueryStringParameters postParameters, IExtendedQuery<Post> expLinqEntity = default)
+        {
+            
+            Task<PagedList<Post>> task = new Task<PagedList<Post>>(() => {
+
+                var posts = _repositoryManager.Post.Posts(postParameters, expLinqEntity);
+
+                return posts;
+            });
+
+            task.Start();
+            return await task;
 
         }
 
@@ -196,8 +222,8 @@ namespace Services
             var post = await _repositoryManager
                 .Post
                 .GetByIdAsync(postId, 
-                 ExpLinqEntity<Post>.ResLinqEntity(ExpExpressions.
-                 ExtendInclude<Post>(p => p.Include(p => p.PostCategories).Include(p => p.PostChilds))));
+                 ExtendedQuery<Post>.Set(ExtendedInclue.
+                 Set<Post>(p => p.Include(p => p.PostCategories).Include(p => p.PostChilds))));
 
 
             if (post == null)
@@ -285,6 +311,76 @@ namespace Services
             return ObjectMapper.Mapper.Map<PostDto>(post);
         }
 
-    
+        public async Task<PostDto> UpDateAsync(string postId, PostForUpdateIdCategoryDto postForUpdate, CancellationToken cancellationToken = default)
+        {
+            var post = await _repositoryManager
+              .Post
+              .GetByIdAsync(postId, null, cancellationToken);
+
+            if (post == null)
+            {
+                throw new PostNotFoundException(post.Id);
+            }
+
+            if (postForUpdate == null)
+            {
+                throw new PostNotFoundException("Không tìm thấy dữ liệu đầu vào .");
+            }
+
+            Type TypePostForupdateDto = postForUpdate.GetType();
+
+            Type TypePost = post.GetType();
+
+            IList<PropertyInfo> props = new List<PropertyInfo>(TypePostForupdateDto.GetProperties());
+
+            foreach (PropertyInfo prop in props)
+            {
+                PropertyInfo propertyInfo = TypePost.GetProperty(prop.Name);
+                propertyInfo.SetValue(post, prop.GetValue(postForUpdate, null));
+
+            }
+
+            _repositoryManager.Post.Update(post);
+
+            await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
+
+            return ObjectMapper.Mapper.Map<PostDto>(post);
+        }
+
+        public async Task<PostDto> UpdateAsync(string postId, PostForUpdateBannerDto postForUpdate, CancellationToken cancellationToken = default)
+        {
+            var post = await _repositoryManager
+               .Post
+               .GetByIdAsync(postId, null, cancellationToken);
+
+            if (post == null)
+            {
+                throw new PostNotFoundException(post.Id);
+            }
+
+            if (postForUpdate == null)
+            {
+                throw new PostNotFoundException("Không tìm thấy dữ liệu đầu vào .");
+            }
+
+            Type TypePostForupdateDto = postForUpdate.GetType();
+
+            Type TypePost = post.GetType();
+
+            IList<PropertyInfo> props = new List<PropertyInfo>(TypePostForupdateDto.GetProperties());
+
+            foreach (PropertyInfo prop in props)
+            {
+                PropertyInfo propertyInfo = TypePost.GetProperty(prop.Name);
+                propertyInfo.SetValue(post, prop.GetValue(postForUpdate, null));
+
+            }
+
+            _repositoryManager.Post.Update(post);
+
+            await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
+
+            return ObjectMapper.Mapper.Map<PostDto>(post);
+        }
     }
 }

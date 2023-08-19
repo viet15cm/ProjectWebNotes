@@ -1,5 +1,5 @@
 ﻿@using Domain.IdentityModel;
-@using static ProjectWebNotes.Controllers.HomeController;
+@using static ProjectWebNotes.Controllers.BaseController;
 @model IEnumerable<Manager>
 
 @{
@@ -80,7 +80,7 @@
                     </div>
 
                     <div class="manager-description">
-                        <p>@Html.LabelFor(modelItem => item.RoleName) : @role <span>@Html.DisplayFor(modelItem => item.RoleName)</span></p>
+                        <p>@Html.LabelFor(modelItem => item.Roles) : @role <span>@Html.DisplayFor(modelItem => item.Roles)</span></p>
                         
                         @Html.Raw(item.Describe)
                     </div>

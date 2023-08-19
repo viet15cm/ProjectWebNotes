@@ -60,7 +60,17 @@ namespace Entities.Models
         [Display(Name = "Số thứ tự")]
         public int Serial { get; set; }
 
+        [StringLength(50, ErrorMessage = "{0} có độ dài dưới 50 kí tự")]
+        [Display(Name = "Banner Post")]
+        public string Banner { get; set; }
+
         [Display(Name ="Tác giả")]
         public string AuthorId { get; set; }
+
+        public string CategoryId { get; set; }
+
+        [ForeignKey("CategoryId")]
+        public virtual Category Category { get; set; }
+
     }
 }

@@ -1,0 +1,76 @@
+﻿@using Entities.Models;
+@using static ProjectWebNotes.Areas.Manager.Controllers.PostController;
+@model IFromFileViewModel
+
+@{
+    var statusMessage = TempData["StatusMessage"] as string;
+}
+
+<div class="container">
+    <div class="col-md-5">
+        <partial name="_MessageBoxPartial" model="@statusMessage" />
+        <form id="submit-banner-post" asp-route-id="@Model.Post.Id" method="post" enctype="multipart/form-data">
+            @Html.HiddenFor(x => Model.Post.Id)
+            @Html.HiddenFor(x => Model.Post.Title)
+            @Html.HiddenFor(x => Model.Post.Slug)
+            @Html.HiddenFor(x => Model.Post.Banner)
+            <div class="personal-image">      
+                <h5 class="text-primary">Banner Post</h5>
+                <label asp-for="@Model.FormFile">
+                    <input accept="image/png, image/jpeg , image/jpg , image/jfif" type="file" asp-for="@Model.FormFile" onchange="ShowImagePreview(this,indexImg )" />
+                    <figure class="personal-figure">
+                        @if (Model.Post.Banner is null)
+                        {
+                            <img src="~/Img/default.jpg" class="personal-avatar" alt="avatar" id="indexImg" />
+                            <figcaption class="personal-figcaption">
+                                <img src="~/Img/camera.png">
+                            </figcaption>
+                        }
+                        else
+                        {
+                            <img src="~/ImageManager/BannerPost/@Model.Post.Banner" class="personal-avatar" alt="avatar" id="indexImg">
+                            <figcaption class="personal-figcaption">
+                                <img src="~/Img/camera.png">
+                            </figcaption>
+                        }
+                    </figure>
+                </label>
+            </div>
+        </form>
+        <hr />
+        @Html.ActionLink("Quay về bài viết", "detail", "post" , new {id = @Model.Post.Id})
+        <div asp-validation-summary="All"></div>
+    </div>
+</div>
+
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script>
+        function ShowImagePreview(imgUpLoader, previewImg) {
+            if (imgUpLoader.files && imgUpLoader.files[0]) {
+                dt = new DataTransfer();
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $(previewImg).attr('src', e.target.result)
+                    var f = e.target.result;
+
+                }
+                reader.readAsDataURL(imgUpLoader.files[0]);
+
+                dt.items.add(imgUpLoader.files[0]);
+
+            }
+            imgUpLoader.files = dt.files
+        }
+    </script>
+
+    <script>
+        document.querySelector("input[type=file]").addEventListener('change', function () {
+            document.getElementById("submit-banner-post").submit();
+        });
+
+    </script>
+
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+
+}

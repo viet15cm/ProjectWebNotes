@@ -15,13 +15,13 @@ namespace Services
         {
         }
 
-        public async Task<IEnumerable<PostCategory>> GetByIdCategoryAsync(string categoryId, IExpLinqEntity<PostCategory> expLinqEntity = null, CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<PostCategory>> GetByIdCategoryAsync(string categoryId, IExtendedQuery<PostCategory> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
             return await _repositoryManager.PostCategory.GetByIdCategoryAsync(categoryId, expLinqEntity, cancellationToken);
         }
 
 
-        public async Task<IEnumerable<PostCategory>> GetByIdPostAsync(string postId, IExpLinqEntity<PostCategory> expLinqEntity = null, CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<PostCategory>> GetByIdPostAsync(string postId, IExtendedQuery<PostCategory> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
             return await _repositoryManager.PostCategory.GetByIdPostAsync(postId, expLinqEntity, cancellationToken);
         }

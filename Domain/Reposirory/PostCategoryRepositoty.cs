@@ -18,25 +18,25 @@ namespace Domain.Reposirory
             Update(postCategory);
         }
 
-        public async Task<IEnumerable<PostCategory>> GetAllAsync(IExpLinqEntity<PostCategory> expLinqEntity = null, CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<PostCategory>> GetAllAsync(IExtendedQuery<PostCategory> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
             return await Queryable(expLinqEntity).ToListAsync();
         }
 
-        public async Task<PostCategory> GetByIdAsync(string categoryId, string postId, IExpLinqEntity<PostCategory> expLinqEntity, CancellationToken cancellationToken = default)
+        public async Task<PostCategory> GetByIdAsync(string categoryId, string postId, IExtendedQuery<PostCategory> expLinqEntity, CancellationToken cancellationToken = default)
         {
             return await Queryable(expLinqEntity).Where(pc => pc.PostID == postId && pc.CategoryID == categoryId)
                         .FirstOrDefaultAsync();
         }
 
-        public async Task<IEnumerable<PostCategory>> GetByIdCategoryAsync(string categoryId, IExpLinqEntity<PostCategory> expLinqEntity = null, CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<PostCategory>> GetByIdCategoryAsync(string categoryId, IExtendedQuery<PostCategory> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
            return  await Queryable(expLinqEntity).Where(x => x.CategoryID.Equals(categoryId))
                    .ToListAsync();
         }
 
 
-        public async Task<IEnumerable<PostCategory>> GetByIdPostAsync(string postId, IExpLinqEntity<PostCategory> expLinqEntity = null, CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<PostCategory>> GetByIdPostAsync(string postId, IExtendedQuery<PostCategory> expLinqEntity = null, CancellationToken cancellationToken = default)
         {
             return await Queryable(expLinqEntity).Where(x => x.PostID.Equals(postId)).ToListAsync();
         }

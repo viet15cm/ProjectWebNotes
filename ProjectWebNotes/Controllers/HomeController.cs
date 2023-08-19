@@ -22,63 +22,13 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace ProjectWebNotes.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
-        private readonly AppDbcontext _context;
-        private readonly IServiceManager _serviceManager;
-
-        private readonly IMemoryCache _cache;
-
-        public const string _administrator = "Administrator";
-        public const string _admin = "Admin";
-        public const string _employee = "Employee";
-
-        private const string _KeyListCategorys = "_listallCategorys";
-        public HomeController(IServiceManager serviceManager,
-                                AppDbcontext context,
-                                IMemoryCache memoryCache
-                                )
-        {
-            _serviceManager = serviceManager;
-            _cache = memoryCache;
-            _context = context;
+        private readonly IFileServices _fileServices;
         
-        }
-
-        [NonAction]
-        async Task<IEnumerable<Category>> GetAllTreeViewCategories()
+        public HomeController(IServiceManager serviceManager, IMemoryCache memoryCache, ILogger<BaseController> logger, UserManager<AppUser> userManager, AppDbcontext appDbcontext, IFileServices fileServices ) : base(serviceManager, memoryCache, logger, userManager, appDbcontext)
         {
-
-            IEnumerable<Category> categories;
-
-            // Phục hồi categories từ Memory cache, không có thì truy vấn Db
-            if (!_cache.TryGetValue(_KeyListCategorys, out categories))
-            {
-                categories = await _serviceManager
-                    .CategoryService
-                    .GetAllAsync(ExpLinqEntity<Category>
-                    .ResLinqEntity
-                    (ExpExpressions
-                    .ExtendInclude<Category>(x => x.Include(x => x.PostCategories))
-                    , x => x.OrderBy(x => x.Serial), true));
-
-                // Thiết lập cache - lưu vào cache
-                var cacheEntryOptions = new MemoryCacheEntryOptions()
-                    .SetSlidingExpiration(TimeSpan.FromMinutes(300));
-                _cache.Set(_KeyListCategorys, categories, cacheEntryOptions);
-
-            }
-
-            categories = _cache.Get<IEnumerable<Category>>(_KeyListCategorys);
-            
-            return categories;
-        }
-
-
-        public class Administrator : AppUser
-        {
-            [Display(Name = "Role")]
-            public string RoleName { get; set; }
+            _fileServices = fileServices;
         }
 
 
@@ -87,55 +37,40 @@ namespace ProjectWebNotes.Controllers
         {
             var categories = await GetAllTreeViewCategories();
 
-
-            var posts = _serviceManager.PostService.Posts(postParameters);
-            var listPosNews = ObjectMapper.Mapper.Map<List<PostSlugCategoryDto>>(posts.ToList());
-
-            var postnews = new PagedList<PostSlugCategoryDto>(listPosNews, posts.TotalCount, postParameters.PageNumber, postParameters.PageSize);
-
-
-            foreach (var category in categories)
-            {
-                foreach (var post in postnews)
-                {
-                    if (post.SlugCategory is null)
-                    {
-                        if (category.PostCategories.Any(x => x.PostID == post.Id))
-                        {
-                            post.SlugCategory = category.Slug;
-                        }
-                    }
-
-                    continue;
-                   
-                }
-            }
             if (categories != null)
             {
                 categories = TreeViews.GetCategoryChierarchicalTree(categories);
             }
 
-            var administrator = await (from r in _context.Roles
-                                join ur in _context.UserRoles on r.Id equals ur.RoleId
-                                join u in _context.Users on ur.UserId equals u.Id
-                                where r.Name.Equals(_administrator) 
-                                select new Administrator
-                                {
-                                    RoleName = r.Name,
-                                    UrlImage = u.UrlImage,
-                                    LastName = u.LastName,
-                                    FirstName = u.FirstName,
-                                }
-                                ).FirstOrDefaultAsync();
+            var postqery = from p in _context.Posts
+                       join u in _context.Users on p.AuthorId equals u.Id
+                       where p.CategoryId != null
+                       select new PostNewDto
+                       {
+                           Id = p.Id,
+                           Slug = p.Slug,
+                           AuthorName = u.UserName,
+                           Banner = p.Banner,
+                           Title = p.Title,
+                           DateCreate = p.DateCreate,
+                           DateUpdated = p.DateUpdated,
+                           Description = p.Description,
+                           CategoryId = p.CategoryId
+
+                       };
+
+            var postnews = PagedList<PostNewDto>.ToPagedList(postqery, postParameters.PageNumber, postParameters.PageSize);
+
+            foreach (var post in postnews)
+            {
+                post.Banner = post.Banner = _fileServices.HttpContextAccessorPathImgSrcIndex(BannerPost.GetBannerPost(), post.Banner);
+            }
+
+            var administrator = await GetAdministrator();
 
             ViewData["administrator"] = administrator;
             ViewData["posts"] = postnews;    
             return View(categories);
-        }
-
-        public class Manager : Administrator
-        {
-            public List<string> Roles { get; set; }
         }
 
         [HttpGet]
@@ -143,13 +78,7 @@ namespace ProjectWebNotes.Controllers
         {
             var categories = await GetAllTreeViewCategories();
 
-            if (categories is null)
-            {
-                _cache.Remove(_KeyListCategorys);
-
-                categories = await GetAllTreeViewCategories();
-            }
-
+           
             categories = TreeViews.GetCategoryChierarchicalTree(categories);
 
             var managers = await (from r in _context.Roles
@@ -191,32 +120,29 @@ namespace ProjectWebNotes.Controllers
         }
 
         [HttpGet]
-        public async Task<PartialViewResult> NewPostPartial( int PageNumber)
+        public  PartialViewResult NewPostPartial( int PageNumber)
         {
             var postParameters = new NewPostParameters() { PageNumber = PageNumber };
-            var categories = await GetAllTreeViewCategories();
-            var posts = _serviceManager.PostService.Posts(postParameters);
-            var listPosNews = ObjectMapper.Mapper.Map<List<PostSlugCategoryDto>>(posts.ToList());
 
-            var postnews = new PagedList<PostSlugCategoryDto>(listPosNews, posts.TotalCount, postParameters.PageNumber, postParameters.PageSize);
+            var post = from p in _context.Posts
+                       join u in _context.Users on p.AuthorId equals u.Id
+                       where p.CategoryId != null
+                       select new PostNewDto
+                       {
+                           Id = p.Id,
+                           Slug = p.Slug,
+                           AuthorName = u.UserName,
+                           Banner = p.Banner,
+                           Title = p.Title,
+                           DateCreate = p.DateCreate,
+                           DateUpdated = p.DateUpdated,
+                           Description = p.Description,
+                           CategoryId = p.CategoryId,
 
+                       };
 
-            foreach (var category in categories)
-            {
-                foreach (var post in postnews)
-                {
-                    if (post.SlugCategory is null)
-                    {
-                        if (category.PostCategories.Any(x => x.PostID == post.Id))
-                        {
-                            post.SlugCategory = category.Slug;
-                        }
-                    }
-
-                    continue;
-
-                }
-            }
+            var postnews = PagedList<PostNewDto>.ToPagedList(post, postParameters.PageNumber, postParameters.PageSize);
+            
             return PartialView("_PostNewPartial", postnews);
         }
 

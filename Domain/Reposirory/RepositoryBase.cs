@@ -40,7 +40,7 @@ namespace Domain.Repository
         }
 
         // phương pháp tối ưu hay nhất
-        public IQueryable<T> Queryable(IExpLinqEntity<T> expLinqEntity = null)
+        public IQueryable<T> Queryable(IExtendedQuery<T> expLinqEntity = null)
         {
             IQueryable<T> query = RepositoryContext.Set<T>();
 
@@ -67,48 +67,6 @@ namespace Domain.Repository
             return query;
 
         }
-
-        
-
-        //public IQueryable<T> Queryable(IExpLinqEntity<T> expLinqEntity = null)
-        //{
-        //    IQueryable<T> query = RepositoryContext.Set<T>();
-
-        //    if (expLinqEntity != null)
-        //    {
-        //        var inclue = typeof(ExpLinqEntity<T>)
-        //            .GetProperty("Include")
-        //            .GetValue(expLinqEntity)
-        //            as Func<IQueryable<T>, IIncludableQueryable<T, object>>;
-        //        var disableTracking = typeof(ExpLinqEntity<T>)
-        //            .GetProperty("DisableTracking")
-        //            .GetValue(expLinqEntity);
-
-        //        var orderBy = typeof(ExpLinqEntity<T>)
-        //            .GetProperty("OrderBy")
-        //            .GetValue(expLinqEntity) as Func<IQueryable<T>, IOrderedQueryable<T>>;
-
-        //        if ((bool)disableTracking)
-        //        {
-        //            query = query.AsNoTracking();
-        //        }
-
-        //        if (orderBy != null)
-        //        {
-        //            query = orderBy(query);
-        //        }
-
-        //        if (inclue != null)
-        //        {
-        //            query = inclue(query);
-        //        }
-
-        //    }
-
-        //    return query;
-
-        //}
-
 
     }
 }

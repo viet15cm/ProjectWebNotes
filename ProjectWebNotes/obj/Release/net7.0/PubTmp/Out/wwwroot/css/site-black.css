@@ -220,6 +220,9 @@ body {
 
 .main-content-introduce {
     padding-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
 }
 
 .main-content-introduce::after {
@@ -256,26 +259,48 @@ body {
 .list-title-curent ul li a {
     text-decoration: none;
 }
+.link-curent {
+    padding: 0px;
 
+}
+
+.link-curent li{
+    list-style: none;
+}
+
+.link-curent li a {
+    text-decoration: none;
+}
 .main-content-title {
    
     color: #fba056;
     font-style: oblique;
+    margin-bottom: 15px;
+    font-weight: bold;
+   
 }
 .font-size-prarent-post {
-    font-size: 30px;
+    font-size: 26px;
+    padding-bottom: 8px;
+   
 }
 
 .font-size-child-post-0 {
-    font-size: 26px;
+    font-size: 24px;
+    padding-bottom: 7px;
+   
 }
 
 .font-size-child-post-1 {
-    font-size: 23px;
+    font-size: 22px;
+    padding-bottom: 5px;
+    
 }
 
 .font-size-child-post-2 {
     font-size: 20px;
+    padding-bottom: 4px;
+    
 }
 
 
@@ -397,6 +422,11 @@ body {
     padding-bottom: 10px;
 }
 
+.categorysidebar-menu-post li {
+    margin-bottom: 8px;
+}
+
+
 .badge {
     display: inline-block;
     padding: 0.35em 0.65em;
@@ -437,6 +467,10 @@ body {
     padding-top: 3px;
     padding-right: 7px;
     padding-left: 0px;
+}
+
+.categorysidebar-title-post a {
+    display: block;
 }
 
 .tree-icon-mycollapse span::after {
@@ -480,8 +514,7 @@ body {
 .active-link {
     /*text-decoration: underline;*/
     color: #fba056;
-    font-weight: 600;
-
+    font-weight: bold;
 }
 
 .categorysidebar-menu-post a {
@@ -514,7 +547,7 @@ body {
 
 .db-description {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: bold;
 }
 
 .db-description-category {
@@ -533,7 +566,8 @@ body {
 
 .db-description-category p {
     min-height: 200px;
-    text-align: left;
+    text-align : justify ;
+    font-weight: bold;
 }
 
 .db-description-category img {
@@ -561,6 +595,26 @@ body {
     height: auto;
     float: left;
 }
+.category-introduce-box a {
+    text-decoration: none;
+    font-weight: bold;
+}
+.category-introduce-box p {
+    font-weight: bold;
+    text-align : justify;
+    height: 100px;
+    overflow-y: auto;
+}
+
+.category-introduce-box p::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+.category-introduce-box p::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
 
 /*//careful*/
 
@@ -676,19 +730,23 @@ body {
     }
 
     .font-size-prarent-post {
-        font-size: 26px;
+        font-size: 24px;
+        font-weight: bold;
     }
 
     .font-size-child-post-0 {
-        font-size: 23px;
+        font-size: 22px;
+        font-weight: bold;
     }
 
     .font-size-child-post-1 {
-        font-size: 21px;
+        font-size: 20px;
+        font-weight: bold;
     }
 
     .font-size-child-post-2 {
-        font-size: 19px;
+        font-size: 10px;
+        font-weight: bold;
     }
 
     .list-category-left {
@@ -754,19 +812,4 @@ body {
         width: 95%;
     }
 
-    .font-size-prarent-post {
-        font-size: 25px;
-    }
-
-    .font-size-child-post-0 {
-        font-size: 23px;
-    }
-
-    .font-size-child-post-1 {
-        font-size: 21px;
-    }
-
-    .font-size-child-post-2 {
-        font-size: 19px;
-    }
 }
