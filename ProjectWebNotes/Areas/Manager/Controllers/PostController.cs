@@ -23,7 +23,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 {
 
     [Authorize(Policy = "Employee")]
-    public class PostController : BaseController
+    public class PostController : BaseMangerController
     {
 
         private readonly IFileServices _fileServices;
@@ -32,7 +32,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             IMemoryCache memoryCache,
             UserManager<AppUser> userManager,
             IAuthorizationService authorizationService, 
-            ILogger<BaseController> logger,
+            ILogger<BaseDocController> logger,
             IFileServices fileServices) : base(serviceManager, memoryCache, userManager, authorizationService, logger)
         {
             _fileServices = fileServices;

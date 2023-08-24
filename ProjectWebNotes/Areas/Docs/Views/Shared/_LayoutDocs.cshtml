@@ -28,6 +28,14 @@
             <link id="arduino-light-theme" href="~/highlight/styles/a11y-dark.min.css" rel="stylesheet" />
         }
 }
+
+@section FacebookSharedCategoryHead{
+    @await RenderSectionAsync("FacebookSharedCategoryHead", required: false)
+}
+
+@section FacebookSharedHead{
+    @await RenderSectionAsync("FacebookSharedHead", required: false)
+}
 @section BackroundSite {
     <li>
         <select id="theme" class="theme" name="theme">

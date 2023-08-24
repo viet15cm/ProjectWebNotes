@@ -12,19 +12,31 @@ using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Hosting;
 using ProjectWebNotes.Areas.Manager.Controllers;
 using ProjectWebNotes.Areas.Manager.Models;
+using ProjectWebNotes.FileManager;
 using Services.Abstractions;
 using System.Threading;
 
 namespace ProjectWebNotes.Areas.Docs.Controllers
 {
     [Area("Docs")]
-    public class ViewDocsController : BaseController
+    public class ViewDocsController : BaseDocController
     {
-        public ViewDocsController(IServiceManager serviceManager, IMemoryCache memoryCache, UserManager<AppUser> userManager, IAuthorizationService authorizationService, ILogger<BaseController> logger) : base(serviceManager, memoryCache, userManager, authorizationService, logger)
+        
+       
+
+        private readonly IFileServices _fileServices;
+        public ViewDocsController(IServiceManager serviceManager, 
+            IMemoryCache memoryCache, UserManager<AppUser> userManager,
+            IAuthorizationService authorizationService,
+            ILogger<BaseDocController> logger ,
+            IFileServices fileServices,
+            IHttpContextAccessor httpContextAccessor) : base(serviceManager, memoryCache, userManager, authorizationService, logger , httpContextAccessor)
         {
+            _fileServices = fileServices;
+         
         }
 
-      
+
         [HttpGet]
         [Route("post/{post?}")]
         public async Task<IActionResult> Post([FromRoute] string post)
@@ -39,6 +51,8 @@ namespace ProjectWebNotes.Areas.Docs.Controllers
             }
 
             categorys = TreeViews.GetCategoryChierarchicalTree(categorys);
+
+
 
             if (categorys is null)
             {
@@ -62,6 +76,28 @@ namespace ProjectWebNotes.Areas.Docs.Controllers
                                                                    .Include(x => x.Posts)),
                                                                     x => x.OrderBy(x => x.Serial), true));
 
+            category.Posts = TreeViews.GetPostChierarchicalTree(category.Posts);
+
+            category.IConFont = _fileServices.HttpContextAccessorPathImgSrcIndex(IconCategory.GetIcon(), category.IConFont);
+
+            if (category.IConFont is null)
+            {
+                category.IConFont = HttpContextAccessorPathDomain() + UrlBannerCategoryDefault;
+            }
+
+            if (category.CategoryChildren?.Count > 0)
+            {
+                foreach (var cate in category.CategoryChildren)
+                {
+                    cate.IConFont = _fileServices.HttpContextAccessorPathImgSrcIndex(IconCategory.GetIcon(), cate.IConFont);
+
+                    if (cate.IConFont is null)
+                    {
+                        cate.IConFont = HttpContextAccessorPathDomain() + UrlBannerCategoryDefault;
+                    }
+                }
+            }
+
             if (category == null)
             {
                 return NotFound("Category is null");
@@ -69,25 +105,32 @@ namespace ProjectWebNotes.Areas.Docs.Controllers
 
             var listPostInCategory = category.Posts.ToList();
 
-            listPostInCategory = TreeViews.GetPostChierarchicalTree(listPostInCategory);
 
-            var listSerialPosts = new List<Post>();
+            var listSerialUrl = new List<string>();
 
 
-            var data = FindPostBySlug(listPostInCategory, post, listSerialPosts); // chỉnh lại code
-
-            var listSerialUrl = listSerialPosts.Select(p => p.Slug).ToList();
-            
+            var data = FindPostBySlug(listPostInCategory, post, listSerialUrl); // chỉnh lại code
+          
             ViewData["slugPost"] = curentPost.Slug;
             ViewData["listSerialUrl"] = listSerialUrl;
             ViewData["currentCategory"] = category;
             ViewData["categorys"] = categorys;
 
+            ViewData["curenturl"] = HttpContextAccessorPathDomain() + UrlPost + curentPost.Slug;
+
             curentPost.Contents = TreeViews.GetContentChierarchicalTree(curentPost.Contents);
+
+            curentPost.Banner = _fileServices.HttpContextAccessorPathImgSrcIndex(BannerPost.GetBannerPost(), curentPost.Banner);
+
+            if (curentPost.Banner is null)
+            {
+                curentPost.Banner = HttpContextAccessorPathDomain() + UrlBannerPostDefault;
+            }
 
             return View(curentPost);
 
         }
+
 
         [Route("category/{category?}")]
         [HttpGet]
@@ -124,83 +167,39 @@ namespace ProjectWebNotes.Areas.Docs.Controllers
             }
 
 
-            category.Posts = TreeViews.GetPostChierarchicalTree(category.Posts.ToList());
+            category.Posts = TreeViews.GetPostChierarchicalTree(category.Posts);
 
             ViewData["slugPost"] = null;
             ViewData["listSerialUrl"] = new List<string>();
             ViewData["currentCategory"] = category;
             ViewData["categorys"] = categorys;
+            ViewData["curenturl"] = HttpContextAccessorPathDomain() + UrlCategory + category.Slug;
+            
+            category.IConFont = _fileServices.HttpContextAccessorPathImgSrcIndex(IconCategory.GetIcon(), category.IConFont);
 
+            if (category.IConFont is null)
+            {
+                category.IConFont = HttpContextAccessorPathDomain() + UrlBannerCategoryDefault;
+            }
 
+            if (category.CategoryChildren?.Count> 0)
+            {
+                foreach (var cate in category.CategoryChildren)
+                {
+                    cate.IConFont = _fileServices.HttpContextAccessorPathImgSrcIndex(IconCategory.GetIcon(), cate.IConFont);
+
+                    if (cate.IConFont is null)
+                    {
+                        cate.IConFont = HttpContextAccessorPathDomain() + UrlBannerCategoryDefault;
+                    }
+                }
+            }
             return View(category);
         }
 
-        [NonAction]
-        Category FindCategoryBySlug(List<Category> categories, string Slug, List<Category> listCategory)
-        {
-
-            try
-            {
-                foreach (var c in categories)
-                {
-                    // xử lý cộng nối tiếp các url có trong node
-
-                    listCategory.Add(c);
-
-                    if (c.Slug == Slug)
-                    {
-                        return c;
-                    }
-                    var c1 = FindCategoryBySlug(c.CategoryChildren?.ToList(), Slug, listCategory);
-
-                    if (c1 != null)
-                        return c1;
-                }
-                listCategory.RemoveAt(listCategory.Count() - 1);
-
-                return null;
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-
-        }
 
         [NonAction]
-        Category FindCategoryBySlug(ICollection<Category> categories, string Slug, List<Category> listCategory)
-        {
-
-            try
-            {
-                foreach (var c in categories)
-                {
-                    // xử lý cộng nối tiếp các url có trong node
-
-                    listCategory.Add(c);
-
-                    if (c.Slug == Slug)
-                    {
-                        return c;
-                    }
-                    var c1 = FindCategoryBySlug(c.CategoryChildren?.ToList(), Slug, listCategory);
-
-                    if (c1 != null)
-                        return c1;
-                }
-                listCategory.RemoveAt(listCategory.Count() - 1);
-
-                return null;
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-
-        }
-
-        [NonAction]
-        Post FindPostBySlug(List<Post> Posts, string Slug, List<Post> listPost)
+        Post FindPostBySlug(List<Post> Posts, string Slug, List<string> Slugs)
         {
 
             try
@@ -209,19 +208,19 @@ namespace ProjectWebNotes.Areas.Docs.Controllers
                 {
                     // xử lý cộng nối tiếp các url có trong node
 
-                    listPost.Add(p);
+                    Slugs.Add(p.Slug);
 
                     if (p.Slug == Slug)
                     {
                         return p;
                     }
 
-                    var p1 = FindPostBySlug(p.PostChilds?.ToList() ?? new List<Post>(), Slug, listPost);
+                    var p1 = FindPostBySlug(p.PostChilds?.ToList() ?? new List<Post>(), Slug, Slugs);
 
                     if (p1 != null)
                         return p1;
                 }
-                listPost.RemoveAt(listPost.Count() - 1);
+                Slugs.RemoveAt(Slugs.Count() - 1);
 
                 return null;
             }

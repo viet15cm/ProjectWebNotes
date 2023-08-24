@@ -1,4 +1,5 @@
 ﻿@using Domain.IdentityModel;
+@using System.Globalization;
 @using static ProjectWebNotes.Controllers.BaseController;
 @model IEnumerable<Manager>
 
@@ -14,6 +15,9 @@
     @{
        await  Information(Model);
     }
+</div>
+
+<div class="web-describe">
 
 </div>
 
@@ -28,11 +32,18 @@
                 var role = "";
                 @if (item.Roles?.Count > 0)
                 {
-                    role = "[" + string.Join(", ", item.Roles.Select(s => string.Format("'{0}'", s))) + "]";
-                 }
+                     role = "[" + string.Join(", ", item.Roles.Select(s => $"'{s}'")) + "]";
+                }
                 <div class="manager-container">
                     <div class="manager-img">
-                        <img src="~/imagemanager/avatar/@item.UrlImage" />
+                        @if (item.UrlImage is null)
+                        {
+                            <img src="~/img/avartar.jpg" />
+                        }else
+                        {
+                            <img src="@item.UrlImage" />
+                        }
+                       
                     </div>
 
                     <div class="manager-information">
@@ -58,9 +69,15 @@
                                 <td>@Html.DisplayFor(modelItem => item.PhoneNumber)</td>
 
                             </tr>
+
+                            <tr>
+                                <td>@Html.LabelFor(modelItem => item.Company)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Company)</td>
+
+                            </tr>
                             <tr>
                                 <td>@Html.LabelFor(modelItem => item.BirthDate)</td>
-                                <td>@Html.DisplayFor(modelItem => item.BirthDate)</td>
+                                <td>@item.BirthDate?.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture)</td>
 
                             </tr>
                          
@@ -80,8 +97,7 @@
                     </div>
 
                     <div class="manager-description">
-                        <p>@Html.LabelFor(modelItem => item.Roles) : @role <span>@Html.DisplayFor(modelItem => item.Roles)</span></p>
-                        
+                        <p>@Html.LabelFor(modelItem => item.Roles) : @role</p>
                         @Html.Raw(item.Describe)
                     </div>
                 </div>

@@ -1,35 +1,31 @@
-﻿@model Category
+﻿@using System.Globalization;
+@model Category
 @{
     var categorys = ViewData["categorys"] as IEnumerable<Category>;
 
     ViewData["Title"] = Model.Title;
-   
+    var url = ViewData["curenturl"] as string;
 }
 
 <div class="main-content">
 
     <div class="main-content-introduce">
 
-        <p style="text-align: right"><i class="bi bi-alarm"></i> @DateTime.Now.ToString()</p>
+        <p style="text-align: right"><i class="bi bi-alarm"></i>  @DateTime.Now.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture)</p>
 
         <h2 class="main-content-title">
             @Model.Title
         </h2>
         <div class="db-description-category">
 
-            @if (Model.IConFont != null)
-            {
-                <img src="~/ImageManager/IconCategory/@Model.IConFont" />
-            }
-            else
-            {
-                <img src="~/img/icon-default.png" />
-            }
+           
+            <img src="@Model.IConFont" />
+          
             <p>@Model.Description</p>
 
         </div>
         <div class="list-title-curent">
-            <ul>
+           @* <ul>
                 <li>
                     <a><span class="badge bg-primary"><i class="bi bi-check"></i> Thích</span></a>
                 </li>
@@ -37,7 +33,22 @@
                     <a><span class="badge bg-primary"><i class="bi bi-share"></i> Chia Sẻ</span></a>
                 </li>
 
-            </ul>
+            </ul>*@
+            <div id="fb-root"></div>
+            <script>
+                (function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
+
+            <!-- Your share button code -->
+            <div class="fb-share-button"
+                 data-href="@url"
+                 data-layout="button_count">
+            </div>
         </div>
 
 
@@ -60,13 +71,9 @@
             @foreach (var category in Model.CategoryChildren)
             {
                 <div class="category-introduce-box">
-                    @if (category.IConFont != null)
-                    {
-                        <img src="~/ImageManager/IconCategory/@category.IConFont" />
-                    }else
-                    {
-                        <img src="~/img/icon-default.png" />
-                    }
+                   
+                    <img src="@category.IConFont"/>
+                   
                     <h5>
                         <a asp-controller="ViewDocs" asp-action="Index" asp-route-category="@category.Slug">@category.Title</a>
                     </h5>
@@ -80,16 +87,25 @@
   
 </div>
 
+@section FacebookSharedCategoryHead{
+    <meta property="og:url" content="@url" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="@Model.Title" />
+    <meta property="og:description" content="@Model.Description" />
+    <meta property="og:image" content="@Model.IConFont" />
+}
+@section Scripts {
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v17.0" nonce="Ag4x6L3a"></script>
+}
 
 @section Sidebar {
     @await Component.InvokeAsync(CategorySidebar.COMPONENTNAME,
              new CategorySidebar.CategorySidebarData()
              {
-
                  listSerialUrl = ViewBag.listSerialUrl,
                  slugPost = ViewBag.slugPost,
                  currentCategory = ViewBag.currentCategory,
-
 
              })
 

@@ -22,7 +22,9 @@ namespace ProjectWebNotes.Controllers
         protected readonly IMemoryCache _cache;
         protected string[] _KeyMemorys = { "keycategorys", "Keyadmin" ,"keycategory" };
 
-       
+        protected const string UrlBannerDefault = "/Img/default-baner-post.jpeg";
+
+
         protected const string _administrator = "Administrator";
         protected const string _employee = "Employee";
 

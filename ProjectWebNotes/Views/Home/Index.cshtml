@@ -1,4 +1,5 @@
 ﻿@using Domain.IdentityModel;
+@using System.Globalization;
 @using static ProjectWebNotes.Controllers.BaseController;
 @model IEnumerable<Category>
 
@@ -48,42 +49,8 @@
         @await Component.InvokeAsync("ViewListCategory", Model)
     }
     
-    <div class="main-center-content">
-        @foreach (var post in posts)
-        {
-            <div class="main-post">
-                <div class="main-post-banner">
-                    <a asp-area="Docs" asp-controller="viewdocs" asp-action="post" asp-route-post="@post.Slug">
-                        @if (post.Banner is null)
-                        {
-                            <img src="~/img/default-baner-post.jpeg" />
-                        }
-                        else
-                        {
-                            <img src="@post.Banner" />
-                        }
-                    </a>
-                  
-                   
-                </div>
-                <div class="main-post-title">
-                    <p style="font-weight: bold;">Chia sẻ kiến thức kinh nghiệm về lập trình</p>
-
-                    <h3>
-                       @post.Title
-                    </h3>
-
-                    <p style="text-align: right;"><i class="bi bi-person"></i> @post.AuthorName - <i class="bi bi-alarm"></i> @String.Format($"{ post.DateCreate.ToString():d}")</p>
-
-                    <p>
-                       @post.Description
-                    </p>
-
-                    <a asp-area="Docs" asp-controller="viewdocs" asp-action="post" asp-route-post="@post.Slug">Xem tiếp →</a>
-                </div>
-            </div>
-        }    
-
+    <div id="main-center-content" class="main-center-content">
+        @await Html.PartialAsync("_ShowNewPostPartial", posts)
     </div>
 
     <div class="introduce">
@@ -129,6 +96,7 @@
                 {
                     @await Html.PartialAsync("_PostNewPartial", posts)
                 }
+                
             
             </div>
 
@@ -171,7 +139,42 @@
             });
         }
 
-        $(document).ready(function () {
+        function showDrop(object) {
+
+            var numberpage = object.value;
+            document.getElementById("loadingshowpost").innerHTML = "Loading...";
+            debugger
+            $.ajax({
+                url: "/Home/ShowNewPostPartial",
+                contentType: 'application/html; charset=utf-8',
+                data: { "PageNumber": numberpage },
+                type: 'GET',
+                dataType: 'html',
+                success: function (response) {
+
+                    $("#main-center-content").append(response);
+
+                    object.parentNode.parentNode.removeChild(object.parentNode);
+                },
+                error: function (response) {
+                    debugger
+                    alert(response);
+                }
+            });
+        }
+
+        function descriptionCollapse(object, text){
+
+
+            var ob = object.parentNode;
+            object.remove();
+            ob.innerHTML += text;
+          
+        }
+
+
+
+        //$(document).ready(function () {
 
             //$("ul.pagination").on("click", "li", function () {
 
@@ -225,7 +228,7 @@
             //    };
             //}
 
-        });
+        //});
 
 
     </script>

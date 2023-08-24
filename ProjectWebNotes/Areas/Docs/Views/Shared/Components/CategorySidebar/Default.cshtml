@@ -13,14 +13,9 @@
         <div class="title-category d-flex justify-content-starts">
             <a asp-controller="ViewDocs" asp-action="Index" asp-route-slug="@Model.currentCategory.Slug">
                 <span class="badge badge-category" aria-hidden="true">
-                    @if (Model.currentCategory.IConFont != null)
-                    {
-                        <img src="~/imagemanager/iconcategory/@Model.currentCategory.IConFont" />
-                    }
-                    else
-                    {
-                        <img src="~/img/icon-default.png" />
-                    }
+
+                    <img src="@Model.currentCategory.IConFont"/>
+
                 </span>
             </a>
             <a class="title-category-content" asp-controller="ViewDocs" asp-action="Index" asp-route-category="@Model.currentCategory.Slug">@Model.currentCategory.Title</a>
@@ -41,7 +36,7 @@
                 <li class="d-flex bd-highlight">
 
                     <span class="icon-category parent-size-text-post tree-icon-mycollapse flex-shrink-1 bd-highlight" aria-hidden="true">
-                        <img style="width: 20px; height: 20px;" src="~/ImageManager/IconCategory/@category.IConFont" />
+                        <img style="width: 20px; height: 20px;" src="@category.IConFont" />
                     </span>
 
                     <span class="categorysidebar-title-post bd-highlight">
@@ -139,7 +134,7 @@
                 <ul class="mycollapse categorysidebar-menu-post-child @myShow">
                     @{
 
-                        await RenderPost(post.PostChilds.OrderBy(x => x.Serial).ToList(), size + 1);
+                        await RenderPost(post.PostChilds, size + 1);
                     }
 
                 </ul>

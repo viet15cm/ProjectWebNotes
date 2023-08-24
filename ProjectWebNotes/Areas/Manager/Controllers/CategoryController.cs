@@ -18,7 +18,7 @@ using System.ComponentModel.DataAnnotations;
 namespace ProjectWebNotes.Areas.Manager.Controllers
 {
     [Authorize(Policy = "Admin")]
-    public class CategoryController : BaseController
+    public class CategoryController : BaseMangerController
     {
 
        
@@ -28,11 +28,13 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             IMemoryCache memoryCache, 
             UserManager<AppUser> userManager, 
             IAuthorizationService authorizationService,
-            ILogger<BaseController> logger,
-            IFileServices fileServices) : base(serviceManager, memoryCache, userManager, authorizationService, logger)
-        {
-            _fileServices = fileServices;
-        }
+            ILogger<BaseDocController> logger,
+            IFileServices fileServices
+           )
+             : base(serviceManager, memoryCache, userManager, authorizationService, logger)
+            {
+                _fileServices = fileServices;
+            }
 
         [NonAction]
         async Task<Category> GetByIdCategoy(string id)
@@ -40,7 +42,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             return await _serviceManager
                      .CategoryService
-                     .GetByIdAsync(id, ExtendedQuery<Category>.Set(ExtendedInclue.Set<Category>(x => x.Include(x => x.Posts)) ,x => x.OrderBy(x => x.Serial), true));
+                     .GetByIdAsync(id, ExtendedQuery<Category>.Set(ExtendedInclue.Set<Category>(x => x.Include(x => x.Posts)) ,null, true));
         }
 
         [HttpGet]

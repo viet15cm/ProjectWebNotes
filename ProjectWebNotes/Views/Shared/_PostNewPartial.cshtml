@@ -1,4 +1,5 @@
-﻿@model PagedList<PostNewDto>
+﻿@using System.Globalization;
+@model PagedList<PostNewDto>
 @{
     var posts = Model;
 
@@ -13,25 +14,13 @@
 
     @foreach (var post in posts)
     {
-        @if (post.CategoryId is null)
-        {
-            <li>
-                <a href="#">@post.Title</a>
-                <span class="date">
-                    @post.DateCreate
-                </span>
-                <span style="font-style: oblique;" class="text-danger">(Chờ hoàn thành )</span>
-            </li>
-        }
-        else
-        {
-            <li>
-                <a asp-area="Docs" asp-controller="ViewDocs" asp-action="post" asp-route-post="@post.Slug">@post.Title</a>
-                <span class="date">
-                    @post.DateCreate
-                </span>
-            </li>
-        }
+       
+        <li>
+            <a asp-area="Docs" asp-controller="ViewDocs" asp-action="post" asp-route-post="@post.Slug">@post.Title</a>
+            <span class="date">
+                @post.DateCreate?.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture)
+            </span>
+        </li>
 
     }
     @await Html.PartialAsync("_PaginPartial", paging)

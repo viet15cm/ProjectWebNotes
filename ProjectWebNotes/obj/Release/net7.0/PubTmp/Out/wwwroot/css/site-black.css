@@ -15,8 +15,7 @@ body {
 
 .icon-contact-service {
     width: 5%;
-    float: left;
-    border-top: 1px solid white;
+    float: left;    
     padding-top: 5px;
 }
 
@@ -34,23 +33,20 @@ body {
 }
 
 .introduce {
-    width: 59%;
+    width: 21%;
     float: right;
-   
     min-height: 200px;
 }
 .new-post {
-    width: 65%;
     border: 1px solid white;
-    float: left;
     
 }
 
 .new-post-title {
-    background: white;
-    color: black;
-    border: 1px solid white;
-    padding: 10px;
+    padding: 8px;
+    border-bottom: 1px solid white;
+  
+    font-weight: bold;
 }
 
 .new-post-body ul li {
@@ -70,25 +66,11 @@ body {
     font-size: 12px;
 }
 
-/*commercial quang cao*/
-
-.commercial {
-    width: 35%;
-    padding-left: 5px;
-    float: right;
-    
-    
-}
-
-.commercial img {
-    width: 100%;
-    height: auto;
-}
 
 
 .list-category-left {
     float: left;
-    width: 35%;
+    width: 20%;
     /*box-shadow: #ffffff 0px 0px 10px;
     box-sizing: inherit;
     box-sizing: inherit;
@@ -99,26 +81,6 @@ body {
    
 }
 
-.banner {
-    box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px;
-    box-sizing: inherit;
-    width: 100%;
-    background-image: url(/Img/banner-c-sharp.jpg);
-    margin: auto;
-    margin: auto;
-    margin-bottom: 20px;
-    margin-top: 7px;
-    background-position: center;
-    min-height: 320px;
-    background-repeat:repeat-y;
-    
-}
-
-
-.banner-avarta {
-    float: right;
-    margin: 30px 30px 0px 0px;
-}
 
 .main-body-content-child {
     padding: 10px;
@@ -221,7 +183,7 @@ body {
 .main-content-introduce {
     padding-top: 10px;
     margin-bottom: 10px;
-    border-bottom: 1px solid white;
+
     padding-bottom: 10px;
 }
 
@@ -546,8 +508,10 @@ body {
 }
 
 .db-description {
+    margin-top: 30px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 400;
+    text-align: justify;
 }
 
 .db-description-category {
@@ -567,7 +531,7 @@ body {
 .db-description-category p {
     min-height: 200px;
     text-align : justify ;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .db-description-category img {
@@ -600,7 +564,7 @@ body {
     font-weight: bold;
 }
 .category-introduce-box p {
-    font-weight: bold;
+    font-weight: 400;
     text-align : justify;
     height: 100px;
     overflow-y: auto;
@@ -696,14 +660,7 @@ body {
     .title-frame-code {
         font-size: 15px;
     }
-    .commercial {
-        width: 100%;
-        float: none;
-        
-    }
-    .commercial img{
-        display: none;
-    }
+
     .new-post {
         padding-top: 10px;
         width: 100%;
@@ -794,11 +751,6 @@ body {
 @media only screen and (max-width: 600px) {
 
     
-    .banner-avarta {
-        float: right;
-        margin-top: 20px;
-        margin-right: 0px;
-    }
     .navbar-brand {
         margin-left: auto;
         margin-right: auto;

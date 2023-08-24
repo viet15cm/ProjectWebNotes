@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Hosting;
 using Paging;
 using ProjectWebNotes.Areas.Manager.Models;
 using ProjectWebNotes.DbContextLayer;
@@ -42,8 +43,9 @@ namespace ProjectWebNotes.Controllers
                 categories = TreeViews.GetCategoryChierarchicalTree(categories);
             }
 
-            var postqery = from p in _context.Posts
+            var postqery =(from p in _context.Posts
                        join u in _context.Users on p.AuthorId equals u.Id
+                       join c in _context.Categories on p.CategoryId equals c.Id
                        where p.CategoryId != null
                        select new PostNewDto
                        {
@@ -55,15 +57,47 @@ namespace ProjectWebNotes.Controllers
                            DateCreate = p.DateCreate,
                            DateUpdated = p.DateUpdated,
                            Description = p.Description,
-                           CategoryId = p.CategoryId
+                           CategoryId = p.CategoryId,
+                           TitleCategory = c.Title,
+                           SlugCategory = c.Slug,
 
-                       };
+                       }).OrderByDescending(x => x.DateCreate);
 
             var postnews = PagedList<PostNewDto>.ToPagedList(postqery, postParameters.PageNumber, postParameters.PageSize);
 
             foreach (var post in postnews)
             {
                 post.Banner = post.Banner = _fileServices.HttpContextAccessorPathImgSrcIndex(BannerPost.GetBannerPost(), post.Banner);
+            }
+
+            foreach (var post in postnews)
+            {
+                if (post.Description is null)
+                {
+                    continue;
+                }
+
+                var spaces = post.Description.Split(' ');
+
+                if (spaces.Length <= 30)
+                {
+                    continue;
+                }
+
+                post.Description = "";
+
+                for (int i = 0; i < 27; i++)
+                {
+                    post.Description += spaces[i] + " ";
+                }
+
+                post.DescriptionCollapse = "";
+
+                for (int i = 27; i < spaces.Length; i++)
+                {
+                    post.DescriptionCollapse += spaces[i] + " ";
+                }
+                
             }
 
             var administrator = await GetAdministrator();
@@ -104,8 +138,11 @@ namespace ProjectWebNotes.Controllers
                                   }
                                ).ToListAsync();
 
-
-            ViewData["managers"] = managers;
+            foreach (var manager in managers)
+            {
+                manager.UrlImage = _fileServices.HttpContextAccessorPathImgSrcIndex(Avatar.GetAvartar(), manager.UrlImage);
+            }
+           
 
             ViewData["categorys"] = categories;
 
@@ -124,27 +161,99 @@ namespace ProjectWebNotes.Controllers
         {
             var postParameters = new NewPostParameters() { PageNumber = PageNumber };
 
-            var post = from p in _context.Posts
-                       join u in _context.Users on p.AuthorId equals u.Id
-                       where p.CategoryId != null
-                       select new PostNewDto
-                       {
-                           Id = p.Id,
-                           Slug = p.Slug,
-                           AuthorName = u.UserName,
-                           Banner = p.Banner,
-                           Title = p.Title,
-                           DateCreate = p.DateCreate,
-                           DateUpdated = p.DateUpdated,
-                           Description = p.Description,
-                           CategoryId = p.CategoryId,
+            var posts = (from p in _context.Posts
+                         join u in _context.Users on p.AuthorId equals u.Id
+                         join c in _context.Categories on p.CategoryId equals c.Id
+                         where p.CategoryId != null
+                         select new PostNewDto
+                         {
+                             Id = p.Id,
+                             Slug = p.Slug,
+                             AuthorName = u.UserName,
+                             Banner = p.Banner,
+                             Title = p.Title,
+                             DateCreate = p.DateCreate,
+                             DateUpdated = p.DateUpdated,
+                             Description = p.Description,
+                             CategoryId = p.CategoryId,
+                             TitleCategory = c.Title,
+                             SlugCategory = c.Slug
 
-                       };
+                         }).OrderByDescending(x => x.DateCreate);
 
-            var postnews = PagedList<PostNewDto>.ToPagedList(post, postParameters.PageNumber, postParameters.PageSize);
+            var postnews = PagedList<PostNewDto>.ToPagedList(posts, postParameters.PageNumber, postParameters.PageSize);
             
             return PartialView("_PostNewPartial", postnews);
         }
+
+        [HttpGet]
+        public PartialViewResult ShowNewPostPartial(int PageNumber)
+        {
+           
+            var postParameters = new NewPostParameters() { PageNumber = PageNumber };
+
+            var posts = (from p in _context.Posts
+                         join u in _context.Users on p.AuthorId equals u.Id
+                         join c in _context.Categories on p.CategoryId equals c.Id
+                         where p.CategoryId != null
+                         select new PostNewDto
+                         {
+                             Id = p.Id,
+                             Slug = p.Slug,
+                             AuthorName = u.UserName,
+                             Banner = p.Banner,
+                             Title = p.Title,
+                             DateCreate = p.DateCreate,
+                             DateUpdated = p.DateUpdated,
+                             Description = p.Description,
+                             CategoryId = p.CategoryId,
+                             TitleCategory = c.Title,
+                             SlugCategory = c.Slug,
+
+                         }).OrderByDescending(x => x.DateCreate);
+            
+            var postnews = PagedList<PostNewDto>.ToPagedList(posts, postParameters.PageNumber, postParameters.PageSize);
+
+
+            foreach (var post in postnews)
+            {
+                if (post.Description is null)
+                {
+                    continue;
+                }
+
+                var spaces = post.Description.Split(' ');
+
+                if (spaces.Length <= 27)
+                {
+                    continue;
+                }
+
+                post.Description = "";
+
+                for (int i = 0; i < 27; i++)
+                {
+                    post.Description += spaces[i] + " ";
+                }
+
+                post.DescriptionCollapse = "";
+
+                for (int i = 27; i < spaces.Length; i++)
+                {
+                    post.DescriptionCollapse += spaces[i] + " ";
+                }
+            }
+
+            
+            foreach (var post in postnews)
+            {
+                post.Banner = post.Banner = _fileServices.HttpContextAccessorPathImgSrcIndex(BannerPost.GetBannerPost(), post.Banner);
+            }
+
+
+            return PartialView("_ShowNewPostPartial", postnews);
+        }
+
 
 
 

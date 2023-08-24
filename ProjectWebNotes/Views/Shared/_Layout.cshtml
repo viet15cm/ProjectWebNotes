@@ -3,6 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    @await RenderSectionAsync("FacebookSharedHead", required: false)
+    @await RenderSectionAsync("FacebookSharedCategoryHead", required: false)
     <title>@ViewData["Title"] - Viet IT</title>
     <link rel="shortcut icon" type="image/x-icon" href="~/shortcut-icon/icon-shortcut-avartar.jpg">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />

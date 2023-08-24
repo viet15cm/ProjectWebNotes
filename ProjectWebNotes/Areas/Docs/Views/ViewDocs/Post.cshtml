@@ -1,11 +1,12 @@
 ﻿@using Entities.Models;
 @using ProjectWebNotes.Areas.Docs.Views.Shared.Components.CategorySidebar;
 @using ProjectWebNotes.Views.Shared.Components.BoxListCategory;
+@using System.Globalization;
 @model Post
 @{
     var categorys = ViewData["categorys"] as IEnumerable<Category>;
-
-    ViewData["Title"] = Model.Category.Title + "-" + Model.Title;
+    ViewData["Title"] = Model.Title;
+    var url = ViewData["curenturl"] as string;
 
 }
 
@@ -17,8 +18,6 @@
             <li>
                 <span><i class="bi bi-chevron-bar-right"></i></span>
                 <a style="color: #0065b3" asp-area="Docs" asp-controller="ViewDocs" asp-action="index" asp-route-category="@Model.Category.Slug">@Model.Category.Title</a>
-
-                @*<a style="color: #624991;" asp-area="Docs" asp-controller="ViewDocs" asp-action="index" asp-route-category="@category.Slug" asp-route-post="@Model.Slug">@Model.Title</a>*@
             </li>
 
         </ul>
@@ -26,7 +25,7 @@
             @Model.Title
         </h2>
         <div class="list-title-curent">
-            <ul>
+           @* <ul>
                 <li>
                     <a><span class="badge bg-primary"><i class="bi bi-check"></i> Thích</span></a>
                 </li>
@@ -34,25 +33,34 @@
                     <a><span class="badge bg-primary"><i class="bi bi-share"></i> Chia Sẻ</span></a>
                 </li>
 
-            </ul>
-          
+            </ul>*@
+                <div id="fb-root"></div>
+                <script>
+                    (function (d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));</script>
+
+                <!-- Your share button code -->
+                <div class="fb-share-button"
+                     data-href="@url"
+                     data-layout="button_count">
+                </div>
         </div>
 
         <div class="author-date">
-            <p class="author-date">Tác giả : Admin - <i class="bi bi-alarm"></i> @String.Format($"{Model.DateCreate:d}")</p>
+            <p class="author-date">Tác giả : Admin - <i class="bi bi-alarm"></i> @Model.DateCreate?.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture)</p>
         </div>
 
     </div>
 
-    <div class="banner-post mb-3">
-        @if (Model.Banner is null)
-        {
-            <img style="width: 200px; height: auto" src="~/img/default-baner-post.jpeg" />
-        }
-        else
-        {
-            <img style="width: 200px; height: auto" src="@Model.Banner" />
-        }
+    <div class="banner-post">
+      
+      <img style="width: 200px; height: auto" src="@Model.Banner" />
+
     </div>
  
     <div class="db-post-content">
@@ -208,6 +216,17 @@
 
     
 }
+
+
+@section FacebookSharedHead{
+    <meta property="og:url" content="@url" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="@Model.Title" />
+    <meta property="og:description" content="@Model.Description" />
+    <meta property="og:image" content="@Model.Banner" />
+}
+
+
 
 @section Sidebar {
     @await Component.InvokeAsync(CategorySidebar.COMPONENTNAME,

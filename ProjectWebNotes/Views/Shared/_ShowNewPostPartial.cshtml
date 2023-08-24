@@ -1,0 +1,54 @@
+﻿@using System.Globalization;
+@model PagedList<PostNewDto>
+@{
+    var posts = Model;
+
+    var paging = new Pagin()
+    {
+        UrlAction = "index",
+        CurrentPage = posts.CurrentPage,
+        TotalPages = posts.TotalPages,
+    };
+}
+
+@foreach (var post in posts)
+{
+    <div class="main-post">
+        <div class="main-post-banner">
+            <a asp-area="Docs" asp-controller="viewdocs" asp-action="post" asp-route-post="@post.Slug">
+                @if (post.Banner is null)
+                {
+                    <img src="~/img/default-baner-post.jpeg" />
+                }
+                else
+                {
+                    <img src="@post.Banner" />
+                }
+            </a>
+
+
+        </div>
+        <div class="main-post-title">
+            <p style="font-weight: bold;"><i class="bi bi-bookmarks"></i> @post.TitleCategory</p>
+
+            <h3>
+                @post.Title
+            </h3>
+
+            <p style="text-align: right;"><i class="bi bi-person"></i> @post.AuthorName - <i class="bi bi-alarm"></i> @post.DateCreate?.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture)</p>
+
+            <p class="main-post-description">
+                @post.Description 
+                @if (post.DescriptionCollapse != null)
+                {
+                    <a onclick="descriptionCollapse(this, `@post.DescriptionCollapse`)" class="description-collapse"> Xem thêm....</a>
+                }
+            </p>
+
+
+            <a asp-area="Docs" asp-controller="viewdocs" asp-action="post" asp-route-post="@post.Slug">Đọc tiếp →</a>
+        </div>
+    </div>
+}
+
+@await Html.PartialAsync("_ShowDropPartial", paging)

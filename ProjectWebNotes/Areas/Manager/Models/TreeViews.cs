@@ -29,10 +29,9 @@ namespace ProjectWebNotes.Areas.Manager.Models
                                 PostCategories = c.PostCategories,
                                 PostChilds = GetPostChierarchicalTree(allCats.ToList(), c.Id)
 
-                            })
+                            }).OrderBy(x => x.Serial)
                             .ToList();
         }
-
 
         /// <summary>
         /// </summary>

@@ -20,12 +20,6 @@ namespace Dto
         [StringLength(100, MinimumLength = 3, ErrorMessage = "{0} có độ dài từ {1} đến {2} kí tự.")]
         [RegularExpression(@"^[a-z0-9-]*$", ErrorMessage = "{0} chỉ gồm các kí tự thường, số, dấu (-) ")]
         public string Slug { set; get; }
-
-        [Display(Name = ("Nội dung"))]
-        public string Content { set; get; }
-
-        [Display(Name = "Ngày cập nhật")]
-        public DateTime? DateUpdated { set; get; }
         public string PostParentId { get; set; }
 
         [Display(Name = "Nổi bậc")]

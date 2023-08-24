@@ -10,6 +10,11 @@ namespace Dto
     {
         public string AuthorName { get; set; }
 
+        public string TitleCategory { get; set; }
         public string IconCategory { get; set; }
+
+        public string SlugCategory { get; set; }
+
+        public string DescriptionCollapse { get; set; }
     }
 }

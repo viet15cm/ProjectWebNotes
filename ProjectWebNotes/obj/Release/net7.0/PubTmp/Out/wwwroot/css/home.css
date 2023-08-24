@@ -12,7 +12,9 @@
     width: 100%;
     z-index: 10000;
 }
-
+.run-source{
+    padding-top: 10px;
+}
 .navbar-brand {
     font-family: cursive;
     font-weight: 700;
@@ -58,15 +60,112 @@ body {
     margin-bottom: 60px;
 }
 
+/*.banner {
+    box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px;
+    box-sizing: inherit;
+    width: 100%;
+    background-image: url(/Img/banner-c-sharp.jpg);
+    margin: auto;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 7px;
+    background-position: center;
+    min-height: 320px;
+    background-repeat: no-repeat;
+}*/
 /*ImageAvartar*/
 
+.manager{
+    width: 50%;
+    
+}
+
+.web-describe {
+    width: 45%;
+    float: right;
+}
+
+.main-center-content {
+    width: 54%;
+    float: left;
+    padding: 0px 20px 0px 20px;
+}
+.main-center-content .main-post {
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 10px;
+       
+    margin-bottom: 40px;
+}
+.main-post-banner img {
+    width: 100%;
+    height: auto;
+}
+
+.main-post-title {
+    width: 80%;
+    min-height: 200px; 
+    margin : auto;  
+    padding: 10px;
+   
+}
+
+.commercial {
+    border: 1px solid white;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 10px;
+}
+
+.banner-avarta {
+    padding: 10px;
+}
+
+.commercial-avatar {
+    width: 70%;
+    height: auto;
+    margin: 10px 0px 10px 0px;
+}
+
+.commercial-content {
+    text-align: left;
+}
+
+.main-post-description{
+    text-align: justify;
+    font-size: 16px;
+}
+
+.show-drop-post li {
+    list-style: none;
+}
+
+.show-drop-post li a:hover{
+   background: rgb(0 0 0 / 10%);
+}
+
+.show-drop-post li a {
+    font-size: 16px;
+    font-weight : 500;
+    font-family:Candara;
+    cursor : pointer;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 10px;
+    
+    padding: 0px 10px 0px 10px;
+   
+       
+}
+.banner-post{
+    margin-bottom: 20px;
+}
+.description-collapse{
+    text-decoration: none;
+    font-size: 12px;
+    cursor: pointer;
+}
 .personal-image {
     text-align: center;
 }
 
-    .personal-image input[type="file"] {
-        display: none;
-    }
+.personal-image input[type="file"] {
+    display: none;
+}
 
 .personal-figure {
     position: relative;
@@ -85,9 +184,9 @@ body {
     transition: all ease-in-out .3s;
 }
 
-    .personal-avatar:hover {
-        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
-    }
+.personal-avatar:hover {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
 
 .personal-figcaption {
     cursor: pointer;
@@ -99,18 +198,18 @@ body {
     transition: all ease-in-out .3s;
 }
 
-    .personal-figcaption:hover {
-        background-color: rgba(0, 0, 0, .5);
-    }
+.personal-figcaption:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
 
-    .personal-figcaption > img {
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        top: 50%; /* position the top  edge of the element at the middle of the parent */
-        left: 50%; /* position the left edge of the element at the middle of the parent */
-        transform: translate(-50%, -50%);
-    }
+.personal-figcaption > img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%; /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+}
 
 /*dropdow*/
 .dropbtn {
@@ -121,9 +220,9 @@ body {
     cursor: pointer;
 }
 
-    .dropbtn:hover, .dropbtn:focus {
-        background-color: #2980B9;
-    }
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
 
 .dropdown {
     position: relative;
@@ -196,8 +295,8 @@ body {
 /*background black*/
 
 .manager-container {
-    margin-top: 20px;
-    padding: 10px;
+   margin-top: 20px;
+   padding: 10px;
    box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px;
    border: 1px solid white;
 }
@@ -257,8 +356,40 @@ body {
     cursor: pointer;
 }
 
+@media (max-width: 900px) {
+
+
+    .show-drop-post {
+        padding-bottom: 30px;
+    }
+    .main-center-content {
+        float: none;
+        width: 100%;
+        margin-top: 20px;
+        box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px;
+    }
+
+    .main-post img {
+       
+    }
+
+    .manager {
+        width: 100%;
+    }
+}
+
+
+
 @media (max-width: 600px) {
 
+    .commercial {
+        float: none;
+        width: 100%;
+    }
+
+    .banner-introduce {
+        margin: 10px;
+    }
     pre {
         font-size: 12px;
     }

@@ -13,8 +13,16 @@
       "PackagePath": "staticwebassets\\ImageManager\\Avatar\\230422946_6df2a8d7.jpg"
     },
     {
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\Avatar\\231204739_09740ff3.jpg",
+      "PackagePath": "staticwebassets\\ImageManager\\Avatar\\231204739_09740ff3.jpg"
+    },
+    {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\Avatar\\232337647_ceae00c5.jpg",
       "PackagePath": "staticwebassets\\ImageManager\\Avatar\\232337647_ceae00c5.jpg"
+    },
+    {
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\Avatar\\233000647_ca653eec.jpg",
+      "PackagePath": "staticwebassets\\ImageManager\\Avatar\\233000647_ca653eec.jpg"
     },
     {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\IconCategory\\230331180_030c8f5e.png",
@@ -105,18 +113,6 @@
       "PackagePath": "staticwebassets\\ImageManager\\IconCategory\\234825982_2addff7a.png"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\IconCategory\\235228677_c02f7102.png",
-      "PackagePath": "staticwebassets\\ImageManager\\IconCategory\\235228677_c02f7102.png"
-    },
-    {
-      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\IconCategory\\235420994_2a5f3565.png",
-      "PackagePath": "staticwebassets\\ImageManager\\IconCategory\\235420994_2a5f3565.png"
-    },
-    {
-      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\IconCategory\\235426384_c9e8b9c3.png",
-      "PackagePath": "staticwebassets\\ImageManager\\IconCategory\\235426384_c9e8b9c3.png"
-    },
-    {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\IconCategory\\235920629_964d65a5.png",
       "PackagePath": "staticwebassets\\ImageManager\\IconCategory\\235920629_964d65a5.png"
     },
@@ -145,6 +141,10 @@
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\234807506_13b498e1.png"
     },
     {
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\234938718_8ae95962.jpeg",
+      "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\234938718_8ae95962.jpeg"
+    },
+    {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\235532117_6209fb57.jpeg",
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\235532117_6209fb57.jpeg"
     },
@@ -169,10 +169,6 @@
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\235816890_375d0c9b.png"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Img\\Aspnetcore.png",
-      "PackagePath": "staticwebassets\\Img\\Aspnetcore.png"
-    },
-    {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Img\\Avartar.jpg",
       "PackagePath": "staticwebassets\\Img\\Avartar.jpg"
     },
@@ -189,8 +185,8 @@
       "PackagePath": "staticwebassets\\Img\\camera.png"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Img\\commercial.png",
-      "PackagePath": "staticwebassets\\Img\\commercial.png"
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Img\\default-baner-post.jpeg",
+      "PackagePath": "staticwebassets\\Img\\default-baner-post.jpeg"
     },
     {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Img\\default.jpg",

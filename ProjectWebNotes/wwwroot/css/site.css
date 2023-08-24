@@ -183,7 +183,6 @@
 .main-content-introduce {
     padding-top: 10px;
     margin-bottom: 10px;
-    border-bottom: 1px solid rgb(0 0 0 / 20%);
     padding-bottom: 10px;
 }
 .main-content-introduce::after {
@@ -501,8 +500,9 @@
 
 .db-description {
     font-size: 16px;
-    font-weight: 400;
-    font-weight: bold;
+    font-weight: 500;
+   margin-top: 30px;
+   text-align: justify;
 }
 
 .db-description-category {
@@ -522,7 +522,7 @@
 .db-description-category p {
     min-height: 200px;
     text-align: justify;
-    font-weight: bold;
+    font-weight: 500;
 }
  
 .db-description-category img{
@@ -558,7 +558,7 @@
 }
 
 .category-introduce-box p {
-    font-weight: bold;
+    font-weight: 400;
     text-align : justify;
     height: 100px;
     overflow-y: auto;

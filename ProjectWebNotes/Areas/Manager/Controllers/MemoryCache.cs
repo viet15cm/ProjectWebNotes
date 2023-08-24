@@ -3,14 +3,21 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
+using ProjectWebNotes.Models;
 using Services.Abstractions;
 
 namespace ProjectWebNotes.Areas.Manager.Controllers
 {
-    public class MemoryCache : BaseController
+    [Area("Manager")]
+    public class MemoryCache : Controller
     {
-        public MemoryCache(IServiceManager serviceManager, IMemoryCache memoryCache, UserManager<AppUser> userManager, IAuthorizationService authorizationService, ILogger<BaseController> logger) : base(serviceManager, memoryCache, userManager, authorizationService, logger)
+        public IMemoryCache _cache;
+
+        [TempData]
+        public string StatusMessage { get; set; }
+        public MemoryCache(IMemoryCache memoryCache)
         {
+            _cache = memoryCache;
         }
 
         public IActionResult Index()
@@ -21,10 +28,12 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         [HttpPost]
         public IActionResult Delete() 
         {
-            _cache.Remove(_KeyMemorys[0]);
-            _cache.Remove(_KeyMemorys[1]);
-            _cache.Remove(_KeyMemorys[2]);
-
+            foreach (var key in MemoryCaheKey.KeyMemorys.ToList())
+            {
+                _cache.Remove(key);
+                
+            }
+           
             StatusMessage = $"Bộ nhớ cache đã bị xóa.";
 
             return RedirectToAction("index");

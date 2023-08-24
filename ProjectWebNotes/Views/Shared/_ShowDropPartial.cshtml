@@ -1,0 +1,53 @@
+﻿@model Pagin
+
+@{
+    int currentPage = Model.CurrentPage;
+    int countPages = Model.TotalPages;
+    Func<int?, string> generateUrl;
+    var urlAction = Model.UrlAction;
+    if (Model.IsPage)
+    {
+        generateUrl = (int? _pagenumber) =>
+        {
+            return Url.Page(urlAction, new { pagenumber = _pagenumber });
+        };
+    }
+    else
+    {
+        generateUrl = (int? _pagenumber) =>
+        {
+            return Url.Action(urlAction, new { pagenumber = _pagenumber });
+        };
+    }
+
+    if (currentPage > countPages)
+        currentPage = countPages;
+
+    if (countPages <= 1) return;
+
+
+    
+    int? next = null;
+
+    if (currentPage < countPages)
+        next = currentPage + 1;
+
+
+}
+
+
+<ul class="show-drop-post">
+    @if (next != null)
+    {
+        <li  onclick="showDrop(this)" value="@next">
+            <a id="loadingshowpost"> <span aria-hidden="true">Bài viết kế tiếp → </span></a>
+        </li>
+    }
+    else
+    {
+        <li>
+            <a href="#" tabindex="-1" aria-disabled="true">Hết <i class="bi bi-arrow-up-short"></i></a>
+        </li>
+    }
+</ul>
+
