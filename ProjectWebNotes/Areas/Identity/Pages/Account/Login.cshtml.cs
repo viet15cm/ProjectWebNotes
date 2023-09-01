@@ -73,6 +73,7 @@ namespace ProjectWebNotes.Areas.Identity.Pages.Account
             // Clear the existing external cookie to ensure a clean login process
             await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
 
+           //danh sách  nhà cung cấp thông tin đăng nhập bên ngoài đã có.
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
 
             ReturnUrl = returnUrl;

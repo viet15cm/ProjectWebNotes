@@ -162,7 +162,6 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
                                   .Include(x => x.PostChilds)
                                   .Include(x => x.PostParent)
                                   .Include(x => x.PostChilds)
-                                  .Include(x => x.Contents)
                                   .Include(x => x.Category)
                                   )));
             return post;

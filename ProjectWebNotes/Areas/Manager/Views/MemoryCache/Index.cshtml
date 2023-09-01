@@ -1,34 +1,39 @@
-﻿@{
+﻿@model  IEnumerable<string>;
+@{
     ViewData["Title"] = "Xóa bộ nhớ cache";
     var statusMessage = TempData["StatusMessage"] as string;
+
+    var caches = Model.ToArray();
 }
 
 <div class="container mt-5">
     <partial name="_MessageBoxPartial" model="@statusMessage" />
-            <h2>@ViewBag.Title</h2>
-            <form method="post" asp-action="Delete">
-
-                <dl>
+    <h1> @ViewData["Title"] </h1>
+    @if (Model?.Count() > 0)
+    {
+        <form method="post" asp-action="Delete">
+            <dl>
+                @for (int i = 0; i < caches.Length; i++)
+                {
                     <dt>
-                       1. Đối tượng cahe 
+                        @i. Đối tượng cahe
                     </dt>
 
                     <dd>
-                       Danh sách danh mục
+                        @caches[i]
                     </dd>
-                    <dt>
-                       2. Đối tượng cahe 
-                    </dt>
+                }
+            </dl>
 
-                    <dd>
-                       Thông tin
-                    </dd>
-                   
-                </dl>
-
-                <p>
-                    <button type="submit" class="btn btn-sm btn-danger">Xóa</button> |
-                    @Html.ActionLink("Quay trở lại trang chủ", "Index")
-                </p>
-            </form>
+            <p>
+                <button type="submit" class="btn btn-sm btn-danger">Xóa</button> |
+                @Html.ActionLink("Quay trở lại trang chủ", "Index")
+            </p>
+        </form>
+    }else
+    {
+        @Html.ActionLink("Quay trở lại trang chủ", "Index")
+    }
+          
+            
 </div>

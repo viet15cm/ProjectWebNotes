@@ -1,8 +1,10 @@
-﻿html {
+﻿
+html {
     font-size: 14px;
     position: relative;
     min-height: 100%;
     scroll-padding-top: 60px;
+    
 }
 
 .navbar-header {
@@ -141,12 +143,11 @@ body {
 }
 
 .show-drop-post li a {
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     font-size: 16px;
-    font-weight : 500;
     font-family:Candara;
     cursor : pointer;
-    box-shadow: rgb(0 0 0 / 10%) 0px 0px 10px;
-    
     padding: 0px 10px 0px 10px;
    
        
@@ -356,9 +357,68 @@ body {
     cursor: pointer;
 }
 
+.rank-content-title-small ul li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.leve-title-content-post-2 {
+    margin-left: 20px;
+}
+
+.leve-title-content-post-3 {
+    margin-left: 40px;
+}
+
+.leve-title-content-post-4 {
+    margin-left: 60px;
+}
+
+.leve-title-content-post-5 {
+    margin-left: 80px;
+}
+
+.leve-title-content-post-6 {
+    margin-left: 100px;
+}
+
+/*frame-code*/
+.box-shadow-frame-code {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.title-frame-code {
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.db-post-content h1, 
+.db-post-content h2,
+.db-post-content h3, 
+.db-post-content h4,
+.db-post-content h5, 
+.db-post-content h6{
+    margin-bottom: 15px;
+    
+}
+
+.db-post-content p {
+    font-size: 14px;
+    
+}
+
+.db-post-content {
+    font-family: Arial,Verdana,Halvetica,"Times New Roman", Times, serif, Tahoma, Geneva, sans-serif;
+}
+
+.rank-content-title-small {
+    display: none;
+}
+
 @media (max-width: 900px) {
-
-
     .show-drop-post {
         padding-bottom: 30px;
     }
@@ -381,7 +441,6 @@ body {
 
 
 @media (max-width: 600px) {
-
     .commercial {
         float: none;
         width: 100%;

@@ -13,6 +13,7 @@ namespace ProjectWebNotes.Areas.Identity.Pages.User
 {
    
     [Authorize(Policy = "Admin")]
+ 
     public class UserPageModel : PageModel
     {
 

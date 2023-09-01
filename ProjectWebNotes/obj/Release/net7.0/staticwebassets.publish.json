@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HV3lrytaoS6jldHeqxS8C/DTr0P1cal27eKkjdyWa7I=",
+  "Hash": "9g+ZClfiyDHJNym5T6W55WbGfK4OuwGCvRLTPv7Ib3s=",
   "Source": "ProjectWebNotes",
   "BasePath": "_content/ProjectWebNotes",
   "Mode": "Default",
@@ -49,23 +49,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\obj\\Release\\net7.0\\scopedcss\\projectbundle\\ProjectWebNotes.bundle.scp.css"
-    },
-    {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Commercial\\dotnet-core-banner.png",
-      "SourceId": "ProjectWebNotes",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\",
-      "BasePath": "_content/ProjectWebNotes",
-      "RelativePath": "Commercial/dotnet-core-banner.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Commercial\\dotnet-core-banner.png"
     },
     {
       "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\css\\home.css",
@@ -11677,23 +11660,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\231609295_e457db4f.png"
-    },
-    {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\234215584_48753884.png",
-      "SourceId": "ProjectWebNotes",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\",
-      "BasePath": "_content/ProjectWebNotes",
-      "RelativePath": "ImageManager/ImagePost/234215584_48753884.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\234215584_48753884.png"
     },
     {
       "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\234807506_13b498e1.png",

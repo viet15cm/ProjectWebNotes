@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets\\ProjectWebNotes.bundle.scp.css"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\Commercial\\dotnet-core-banner.png",
-      "PackagePath": "staticwebassets\\Commercial\\dotnet-core-banner.png"
-    },
-    {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\Avatar\\230422946_6df2a8d7.jpg",
       "PackagePath": "staticwebassets\\ImageManager\\Avatar\\230422946_6df2a8d7.jpg"
     },
@@ -131,10 +127,6 @@
     {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\231609295_e457db4f.png",
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\231609295_e457db4f.png"
-    },
-    {
-      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\234215584_48753884.png",
-      "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\234215584_48753884.png"
     },
     {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\234807506_13b498e1.png",

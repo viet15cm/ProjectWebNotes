@@ -252,7 +252,7 @@
 .main-content-title {
     clear: right;
     color: #800;
-    font-style: oblique;
+   
     font-weight: bold;
 
     margin-bottom: 15px;
@@ -268,54 +268,49 @@
 }
 
 
-.rank-content-title li  {
-   list-style: none;
-}
-
-.rank-content-title li a {
-     text-decoration: none;
-     color: #800;
-     
-}
-
 .rank-content-title-small p a {
-    background: rgba(0, 0, 0, .05);
+    background: rgb(0 0 0 / 10%);
     border: 2px solid white;
-    font-size: 16px;
-    border : 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 14px;
     font-weight: 500;
+}
+
+.rank-content-body ul li {
+    list-style-type: armenian;
+}
+
+.rank-content-body {
     
 }
 
-.rank-content-title-small ul {
-    margin-top: 12px;
+.rank-content-body ul li a {
+    text-decoration: none;
+    color: #808080;
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
 }
 
-.rank-content-title-small ul li {
-    margin-bottom: 8px;
-    margin-bottom: 5px;
-    padding: 3px;
-    list-style: none;
-}
 
 .rank-content-title-small p a:is(:hover) {
     color: #800;
-}
-
-.rank-content-title-small {   
-    display: none;
-}
-
-#content-title {
-    margin-bottom: 12px;
 }
 
 .rank-content-title-small ul li a {
     text-decoration: none;
     color: black;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 500;
     display: block;
+}
+
+.rank-content-title li a {
+    text-decoration: none;
+    color: #800;
+}
+
+.rank-content-title li {
+    list-style: none;
 }
 
 
@@ -326,19 +321,21 @@
 
 
 #TableOfContents ul li{
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     list-style: none;
 }
 
 
 #TableOfContents ul li a {
     text-decoration: none;
-    color: #232323;
+    color : #808080;
+    
 }
 
 .title-category{
 
 }
+
 
 .categorysidebar-menu-post{
     margin-left: 24px;
@@ -487,16 +484,7 @@
     height: 50px;
     border-bottom: 1px solid #000000;
 }
-/*frame-code*/
-.box-shadow-frame-code {
-    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .05);
-}
 
-.title-frame-code {
-    padding-top: 5px;
-    color: #800;
-    font-weight: 500;
-}
 
 .db-description {
     font-size: 16px;
@@ -639,10 +627,6 @@
         font-weight: 500;
         font-size: 12px;
         margin: 25px 0px 22px 0px;
-    }
-
-    .title-frame-code {
-        font-size: 15px;
     }
     .new-post{
         padding-top: 10px;

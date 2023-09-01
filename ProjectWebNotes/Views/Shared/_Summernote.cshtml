@@ -103,7 +103,7 @@
             click: function (value) {
                 var text = context.invoke('editor.getSelectedText');
                 // http://summernote.org/deep-dive/#insertnode
-                context.invoke('editor.pasteHTML', '<pre class="box-shadow-frame-code" style="min-height: 50px; background: #F5F5F5;"><h5 class="title-frame-code coppy-code">Code</h5><code class=""><br><br>' + text + '</code></pre><p><br/></p>');
+                context.invoke('editor.pasteHTML', '<pre class="box-shadow-frame-code" style="min-height: 50px; background: #F5F5F5;"><p class="title-frame-code coppy-code">Code</p><code class=""><br><br>' + text + '</code></pre><p><br/></p>');
             },
 
         });

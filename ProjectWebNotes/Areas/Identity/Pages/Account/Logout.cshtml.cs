@@ -27,7 +27,6 @@ namespace ProjectWebNotes.Areas.Identity.Pages.Account
             
             await _signInManager.SignOutAsync();
           
-
             if (ReturnUrl != null)
             {
                 return LocalRedirect(ReturnUrl);

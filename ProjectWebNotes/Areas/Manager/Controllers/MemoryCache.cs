@@ -22,7 +22,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(MemoryCaheKey.KeyMemorys.ToList());
         }
 
         [HttpPost]

@@ -11,7 +11,7 @@
 <div class="categorysidebar">
     <div class="item-cagory-parent">
         <div class="title-category d-flex justify-content-starts">
-            <a asp-controller="ViewDocs" asp-action="Index" asp-route-slug="@Model.currentCategory.Slug">
+            <a asp-controller="ViewDocs" asp-action="Index" asp-route-category="@Model.currentCategory.Slug">
                 <span class="badge badge-category" aria-hidden="true">
 
                     <img src="@Model.currentCategory.IConFont"/>

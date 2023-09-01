@@ -15,6 +15,7 @@
                         asp-items="@(new SelectList(@Model.categories,"Id","Title"))">
                     <option value="">Không</option>
                 </select>
+               <hr />
                 <span asp-validation-for="@Model.CategoryId"></span>
                     <button type="submit"  class="btn btn-primary w-100">Cập nhật</button>
                 </form>

@@ -60,7 +60,7 @@ namespace ProjectWebNotes.Areas.Docs.Controllers
             }
 
             var curentPost = await _serviceManager.PostService.GetBySlugAsync(post, ExtendedQuery<Post>.Set(ExtendedInclue
-                                    .Set<Post>(x => x.Include(x => x.Category).Include(x => x.Contents)),
+                                    .Set<Post>(x => x.Include(x => x.Category)),
                                                                     x => x.OrderBy(x => x.Serial), true));
 
             if (curentPost.Category is null)
@@ -118,7 +118,7 @@ namespace ProjectWebNotes.Areas.Docs.Controllers
 
             ViewData["curenturl"] = HttpContextAccessorPathDomain() + UrlPost + curentPost.Slug;
 
-            curentPost.Contents = TreeViews.GetContentChierarchicalTree(curentPost.Contents);
+            //curentPost.Contents = TreeViews.GetContentChierarchicalTree(curentPost.Contents);
 
             curentPost.Banner = _fileServices.HttpContextAccessorPathImgSrcIndex(BannerPost.GetBannerPost(), curentPost.Banner);
 

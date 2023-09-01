@@ -1,4 +1,4 @@
-﻿const copyButtonLabel = "Copy Code";
+﻿const copyButtonLabel = "Copy";
 
 // you can use a class selector instead if you, or the syntax highlighting library adds one to the 'pre'. 
 const collection = document.getElementsByClassName("code-light-height");
@@ -23,7 +23,7 @@ async function copyCode(event) {
     let text = code.innerText;
     await navigator.clipboard.writeText(text);
 
-    button.innerText = "Code Copied";
+    button.innerText = "Copied";
 
     setTimeout(() => {
         button.innerText = copyButtonLabel;

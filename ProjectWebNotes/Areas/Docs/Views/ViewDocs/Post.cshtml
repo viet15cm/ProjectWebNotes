@@ -21,9 +21,9 @@
             </li>
 
         </ul>
-        <h2 class="main-content-title">
+        <h1 class="main-content-title">
             @Model.Title
-        </h2>
+        </h1>
         <div class="list-title-curent">
            @* <ul>
                 <li>
@@ -62,6 +62,7 @@
       <img style="width: 200px; height: auto" src="@Model.Banner" />
 
     </div>
+
  
     <div class="db-post-content">
 
@@ -70,38 +71,39 @@
             <p class="db-description">@Model.Description</p>
         }
 
-        @if (Model?.Content != null)
-        {
-            @Html.Raw(Model.Content)
-        }
+        <div class="rank-content-title-small">
+            <p>
+                <a class="btn btn-small" data-bs-toggle="collapse" href="#content-title" role="button" aria-expanded="false" aria-controls="content-title">
+                    Nội dung chính <i class="bi bi-arrows-collapse"></i>
+                </a>
+            </p>
+            <div class="collapse show" id="content-title">
+                <div class="card-rank-content card card-body">
+                    <ul id="rank-content-boder-small" class="rank-content-body-small">
 
-        @if (Model.Contents?.Count > 0)
-        {
-            <div class="rank-content-title-small">
-                <p>
-                    <a class="btn btn-small" data-bs-toggle="collapse" href="#content-title" role="button" aria-expanded="false" aria-controls="content-title">
-                        Nội dung chính <i class="bi bi-arrows-collapse"></i>
-                    </a>
-                </p>
-                <div class="collapse show" id="content-title">
-                    <div class="card card-body">
-                        <ul>
-                            @{
+                         @*@{
 
-                                await RenderTitleContents(Model.Contents);
-                            }
-                        </ul>
+                        await RenderTitleContents(Model.Contents);
+                        }*@
+                    </ul>
 
 
-                    </div>
                 </div>
             </div>
+        </div>
+
+        @if (Model?.Content != null)
+        {
+            <div id="db-post-content" class="db-post-content" ata-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0"  tabindex="0">
+                @Html.Raw(Model.Content)
+            </div>   
         }
-        
 
     </div>
 
-    <div class="db-content-main scrollspy-example" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-offset="0" tabindex="0">
+
+
+    @*    <div id="db-content-main" class="db-content-main scrollspy-example" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-offset="0" tabindex="0">
         @if (Model.Contents?.Count > 0)
         {
             int size = 0;
@@ -114,12 +116,12 @@
 
 
     </div>
-
+*@
 
 </div>
 
 
-<div class="rank-content scrollspy-example" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-offset="0" tabindex="0">
+<div class="rank-content">
     
     <ul class="rank-content-title">
         <li>
@@ -127,9 +129,9 @@
         </li>
     </ul>
    
-    <nav id="TableOfContents">
-        <ul id="rank-content-boder">
-
+    <nav id="TableOfContents" >
+        <ul id="rank-content-body" class="rank-content-body">
+         
             @if (Model.Contents?.Count > 0)
             {
 
@@ -257,4 +259,8 @@
 
 @section BoxListCategory {
     @await Component.InvokeAsync(BoxListCategory.COMPONENTNAME, categorys)
+}
+
+@section Scripts{
+    <script src="~/js/post.js"></script>
 }

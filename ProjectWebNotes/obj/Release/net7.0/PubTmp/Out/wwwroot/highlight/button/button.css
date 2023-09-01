@@ -11,9 +11,9 @@
         top: 0px;
         right: 0px;
         overflow: auto;
-        margin: 5px 0;
-        border-radius: 8px;
-        font-size: 13px;
+       
+        border-radius: 5px;
+        font-size: 12px;
         border: 1px solid #bcbabb
 
 }
