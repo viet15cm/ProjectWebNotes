@@ -1,6 +1,7 @@
 ﻿using Domain.Extensions;
 using Microsoft.AspNetCore.Routing.Constraints;
 using ProjectWebNotes.Extensions;
+using ProjectWebNotes.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +26,9 @@ builder.Services.ConfigureApplicationCookie(option =>
 });
 
 builder.Services.ConfigureAuthorizationHandlerService();
+
+
+builder.Services.AddSignalR();
 
 builder.Services.AddControllers();
 
@@ -77,5 +81,11 @@ app.MapRazorPages();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=RoomChat}/{action=Index}/{id?}");
+
+app.MapHub<StronglyTypedChatHub>("/chatHub");
 
 app.Run();

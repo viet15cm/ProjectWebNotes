@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\ImageManager\\Avatar\\233000647_ca653eec.jpg"
     },
     {
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\BannerPost\\234513389_354f5d7e.jpg",
+      "PackagePath": "staticwebassets\\ImageManager\\BannerPost\\234513389_354f5d7e.jpg"
+    },
+    {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\IconCategory\\230331180_030c8f5e.png",
       "PackagePath": "staticwebassets\\ImageManager\\IconCategory\\230331180_030c8f5e.png"
     },
@@ -125,8 +129,12 @@
       "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\231259119_154fe70d.png"
     },
     {
-      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\231609295_e457db4f.png",
-      "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\231609295_e457db4f.png"
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\234522438_224d1854.jpg",
+      "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\234522438_224d1854.jpg"
+    },
+    {
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\234522465_84806274.png",
+      "PackagePath": "staticwebassets\\ImageManager\\ImagePost\\234522465_84806274.png"
     },
     {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\234807506_13b498e1.png",
@@ -3377,12 +3385,20 @@
       "PackagePath": "staticwebassets\\highlight\\styles\\xt256.min.css"
     },
     {
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\js\\chat.js",
+      "PackagePath": "staticwebassets\\js\\chat.js"
+    },
+    {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\js\\dropdownBtn.js",
       "PackagePath": "staticwebassets\\js\\dropdownBtn.js"
     },
     {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\js\\jquery.unobtrusive-ajax.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.unobtrusive-ajax.min.js"
+    },
+    {
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\js\\post.js",
+      "PackagePath": "staticwebassets\\js\\post.js"
     },
     {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\js\\site.js",
@@ -3623,6 +3639,14 @@
     {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\microsoft-signalr\\signalr.js",
+      "PackagePath": "staticwebassets\\lib\\microsoft-signalr\\signalr.js"
+    },
+    {
+      "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\lib\\microsoft-signalr\\signalr.min.js",
+      "PackagePath": "staticwebassets\\lib\\microsoft-signalr\\signalr.min.js"
     },
     {
       "Id": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\shortcut-icon\\icon-shortcut-avartar.jpg",

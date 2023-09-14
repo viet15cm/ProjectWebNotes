@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#\\ProjectWebNotes\\projectwebnotes\\ProjectWebNotes.csproj": {}
+    "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\ProjectWebNotes.csproj": {}
   },
   "projects": {
     "D:\\C#\\ProjectWebNotes\\ATMapper\\ATMapper.csproj": {
@@ -304,6 +304,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -680,14 +686,14 @@
         }
       }
     },
-    "D:\\C#\\ProjectWebNotes\\projectwebnotes\\ProjectWebNotes.csproj": {
+    "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\ProjectWebNotes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\ProjectWebNotes.csproj",
+        "projectUniqueName": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\ProjectWebNotes.csproj",
         "projectName": "ProjectWebNotes",
-        "projectPath": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\ProjectWebNotes.csproj",
+        "projectPath": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\ProjectWebNotes.csproj",
         "packagesPath": "C:\\Users\\Viet_Key\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\obj\\",
+        "outputPath": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Viet_Key\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -743,6 +749,10 @@
             "Microsoft.AspNetCore.Mvc.Formatters.Json": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.1.0, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

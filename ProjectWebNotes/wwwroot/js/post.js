@@ -29,6 +29,8 @@ function walk(root) {
 
 }
 
+
+
 walk(document.getElementById("db-post-content"))
 
 var titles = "";
@@ -62,6 +64,7 @@ for (var i = 0; i < headings.length; i++) {
 
 }
 
+
 function removeVietnameseTones(str) {
     str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
     str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
@@ -92,3 +95,22 @@ function removeVietnameseTones(str) {
     str = str.toLowerCase()
     return str;
 }
+
+$(window).scroll(function () {
+    var scrollTop = $(document).scrollTop();
+
+    for (var i = 0; i < headings.length; i++) {
+        if (scrollTop > $(headings[i]).offset().top - 70
+            && scrollTop < $(headings[i + 1]).offset().top - 70
+           )
+        {
+            
+            $('.rank-content-body li a[href="#' + $(headings[i]).attr('id') + '"]').addClass('active-content');
+           
+        }
+        else {
+            $('.rank-content-body li a[href="#' + $(headings[i]).attr('id') + '"]').removeClass('active-content');
+            
+        }
+    }
+});

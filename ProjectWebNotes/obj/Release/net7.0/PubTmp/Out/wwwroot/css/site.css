@@ -262,9 +262,9 @@
     padding-top: 60px;
     width: 20%;
     float: right;
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
+    
 }
 
 
@@ -275,15 +275,30 @@
     font-weight: 500;
 }
 
-.rank-content-body ul li {
-    list-style-type: armenian;
+
+.rank-content-body li {
+    margin-bottom: 15px;
+    list-style: none;
 }
 
 .rank-content-body {
-    
+    height: 550px;
+    overflow-y: auto;
+    overflow-x: auto;
 }
 
-.rank-content-body ul li a {
+.rank-content-body::-webkit-scrollbar {
+    width: 5px;
+    height: 0px;
+    background-color: #F5F5F5;
+}
+
+.rank-content-body::-webkit-scrollbar-thumb {
+    background-color: #808080;
+}
+
+
+.rank-content-body li a {
     text-decoration: none;
     color: #808080;
     text-decoration: none;
@@ -296,12 +311,20 @@
     color: #800;
 }
 
+.rank-content-title-small ul li {
+    list-style: none;
+}
+
 .rank-content-title-small ul li a {
-    text-decoration: none;
     color: black;
     text-decoration: none;
-    font-weight: 500;
+  
     display: block;
+}
+
+.card-rank-content {
+  
+    margin-bottom: 20px;
 }
 
 .rank-content-title li a {
@@ -313,24 +336,23 @@
     list-style: none;
 }
 
+.rank-content-body li a:hover {
+    border-left: 3px solid #800;
+    padding-left: 5px;
+    color: #800;
+}
+
+.active-content {
+    border-left: 3px solid #800;
+    padding-left: 5px;
+    color: #800;
+}
 
 
-#TableOfContents ul {
+/*#TableOfContents ul {
     margin-top: 12px;
 }
-
-
-#TableOfContents ul li{
-    margin-bottom: 10px;
-    list-style: none;
-}
-
-
-#TableOfContents ul li a {
-    text-decoration: none;
-    color : #808080;
-    
-}
+*/
 
 .title-category{
 
@@ -590,7 +612,6 @@
 
 
 @media (max-width: 1000px) {
-    
     .iconOffcanvasListPost{
         display: inline;
     }
@@ -634,8 +655,7 @@
         float: none;
     }
     .categorysidebar-menu-post a {
-        padding-top: 4px;
-        font-size: 14px;
+        
     }
 
     .main-content {

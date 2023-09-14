@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "th3Nfnss3RQ++Klv+G2Nw+vM9k2pI1HMxRh6AFcXNZ5QRswRuh0Efsb2r1MNEdamIJ/CT2uhRMI5yL00vAWK2Q==",
+  "dgSpecHash": "44rW/KyYybcZ8rXvjg4H32yxHx3yLzuW3l6ztzY6QP15tJRteajVs9lqXg+Utqq7Pq12+NqEvD4mH4AVCuy4+A==",
   "success": true,
   "projectFilePath": "D:\\C#\\ProjectWebNotes\\Services.Abstractions\\Services.Abstractions.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Viet_Key\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.4\\microsoft.aspnetcore.cryptography.internal.7.0.4.nupkg.sha512",
+    "C:\\Users\\Viet_Key\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.4\\microsoft.aspnetcore.cryptography.keyderivation.7.0.4.nupkg.sha512",
+    "C:\\Users\\Viet_Key\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Viet_Key\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\Viet_Key\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Viet_Key\\.nuget\\packages\\microsoft.extensions.identity.core\\7.0.4\\microsoft.extensions.identity.core.7.0.4.nupkg.sha512",
+    "C:\\Users\\Viet_Key\\.nuget\\packages\\microsoft.extensions.identity.stores\\7.0.4\\microsoft.extensions.identity.stores.7.0.4.nupkg.sha512",
+    "C:\\Users\\Viet_Key\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "C:\\Users\\Viet_Key\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Viet_Key\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\microsoft.extensions.options.7.0.1.nupkg.sha512",
+    "C:\\Users\\Viet_Key\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

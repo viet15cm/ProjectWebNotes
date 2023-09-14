@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Hosting;
 using ModelValidation;
 using Paging;
 using ProjectWebNotes.Areas.Manager.Models;
@@ -22,7 +23,7 @@ using System.ComponentModel.DataAnnotations;
 namespace ProjectWebNotes.Areas.Manager.Controllers
 {
 
-    [Authorize(Policy = "Employee")]
+    [Authorize(Policy = "Admin")]
     public class PostController : BaseMangerController
     {
 
@@ -67,7 +68,16 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         {
 
             var post = await _serviceManager.PostService.GetByIdAsync(id);
-           
+
+            var rs = await _authorizationService.AuthorizeAsync(User, post,
+                                                           new CanOptionPostUserRequirements());
+
+            if (!rs.Succeeded)
+            {
+                return Forbid();
+
+            }
+
             var fromFileViewModel = new IFromFileViewModel();
 
             fromFileViewModel.Post = post;
@@ -198,6 +208,14 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         {
             var post = await RunPostDetail(id);
 
+            var rs = await _authorizationService.AuthorizeAsync(User, post,
+                                                        new CanOptionPostUserRequirements());
+
+            if (!rs.Succeeded)
+            {
+                return Forbid();
+            }
+
             var postFWDImgaesDto = ObjectMapper.Mapper.Map<PostsFWDImagesDto>(post);
 
             if (postFWDImgaesDto.Images?.Count >0)
@@ -235,14 +253,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
                 return View(postFWDImgaesDto);
             }
 
-            var rs = await _authorizationService.AuthorizeAsync(User, id,
-                                                         new CanOptionPostUserRequirements(true));
-
-            if (!rs.Succeeded)
-            {
-                return Forbid();
-            }
-
+           
             if (postForUpdateContentDto.DateUpdated is null)
             {
                 postForUpdateContentDto.DateUpdated = _serviceManager.HttpClient.GetNistTime();
@@ -260,7 +271,6 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         
 
         [HttpPost]
-
         public async Task<IActionResult> CreatePost([FromForm] PostForCreationDto postForCreationDto, 
                                                     [FromQuery] PostParameters postParameters)
         {
@@ -309,6 +319,15 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             var post = await _serviceManager.PostService.GetByIdAsync(id);
 
+            var rs = await _authorizationService.AuthorizeAsync(User, post,
+                                                           new CanOptionPostUserRequirements());
+
+            if (!rs.Succeeded)
+            {
+                return Forbid();
+
+            }
+
 
             var postDto = ObjectMapper.Mapper.Map<PostDto>(post);
 
@@ -335,13 +354,6 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             }
 
-            var rs = await _authorizationService.AuthorizeAsync(User, id,
-                                                          new CanOptionPostUserRequirements(true));
-
-            if (!rs.Succeeded)
-            {
-                return Forbid();
-            }
 
             var post = await _serviceManager.PostService.UpdateAsync(id, postForUpdateDto);
             StatusMessage = $"Cập nhật thành bài viết #{post.Title}#";
@@ -358,6 +370,15 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             var post = await _serviceManager.PostService.GetByIdAsync(id);
 
+            var rs = await _authorizationService.AuthorizeAsync(User, post,
+                                                           new CanOptionPostUserRequirements());
+
+            if (!rs.Succeeded) 
+            {
+                return Forbid();
+            
+            }
+
             var postDto = ObjectMapper.Mapper.Map<PostDto>(post);
 
             return View(postDto);
@@ -366,14 +387,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         [HttpPost]
         public async Task<IActionResult> DeletePost([FromRoute] string id, bool IsDelte)
         {
-            var rs = await _authorizationService.AuthorizeAsync(User, id,
-                                                          new CanOptionPostUserRequirements(true));
-
-            if (!rs.Succeeded)
-            {
-                return Forbid();
-            }
-
+           
             var post = await _serviceManager.PostService.DeleteAsync(id);
            
             StatusMessage = $"Xóa thành công bài viết #{post.Title}# ";
@@ -391,7 +405,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         }
 
         [HttpGet]
-        [Authorize(Policy = "Admin")]
+      
         public async Task<IActionResult> AddCategory([FromRoute] string id, [FromQuery] PostParameters postParameters)
         {
 
@@ -401,7 +415,16 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
             {
                 return NotFound();
             }
-           
+
+            var rs = await _authorizationService.AuthorizeAsync(User, post,
+                                                          new CanOptionPostUserRequirements());
+
+            if (!rs.Succeeded)
+            {
+                return Forbid();
+
+            }
+
             var cateforys = await GetAllTreeViewCategories();
 
             var treeViewcategories = TreeViews.GetCategoryChierarchicalTree(cateforys);
@@ -417,7 +440,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         }
 
         [HttpPost]
-        [Authorize(Policy = "Admin")]
+        
         public async Task<IActionResult> AddCategory([FromRoute] string id, [FromForm] ViewAddCategory viewAddCategory)
         {
 
@@ -431,7 +454,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         }
 
         [HttpGet]
-        [Authorize(Policy = "Admin")]
+       
         public async Task<IActionResult> AddItemCategory([FromRoute] string id, [FromQuery] PostParameters postParameters)
         {
             
@@ -458,7 +481,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         }
 
         [HttpPost]
-        [Authorize(Policy = "Admin")]
+       
         public async Task<IActionResult> AddItemCategory([FromForm] BidingPostCategory bidingPostCategory, 
                                                             [FromRoute] string id
                                                             )
@@ -490,7 +513,6 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
 
         }
-
 
         [HttpGet]
         public async Task<IActionResult> CreateContent([FromRoute] string id)
@@ -549,15 +571,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
                 return View(contentForCreateDto);
             }
-
-            var rs = await _authorizationService.AuthorizeAsync(User, id,
-                                                          new CanOptionPostUserRequirements(true));
-
-            if (!rs.Succeeded)
-            {
-                return Forbid();
-            }
-
+           
             if (contentForCreateDto?.PostId is null)
             {
                 contentForCreateDto.PostId = id;
@@ -626,13 +640,7 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
                 return View(contentForUpdateDto);
             }
 
-            var rs = await _authorizationService.AuthorizeAsync(User, id,
-                                                          new CanOptionPostUserRequirements(true));
-
-            if (!rs.Succeeded)
-            {
-                return Forbid();
-            }
+          
 
             var contentDto = await _serviceManager.ContentService.UpdateAsync(contentid, contentForUpdateDto);
 
@@ -649,13 +657,6 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         public async Task<IActionResult> DeleteContent([FromRoute]string id , [FromQuery]int contentid)        
         {
 
-            var rs = await _authorizationService.AuthorizeAsync(User, id,
-                                                          new CanOptionPostUserRequirements(true));
-
-            if (!rs.Succeeded)
-            {
-                return Forbid();
-            }
 
             var contentDto = await _serviceManager.ContentService.DeleteAsync(contentid);
 
@@ -668,7 +669,18 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         {
             var post = await RunPostDetail(id);
 
+            var rs = await _authorizationService.AuthorizeAsync(User, post,
+                                                           new CanOptionPostUserRequirements());
+
+            if (!rs.Succeeded)
+            {
+                return Forbid();
+
+            }
+
             var postFWDImgaesDto = ObjectMapper.Mapper.Map<PostsFWDImagesDto>(post);
+
+
 
             ViewData["postFWDImgaesDto"] = postFWDImgaesDto;
 
@@ -692,12 +704,13 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
 
             var post =  await RunPostDetail(id);
 
-            var rs = await _authorizationService.AuthorizeAsync(User, id,
-                                                          new CanOptionPostUserRequirements(true));
+            var rs = await _authorizationService.AuthorizeAsync(User, post,
+                                                            new CanOptionPostUserRequirements());
 
             if (!rs.Succeeded)
             {
                 return Forbid();
+
             }
 
             var messgae = 0;

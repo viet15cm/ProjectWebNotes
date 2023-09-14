@@ -1,17 +1,13 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 using ProjectWebNotes.DbContextLayer;
 using Domain.IdentityModel;
 using Entities.Models;
 
 namespace ProjectWebNotes.Security.Requirements
 {
-    public class CanOptionPostUserHandler : AuthorizationHandler<CanOptionPostUserRequirements, string>
+    public class CanOptionPostUserHandler : AuthorizationHandler<CanOptionPostUserRequirements, Post>
     {
         
         private readonly UserManager<AppUser> _userManager;
@@ -24,13 +20,11 @@ namespace ProjectWebNotes.Security.Requirements
             _context = appDbcontext;
         }
 
-        protected override async  Task HandleRequirementAsync(AuthorizationHandlerContext context, CanOptionPostUserRequirements requirement, string PostId)
+        protected override async  Task HandleRequirementAsync(AuthorizationHandlerContext context, CanOptionPostUserRequirements requirement, Post post)
         {
             var user = _userManager.GetUserAsync(context.User).Result;
 
-            var post = await _context.Posts.FirstOrDefaultAsync(x => x.Id == PostId);
-
-            if (context.User.IsInRole("Admin") || context.User.IsInRole("Administrator"))
+            if (context.User.IsInRole("Administrator"))
             {
                 context.Succeed(requirement);
                 await Task.CompletedTask;
@@ -39,25 +33,10 @@ namespace ProjectWebNotes.Security.Requirements
 
             if (user.Id == post.AuthorId)
             {
-                if (requirement.IsSharedPostUser)
-                {
-                    var postcategoy = await _context.PostCategories.Where(x => x.PostID == PostId).FirstOrDefaultAsync();
-
-                    if (postcategoy == null)
-                    {
-                        context.Succeed(requirement);
-                        await Task.CompletedTask;
-                    }
-                }
-                else
-                {
-                    context.Succeed(requirement);
-                    await Task.CompletedTask;
-                }
+                context.Succeed(requirement);
+                await Task.CompletedTask;
              
             }
-
-
 
             await Task.CompletedTask;
         }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JqWxUoaFIZWot01hkEx+T7TXHnLdU8ABwSPY6kQradM=",
+  "Hash": "B1W4Z0RMBa5A7t4MiwaOzz4kmGxS1HlzS8NEr87dw7I=",
   "Source": "ProjectWebNotes",
   "BasePath": "_content/ProjectWebNotes",
   "Mode": "Default",
@@ -11203,6 +11203,23 @@
       "OriginalItemSpec": "wwwroot\\ImageManager\\Avatar\\233000647_ca653eec.jpg"
     },
     {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\BannerPost\\234513389_354f5d7e.jpg",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "ImageManager/BannerPost/234513389_354f5d7e.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ImageManager\\BannerPost\\234513389_354f5d7e.jpg"
+    },
+    {
       "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\IconCategory\\230331180_030c8f5e.png",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
@@ -11645,12 +11662,12 @@
       "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\231259119_154fe70d.png"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\231415155_d03b835c.jpg",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\234522438_224d1854.jpg",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
       "BasePath": "_content/ProjectWebNotes",
-      "RelativePath": "ImageManager/ImagePost/231415155_d03b835c.jpg",
+      "RelativePath": "ImageManager/ImagePost/234522438_224d1854.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11659,15 +11676,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\231415155_d03b835c.jpg"
+      "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\234522438_224d1854.jpg"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\231415206_e48d55c7.jpg",
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\234522465_84806274.png",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
       "BasePath": "_content/ProjectWebNotes",
-      "RelativePath": "ImageManager/ImagePost/231415206_e48d55c7.jpg",
+      "RelativePath": "ImageManager/ImagePost/234522465_84806274.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11676,41 +11693,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\231415206_e48d55c7.jpg"
-    },
-    {
-      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\231609295_e457db4f.png",
-      "SourceId": "ProjectWebNotes",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
-      "BasePath": "_content/ProjectWebNotes",
-      "RelativePath": "ImageManager/ImagePost/231609295_e457db4f.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\231609295_e457db4f.png"
-    },
-    {
-      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\233554147_85c3e0a9.jpg",
-      "SourceId": "ProjectWebNotes",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
-      "BasePath": "_content/ProjectWebNotes",
-      "RelativePath": "ImageManager/ImagePost/233554147_85c3e0a9.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\233554147_85c3e0a9.jpg"
+      "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\234522465_84806274.png"
     },
     {
       "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\ImageManager\\ImagePost\\234807506_13b498e1.png",
@@ -11949,6 +11932,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Img\\Icon-default.png"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\js\\chat.js",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "js/chat.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\chat.js"
     },
     {
       "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\js\\dropdownBtn.js",
@@ -13020,6 +13020,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\microsoft-signalr\\signalr.js",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "lib/microsoft-signalr/signalr.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\microsoft-signalr\\signalr.js"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\lib\\microsoft-signalr\\signalr.min.js",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "lib/microsoft-signalr/signalr.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\microsoft-signalr\\signalr.min.js"
     },
     {
       "Identity": "D:\\C#\\ProjectWebNotes\\projectwebnotes\\wwwroot\\shortcut-icon\\icon-shortcut-avartar.jpg",

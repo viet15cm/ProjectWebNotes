@@ -113,3 +113,5 @@ D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Release\net7.0\ModelValidation.pdb
 D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Release\net7.0\Dto.pdb
 D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Release\net7.0\ExtentionLinqEntitys.pdb
 D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Release\net7.0\Paging.pdb
+D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Release\net7.0\libman.json
+D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Release\net7.0\System.Net.WebSockets.WebSocketProtocol.dll

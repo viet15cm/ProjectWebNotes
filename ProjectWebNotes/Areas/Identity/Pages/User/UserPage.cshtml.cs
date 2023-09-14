@@ -11,9 +11,9 @@ using ProjectWebNotes.DbContextLayer;
 
 namespace ProjectWebNotes.Areas.Identity.Pages.User
 {
-   
-    [Authorize(Policy = "Admin")]
- 
+
+    [Authorize(Policy = "Administrator")]
+
     public class UserPageModel : PageModel
     {
 

@@ -4,6 +4,7 @@
     var categorys = ViewData["categorys"] as IEnumerable<Category>;
 
     ViewData["Title"] = Model.Title;
+    var descriptionCollapse = ViewData["DescriptionCollapse"] as string;
     var url = ViewData["curenturl"] as string;
 }
 
@@ -21,7 +22,14 @@
            
             <img src="@Model.IConFont" />
           
-            <p>@Model.Description</p>
+            <p>@Model.Description
+                @if (descriptionCollapse != null)
+                {
+                    <a onclick="descriptionCollapse(this, `@descriptionCollapse`)" class="description-collapse"> Xem thêm....</a>
+                }
+            
+            </p>
+            
 
         </div>
         <div class="list-title-curent">
@@ -61,6 +69,7 @@
         {
             @Html.Raw(Model.Content)
         }
+
     </div>
 
     
@@ -84,8 +93,13 @@
             }
         </div>
     }
+
+    @await Html.PartialAsync("_FooterPartial")
   
 </div>
+
+
+
 
 @section FacebookSharedCategoryHead{
     <meta property="og:url" content="@url" />
@@ -97,6 +111,18 @@
 @section Scripts {
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v17.0" nonce="Ag4x6L3a"></script>
+    
+    <script>
+         function descriptionCollapse(object, text){
+
+
+            var ob = object.parentNode;
+            object.remove();
+            ob.innerHTML += text;
+
+        }
+    </script>
+   
 }
 
 @section Sidebar {

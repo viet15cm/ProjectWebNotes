@@ -63,13 +63,12 @@
 
     </div>
 
+    @if (@Model?.Description != null)
+    {
+        <p class="db-description">@Model.Description</p>
+    }
  
     <div class="db-post-content">
-
-        @if (@Model?.Description != null)
-        {
-            <p class="db-description">@Model.Description</p>
-        }
 
         <div class="rank-content-title-small">
             <p>
@@ -96,8 +95,10 @@
         {
             <div id="db-post-content" class="db-post-content" ata-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0"  tabindex="0">
                 @Html.Raw(Model.Content)
+                <h1></h1>
             </div>   
         }
+        @await Html.PartialAsync("_FooterPartial")
 
     </div>
 

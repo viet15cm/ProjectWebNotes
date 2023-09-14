@@ -54,6 +54,11 @@ namespace ProjectWebNotes.Areas.Manager.Controllers
         [TempData]
         public string StatusMessage { get; set; }
 
+       
+       public string DescriptionCollapse { get; set; }
+        
+
+
         [NonAction]
         public string HttpContextAccessorPathDomain()
         {

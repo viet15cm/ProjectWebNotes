@@ -278,16 +278,18 @@
 
 .rank-content-body li {
     margin-bottom: 15px;
-    list-style-type: armenian;
+    list-style: none;
 }
 
 .rank-content-body {
-    height: 500px;
+    height: 550px;
     overflow-y: auto;
+    overflow-x: auto;
 }
 
 .rank-content-body::-webkit-scrollbar {
-    width: 6px;
+    width: 5px;
+    height: 0px;
     background-color: #F5F5F5;
 }
 
@@ -310,7 +312,7 @@
 }
 
 .rank-content-title-small ul li {
-    list-style-type: armenian;
+    list-style: none;
 }
 
 .rank-content-title-small ul li a {
@@ -334,6 +336,17 @@
     list-style: none;
 }
 
+.rank-content-body li a:hover {
+    border-left: 3px solid #800;
+    padding-left: 5px;
+    color: #800;
+}
+
+.active-content {
+    border-left: 3px solid #800;
+    padding-left: 5px;
+    color: #800;
+}
 
 
 /*#TableOfContents ul {
@@ -599,7 +612,6 @@
 
 
 @media (max-width: 1000px) {
-    
     .iconOffcanvasListPost{
         display: inline;
     }

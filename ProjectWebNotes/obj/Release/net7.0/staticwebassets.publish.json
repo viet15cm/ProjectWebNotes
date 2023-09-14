@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9g+ZClfiyDHJNym5T6W55WbGfK4OuwGCvRLTPv7Ib3s=",
+  "Hash": "eGAEwiCBMdyLG7iT9Drq2pm2h6Uy9TCL6HHRZfpAcxk=",
   "Source": "ProjectWebNotes",
   "BasePath": "_content/ProjectWebNotes",
   "Mode": "Default",
@@ -11203,6 +11203,23 @@
       "OriginalItemSpec": "wwwroot\\ImageManager\\Avatar\\233000647_ca653eec.jpg"
     },
     {
+      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\BannerPost\\234513389_354f5d7e.jpg",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "ImageManager/BannerPost/234513389_354f5d7e.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ImageManager\\BannerPost\\234513389_354f5d7e.jpg"
+    },
+    {
       "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\IconCategory\\230331180_030c8f5e.png",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
@@ -11645,12 +11662,12 @@
       "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\231259119_154fe70d.png"
     },
     {
-      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\231609295_e457db4f.png",
+      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\234522438_224d1854.jpg",
       "SourceId": "ProjectWebNotes",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\",
       "BasePath": "_content/ProjectWebNotes",
-      "RelativePath": "ImageManager/ImagePost/231609295_e457db4f.png",
+      "RelativePath": "ImageManager/ImagePost/234522438_224d1854.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11659,7 +11676,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\231609295_e457db4f.png"
+      "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\234522438_224d1854.jpg"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\234522465_84806274.png",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "ImageManager/ImagePost/234522465_84806274.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ImageManager\\ImagePost\\234522465_84806274.png"
     },
     {
       "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\ImageManager\\ImagePost\\234807506_13b498e1.png",
@@ -11932,6 +11966,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\jquery.unobtrusive-ajax.min.js"
+    },
+    {
+      "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\js\\post.js",
+      "SourceId": "ProjectWebNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\",
+      "BasePath": "_content/ProjectWebNotes",
+      "RelativePath": "js/post.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\post.js"
     },
     {
       "Identity": "D:\\C#\\ProjectWebNotes\\ProjectWebNotes\\wwwroot\\js\\site.js",

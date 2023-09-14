@@ -9,6 +9,7 @@ using Services.Abstractions;
 namespace ProjectWebNotes.Areas.Manager.Controllers
 {
     [Area("Manager")]
+    [Authorize(Policy = "Administrator")]
     public class MemoryCache : Controller
     {
         public IMemoryCache _cache;

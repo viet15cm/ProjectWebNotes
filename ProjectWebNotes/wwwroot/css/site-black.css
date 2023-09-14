@@ -286,7 +286,7 @@ body {
 }
 
 .rank-content-title-small ul li {
-    list-style-type: armenian;
+   list-style: none;
 }
 
 .rank-content-title-small ul li a {
@@ -302,16 +302,18 @@ body {
 }
 .rank-content-body li {
     margin-bottom: 15px;
-    list-style-type: armenian;
+    list-style: none;
+    
 }
 
 .rank-content-body {
-    height: 500px;
+    height: 550px;
     overflow-y: auto;
 }
 
 .rank-content-body::-webkit-scrollbar {
-    width: 6px;
+    width: 5px;
+    height: 0px;
     background-color: #F5F5F5;
 }
 
@@ -327,10 +329,22 @@ body {
     display: block;
 }
 
+.rank-content-body li a:hover{
+    border-left: 3px solid white;
+    padding-left: 5px;
+    color: #cae1e1;
+}
+
+.active-content {
+    border-left: 3px solid white;
+    padding-left: 5px;
+}
+
 
 .rank-content-title-small p a:is(:hover){
     color: #258cfb;
 }
+
 
 
 

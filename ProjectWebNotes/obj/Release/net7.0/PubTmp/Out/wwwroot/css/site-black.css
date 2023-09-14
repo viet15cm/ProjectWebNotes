@@ -265,7 +265,6 @@ body {
     
 }
 
-
 .rank-content {
     width: 20%;
     float: right;
@@ -280,31 +279,72 @@ body {
 }
 
 .rank-content-title-small p a {
-    background: white;
-    border: 2px solid white;
+    background: #F5F5F5;
+  
     font-size: 14px;
     font-weight: 500;
 }
-.rank-content-body ul li {
-    list-style-type: armenian;
+
+.rank-content-title-small ul li {
+   list-style: none;
 }
 
-.rank-content-body {
-    background: #2b2b2b;
-}
-
-.rank-content-body ul li a {
-    text-decoration: none;
-    color: white;
+.rank-content-title-small ul li a {
+    color: #e4fafa;
     text-decoration: none;
     font-weight: 500;
     display: block;
+}
+.card-rank-content {
+    background: #2b2b2b;
+    margin-bottom: 20px;
+    
+}
+.rank-content-body li {
+    margin-bottom: 15px;
+    list-style: none;
+    
+}
+
+.rank-content-body {
+    height: 550px;
+    overflow-y: auto;
+}
+
+.rank-content-body::-webkit-scrollbar {
+    width: 5px;
+    height: 0px;
+    background-color: #F5F5F5;
+}
+
+.rank-content-body::-webkit-scrollbar-thumb {
+    background-color: #808080;
+}
+
+.rank-content-body li a {
+  
+    color: #F5F5F5;
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+}
+
+.rank-content-body li a:hover{
+    border-left: 3px solid white;
+    padding-left: 5px;
+    color: #cae1e1;
+}
+
+.active-content {
+    border-left: 3px solid white;
+    padding-left: 5px;
 }
 
 
 .rank-content-title-small p a:is(:hover){
     color: #258cfb;
 }
+
 
 
 
@@ -318,23 +358,6 @@ body {
     color:  #fba056;
 }
 
-#TableOfContents ul {
-    margin-top: 12px;
-}
-
-#TableOfContents ul li {
-   margin-bottom: 10px;
-   list-style: none;
-   
-
-}
-
-#TableOfContents ul li a {
-    text-decoration: none;
-   color : #F5F5F5;
-   font-weight: 400;
-
-}
 
 .title-category-content {
     font-size: 18px;

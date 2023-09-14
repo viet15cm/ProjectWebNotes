@@ -418,6 +418,35 @@ body {
     display: none;
 }
 
+pre {
+    font-size: 14px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.db-post-content img {
+    margin-top: 17px;
+    margin-bottom: 17px;
+}
+
+code span {
+    font-size: 13px;
+}
+
+.footer-post {
+    margin-top: 50px;
+    border-top: 1px solid #c5b1b1;
+    border-top: 1px solid #c5b1b1;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer-contact-post ul li {
+    list-style: none;
+    display: inline;
+}
+
 @media (max-width: 900px) {
     .show-drop-post {
         padding-bottom: 30px;

@@ -1,4 +1,4 @@
-﻿using Domain.IdentityModel;
+﻿using Entities.Identity;
 using Entities.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +15,7 @@ namespace Domain.Reposirory
         {
         }
 
+      
         public virtual DbSet<Post> Posts { get; set; }
 
         public virtual DbSet<PostCategory> PostCategories { get; set; }

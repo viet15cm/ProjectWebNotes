@@ -194,6 +194,31 @@ namespace ProjectWebNotes.Areas.Docs.Controllers
                     }
                 }
             }
+
+            var spaces = category.Description.Split(' ');
+
+            if (spaces.Length <= 47)
+            {
+                return View(category);
+            }
+
+            category.Description = "";
+
+            for (int i = 0; i < 47; i++)
+            {
+                category.Description += spaces[i] + " ";
+            }
+
+            DescriptionCollapse = "";
+
+            for (int i = 47; i < spaces.Length; i++)
+            {
+                DescriptionCollapse += spaces[i] + " ";
+            }
+
+            ViewData["DescriptionCollapse"] = DescriptionCollapse;
+
+
             return View(category);
         }
 

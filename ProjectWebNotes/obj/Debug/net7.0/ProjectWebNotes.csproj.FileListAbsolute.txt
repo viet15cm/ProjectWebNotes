@@ -113,3 +113,5 @@ D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\MimeKit.dll
 D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\BouncyCastle.Crypto.dll
 D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\LoggerManager.dll
 D:\C#\ProjectWebNotes\ProjectWebNotes\bin\Debug\net7.0\LoggerManager.pdb
+D:\C#\ProjectWebNotes\projectwebnotes\bin\Debug\net7.0\libman.json
+D:\C#\ProjectWebNotes\projectwebnotes\bin\Debug\net7.0\System.Net.WebSockets.WebSocketProtocol.dll

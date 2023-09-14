@@ -17,7 +17,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ProjectWebNotes.Areas.Manager.Controllers
 {
-    [Authorize(Policy = "Admin")]
+    [Authorize(Policy = "Administrator")]
     public class CategoryController : BaseMangerController
     {
 

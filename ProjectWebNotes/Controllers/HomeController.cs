@@ -79,7 +79,7 @@ namespace ProjectWebNotes.Controllers
 
                 var spaces = post.Description.Split(' ');
 
-                if (spaces.Length <= 30)
+                if (spaces.Length <= 27)
                 {
                     continue;
                 }
@@ -265,5 +265,8 @@ namespace ProjectWebNotes.Controllers
             Response.Cookies.Append("theme", data, cookie);
             return Ok();
         }
+
+
+        
     }
 }
